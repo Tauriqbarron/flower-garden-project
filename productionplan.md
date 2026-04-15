@@ -310,7 +310,7 @@ app.add_middleware(
 Add to `docker-compose.prod.yml` backend environment:
 ```yaml
 environment:
-  CORS_ORIGINS: "https://garden.tauriqbarron.co.nz"
+      CORS_ORIGINS: "https://auckland.garden"
 ```
 
 ### 10. Push to Server & Deploy
