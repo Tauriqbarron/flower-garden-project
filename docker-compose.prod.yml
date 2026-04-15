@@ -1,0 +1,45 @@
+name: flower-garden
+
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    volumes:
+      - ./backend/database:/app/database:ro
+    networks:
+      - flower-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+    depends_on:
+      - backend
+    networks:
+      - flower-network
+
+  nginx:
+    image: nginx:1.25-alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates:ro
+    environment:
+      - DOMAIN_NAME=${DOMAIN_NAME}
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - flower-network
+
+networks:
+  flower-network:
+    driver: bridge

@@ -51,7 +51,7 @@ The repo has a `master` branch with no commits (unborn). Need to:
 cd ~/Github/flower-garden-project
 git add -A
 git commit -m "Initial commit — flower garden project"
-git push origin master
+git push origin main
 ```
 
 ### 2. Create Dockerfiles
@@ -252,7 +252,7 @@ cd "$DEPLOY_DIR"
 
 PREVIOUS_COMMIT="$(git rev-parse HEAD)"
 log "Pulling latest..."
-git pull origin master
+git pull origin main
 CURRENT_COMMIT="$(git rev-parse HEAD)"
 
 if [ "$PREVIOUS_COMMIT" = "$CURRENT_COMMIT" ]; then
@@ -349,7 +349,7 @@ If not already running on the ProDesk (ParishHub may have one), install the runn
 name: Deploy to ProDesk
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   deploy:

@@ -1,0 +1,13 @@
+name: Deploy to ProDesk
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Deploy flower garden
+        run: |
+          cd /opt/flower-garden-project
+          bash scripts/deploy.sh
