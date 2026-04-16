@@ -188,10 +188,28 @@ def _enrich_sow_item(flower: dict) -> dict:
             window_months = list(range(sow_start, 13)) + list(range(1, sow_end + 1))
         optimal_month = window_months[len(window_months) // 2]
 
-        optimal_start_week, _ = _month_to_week_range(optimal_month)
-        _, current_month_end_week = _month_to_week_range(current_month)
+        # Get full sow window week range (not just optimal month)
+        window_start_week, _ = _month_to_week_range(sow_start)
+        _, window_end_week = _month_to_week_range(sow_end)
 
-        weeks_from_optimal = _weeks_between(current_week, optimal_start_week)
+        # Check if current week falls within the sow window
+        if sow_start <= sow_end:
+            in_window = window_start_week <= current_week <= window_end_week
+        else:
+            # Year wrap: window spans Dec→Jan
+            in_window = current_week >= window_start_week or current_week <= window_end_week
+
+        if in_window:
+            weeks_from_optimal = 0
+        else:
+            # Calculate weeks to nearest edge of sow window
+            weeks_to_start = _weeks_between(current_week, window_start_week)
+            weeks_to_end = _weeks_between(current_week, window_end_week)
+            # Use the edge with smallest absolute distance
+            if abs(weeks_to_start) <= abs(weeks_to_end):
+                weeks_from_optimal = weeks_to_start
+            else:
+                weeks_from_optimal = weeks_to_end
     else:
         optimal_month = current_month
         weeks_from_optimal = 0
