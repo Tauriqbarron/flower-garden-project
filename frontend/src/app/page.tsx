@@ -10,7 +10,7 @@ export default async function HomePage() {
     <div>
       {/* Hero */}
       <div className="glass-card p-8 mb-8 bg-gradient-to-br from-green-50 to-emerald-50 border-green-100">
-        <h1 className="text-3xl font-bold mb-2">Welcome to Your Flower Garden</h1>
+        <h1 className="text-3xl font-bold mb-2">Welcome to Your Flower Garden Planner</h1>
         <p className="text-gray-600 text-lg">
           It is currently <strong>{data.current_month}</strong> ({data.current_season}) in Auckland.
         </p>
