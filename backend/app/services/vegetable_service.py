@@ -246,6 +246,20 @@ def get_vegetable_dashboard_summary():
     # Sort: closest to optimal first
     sow_vegetables.sort(key=lambda v: abs(v["weeks_from_optimal"]))
 
+    # Next month and month+2 sow details
+    upcoming = []
+    for offset in [1, 2]:
+        future_month = ((current_month - 1 + offset) % 12) + 1
+        future_info = get_vegetables_for_month(future_month)
+        future_items = []
+        for name in future_info.sow_now:
+            vegetable = get_vegetable_by_name(name)
+            if vegetable:
+                future_items.append(_enrich_veg_sow_item(vegetable))
+        future_items.sort(key=lambda v: abs(v["weeks_from_optimal"]))
+        month_label = NZ_MONTHS[future_month]["name"]
+        upcoming.append({"month": month_label, "month_number": future_month, "items": future_items})
+
     return {
         "current_month": month_info.name,
         "current_season": month_info.nz_season,
@@ -255,6 +269,8 @@ def get_vegetable_dashboard_summary():
         "greens": greens,
         "sow_now": month_info.sow_now,
         "sow_now_details": sow_vegetables,
+        "sow_next_month": upcoming[0],
+        "sow_in_two_months": upcoming[1],
         "transplant_now": month_info.transplant_now,
         "harvest_now": month_info.harvest_now,
         "top_storage_life": [{"name": v["common_name"], "storage_life_weeks": v.get("storage_life_weeks", "")} for v in best_storage],

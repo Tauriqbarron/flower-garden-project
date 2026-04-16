@@ -260,6 +260,20 @@ def get_dashboard_summary():
     # Sort: closest to optimal first
     sow_flowers.sort(key=lambda f: abs(f["weeks_from_optimal"]))
 
+    # Next month and month+2 sow details
+    upcoming = []
+    for offset in [1, 2]:
+        future_month = ((current_month - 1 + offset) % 12) + 1
+        future_info = get_flowers_for_month(future_month)
+        future_items = []
+        for name in future_info.sow_now:
+            flower = get_flower_by_name(name)
+            if flower:
+                future_items.append(_enrich_sow_item(flower))
+        future_items.sort(key=lambda f: abs(f["weeks_from_optimal"]))
+        month_label = NZ_MONTHS[future_month]["name"]
+        upcoming.append({"month": month_label, "month_number": future_month, "items": future_items})
+
     return {
         "current_month": month_info.name,
         "current_season": month_info.nz_season,
@@ -271,6 +285,8 @@ def get_dashboard_summary():
         "biennials": biennials,
         "sow_now": month_info.sow_now,
         "sow_now_details": sow_flowers,
+        "sow_next_month": upcoming[0],
+        "sow_in_two_months": upcoming[1],
         "transplant_now": month_info.transplant_now,
         "harvest_now": month_info.harvest_now,
         "top_vase_life": [{"name": f["common_name"], "vase_life": f["vase_life_days"]} for f in best_vase],

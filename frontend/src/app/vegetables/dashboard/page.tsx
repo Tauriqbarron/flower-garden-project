@@ -40,6 +40,29 @@ export default async function VegetableDashboardPage() {
         )}
       </div>
 
+      {/* Coming Up — Next 2 Months */}
+      {[
+        { label: `Sow in ${data.sow_next_month.month}`, emoji: "📅", data: data.sow_next_month },
+        { label: `Sow in ${data.sow_in_two_months.month}`, emoji: "📆", data: data.sow_in_two_months },
+      ].map((section) =>
+        section.data.items.length > 0 ? (
+          <div key={section.data.month} className="glass-card p-6 mb-8 border border-green-200 bg-green-50/20">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-2xl">{section.emoji}</span>
+              <h2 className="font-bold text-xl">{section.label}</h2>
+              <span className="text-sm text-gray-500 ml-auto">
+                {section.data.items.length} varieties
+              </span>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {section.data.items.map((v) => (
+                <VegSowCard key={v.name} vegetable={v} />
+              ))}
+            </div>
+          </div>
+        ) : null
+      )}
+
       {/* Transplant & Harvest */}
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         <ActionCard title="Transplant Now" emoji="🌿" items={data.transplant_now} color="blue" />

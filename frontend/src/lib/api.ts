@@ -49,6 +49,12 @@ export interface SowNowDetail {
   expected_bloom_text: string;
 }
 
+export interface UpcomingSow {
+  month: string;
+  month_number: number;
+  items: SowNowDetail[];
+}
+
 export interface DashboardData {
   current_month: string;
   current_season: string;
@@ -60,6 +66,8 @@ export interface DashboardData {
   biennials: number;
   sow_now: string[];
   sow_now_details: SowNowDetail[];
+  sow_next_month: UpcomingSow;
+  sow_in_two_months: UpcomingSow;
   transplant_now: string[];
   harvest_now: string[];
   top_vase_life: { name: string; vase_life: string }[];
@@ -175,6 +183,12 @@ export interface VegSowNowDetail {
   expected_harvest_text: string;
 }
 
+export interface VegUpcomingSow {
+  month: string;
+  month_number: number;
+  items: VegSowNowDetail[];
+}
+
 export interface VegetableDashboardData {
   current_month: string;
   current_season: string;
@@ -184,6 +198,8 @@ export interface VegetableDashboardData {
   greens: number;
   sow_now: string[];
   sow_now_details: VegSowNowDetail[];
+  sow_next_month: VegUpcomingSow;
+  sow_in_two_months: VegUpcomingSow;
   transplant_now: string[];
   harvest_now: string[];
   top_storage_life: { name: string; storage_life_weeks: string }[];
