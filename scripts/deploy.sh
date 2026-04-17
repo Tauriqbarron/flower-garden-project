@@ -18,7 +18,8 @@ cd "$DEPLOY_DIR"
 
 PREVIOUS_COMMIT="$(git rev-parse HEAD)"
 log "Pulling latest..."
-git pull origin main
+git fetch origin main
+git reset --hard origin/main
 CURRENT_COMMIT="$(git rev-parse HEAD)"
 
 if [ "$PREVIOUS_COMMIT" = "$CURRENT_COMMIT" ]; then
