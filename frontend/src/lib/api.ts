@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-const API_BASE = process.env.NODE_ENV === "production" ? "" : "http://localhost:8000";
+const API_BASE =
+  process.env.BUILD_API_URL ||
+  (process.env.NODE_ENV === "production" ? "" : "http://localhost:8000");
 
 export interface Flower {
   common_name: string;

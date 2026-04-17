@@ -30,10 +30,23 @@ if [ "$PREVIOUS_COMMIT" = "$CURRENT_COMMIT" ]; then
     log "No changes but unhealthy — rebuilding..."
 fi
 
-log "Building images..."
-docker compose -f "$COMPOSE_FILE" build --no-cache backend frontend
+log "Building backend first (needed for frontend static generation)..."
+docker compose -f "$COMPOSE_FILE" build --no-cache backend
+docker compose -f "$COMPOSE_FILE" up -d backend
 
-log "Starting services..."
+log "Waiting for backend to be healthy..."
+for i in $(seq 1 10); do
+    if docker compose -f "$COMPOSE_FILE" exec -T backend python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')" > /dev/null 2>&1; then
+        log "Backend healthy (attempt $i)"
+        break
+    fi
+    sleep 2
+done
+
+log "Building frontend..."
+docker compose -f "$COMPOSE_FILE" build --no-cache frontend
+
+log "Starting all services..."
 docker compose -f "$COMPOSE_FILE" up -d --force-recreate
 
 log "Health check..."

@@ -3,6 +3,9 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --ignore-scripts
 COPY . .
+# During build, generateStaticParams() needs the backend API.
+# docker compose build starts backend first, so backend:8000 is reachable.
+ENV BUILD_API_URL="http://backend:8000"
 RUN npm run build
 
 FROM node:22-alpine
