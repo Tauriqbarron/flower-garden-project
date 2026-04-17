@@ -1,11 +1,6 @@
-import { fetchVegetableBySlug, fetchAllVegetableSlugs } from "@/lib/api";
+import { fetchVegetableBySlug } from "@/lib/api";
 import Link from "next/link";
 import { MonthBar } from "@/components/MonthBar";
-
-export async function generateStaticParams() {
-  const slugs = await fetchAllVegetableSlugs();
-  return slugs.map((s: string) => ({ slug: s }));
-}
 
 export default async function VegetableDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

@@ -1,13 +1,8 @@
-import { fetchFlowerBySlug, fetchAllFlowerSlugs, fetchFlowers } from "@/lib/api";
+import { fetchFlowerBySlug, fetchFlowers } from "@/lib/api";
 import Image from "next/image";
 import Link from "next/link";
 import { MonthBar } from "@/components/MonthBar";
 import flowerImages from "@/lib/flower-images.json";
-
-export async function generateStaticParams() {
-  const flowers = await fetchAllFlowerSlugs();
-  return flowers.map((s: string) => ({ slug: s }));
-}
 
 export default async function FlowerDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
