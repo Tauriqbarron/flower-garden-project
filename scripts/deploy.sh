@@ -47,4 +47,6 @@ for i in $(seq 1 "$MAX_RETRIES"); do
 done
 
 log "ERROR: Health check failed after $MAX_RETRIES attempts"
+log "=== Container logs for debugging ==="
+docker compose -f "$COMPOSE_FILE" logs --tail=30 backend frontend nginx
 exit 1
