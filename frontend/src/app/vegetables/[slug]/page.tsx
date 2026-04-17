@@ -11,7 +11,7 @@ export default async function VegetableDetailPage({ params }: { params: Promise<
   const { slug } = await params;
   const vegetable = await fetchVegetableBySlug(slug);
 
-  if ((vegetable as any).error) {
+  if (!vegetable.common_name) {
     return <div className="text-center py-20">Vegetable not found</div>;
   }
 

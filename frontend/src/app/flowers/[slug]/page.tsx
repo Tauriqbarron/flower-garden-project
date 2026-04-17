@@ -13,7 +13,7 @@ export default async function FlowerDetailPage({ params }: { params: Promise<{ s
   const { slug } = await params;
   const flower = await fetchFlowerBySlug(slug);
 
-  if (flower.error) {
+  if (!flower.common_name) {
     return <div className="text-center py-20">Flower not found</div>;
   }
 
