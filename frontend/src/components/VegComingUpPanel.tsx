@@ -14,6 +14,16 @@ export default function VegComingUpPanel({ actions }: { actions: VegUpcomingActi
       color: "red" as const,
     },
     {
+      key: "opening_soon",
+      title: "Window Opening Soon",
+      emoji: "🌱",
+      description: "Sow window opening soon — get seeds and supplies ready",
+      items: actions.opening_soon,
+      getCountdown: (v: VegSowNowDetail) => v.weeks_until_window_starts ?? null,
+      getCountdownLabel: (w: number) => `Opens in ${w} week${w !== 1 ? "s" : ""}`,
+      color: "blue" as const,
+    },
+    {
       key: "peak_approaching",
       title: "Plan Ahead",
       emoji: "🎯",
@@ -25,16 +35,6 @@ export default function VegComingUpPanel({ actions }: { actions: VegUpcomingActi
       },
       getCountdownLabel: (w: number) => `${w} week${w !== 1 ? "s" : ""}`,
       color: "green" as const,
-    },
-    {
-      key: "opening_soon",
-      title: "Window Opening Soon",
-      emoji: "🌱",
-      description: "Sow window opening soon — get seeds and supplies ready",
-      items: actions.opening_soon,
-      getCountdown: (v: VegSowNowDetail) => v.weeks_until_window_starts ?? null,
-      getCountdownLabel: (w: number) => `Opens in ${w} week${w !== 1 ? "s" : ""}`,
-      color: "blue" as const,
     },
   ];
 
