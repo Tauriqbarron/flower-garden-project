@@ -302,13 +302,30 @@ def get_vegetable_dashboard_summary():
         [v for v in all_enriched if v.get("window_status") == "closing_soon"],
         key=lambda v: v.get("weeks_until_window_ends") or 99,
     )
-    peak_approaching = sorted(
-        [v for v in all_enriched if v.get("window_status") in ("in_window", "opening_soon")],
-        key=lambda v: v.get("weeks_until_window_starts") or -v.get("weeks_until_window_ends") or 0,
-    )
-    opening_soon = sorted(
+    # Split opening_soon items into two distinct groups by relative proximity
+    # This ensures both sections always have unique content, regardless of season
+    all_opening_soon = sorted(
         [v for v in all_enriched if v.get("window_status") == "opening_soon"],
         key=lambda v: v.get("weeks_until_window_starts") or 99,
+    )
+    if len(all_opening_soon) > 2:
+        mid = len(all_opening_soon) // 2
+        near_opening = all_opening_soon[:mid]       # nearer items → opening_soon section
+        far_opening = all_opening_soon[mid:]         # further items → peak_approaching section
+    elif len(all_opening_soon) == 2:
+        near_opening = all_opening_soon[:1]
+        far_opening = all_opening_soon[1:]
+    else:
+        near_opening = all_opening_soon
+        far_opening = []
+
+    # opening_soon: nearer-term items — start preparing seeds/beds
+    opening_soon = near_opening
+
+    # peak_approaching: longer-range planning — split opening_soon items + far_ahead + in_window
+    peak_approaching = sorted(
+        [v for v in all_enriched if v.get("window_status") in ("in_window", "far_ahead")] + far_opening,
+        key=lambda v: v.get("weeks_until_window_starts") or -v.get("weeks_until_window_ends") or 0,
     )
 
     return {
