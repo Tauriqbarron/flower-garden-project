@@ -47,12 +47,21 @@ export interface SowNowDetail {
   expected_bloom_month_name?: string;
   expected_bloom_weeks?: number;
   expected_bloom_text: string;
+  weeks_until_window_ends?: number | null;
+  weeks_until_window_starts?: number | null;
+  window_status?: string;
 }
 
 export interface UpcomingSow {
   month: string;
   month_number: number;
   items: SowNowDetail[];
+}
+
+export interface UpcomingActions {
+  closing_soon: SowNowDetail[];
+  peak_approaching: SowNowDetail[];
+  opening_soon: SowNowDetail[];
 }
 
 export interface DashboardData {
@@ -68,6 +77,7 @@ export interface DashboardData {
   sow_now_details: SowNowDetail[];
   sow_next_month: UpcomingSow;
   sow_in_two_months: UpcomingSow;
+  upcoming_actions: UpcomingActions;
   transplant_now: string[];
   harvest_now: string[];
   top_vase_life: { name: string; vase_life: string }[];
