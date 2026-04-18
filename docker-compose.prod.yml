@@ -32,11 +32,7 @@ services:
     ports:
       - "127.0.0.1:8080:80"
     volumes:
-      - ./nginx/templates:/etc/nginx/templates:ro
-    environment:
-      - DOMAIN_NAME=${DOMAIN_NAME}
-    # Remove default server block so our template is the only config
-    command: /bin/sh -c "rm -f /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
     depends_on:
       - frontend
       - backend
