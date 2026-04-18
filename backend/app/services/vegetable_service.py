@@ -136,6 +136,46 @@ def _timing_color(weeks_diff: int) -> str:
         return "red"
 
 
+def _compute_urgency(current_month: int, sow_start: int | None, sow_end: int | None) -> dict:
+    """Compute urgency fields: weeks until window opens/closes, and status category."""
+    if sow_start is None or sow_end is None:
+        return {
+            "weeks_until_window_ends": None,
+            "weeks_until_window_starts": None,
+            "window_status": "unknown",
+        }
+
+    current_week = date.today().isocalendar()[1]
+    _, window_end_week = _month_to_week_range(sow_end)
+    window_start_week, _ = _month_to_week_range(sow_start)
+
+    if sow_start <= sow_end:
+        in_window = window_start_week <= current_week <= window_end_week
+    else:
+        in_window = current_week >= window_start_week or current_week <= window_end_week
+
+    weeks_to_end = _weeks_between(current_week, window_end_week)
+    weeks_to_start = _weeks_between(current_week, window_start_week)
+
+    if in_window:
+        if weeks_to_end <= 6:
+            status = "closing_soon"
+        else:
+            status = "in_window"
+    elif weeks_to_start > 0 and weeks_to_start <= 16:
+        status = "opening_soon"
+    elif weeks_to_start > 16:
+        status = "far_ahead"
+    else:
+        status = "past"
+
+    return {
+        "weeks_until_window_ends": weeks_to_end if in_window else None,
+        "weeks_until_window_starts": weeks_to_start if not in_window else None,
+        "window_status": status,
+    }
+
+
 def _compute_harvest_date(sow_date: date, days_to_maturity: int) -> dict:
     """Compute expected harvest date and relative text from sowing date."""
     harvest_date = sow_date + timedelta(days=days_to_maturity)
@@ -206,6 +246,10 @@ def _enrich_veg_sow_item(vegetable: dict) -> dict:
         "timing_color": _timing_color(weeks_from_optimal),
     }
 
+    # Urgency fields
+    urgency = _compute_urgency(current_month, sow_start, sow_end)
+    result.update(urgency)
+
     # Expected harvest if sown today
     if days_to_maturity:
         harvest_info = _compute_harvest_date(today, days_to_maturity)
@@ -246,19 +290,26 @@ def get_vegetable_dashboard_summary():
     # Sort: closest to optimal first
     sow_vegetables.sort(key=lambda v: abs(v["weeks_from_optimal"]))
 
-    # Next month and month+2 sow details
-    upcoming = []
-    for offset in [1, 2]:
-        future_month = ((current_month - 1 + offset) % 12) + 1
-        future_info = get_vegetables_for_month(future_month)
-        future_items = []
-        for name in future_info.sow_now:
-            vegetable = get_vegetable_by_name(name)
-            if vegetable:
-                future_items.append(_enrich_veg_sow_item(vegetable))
-        future_items.sort(key=lambda v: abs(v["weeks_from_optimal"]))
-        month_label = NZ_MONTHS[future_month]["name"]
-        upcoming.append({"month": month_label, "month_number": future_month, "items": future_items})
+    # Categorized upcoming actions (replaces flat sow_next_month / sow_in_two_months)
+    sow_names = set(month_info.sow_now)
+    all_enriched = []
+    for v in vegetables:
+        if v.get("auckland_sow_start") and v.get("auckland_sow_end"):
+            if v["common_name"] not in sow_names:
+                all_enriched.append(_enrich_veg_sow_item(v))
+
+    closing_soon = sorted(
+        [v for v in all_enriched if v.get("window_status") == "closing_soon"],
+        key=lambda v: v.get("weeks_until_window_ends") or 99,
+    )
+    peak_approaching = sorted(
+        [v for v in all_enriched if v.get("window_status") in ("in_window", "opening_soon")],
+        key=lambda v: v.get("weeks_until_window_starts") or -v.get("weeks_until_window_ends") or 0,
+    )
+    opening_soon = sorted(
+        [v for v in all_enriched if v.get("window_status") == "opening_soon"],
+        key=lambda v: v.get("weeks_until_window_starts") or 99,
+    )
 
     return {
         "current_month": month_info.name,
@@ -269,8 +320,13 @@ def get_vegetable_dashboard_summary():
         "greens": greens,
         "sow_now": month_info.sow_now,
         "sow_now_details": sow_vegetables,
-        "sow_next_month": upcoming[0],
-        "sow_in_two_months": upcoming[1],
+        "sow_next_month": {"month": "", "month_number": 0, "items": []},
+        "sow_in_two_months": {"month": "", "month_number": 0, "items": []},
+        "upcoming_actions": {
+            "closing_soon": closing_soon,
+            "peak_approaching": peak_approaching,
+            "opening_soon": opening_soon,
+        },
         "transplant_now": month_info.transplant_now,
         "harvest_now": month_info.harvest_now,
         "top_storage_life": [{"name": v["common_name"], "storage_life_weeks": v.get("storage_life_weeks", "")} for v in best_storage],

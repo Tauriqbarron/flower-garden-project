@@ -191,12 +191,21 @@ export interface VegSowNowDetail {
   expected_harvest_month_name?: string;
   expected_harvest_weeks?: number;
   expected_harvest_text: string;
+  weeks_until_window_ends?: number | null;
+  weeks_until_window_starts?: number | null;
+  window_status?: string;
 }
 
 export interface VegUpcomingSow {
   month: string;
   month_number: number;
   items: VegSowNowDetail[];
+}
+
+export interface VegUpcomingActions {
+  closing_soon: VegSowNowDetail[];
+  peak_approaching: VegSowNowDetail[];
+  opening_soon: VegSowNowDetail[];
 }
 
 export interface VegetableDashboardData {
@@ -210,6 +219,7 @@ export interface VegetableDashboardData {
   sow_now_details: VegSowNowDetail[];
   sow_next_month: VegUpcomingSow;
   sow_in_two_months: VegUpcomingSow;
+  upcoming_actions: VegUpcomingActions;
   transplant_now: string[];
   harvest_now: string[];
   top_storage_life: { name: string; storage_life_weeks: string }[];
