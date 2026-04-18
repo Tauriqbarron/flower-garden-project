@@ -19,6 +19,7 @@ services:
     restart: unless-stopped
     environment:
       NODE_ENV: production
+      API_BASE: http://backend:8000
       PORT: "3000"
     depends_on:
       - backend
