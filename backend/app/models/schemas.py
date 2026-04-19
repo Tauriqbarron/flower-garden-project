@@ -3,6 +3,13 @@ from typing import Optional, List
 from datetime import datetime
 
 
+class GrowthStages(BaseModel):
+    harvest: Optional[str] = None      # FIRST — most recognizable
+    seed: Optional[str] = None
+    seedling: Optional[str] = None
+    young_plant: Optional[str] = None
+
+
 class FlowerActivity(BaseModel):
     id: str
     flower_name: str
@@ -41,6 +48,7 @@ class Flower(BaseModel):
     cut_flower_notes: str
     auckland_varieties: str
     pest_disease_notes: str
+    growth_stages: Optional[GrowthStages] = None
 
 
 class SeasonMonth(BaseModel):
@@ -82,6 +90,7 @@ class Vegetable(BaseModel):
     growing_notes: str
     auckland_varieties: str
     pest_disease_notes: str
+    growth_stages: Optional[GrowthStages] = None
 
 
 class VegetableActivity(BaseModel):

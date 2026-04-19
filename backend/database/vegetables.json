@@ -31,13 +31,19 @@
       "harvest_start": 1,
       "harvest_end": 5,
       "storage_life_weeks": "12-16",
-      "storage_method": "Cool, dark, ventilated area (7-10°C). Do not refrigerate.",
+      "storage_method": "Cool, dark, ventilated area (7-10\u00b0C). Do not refrigerate.",
       "pest_resistance": "moderate",
       "disease_resistance": "moderate",
       "slug": "potato",
       "growing_notes": "Mound soil around stems as plants grow (earthing up). Plant seed potatoes 10cm deep. Avoid planting where tomatoes or peppers grew recently.",
       "auckland_varieties": "Rocket (early, blight resistant), Desiree (red, good storage), Agria (great for chips), Jersey Benne (NZ heritage)",
-      "pest_disease_notes": "Tomato-potato psyllid is the main Auckland pest — use exclusion netting. Late blight can occur in wet weather; choose resistant varieties."
+      "pest_disease_notes": "Tomato-potato psyllid is the main Auckland pest \u2014 use exclusion netting. Late blight can occur in wet weather; choose resistant varieties.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Kumara",
@@ -62,13 +68,19 @@
       "harvest_start": 4,
       "harvest_end": 6,
       "storage_life_weeks": "20-24",
-      "storage_method": "Cure at 25-30°C for 10 days with high humidity, then store at 13-15°C in a dark ventilated area.",
+      "storage_method": "Cure at 25-30\u00b0C for 10 days with high humidity, then store at 13-15\u00b0C in a dark ventilated area.",
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "kumara",
-      "growing_notes": "Grow from kumara tips (sprouts) not seed. Needs warm soil — plant after last frost. Can sprawl or train up a trellis. Very well suited to Auckland climate.",
+      "growing_notes": "Grow from kumara tips (sprouts) not seed. Needs warm soil \u2014 plant after last frost. Can sprawl or train up a trellis. Very well suited to Auckland climate.",
       "auckland_varieties": "Owairaka Red (NZ standard), Beauregard (American, fast growing), Toka Toka Gold",
-      "pest_disease_notes": "Very few pest issues in Auckland. Occasional caterpillar damage on leaves. Cure properly after harvest to prevent rot."
+      "pest_disease_notes": "Very few pest issues in Auckland. Occasional caterpillar damage on leaves. Cure properly after harvest to prevent rot.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Onion",
@@ -99,7 +111,13 @@
       "slug": "onion",
       "growing_notes": "Short-day varieties suit Auckland. Can grow from seed or sets. Stop watering when tops start to fall over.",
       "auckland_varieties": "Pukekohe Long Keeper (NZ heritage, excellent storage), Californian Red, Creamgold",
-      "pest_disease_notes": "Onion rust can be an issue in humid weather — ensure good air circulation. Thrips may cause silvering of leaves."
+      "pest_disease_notes": "Onion rust can be an issue in humid weather \u2014 ensure good air circulation. Thrips may cause silvering of leaves.",
+      "growth_stages": {
+        "harvest": "/images/vegetables/onion/harvest.png",
+        "seed": "/images/vegetables/onion/seed.png",
+        "seedling": "/images/vegetables/onion/seedling.png",
+        "young_plant": "/images/vegetables/onion/young-plant.png"
+      }
     },
     {
       "common_name": "Garlic",
@@ -130,7 +148,13 @@
       "slug": "garlic",
       "growing_notes": "Plant individual cloves pointed end up. Mulch well. Remove scapes (flower stalks) to increase bulb size. Needs a cold period to form bulbs.",
       "auckland_varieties": "Printanor (softneck, great storage), elephant garlic (mild, huge bulbs), Yen Ben (NZ standard hardneck)",
-      "pest_disease_notes": "Very few problems. White rot can persist in soil — rotate crops. Rust occasionally in humid weather."
+      "pest_disease_notes": "Very few problems. White rot can persist in soil \u2014 rotate crops. Rust occasionally in humid weather.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Carrot",
@@ -159,9 +183,15 @@
       "pest_resistance": "moderate",
       "disease_resistance": "high",
       "slug": "carrot",
-      "growing_notes": "Sow direct — carrots dislike transplanting. Thin to 5cm spacing. Keep soil consistently moist for germination. Deep, loose soil prevents forking.",
+      "growing_notes": "Sow direct \u2014 carrots dislike transplanting. Thin to 5cm spacing. Keep soil consistently moist for germination. Deep, loose soil prevents forking.",
       "auckland_varieties": "Nantes (quick, sweet), Autumn King (large, stores well), Chantenay (short, heavy soils), Cosmic Purple",
-      "pest_disease_notes": "Carrot rust fly is the main pest — use fine mesh coverings. Avoid thinning in the evening when flies are most active."
+      "pest_disease_notes": "Carrot rust fly is the main pest \u2014 use fine mesh coverings. Avoid thinning in the evening when flies are most active.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Pumpkin",
@@ -186,13 +216,19 @@
       "harvest_start": 2,
       "harvest_end": 5,
       "storage_life_weeks": "20-24",
-      "storage_method": "Cure in sun for 10 days after harvest. Store in cool, dry place (10-15°C). Handle carefully to avoid bruising.",
+      "storage_method": "Cure in sun for 10 days after harvest. Store in cool, dry place (10-15\u00b0C). Handle carefully to avoid bruising.",
       "pest_resistance": "moderate",
       "disease_resistance": "moderate",
       "slug": "pumpkin",
-      "growing_notes": "Very heavy feeders — add lots of compost. Train vines to save space or let sprawl. Lift fruit off soil with a tile to prevent rot.",
+      "growing_notes": "Very heavy feeders \u2014 add lots of compost. Train vines to save space or let sprawl. Lift fruit off soil with a tile to prevent rot.",
       "auckland_varieties": "Crown (the classic NZ pumpkin), Butternut (see separate entry), Triamble (heirloom, ornamental), Ironbark",
-      "pest_disease_notes": "Powdery mildew common in Auckland humidity. Spray with milk solution (1:9 milk:water). Protect young plants from slugs."
+      "pest_disease_notes": "Powdery mildew common in Auckland humidity. Spray with milk solution (1:9 milk:water). Protect young plants from slugs.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Butternut Squash",
@@ -217,13 +253,19 @@
       "harvest_start": 2,
       "harvest_end": 5,
       "storage_life_weeks": "16-20",
-      "storage_method": "Cure in sun for 10 days. Store at 10-15°C in dry conditions.",
+      "storage_method": "Cure in sun for 10 days. Store at 10-15\u00b0C in dry conditions.",
       "pest_resistance": "moderate",
       "disease_resistance": "moderate",
       "slug": "butternut-squash",
       "growing_notes": "More compact than Crown pumpkin. Excellent flavour and versatile in the kitchen. Can train vertically on strong trellis.",
       "auckland_varieties": "Butternut (Waltham), Butterbush (compact), Tromboncino (climbing)",
-      "pest_disease_notes": "Similar to pumpkin — powdery mildew is the main issue. Aphids can transmit viruses; control early."
+      "pest_disease_notes": "Similar to pumpkin \u2014 powdery mildew is the main issue. Aphids can transmit viruses; control early.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Beetroot",
@@ -252,9 +294,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "beetroot",
-      "growing_notes": "Each 'seed' is actually a cluster — thin to 10cm. Sow every 3-4 weeks for continuous harvest. Tolerates partial shade. Leaves are excellent in salads.",
+      "growing_notes": "Each 'seed' is actually a cluster \u2014 thin to 10cm. Sow every 3-4 weeks for continuous harvest. Tolerates partial shade. Leaves are excellent in salads.",
       "auckland_varieties": "Detroit Dark Red (reliable), Chioggia (candy-striped), Golden (mild), Boltardy (slow to bolt)",
-      "pest_disease_notes": "Very few pest issues in Auckland. Leaf miner occasionally — remove affected leaves. Generally trouble-free."
+      "pest_disease_notes": "Very few pest issues in Auckland. Leaf miner occasionally \u2014 remove affected leaves. Generally trouble-free.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Parsnip",
@@ -283,9 +331,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "parsnip",
-      "growing_notes": "Seed is short-lived — use fresh seed each year. Slow germination is normal (up to 4 weeks). Frost improves flavour — sweeter after cold weather.",
+      "growing_notes": "Seed is short-lived \u2014 use fresh seed each year. Slow germination is normal (up to 4 weeks). Frost improves flavour \u2014 sweeter after cold weather.",
       "auckland_varieties": "Hollow Crown (reliable), Avonresister (canker resistant), Gladiator F1 (hybrid)",
-      "pest_disease_notes": "Canker can affect roots in heavy soil — grow in deep, loose soil. Very few pest issues otherwise."
+      "pest_disease_notes": "Canker can affect roots in heavy soil \u2014 grow in deep, loose soil. Very few pest issues otherwise.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Leek",
@@ -316,7 +370,13 @@
       "slug": "leek",
       "growing_notes": "Transplant into 15cm deep holes (trench method). Soil gradually fills in around stems as they grow. Long season crop but easy.",
       "auckland_varieties": "Musselburgh (large, hardy), Giant Winter, King Richard (early, slim)",
-      "pest_disease_notes": "Very few problems. Rust occasionally in humid weather. Generally one of the most trouble-free vegetables to grow."
+      "pest_disease_notes": "Very few problems. Rust occasionally in humid weather. Generally one of the most trouble-free vegetables to grow.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Dried Beans",
@@ -345,9 +405,15 @@
       "pest_resistance": "moderate",
       "disease_resistance": "high",
       "slug": "dried-beans",
-      "growing_notes": "Let pods dry completely on the plant before harvesting. Fix nitrogen in soil — good rotation crop. Include climbing and bush types.",
-      "auckland_varieties": "Borlotti (Italian, speckled), Cannellini, Black Turtle, Navy beans, Scarlet Runner (dual purpose — eat fresh or dry)",
-      "pest_disease_notes": "Mexican bean beetle can be an issue — hand-pick. Avoid overhead watering to prevent fungal issues."
+      "growing_notes": "Let pods dry completely on the plant before harvesting. Fix nitrogen in soil \u2014 good rotation crop. Include climbing and bush types.",
+      "auckland_varieties": "Borlotti (Italian, speckled), Cannellini, Black Turtle, Navy beans, Scarlet Runner (dual purpose \u2014 eat fresh or dry)",
+      "pest_disease_notes": "Mexican bean beetle can be an issue \u2014 hand-pick. Avoid overhead watering to prevent fungal issues.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Celeriac",
@@ -376,9 +442,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "celeriac",
-      "growing_notes": "Needs consistent moisture. Slow to germinate — start in trays. Trim side roots and remove lower leaves to encourage swelling. Excellent in soups and remoulade.",
+      "growing_notes": "Needs consistent moisture. Slow to germinate \u2014 start in trays. Trim side roots and remove lower leaves to encourage swelling. Excellent in soups and remoulade.",
       "auckland_varieties": "Giant Prague (classic), Monarch (smooth), Ibis F1 (resists bolting)",
-      "pest_disease_notes": "Celery leaf miner occasionally — remove affected leaves. Slugs like moisture — mulch carefully. Generally very low maintenance."
+      "pest_disease_notes": "Celery leaf miner occasionally \u2014 remove affected leaves. Slugs like moisture \u2014 mulch carefully. Generally very low maintenance.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Silverbeet",
@@ -407,9 +479,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "silverbeet",
-      "growing_notes": "Year-round harvest in Auckland. Pick outer leaves and let the centre keep growing. One of the most reliable and productive greens. Biennial — will flower in year 2.",
+      "growing_notes": "Year-round harvest in Auckland. Pick outer leaves and let the centre keep growing. One of the most reliable and productive greens. Biennial \u2014 will flower in year 2.",
       "auckland_varieties": "Fordhook Giant (classic, vigorous), Rainbow Chard (colourful stems), Rhubarb Chard (red stems)",
-      "pest_disease_notes": "Virtually pest-free. Slugs occasionally on young plants. Leaf miner very rarely. One of the most trouble-free greens you can grow."
+      "pest_disease_notes": "Virtually pest-free. Slugs occasionally on young plants. Leaf miner very rarely. One of the most trouble-free greens you can grow.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Kale",
@@ -440,7 +518,13 @@
       "slug": "kale",
       "growing_notes": "Frost improves flavour (sweeter after cold). Pick outer leaves for continuous harvest. Curly types tend to be more pest resistant than flat-leaf. Excellent nutrition.",
       "auckland_varieties": "Dwarf Green Curled (hardy, pest resistant), Red Russian (mild, flat leaf), Tuscan Black/Cavolo Nero (see separate), Walking Stick",
-      "pest_disease_notes": "White butterfly caterpillars are the main pest — use fine mesh/netting. Curly varieties are harder for butterflies to lay eggs on. Cabbage aphid occasionally."
+      "pest_disease_notes": "White butterfly caterpillars are the main pest \u2014 use fine mesh/netting. Curly varieties are harder for butterflies to lay eggs on. Cabbage aphid occasionally.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Rocket",
@@ -469,9 +553,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "rocket",
-      "growing_notes": "One of the fastest and easiest greens. Sow every 2-3 weeks for continuous supply. Bolts in hot weather — partial shade extends the season. Self-seeds readily.",
+      "growing_notes": "One of the fastest and easiest greens. Sow every 2-3 weeks for continuous supply. Bolts in hot weather \u2014 partial shade extends the season. Self-seeds readily.",
       "auckland_varieties": "Wild Rocket (pungent, serrated leaves), Salad Rocket (milder, smooth), Astro",
-      "pest_disease_notes": "Very pest resistant — the strong flavour deters most insects. Flea beetle occasionally but rarely damaging. Essentially trouble-free."
+      "pest_disease_notes": "Very pest resistant \u2014 the strong flavour deters most insects. Flea beetle occasionally but rarely damaging. Essentially trouble-free.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Mustard Greens",
@@ -500,9 +590,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "mustard-greens",
-      "growing_notes": "Very fast growing — harvest in 4-6 weeks. Peppery flavour. Sow successionally every 3 weeks. Excellent as a green manure if left to flower.",
+      "growing_notes": "Very fast growing \u2014 harvest in 4-6 weeks. Peppery flavour. Sow successionally every 3 weeks. Excellent as a green manure if left to flower.",
       "auckland_varieties": "Red Giant (purple leaves, mild), Green Wave (frilly, hot), Mizuna (see separate entry), Tendergreen (mild)",
-      "pest_disease_notes": "Strong flavour repels most pests. White butterfly may try but mustard grows fast enough to outpace damage. Excellent pest resistance."
+      "pest_disease_notes": "Strong flavour repels most pests. White butterfly may try but mustard grows fast enough to outpace damage. Excellent pest resistance.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Perpetual Spinach",
@@ -531,9 +627,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "perpetual-spinach",
-      "growing_notes": "Actually a chard bred for leaf production. Much hardier than true spinach — resists bolting in Auckland heat. Pick outer leaves for continuous harvest. Biennial.",
+      "growing_notes": "Actually a chard bred for leaf production. Much hardier than true spinach \u2014 resists bolting in Auckland heat. Pick outer leaves for continuous harvest. Biennial.",
       "auckland_varieties": "Perpetual Spinach / Spinach Beet (standard), Lucullus",
-      "pest_disease_notes": "Same excellent pest resistance as silverbeet. Virtually no pest or disease issues. Superior to true spinach in Auckland's climate."
+      "pest_disease_notes": "Same excellent pest resistance as silverbeet. Virtually no pest or disease issues. Superior to true spinach in Auckland's climate.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "New Zealand Spinach",
@@ -562,9 +664,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "nz-spinach",
-      "growing_notes": "Native relative — bred for edible leaves. Heat tolerant unlike true spinach. Trailing habit — good ground cover or over a wall. Pick tips to encourage bushiness. Not related to true spinach.",
-      "auckland_varieties": "Standard NZ Spinach (the species — no named varieties needed)",
-      "pest_disease_notes": "Essentially pest-free. The slightly fuzzy leaves deter insects. One of the most resilient greens for Auckland summers."
+      "growing_notes": "Native relative \u2014 bred for edible leaves. Heat tolerant unlike true spinach. Trailing habit \u2014 good ground cover or over a wall. Pick tips to encourage bushiness. Not related to true spinach.",
+      "auckland_varieties": "Standard NZ Spinach (the species \u2014 no named varieties needed)",
+      "pest_disease_notes": "Essentially pest-free. The slightly fuzzy leaves deter insects. One of the most resilient greens for Auckland summers.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Mibuna",
@@ -594,8 +702,14 @@
       "disease_resistance": "high",
       "slug": "mibuna",
       "growing_notes": "Japanese green. Mild mustard flavour. Harvest as baby leaf in 21 days or full size in 35 days. Cut-and-come-again. Excellent in stir-fries and salads.",
-      "auckland_varieties": "Mibuna (standard — no named varieties needed)",
-      "pest_disease_notes": "Strong deters most pests. Very rarely bothered by white butterfly. Fast growth outpaces any minor damage."
+      "auckland_varieties": "Mibuna (standard \u2014 no named varieties needed)",
+      "pest_disease_notes": "Strong deters most pests. Very rarely bothered by white butterfly. Fast growth outpaces any minor damage.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Mizuna",
@@ -624,9 +738,15 @@
       "pest_resistance": "high",
       "disease_resistance": "high",
       "slug": "mizuna",
-      "growing_notes": "Japanese green. Feathery, serrated leaves. Mild peppery flavour. Very productive — one plant gives continuous harvests. Self-seeds readily in Auckland.",
+      "growing_notes": "Japanese green. Feathery, serrated leaves. Mild peppery flavour. Very productive \u2014 one plant gives continuous harvests. Self-seeds readily in Auckland.",
       "auckland_varieties": "Green Mizuna (standard), Red Mizuna (purple tinged), Tokyo Bekana (similar, very mild)",
-      "pest_disease_notes": "Excellent pest resistance. Very rarely affected by white butterfly. Fast growing and resilient."
+      "pest_disease_notes": "Excellent pest resistance. Very rarely affected by white butterfly. Fast growing and resilient.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Cavolo Nero",
@@ -655,9 +775,15 @@
       "pest_resistance": "moderate",
       "disease_resistance": "high",
       "slug": "cavolo-nero",
-      "growing_notes": "Tuscan kale. Dramatic dark blue-green crinkled leaves. Frost improves sweetness. Tall plants — up to 1m. Harvest lower leaves first. Essential for Italian cooking (ribollita).",
+      "growing_notes": "Tuscan kale. Dramatic dark blue-green crinkled leaves. Frost improves sweetness. Tall plants \u2014 up to 1m. Harvest lower leaves first. Essential for Italian cooking (ribollita).",
       "auckland_varieties": "Nero di Toscana (authentic), Black Magic (compact), Dazzling Blue (cold tolerant)",
-      "pest_disease_notes": "White butterfly caterpillars are the main pest — use fine mesh netting. More pest resistant than regular cabbage. Can be grown successfully with netting."
+      "pest_disease_notes": "White butterfly caterpillars are the main pest \u2014 use fine mesh netting. More pest resistant than regular cabbage. Can be grown successfully with netting.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     },
     {
       "common_name": "Lettuce - Cos",
@@ -688,7 +814,13 @@
       "slug": "lettuce-cos",
       "growing_notes": "More heat tolerant and pest resistant than butterhead types. Can harvest outer leaves or whole head. Succession sow every 2-3 weeks.",
       "auckland_varieties": "Parris Island Cos (classic romaine), Little Gem (compact, sweet), Freckles (speckled, heirloom)",
-      "pest_disease_notes": "Slugs and snails are the main pest — use beer traps or copper tape. Lettuce root aphid can occur; rotate crops. More pest resistant than soft lettuces."
+      "pest_disease_notes": "Slugs and snails are the main pest \u2014 use beer traps or copper tape. Lettuce root aphid can occur; rotate crops. More pest resistant than soft lettuces.",
+      "growth_stages": {
+        "harvest": null,
+        "seed": null,
+        "seedling": null,
+        "young_plant": null
+      }
     }
   ]
 }
