@@ -2,6 +2,13 @@ import Link from "next/link";
 
 const API_BASE = process.env.API_BASE || "http://localhost:8000";
 
+export interface GrowthStages {
+  harvest: string | null;
+  seed: string | null;
+  seedling: string | null;
+  young_plant: string | null;
+}
+
 export interface Flower {
   common_name: string;
   botanical_name: string;
@@ -31,6 +38,7 @@ export interface Flower {
   cut_flower_notes: string;
   auckland_varieties: string;
   pest_disease_notes: string;
+  growth_stages?: GrowthStages;
 }
 
 export interface SowNowDetail {
@@ -175,6 +183,7 @@ export interface Vegetable {
   growing_notes: string;
   auckland_varieties: string;
   pest_disease_notes: string;
+  growth_stages?: GrowthStages;
 }
 
 export interface VegSowNowDetail {

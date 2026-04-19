@@ -1,6 +1,7 @@
 import { fetchVegetableBySlug } from "@/lib/api";
 import Link from "next/link";
 import { MonthBar } from "@/components/MonthBar";
+import GrowthCarousel from "@/components/GrowthCarousel";
 
 export default async function VegetableDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -17,10 +18,7 @@ export default async function VegetableDetailPage({ params }: { params: Promise<
       </Link>
 
       <div className="glass-card overflow-hidden">
-        {/* Hero placeholder */}
-        <div className="w-full h-64 bg-gradient-to-br from-green-50 to-amber-50 flex items-center justify-center text-7xl">
-          🥕
-        </div>
+        <GrowthCarousel stages={vegetable.growth_stages} plantName={vegetable.common_name} isVegetable />
 
         <div className="p-6 md:p-8">
           {/* Header */}

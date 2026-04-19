@@ -15,26 +15,62 @@ function toSlug(name: string): string {
   return result.replace(/^-|-$/g, "");
 }
 
+const STAGE_EMOJIS: Record<string, string> = {
+  harvest: "🌻",
+  seed: "🌰",
+  seedling: "🌱",
+  young_plant: "🪴",
+};
+
+const STAGE_LABELS: Record<string, string> = {
+  harvest: "Harvest",
+  seed: "Seed",
+  seedling: "Seedling",
+  young_plant: "Young Plant",
+};
+
 export default function FlowerCard({ flower }: { flower: Flower }) {
-  const imgSrc = (flowerImages as Record<string, string>)[flower.common_name];
+  const harvestImg = flower.growth_stages?.harvest || (flowerImages as Record<string, string>)[flower.common_name];
   const slug = (flower as any).slug || toSlug(flower.common_name);
+  const stages = flower.growth_stages;
 
   return (
     <Link href={`/flowers/${slug}`}>
       <div className="glass-card hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col overflow-hidden">
-        {imgSrc ? (
+        {harvestImg ? (
           <div className="relative w-full h-48 bg-gray-100">
             <Image
-              src={imgSrc}
+              src={harvestImg}
               alt={flower.common_name}
               fill
               className="object-cover"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
+            {/* Stage label on hover */}
+            <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-medium flex items-center gap-1">
+              <span>🌻</span> Harvest
+            </div>
           </div>
         ) : (
           <div className="w-full h-48 bg-gray-100 flex items-center justify-center text-5xl">
             &#x1F33C;
+          </div>
+        )}
+        {/* Growth stage indicators */}
+        {stages && (
+          <div className="flex gap-2 justify-center py-2 bg-white/60 border-b border-gray-100">
+            {["harvest", "seed", "seedling", "young_plant"].map((stage) => {
+              const hasImage = stages[stage as keyof typeof stages];
+              return (
+                <span
+                  key={stage}
+                  className={`text-xs ${hasImage ? "opacity-100" : "opacity-25"}`}
+                  title={hasImage ? STAGE_LABELS[stage] : `${STAGE_LABELS[stage]} (no photo yet)`}
+                >
+                  {STAGE_EMOJIS[stage]}
+                </span>
+              );
+            })}
           </div>
         )}
         <div className="p-5 flex flex-col flex-1">

@@ -1,8 +1,7 @@
 import { fetchFlowerBySlug, fetchFlowers } from "@/lib/api";
-import Image from "next/image";
 import Link from "next/link";
 import { MonthBar } from "@/components/MonthBar";
-import flowerImages from "@/lib/flower-images.json";
+import GrowthCarousel from "@/components/GrowthCarousel";
 
 export default async function FlowerDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -12,8 +11,6 @@ export default async function FlowerDetailPage({ params }: { params: Promise<{ s
     return <div className="text-center py-20">Flower not found</div>;
   }
 
-  const imgSrc = (flowerImages as Record<string, string>)[flower.common_name];
-
   return (
     <div>
       <Link href="/flowers" className="text-sm text-gray-500 hover:text-gray-800 mb-4 inline-block">
@@ -21,24 +18,7 @@ export default async function FlowerDetailPage({ params }: { params: Promise<{ s
       </Link>
 
       <div className="glass-card overflow-hidden">
-        {/* Hero Image */}
-        {imgSrc ? (
-          <div className="relative w-full h-64 md:h-80 bg-gray-100">
-            <Image
-              src={imgSrc}
-              alt={flower.common_name}
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-          </div>
-        ) : (
-          <div className="w-full h-64 bg-gray-100 flex items-center justify-center text-7xl">
-            &#x1F33C;
-          </div>
-        )}
+        <GrowthCarousel stages={flower.growth_stages} plantName={flower.common_name} />
 
         <div className="p-6 md:p-8">
         {/* Header */}
