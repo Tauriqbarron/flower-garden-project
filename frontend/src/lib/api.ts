@@ -57,6 +57,13 @@ export interface SowNowDetail {
   weeks_until_window_ends?: number | null;
   weeks_until_window_starts?: number | null;
   window_status?: string;
+  growth_stages?: GrowthStages | null;
+}
+
+export interface HarvestItem {
+  name: string;
+  slug: string;
+  growth_stages?: GrowthStages | null;
 }
 
 export interface UpcomingSow {
@@ -86,7 +93,7 @@ export interface DashboardData {
   sow_in_two_months: UpcomingSow;
   upcoming_actions: UpcomingActions;
   transplant_now: string[];
-  harvest_now: string[];
+  harvest_now: HarvestItem[];
   top_vase_life: { name: string; vase_life: string }[];
 }
 
@@ -202,6 +209,7 @@ export interface VegSowNowDetail {
   weeks_until_window_ends?: number | null;
   weeks_until_window_starts?: number | null;
   window_status?: string;
+  growth_stages?: GrowthStages | null;
 }
 
 export interface VegUpcomingSow {
@@ -229,7 +237,7 @@ export interface VegetableDashboardData {
   sow_in_two_months: VegUpcomingSow;
   upcoming_actions: VegUpcomingActions;
   transplant_now: string[];
-  harvest_now: string[];
+  harvest_now: HarvestItem[];
   top_storage_life: { name: string; storage_life_weeks: string }[];
 }
 

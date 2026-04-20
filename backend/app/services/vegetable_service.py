@@ -244,6 +244,7 @@ def _enrich_veg_sow_item(vegetable: dict) -> dict:
         "weeks_from_optimal": weeks_from_optimal,
         "timing_label": _timing_label(weeks_from_optimal),
         "timing_color": _timing_color(weeks_from_optimal),
+        "growth_stages": vegetable.get("growth_stages"),
     }
 
     # Urgency fields
@@ -345,7 +346,11 @@ def get_vegetable_dashboard_summary():
             "opening_soon": opening_soon,
         },
         "transplant_now": month_info.transplant_now,
-        "harvest_now": month_info.harvest_now,
+        "harvest_now": [
+            {"name": v["common_name"], "slug": v.get("slug", ""), "growth_stages": v.get("growth_stages")}
+            for name in month_info.harvest_now
+            if (v := get_vegetable_by_name(name))
+        ],
         "top_storage_life": [{"name": v["common_name"], "storage_life_weeks": v.get("storage_life_weeks", "")} for v in best_storage],
     }
 

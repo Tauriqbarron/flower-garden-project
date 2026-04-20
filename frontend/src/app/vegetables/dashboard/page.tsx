@@ -2,26 +2,27 @@ import { fetchVegetableDashboard } from "@/lib/api";
 import Link from "next/link";
 import VegSowCard from "@/components/VegSowCard";
 import VegComingUpPanel from "@/components/VegComingUpPanel";
+import HighlightReel from "@/components/HighlightReel";
 
 export default async function VegetableDashboardPage() {
   const data = await fetchVegetableDashboard();
 
   return (
     <div>
-      {/* Hero */}
-      <div className="glass-card p-8 mb-8 bg-gradient-to-br from-amber-50 to-green-50 border-amber-100">
-        <h1 className="text-3xl font-bold mb-2">Vegetable Garden</h1>
-        <p className="text-gray-600 text-lg">
-          It is currently <strong>{data.current_month}</strong> ({data.current_season}) in Auckland.
+      {/* Season bar */}
+      <div className="glass-card px-6 py-3 mb-6 flex items-center gap-3 border border-amber-100">
+        <span className="text-lg">🥕</span>
+        <p className="text-gray-700">
+          <strong>{data.current_month}</strong> · {data.current_season}
         </p>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-        <StatCard label="Total Varieties" value={data.total_vegetables} color="bg-green-500" />
-        <StatCard label="Storage Staples" value={data.staples} color="bg-amber-500" />
-        <StatCard label="Pest-Resistant Greens" value={data.greens} color="bg-emerald-500" />
-      </div>
+      {/* Highlight Reel */}
+      <HighlightReel
+        sowNow={data.sow_now_details}
+        harvestNow={data.harvest_now}
+        type="vegetables"
+      />
 
       {/* Sow Now */}
       <div className="glass-card p-6 mb-8 border border-green-200 bg-green-50/30">
@@ -44,10 +45,9 @@ export default async function VegetableDashboardPage() {
       {/* What's Coming Up — urgency-based lookahead */}
       <VegComingUpPanel actions={data.upcoming_actions} />
 
-      {/* Transplant & Harvest */}
-      <div className="grid md:grid-cols-2 gap-6 mb-8">
+      {/* Transplant Now */}
+      <div className="mb-8">
         <ActionCard title="Transplant Now" emoji="🌿" items={data.transplant_now} color="blue" />
-        <ActionCard title="Harvest Now" emoji="🧺" items={data.harvest_now} color="amber" />
       </div>
 
       {/* Top Storage Life */}
@@ -64,16 +64,6 @@ export default async function VegetableDashboardPage() {
           ))}
         </div>
       </div>
-    </div>
-  );
-}
-
-function StatCard({ label, value, color }: { label: string; value: number; color: string }) {
-  return (
-    <div className="glass-card p-5">
-      <div className={`w-3 h-3 rounded-full ${color} mb-2`}></div>
-      <div className="text-2xl font-bold">{value}</div>
-      <div className="text-sm text-gray-500">{label}</div>
     </div>
   );
 }

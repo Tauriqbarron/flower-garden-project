@@ -265,6 +265,7 @@ def _enrich_sow_item(flower: dict) -> dict:
         "weeks_from_optimal": weeks_from_optimal,
         "timing_label": _timing_label(weeks_from_optimal),
         "timing_color": _timing_color(weeks_from_optimal),
+        "growth_stages": flower.get("growth_stages"),
     }
 
     # Urgency fields
@@ -362,7 +363,11 @@ def get_dashboard_summary():
             "opening_soon": opening_soon,
         },
         "transplant_now": month_info.transplant_now,
-        "harvest_now": month_info.harvest_now,
+        "harvest_now": [
+            {"name": f["common_name"], "slug": f.get("slug", ""), "growth_stages": f.get("growth_stages")}
+            for name in month_info.harvest_now
+            if (f := get_flower_by_name(name))
+        ],
         "top_vase_life": [{"name": f["common_name"], "vase_life": f["vase_life_days"]} for f in best_vase],
     }
 
