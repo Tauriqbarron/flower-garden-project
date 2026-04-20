@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -19,6 +22,28 @@ interface HighlightReelProps {
   type?: "flowers" | "vegetables";
 }
 
+interface Slide {
+  name: string;
+  slug: string;
+  imageUrl: string | null;
+  action: string;
+  actionEmoji: string;
+  badge?: string;
+  badgeColor?: string;
+  href: string;
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const INTERVAL_MS = 4000;
+
 export default function HighlightReel({
   sowNow,
   harvestNow,
@@ -26,134 +51,148 @@ export default function HighlightReel({
 }: HighlightReelProps) {
   const basePath = type === "vegetables" ? "/vegetables" : "/flowers";
 
-  const hasSow = sowNow.length > 0;
-  const hasHarvest = harvestNow.length > 0;
+  // Build and shuffle slides on mount
+  const [slides] = useState<Slide[]>(() => {
+    const items: Slide[] = [];
 
-  if (!hasSow && !hasHarvest) {
-    return null;
-  }
+    for (const s of sowNow) {
+      items.push({
+        name: s.name,
+        slug: s.slug,
+        imageUrl: s.growth_stages?.harvest ?? s.growth_stages?.seedling ?? null,
+        action: "Planting Now",
+        actionEmoji: "🌱",
+        badge: s.timing_label,
+        badgeColor: s.timing_color,
+        href: `${basePath}/${s.slug || encodeURIComponent(s.name)}`,
+      });
+    }
 
-  return (
-    <div className="space-y-6 mb-8">
-      {hasSow && (
-        <HighlightSection
-          title="Planting Now"
-          emoji="🌱"
-          subtitle={`${sowNow.length} varieties to sow`}
-        >
-          {sowNow.map((item) => (
-            <HighlightCard
-              key={item.name}
-              name={item.name}
-              slug={item.slug}
-              href={`${basePath}/${item.slug || encodeURIComponent(item.name)}`}
-              imageUrl={item.growth_stages?.harvest || item.growth_stages?.seedling}
-              badge={item.timing_label}
-              badgeColor={item.timing_color}
-            />
-          ))}
-        </HighlightSection>
-      )}
+    for (const h of harvestNow) {
+      items.push({
+        name: h.name,
+        slug: h.slug,
+        imageUrl: h.growth_stages?.harvest ?? null,
+        action: "Harvest Now",
+        actionEmoji: "✂️",
+        href: `${basePath}/${h.slug || encodeURIComponent(h.name)}`,
+      });
+    }
 
-      {hasHarvest && (
-        <HighlightSection
-          title="Harvest Now"
-          emoji="✂️"
-          subtitle={`${harvestNow.length} varieties ready`}
-        >
-          {harvestNow.map((item) => (
-            <HighlightCard
-              key={item.name}
-              name={item.name}
-              slug={item.slug}
-              href={`${basePath}/${item.slug || encodeURIComponent(item.name)}`}
-              imageUrl={item.growth_stages?.harvest}
-            />
-          ))}
-        </HighlightSection>
-      )}
-    </div>
-  );
-}
+    return shuffle(items);
+  });
 
-function HighlightSection({
-  title,
-  emoji,
-  subtitle,
-  children,
-}: {
-  title: string;
-  emoji: string;
-  subtitle: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="glass-card p-6 border border-green-200 bg-green-50/30">
-      <div className="flex items-center gap-2 mb-4">
-        <span className="text-2xl">{emoji}</span>
-        <h2 className="font-bold text-xl">{title}</h2>
-        <span className="text-sm text-gray-500 ml-auto">{subtitle}</span>
-      </div>
-      <div className="flex gap-4 overflow-x-auto pb-2">
-        {children}
-      </div>
-    </div>
-  );
-}
+  const [current, setCurrent] = useState(0);
+  const total = slides.length;
 
-function HighlightCard({
-  name,
-  slug,
-  href,
-  imageUrl,
-  badge,
-  badgeColor,
-}: {
-  name: string;
-  slug: string;
-  href: string;
-  imageUrl?: string | null;
-  badge?: string;
-  badgeColor?: string;
-}) {
+  const next = useCallback(() => setCurrent((i) => (i + 1) % total), [total]);
+  const prev = useCallback(() => setCurrent((i) => (i - 1 + total) % total), [total]);
+
+  // Auto-advance
+  useEffect(() => {
+    if (total <= 1) return;
+    const timer = setInterval(next, INTERVAL_MS);
+    return () => clearInterval(timer);
+  }, [total, next]);
+
+  if (total === 0) return null;
+
+  const slide = slides[current];
+
   const badgeClasses =
-    badgeColor === "green"
+    slide.badgeColor === "green"
       ? "bg-green-100 text-green-800"
-      : badgeColor === "amber"
+      : slide.badgeColor === "amber"
       ? "bg-amber-100 text-amber-800"
-      : badgeColor === "red"
+      : slide.badgeColor === "red"
       ? "bg-red-100 text-red-800"
       : "bg-gray-100 text-gray-600";
 
   return (
-    <Link href={href} className="flex-shrink-0 w-40 group">
-      <div className="rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition bg-white">
-        <div className="relative w-full h-32 bg-gray-100">
-          {imageUrl ? (
+    <div className="mb-8">
+      <Link href={slide.href}>
+        <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden bg-gray-100 group cursor-pointer hover:shadow-lg transition-shadow">
+          {slide.imageUrl ? (
             <Image
-              src={imageUrl}
-              alt={name}
+              src={slide.imageUrl}
+              alt={slide.name}
               fill
               className="object-cover"
-              sizes="160px"
+              sizes="(max-width: 768px) 100vw, 800px"
+              priority
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center text-3xl">
-              🌿
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-50 to-amber-50">
+              <span className="text-7xl">🌿</span>
             </div>
           )}
-        </div>
-        <div className="p-2.5">
-          <p className="text-sm font-semibold truncate">{name}</p>
-          {badge && (
-            <span
-              className={`inline-block text-xs px-1.5 py-0.5 rounded-full mt-1 ${badgeClasses}`}
-            >
-              {badge}
-            </span>
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+          {/* Action badge — top left */}
+          <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow">
+            <span>{slide.actionEmoji}</span>
+            <span className="text-sm font-medium">{slide.action}</span>
+          </div>
+
+          {/* Timing badge — top right (if sow item) */}
+          {slide.badge && (
+            <div className={`absolute top-4 right-4 rounded-full px-3 py-1.5 text-sm font-medium shadow ${badgeClasses}`}>
+              {slide.badge}
+            </div>
           )}
+
+          {/* Name — bottom */}
+          <div className="absolute bottom-4 left-4 right-4">
+            <h3 className="text-2xl font-bold text-white drop-shadow-md">
+              {slide.name}
+            </h3>
+            <p className="text-sm text-white/80 mt-0.5">
+              {current + 1} / {total}
+            </p>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+
+      {/* Controls */}
+      {total > 1 && (
+        <div className="flex items-center justify-center gap-4 mt-3">
+          <button
+            onClick={prev}
+            className="bg-white/80 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow transition"
+            aria-label="Previous"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Dots */}
+          <div className="flex gap-1.5">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2 h-2 rounded-full transition ${
+                  i === current ? "bg-green-600 w-4" : "bg-gray-300"
+                }`}
+                aria-label={`Slide ${i + 1}`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={next}
+            className="bg-white/80 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow transition"
+            aria-label="Next"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      )}
+    </div>
   );
 }
