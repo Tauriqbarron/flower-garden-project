@@ -17,14 +17,12 @@ function toSlug(name: string): string {
 
 const STAGE_EMOJIS: Record<string, string> = {
   harvest: "🌻",
-  seed: "🌰",
   seedling: "🌱",
   young_plant: "🪴",
 };
 
 const STAGE_LABELS: Record<string, string> = {
   harvest: "Harvest",
-  seed: "Seed",
   seedling: "Seedling",
   young_plant: "Young Plant",
 };
@@ -59,7 +57,7 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
         {/* Growth stage indicators */}
         {stages && (
           <div className="flex gap-2 justify-center py-2 bg-white/60 border-b border-gray-100">
-            {["harvest", "seed", "seedling", "young_plant"].map((stage) => {
+            {["harvest", "seedling", "young_plant"].map((stage) => {
               const hasImage = stages[stage as keyof typeof stages];
               return (
                 <span

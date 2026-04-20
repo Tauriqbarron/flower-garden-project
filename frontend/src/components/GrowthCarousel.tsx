@@ -5,7 +5,6 @@ import Image from "next/image";
 
 export interface GrowthStages {
   harvest: string | null;
-  seed: string | null;
   seedling: string | null;
   young_plant: string | null;
 }
@@ -18,7 +17,6 @@ interface GrowthCarouselProps {
 
 const STAGE_ORDER = [
   { key: "harvest" as const, label: "Harvest", emoji: "🌻", description: "Ready to pick" },
-  { key: "seed" as const, label: "Seed", emoji: "🌰", description: "What the seed looks like" },
   { key: "seedling" as const, label: "Seedling", emoji: "🌱", description: "Just sprouted" },
   { key: "young_plant" as const, label: "Young Plant", emoji: "🪴", description: "Growing, before maturity" },
 ] as const;

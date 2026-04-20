@@ -40,7 +40,6 @@
       "pest_disease_notes": "Tomato-potato psyllid is the main Auckland pest \u2014 use exclusion netting. Late blight can occur in wet weather; choose resistant varieties.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -77,7 +76,6 @@
       "pest_disease_notes": "Very few pest issues in Auckland. Occasional caterpillar damage on leaves. Cure properly after harvest to prevent rot.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -114,7 +112,6 @@
       "pest_disease_notes": "Onion rust can be an issue in humid weather \u2014 ensure good air circulation. Thrips may cause silvering of leaves.",
       "growth_stages": {
         "harvest": "/images/vegetables/onion/harvest.png",
-        "seed": "/images/vegetables/onion/seed.png",
         "seedling": "/images/vegetables/onion/seedling.png",
         "young_plant": "/images/vegetables/onion/young-plant.png"
       }
@@ -151,7 +148,6 @@
       "pest_disease_notes": "Very few problems. White rot can persist in soil \u2014 rotate crops. Rust occasionally in humid weather.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -188,7 +184,6 @@
       "pest_disease_notes": "Carrot rust fly is the main pest \u2014 use fine mesh coverings. Avoid thinning in the evening when flies are most active.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -225,7 +220,6 @@
       "pest_disease_notes": "Powdery mildew common in Auckland humidity. Spray with milk solution (1:9 milk:water). Protect young plants from slugs.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -262,7 +256,6 @@
       "pest_disease_notes": "Similar to pumpkin \u2014 powdery mildew is the main issue. Aphids can transmit viruses; control early.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -299,7 +292,6 @@
       "pest_disease_notes": "Very few pest issues in Auckland. Leaf miner occasionally \u2014 remove affected leaves. Generally trouble-free.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -336,7 +328,6 @@
       "pest_disease_notes": "Canker can affect roots in heavy soil \u2014 grow in deep, loose soil. Very few pest issues otherwise.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -373,7 +364,6 @@
       "pest_disease_notes": "Very few problems. Rust occasionally in humid weather. Generally one of the most trouble-free vegetables to grow.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -410,7 +400,6 @@
       "pest_disease_notes": "Mexican bean beetle can be an issue \u2014 hand-pick. Avoid overhead watering to prevent fungal issues.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -447,7 +436,6 @@
       "pest_disease_notes": "Celery leaf miner occasionally \u2014 remove affected leaves. Slugs like moisture \u2014 mulch carefully. Generally very low maintenance.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -484,7 +472,6 @@
       "pest_disease_notes": "Virtually pest-free. Slugs occasionally on young plants. Leaf miner very rarely. One of the most trouble-free greens you can grow.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -521,7 +508,6 @@
       "pest_disease_notes": "White butterfly caterpillars are the main pest \u2014 use fine mesh/netting. Curly varieties are harder for butterflies to lay eggs on. Cabbage aphid occasionally.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -558,7 +544,6 @@
       "pest_disease_notes": "Very pest resistant \u2014 the strong flavour deters most insects. Flea beetle occasionally but rarely damaging. Essentially trouble-free.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -595,7 +580,6 @@
       "pest_disease_notes": "Strong flavour repels most pests. White butterfly may try but mustard grows fast enough to outpace damage. Excellent pest resistance.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -632,7 +616,6 @@
       "pest_disease_notes": "Same excellent pest resistance as silverbeet. Virtually no pest or disease issues. Superior to true spinach in Auckland's climate.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -669,7 +652,6 @@
       "pest_disease_notes": "Essentially pest-free. The slightly fuzzy leaves deter insects. One of the most resilient greens for Auckland summers.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -706,7 +688,6 @@
       "pest_disease_notes": "Strong deters most pests. Very rarely bothered by white butterfly. Fast growth outpaces any minor damage.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -743,7 +724,6 @@
       "pest_disease_notes": "Excellent pest resistance. Very rarely affected by white butterfly. Fast growing and resilient.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -780,7 +760,6 @@
       "pest_disease_notes": "White butterfly caterpillars are the main pest \u2014 use fine mesh netting. More pest resistant than regular cabbage. Can be grown successfully with netting.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -817,7 +796,6 @@
       "pest_disease_notes": "Slugs and snails are the main pest \u2014 use beer traps or copper tape. Lettuce root aphid can occur; rotate crops. More pest resistant than soft lettuces.",
       "growth_stages": {
         "harvest": null,
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }

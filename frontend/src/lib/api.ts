@@ -4,7 +4,6 @@ const API_BASE = process.env.API_BASE || "http://localhost:8000";
 
 export interface GrowthStages {
   harvest: string | null;
-  seed: string | null;
   seedling: string | null;
   young_plant: string | null;
 }

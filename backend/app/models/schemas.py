@@ -5,7 +5,6 @@ from datetime import datetime
 
 class GrowthStages(BaseModel):
     harvest: Optional[str] = None      # FIRST — most recognizable
-    seed: Optional[str] = None
     seedling: Optional[str] = None
     young_plant: Optional[str] = None
 

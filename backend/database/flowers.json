@@ -40,7 +40,6 @@
       "slug": "zinnia",
       "growth_stages": {
         "harvest": "/images/flowers/zinnia.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -77,7 +76,6 @@
       "slug": "cosmos",
       "growth_stages": {
         "harvest": "/images/flowers/cosmos.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -114,7 +112,6 @@
       "slug": "sweet-pea",
       "growth_stages": {
         "harvest": "/images/flowers/sweet-pea.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -151,7 +148,6 @@
       "slug": "dahlia",
       "growth_stages": {
         "harvest": "/images/flowers/dahlia.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -188,7 +184,6 @@
       "slug": "sunflower-cut-flower",
       "growth_stages": {
         "harvest": "/images/flowers/sunflower-cut-flower.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -225,7 +220,6 @@
       "slug": "gladiolus",
       "growth_stages": {
         "harvest": "/images/flowers/gladiolus.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -262,7 +256,6 @@
       "slug": "lisianthus",
       "growth_stages": {
         "harvest": "/images/flowers/lisianthus.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -299,7 +292,6 @@
       "slug": "ranunculus",
       "growth_stages": {
         "harvest": "/images/flowers/ranunculus.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -336,7 +328,6 @@
       "slug": "anemone",
       "growth_stages": {
         "harvest": "/images/flowers/anemone.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -373,7 +364,6 @@
       "slug": "freesia",
       "growth_stages": {
         "harvest": "/images/flowers/freesia.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -410,7 +400,6 @@
       "slug": "chrysanthemum",
       "growth_stages": {
         "harvest": "/images/flowers/chrysanthemum.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -447,7 +436,6 @@
       "slug": "snapdragon",
       "growth_stages": {
         "harvest": "/images/flowers/snapdragon.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -484,7 +472,6 @@
       "slug": "calendula",
       "growth_stages": {
         "harvest": "/images/flowers/calendula.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -521,7 +508,6 @@
       "slug": "delphinium",
       "growth_stages": {
         "harvest": "/images/flowers/delphinium.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -558,7 +544,6 @@
       "slug": "statice",
       "growth_stages": {
         "harvest": "/images/flowers/statice.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -595,7 +580,6 @@
       "slug": "celosia-plume",
       "growth_stages": {
         "harvest": "/images/flowers/celosia-plume.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -632,7 +616,6 @@
       "slug": "nigella",
       "growth_stages": {
         "harvest": "/images/flowers/nigella.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -669,7 +652,6 @@
       "slug": "buddleja-butterfly-bush-cut",
       "growth_stages": {
         "harvest": "/images/flowers/buddleja-butterfly-bush-cut.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -706,7 +688,6 @@
       "slug": "echinacea",
       "growth_stages": {
         "harvest": "/images/flowers/echinacea.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -743,7 +724,6 @@
       "slug": "rudbeckia",
       "growth_stages": {
         "harvest": "/images/flowers/rudbeckia.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -780,7 +760,6 @@
       "slug": "strawflower",
       "growth_stages": {
         "harvest": "/images/flowers/strawflower.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -817,7 +796,6 @@
       "slug": "stock",
       "growth_stages": {
         "harvest": "/images/flowers/stock.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -854,7 +832,6 @@
       "slug": "cornflower",
       "growth_stages": {
         "harvest": "/images/flowers/cornflower.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -891,7 +868,6 @@
       "slug": "larkspur-annual",
       "growth_stages": {
         "harvest": "/images/flowers/larkspur-annual.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -928,7 +904,6 @@
       "slug": "scabiosa",
       "growth_stages": {
         "harvest": "/images/flowers/scabiosa.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -965,7 +940,6 @@
       "slug": "bupleurum",
       "growth_stages": {
         "harvest": "/images/flowers/bupleurum.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -1002,7 +976,6 @@
       "slug": "ammi-majus",
       "growth_stages": {
         "harvest": "/images/flowers/ammi-majus.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -1039,7 +1012,6 @@
       "slug": "gomphrena",
       "growth_stages": {
         "harvest": "/images/flowers/gomphrena.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -1076,7 +1048,6 @@
       "slug": "sweet-william",
       "growth_stages": {
         "harvest": "/images/flowers/sweet-william.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
@@ -1113,7 +1084,6 @@
       "slug": "lavatera",
       "growth_stages": {
         "harvest": "/images/flowers/lavatera.jpg",
-        "seed": null,
         "seedling": null,
         "young_plant": null
       }
