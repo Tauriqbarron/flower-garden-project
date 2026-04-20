@@ -39,9 +39,9 @@
       "pest_disease_notes": "Powdery mildew common in Auckland humidity - ensure good air circulation. Watch for aphids and two-spotted mite.",
       "slug": "zinnia",
       "growth_stages": {
-        "harvest": "/images/flowers/zinnia.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/zinnia/harvest.png",
+        "seedling": "/images/flowers/zinnia/seedling.png",
+        "young_plant": "/images/flowers/zinnia/young-plant.png"
       }
     },
     {
@@ -75,9 +75,9 @@
       "pest_disease_notes": "Generally hardy in Auckland. Earwigs may damage buds. Watch for slugs on young seedlings.",
       "slug": "cosmos",
       "growth_stages": {
-        "harvest": "/images/flowers/cosmos.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/cosmos/harvest.png",
+        "seedling": "/images/flowers/cosmos/seedling.png",
+        "young_plant": "/images/flowers/cosmos/young-plant.png"
       }
     },
     {
@@ -111,9 +111,9 @@
       "pest_disease_notes": "In Auckland, sow in autumn for winter growth and spring flowering. Slugs are main pest. Powdery mildew in late season heat.",
       "slug": "sweet-pea",
       "growth_stages": {
-        "harvest": "/images/flowers/sweet-pea.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/sweet-pea/harvest.png",
+        "seedling": "/images/flowers/sweet-pea/seedling.png",
+        "young_plant": "/images/flowers/sweet-pea/young-plant.png"
       }
     },
     {
@@ -147,9 +147,9 @@
       "pest_disease_notes": "Slugs and snails eat tubers and young shoots. Two-spotted mite in Auckland summers. Tuber rot in waterlogged soil.",
       "slug": "dahlia",
       "growth_stages": {
-        "harvest": "/images/flowers/dahlia.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/dahlia/harvest.png",
+        "seedling": "/images/flowers/dahlia/seedling.png",
+        "young_plant": "/images/flowers/dahlia/young-plant.png"
       }
     },
     {
@@ -183,9 +183,9 @@
       "pest_disease_notes": "Aphids on buds. Birds may pull up seedlings. Generally easy in Auckland. Succession sow every 2-3 weeks.",
       "slug": "sunflower-cut-flower",
       "growth_stages": {
-        "harvest": "/images/flowers/sunflower-cut-flower.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/sunflower-cut-flower/harvest.png",
+        "seedling": "/images/flowers/sunflower-cut-flower/seedling.png",
+        "young_plant": "/images/flowers/sunflower-cut-flower/young-plant.png"
       }
     },
     {
@@ -219,9 +219,9 @@
       "pest_disease_notes": "Thrips are worst enemy in Auckland - they corms in storage and damage flowers. Keep soil well-drained. Corms may need lifting and storing in wet winters.",
       "slug": "gladiolus",
       "growth_stages": {
-        "harvest": "/images/flowers/gladiolus.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/gladiolus/harvest.png",
+        "seedling": "/images/flowers/gladiolus/seedling.png",
+        "young_plant": "/images/flowers/gladiolus/young-plant.png"
       }
     },
     {
@@ -255,9 +255,9 @@
       "pest_disease_notes": "Damping-off is major risk for seedlings. Auckland humidity makes fungal diseases likely. Grow on benches if possible. Fusarium wilt in poorly drained soil.",
       "slug": "lisianthus",
       "growth_stages": {
-        "harvest": "/images/flowers/lisianthus.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/lisianthus/harvest.png",
+        "seedling": "/images/flowers/lisianthus/seedling.png",
+        "young_plant": "/images/flowers/lisianthus/young-plant.png"
       }
     },
     {
@@ -291,9 +291,9 @@
       "pest_disease_notes": "Corms rot in wet Auckland winter soil. Consider growing in raised beds or pots. Soak corms before planting. Botrytis in high humidity.",
       "slug": "ranunculus",
       "growth_stages": {
-        "harvest": "/images/flowers/ranunculus.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/ranunculus/harvest.png",
+        "seedling": "/images/flowers/ranunculus/seedling.png",
+        "young_plant": "/images/flowers/ranunculus/young-plant.png"
       }
     },
     {
@@ -327,9 +327,9 @@
       "pest_disease_notes": "Same as Ranunculus - wet soil kills corms. Raised beds essential in Auckland. Mice may eat corms.",
       "slug": "anemone",
       "growth_stages": {
-        "harvest": "/images/flowers/anemone.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/anemone/harvest.png",
+        "seedling": "/images/flowers/anemone/seedling.png",
+        "young_plant": "/images/flowers/anemone/young-plant.png"
       }
     },
     {
@@ -363,9 +363,9 @@
       "pest_disease_notes": "Needs cool winters to bloom well - Auckland's mild climate usually fine, but very warm winters can reduce flowering.",
       "slug": "freesia",
       "growth_stages": {
-        "harvest": "/images/flowers/freesia.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/freesia/harvest.png",
+        "seedling": "/images/flowers/freesia/seedling.png",
+        "young_plant": "/images/flowers/freesia/young-plant.png"
       }
     },
     {
@@ -399,9 +399,9 @@
       "pest_disease_notes": "Aphids on buds and new growth. Powdery mildew in Auckland humidity. Rust common. Plant in well-ventilated positions.",
       "slug": "chrysanthemum",
       "growth_stages": {
-        "harvest": "/images/flowers/chrysanthemum.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/chrysanthemum/harvest.png",
+        "seedling": "/images/flowers/chrysanthemum/seedling.png",
+        "young_plant": "/images/flowers/chrysanthemum/young-plant.png"
       }
     },
     {
@@ -435,9 +435,9 @@
       "pest_disease_notes": "Rust is common in Auckland - avoid overhead watering. Snails and slugs on young plants. Generally easy to grow.",
       "slug": "snapdragon",
       "growth_stages": {
-        "harvest": "/images/flowers/snapdragon.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/snapdragon/harvest.png",
+        "seedling": "/images/flowers/snapdragon/seedling.png",
+        "young_plant": "/images/flowers/snapdragon/young-plant.png"
       }
     },
     {
@@ -471,9 +471,9 @@
       "pest_disease_notes": "Very easy in Auckland. May get powdery mildew in humid summers but rarely severe. Self-seeds prolifically.",
       "slug": "calendula",
       "growth_stages": {
-        "harvest": "/images/flowers/calendula.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/calendula/harvest.png",
+        "seedling": "/images/flowers/calendula/seedling.png",
+        "young_plant": "/images/flowers/calendula/young-plant.png"
       }
     },
     {
@@ -507,9 +507,9 @@
       "pest_disease_notes": "Needs protection from Auckland hot afternoon sun. Crown rot in wet soil. Slugs on new growth. Second flush of flowers after cutting.",
       "slug": "delphinium",
       "growth_stages": {
-        "harvest": "/images/flowers/delphinium.jpg",
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/flowers/delphinium/harvest.png",
+        "seedling": "/images/flowers/delphinium/seedling.png",
+        "young_plant": "/images/flowers/delphinium/young-plant.png"
       }
     },
     {
@@ -544,8 +544,8 @@
       "slug": "statice",
       "growth_stages": {
         "harvest": "/images/flowers/statice.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/statice/seedling.png",
+        "young_plant": "/images/flowers/statice/young-plant.png"
       }
     },
     {
@@ -580,8 +580,8 @@
       "slug": "celosia-plume",
       "growth_stages": {
         "harvest": "/images/flowers/celosia-plume.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/celosia-plume/seedling.png",
+        "young_plant": "/images/flowers/celosia-plume/young-plant.png"
       }
     },
     {
@@ -616,8 +616,8 @@
       "slug": "nigella",
       "growth_stages": {
         "harvest": "/images/flowers/nigella.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/nigella/seedling.png",
+        "young_plant": "/images/flowers/nigella/young-plant.png"
       }
     },
     {
@@ -652,8 +652,8 @@
       "slug": "buddleja-butterfly-bush-cut",
       "growth_stages": {
         "harvest": "/images/flowers/buddleja-butterfly-bush-cut.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/buddleja-butterfly-bush-cut/seedling.png",
+        "young_plant": "/images/flowers/buddleja-butterfly-bush-cut/young-plant.png"
       }
     },
     {
@@ -688,8 +688,8 @@
       "slug": "echinacea",
       "growth_stages": {
         "harvest": "/images/flowers/echinacea.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/echinacea/seedling.png",
+        "young_plant": "/images/flowers/echinacea/young-plant.png"
       }
     },
     {
@@ -724,8 +724,8 @@
       "slug": "rudbeckia",
       "growth_stages": {
         "harvest": "/images/flowers/rudbeckia.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/rudbeckia/seedling.png",
+        "young_plant": "/images/flowers/rudbeckia/young-plant.png"
       }
     },
     {
@@ -760,8 +760,8 @@
       "slug": "strawflower",
       "growth_stages": {
         "harvest": "/images/flowers/strawflower.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/strawflower/seedling.png",
+        "young_plant": "/images/flowers/strawflower/young-plant.png"
       }
     },
     {
@@ -796,8 +796,8 @@
       "slug": "stock",
       "growth_stages": {
         "harvest": "/images/flowers/stock.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/stock/seedling.png",
+        "young_plant": "/images/flowers/stock/young-plant.png"
       }
     },
     {
@@ -832,8 +832,8 @@
       "slug": "cornflower",
       "growth_stages": {
         "harvest": "/images/flowers/cornflower.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/cornflower/seedling.png",
+        "young_plant": "/images/flowers/cornflower/young-plant.png"
       }
     },
     {
@@ -868,8 +868,8 @@
       "slug": "larkspur-annual",
       "growth_stages": {
         "harvest": "/images/flowers/larkspur-annual.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/larkspur-annual/seedling.png",
+        "young_plant": "/images/flowers/larkspur-annual/young-plant.png"
       }
     },
     {
@@ -904,8 +904,8 @@
       "slug": "scabiosa",
       "growth_stages": {
         "harvest": "/images/flowers/scabiosa.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/scabiosa/seedling.png",
+        "young_plant": "/images/flowers/scabiosa/young-plant.png"
       }
     },
     {
@@ -940,8 +940,8 @@
       "slug": "bupleurum",
       "growth_stages": {
         "harvest": "/images/flowers/bupleurum.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/bupleurum/seedling.png",
+        "young_plant": "/images/flowers/bupleurum/young-plant.png"
       }
     },
     {
@@ -976,8 +976,8 @@
       "slug": "ammi-majus",
       "growth_stages": {
         "harvest": "/images/flowers/ammi-majus.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/ammi-majus/seedling.png",
+        "young_plant": "/images/flowers/ammi-majus/young-plant.png"
       }
     },
     {
@@ -1012,8 +1012,8 @@
       "slug": "gomphrena",
       "growth_stages": {
         "harvest": "/images/flowers/gomphrena.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/gomphrena/seedling.png",
+        "young_plant": "/images/flowers/gomphrena/young-plant.png"
       }
     },
     {
@@ -1048,8 +1048,8 @@
       "slug": "sweet-william",
       "growth_stages": {
         "harvest": "/images/flowers/sweet-william.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/sweet-william/seedling.png",
+        "young_plant": "/images/flowers/sweet-william/young-plant.png"
       }
     },
     {
@@ -1084,8 +1084,8 @@
       "slug": "lavatera",
       "growth_stages": {
         "harvest": "/images/flowers/lavatera.jpg",
-        "seedling": null,
-        "young_plant": null
+        "seedling": "/images/flowers/lavatera/seedling.png",
+        "young_plant": "/images/flowers/lavatera/young-plant.png"
       }
     }
   ]

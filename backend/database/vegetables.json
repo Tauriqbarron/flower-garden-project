@@ -39,9 +39,9 @@
       "auckland_varieties": "Rocket (early, blight resistant), Desiree (red, good storage), Agria (great for chips), Jersey Benne (NZ heritage)",
       "pest_disease_notes": "Tomato-potato psyllid is the main Auckland pest \u2014 use exclusion netting. Late blight can occur in wet weather; choose resistant varieties.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/potato/harvest.png",
+        "seedling": "/images/vegetables/potato/seedling.png",
+        "young_plant": "/images/vegetables/potato/young-plant.png"
       }
     },
     {
@@ -75,9 +75,9 @@
       "auckland_varieties": "Owairaka Red (NZ standard), Beauregard (American, fast growing), Toka Toka Gold",
       "pest_disease_notes": "Very few pest issues in Auckland. Occasional caterpillar damage on leaves. Cure properly after harvest to prevent rot.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/kumara/harvest.png",
+        "seedling": "/images/vegetables/kumara/seedling.png",
+        "young_plant": "/images/vegetables/kumara/young-plant.png"
       }
     },
     {
@@ -147,9 +147,9 @@
       "auckland_varieties": "Printanor (softneck, great storage), elephant garlic (mild, huge bulbs), Yen Ben (NZ standard hardneck)",
       "pest_disease_notes": "Very few problems. White rot can persist in soil \u2014 rotate crops. Rust occasionally in humid weather.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/garlic/harvest.png",
+        "seedling": "/images/vegetables/garlic/seedling.png",
+        "young_plant": "/images/vegetables/garlic/young-plant.png"
       }
     },
     {
@@ -183,9 +183,9 @@
       "auckland_varieties": "Nantes (quick, sweet), Autumn King (large, stores well), Chantenay (short, heavy soils), Cosmic Purple",
       "pest_disease_notes": "Carrot rust fly is the main pest \u2014 use fine mesh coverings. Avoid thinning in the evening when flies are most active.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/carrot/harvest.png",
+        "seedling": "/images/vegetables/carrot/seedling.png",
+        "young_plant": "/images/vegetables/carrot/young-plant.png"
       }
     },
     {
@@ -219,9 +219,9 @@
       "auckland_varieties": "Crown (the classic NZ pumpkin), Butternut (see separate entry), Triamble (heirloom, ornamental), Ironbark",
       "pest_disease_notes": "Powdery mildew common in Auckland humidity. Spray with milk solution (1:9 milk:water). Protect young plants from slugs.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/pumpkin/harvest.png",
+        "seedling": "/images/vegetables/pumpkin/seedling.png",
+        "young_plant": "/images/vegetables/pumpkin/young-plant.png"
       }
     },
     {
@@ -255,9 +255,9 @@
       "auckland_varieties": "Butternut (Waltham), Butterbush (compact), Tromboncino (climbing)",
       "pest_disease_notes": "Similar to pumpkin \u2014 powdery mildew is the main issue. Aphids can transmit viruses; control early.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/butternut-squash/harvest.png",
+        "seedling": "/images/vegetables/butternut-squash/seedling.png",
+        "young_plant": "/images/vegetables/butternut-squash/young-plant.png"
       }
     },
     {
@@ -291,9 +291,9 @@
       "auckland_varieties": "Detroit Dark Red (reliable), Chioggia (candy-striped), Golden (mild), Boltardy (slow to bolt)",
       "pest_disease_notes": "Very few pest issues in Auckland. Leaf miner occasionally \u2014 remove affected leaves. Generally trouble-free.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/beetroot/harvest.png",
+        "seedling": "/images/vegetables/beetroot/seedling.png",
+        "young_plant": "/images/vegetables/beetroot/young-plant.png"
       }
     },
     {
@@ -327,9 +327,9 @@
       "auckland_varieties": "Hollow Crown (reliable), Avonresister (canker resistant), Gladiator F1 (hybrid)",
       "pest_disease_notes": "Canker can affect roots in heavy soil \u2014 grow in deep, loose soil. Very few pest issues otherwise.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/parsnip/harvest.png",
+        "seedling": "/images/vegetables/parsnip/seedling.png",
+        "young_plant": "/images/vegetables/parsnip/young-plant.png"
       }
     },
     {
@@ -363,9 +363,9 @@
       "auckland_varieties": "Musselburgh (large, hardy), Giant Winter, King Richard (early, slim)",
       "pest_disease_notes": "Very few problems. Rust occasionally in humid weather. Generally one of the most trouble-free vegetables to grow.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/leek/harvest.png",
+        "seedling": "/images/vegetables/leek/seedling.png",
+        "young_plant": "/images/vegetables/leek/young-plant.png"
       }
     },
     {
@@ -399,9 +399,9 @@
       "auckland_varieties": "Borlotti (Italian, speckled), Cannellini, Black Turtle, Navy beans, Scarlet Runner (dual purpose \u2014 eat fresh or dry)",
       "pest_disease_notes": "Mexican bean beetle can be an issue \u2014 hand-pick. Avoid overhead watering to prevent fungal issues.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/dried-beans/harvest.png",
+        "seedling": "/images/vegetables/dried-beans/seedling.png",
+        "young_plant": "/images/vegetables/dried-beans/young-plant.png"
       }
     },
     {
@@ -435,9 +435,9 @@
       "auckland_varieties": "Giant Prague (classic), Monarch (smooth), Ibis F1 (resists bolting)",
       "pest_disease_notes": "Celery leaf miner occasionally \u2014 remove affected leaves. Slugs like moisture \u2014 mulch carefully. Generally very low maintenance.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/celeriac/harvest.png",
+        "seedling": "/images/vegetables/celeriac/seedling.png",
+        "young_plant": "/images/vegetables/celeriac/young-plant.png"
       }
     },
     {
@@ -471,9 +471,9 @@
       "auckland_varieties": "Fordhook Giant (classic, vigorous), Rainbow Chard (colourful stems), Rhubarb Chard (red stems)",
       "pest_disease_notes": "Virtually pest-free. Slugs occasionally on young plants. Leaf miner very rarely. One of the most trouble-free greens you can grow.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/silverbeet/harvest.png",
+        "seedling": "/images/vegetables/silverbeet/seedling.png",
+        "young_plant": "/images/vegetables/silverbeet/young-plant.png"
       }
     },
     {
@@ -507,9 +507,9 @@
       "auckland_varieties": "Dwarf Green Curled (hardy, pest resistant), Red Russian (mild, flat leaf), Tuscan Black/Cavolo Nero (see separate), Walking Stick",
       "pest_disease_notes": "White butterfly caterpillars are the main pest \u2014 use fine mesh/netting. Curly varieties are harder for butterflies to lay eggs on. Cabbage aphid occasionally.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/kale/harvest.png",
+        "seedling": "/images/vegetables/kale/seedling.png",
+        "young_plant": "/images/vegetables/kale/young-plant.png"
       }
     },
     {
@@ -543,9 +543,9 @@
       "auckland_varieties": "Wild Rocket (pungent, serrated leaves), Salad Rocket (milder, smooth), Astro",
       "pest_disease_notes": "Very pest resistant \u2014 the strong flavour deters most insects. Flea beetle occasionally but rarely damaging. Essentially trouble-free.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/rocket/harvest.png",
+        "seedling": "/images/vegetables/rocket/seedling.png",
+        "young_plant": "/images/vegetables/rocket/young-plant.png"
       }
     },
     {
@@ -579,9 +579,9 @@
       "auckland_varieties": "Red Giant (purple leaves, mild), Green Wave (frilly, hot), Mizuna (see separate entry), Tendergreen (mild)",
       "pest_disease_notes": "Strong flavour repels most pests. White butterfly may try but mustard grows fast enough to outpace damage. Excellent pest resistance.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/mustard-greens/harvest.png",
+        "seedling": "/images/vegetables/mustard-greens/seedling.png",
+        "young_plant": "/images/vegetables/mustard-greens/young-plant.png"
       }
     },
     {
@@ -615,9 +615,9 @@
       "auckland_varieties": "Perpetual Spinach / Spinach Beet (standard), Lucullus",
       "pest_disease_notes": "Same excellent pest resistance as silverbeet. Virtually no pest or disease issues. Superior to true spinach in Auckland's climate.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/perpetual-spinach/harvest.png",
+        "seedling": "/images/vegetables/perpetual-spinach/seedling.png",
+        "young_plant": "/images/vegetables/perpetual-spinach/young-plant.png"
       }
     },
     {
@@ -651,9 +651,9 @@
       "auckland_varieties": "Standard NZ Spinach (the species \u2014 no named varieties needed)",
       "pest_disease_notes": "Essentially pest-free. The slightly fuzzy leaves deter insects. One of the most resilient greens for Auckland summers.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/nz-spinach/harvest.png",
+        "seedling": "/images/vegetables/nz-spinach/seedling.png",
+        "young_plant": "/images/vegetables/nz-spinach/young-plant.png"
       }
     },
     {
@@ -687,9 +687,9 @@
       "auckland_varieties": "Mibuna (standard \u2014 no named varieties needed)",
       "pest_disease_notes": "Strong deters most pests. Very rarely bothered by white butterfly. Fast growth outpaces any minor damage.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/mibuna/harvest.png",
+        "seedling": "/images/vegetables/mibuna/seedling.png",
+        "young_plant": "/images/vegetables/mibuna/young-plant.png"
       }
     },
     {
@@ -723,9 +723,9 @@
       "auckland_varieties": "Green Mizuna (standard), Red Mizuna (purple tinged), Tokyo Bekana (similar, very mild)",
       "pest_disease_notes": "Excellent pest resistance. Very rarely affected by white butterfly. Fast growing and resilient.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/mizuna/harvest.png",
+        "seedling": "/images/vegetables/mizuna/seedling.png",
+        "young_plant": "/images/vegetables/mizuna/young-plant.png"
       }
     },
     {
@@ -759,9 +759,9 @@
       "auckland_varieties": "Nero di Toscana (authentic), Black Magic (compact), Dazzling Blue (cold tolerant)",
       "pest_disease_notes": "White butterfly caterpillars are the main pest \u2014 use fine mesh netting. More pest resistant than regular cabbage. Can be grown successfully with netting.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/cavolo-nero/harvest.png",
+        "seedling": "/images/vegetables/cavolo-nero/seedling.png",
+        "young_plant": "/images/vegetables/cavolo-nero/young-plant.png"
       }
     },
     {
@@ -795,9 +795,9 @@
       "auckland_varieties": "Parris Island Cos (classic romaine), Little Gem (compact, sweet), Freckles (speckled, heirloom)",
       "pest_disease_notes": "Slugs and snails are the main pest \u2014 use beer traps or copper tape. Lettuce root aphid can occur; rotate crops. More pest resistant than soft lettuces.",
       "growth_stages": {
-        "harvest": null,
-        "seedling": null,
-        "young_plant": null
+        "harvest": "/images/vegetables/lettuce-cos/harvest.png",
+        "seedling": "/images/vegetables/lettuce-cos/seedling.png",
+        "young_plant": "/images/vegetables/lettuce-cos/young-plant.png"
       }
     }
   ]
