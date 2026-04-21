@@ -120,7 +120,7 @@ export default function HighlightReel({
   return (
     <div className="mb-8">
       <Link href={slide.href}>
-        <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden bg-gray-100 group cursor-pointer hover:shadow-lg transition-shadow">
+        <div className="relative w-full h-64 md:h-80 lg:h-[480px] rounded-xl overflow-hidden bg-gray-100 group cursor-pointer hover:shadow-lg transition-shadow">
           {slide.imageUrl ? (
             <Image
               src={slide.imageUrl}

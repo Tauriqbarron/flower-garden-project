@@ -36,7 +36,7 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
     <Link href={`/flowers/${slug}`}>
       <div className="glass-card hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col overflow-hidden">
         {harvestImg ? (
-          <div className="relative w-full h-48 bg-gray-100">
+          <div className="relative w-full h-48 md:h-56 bg-gray-100">
             <Image
               src={harvestImg}
               alt={flower.common_name}

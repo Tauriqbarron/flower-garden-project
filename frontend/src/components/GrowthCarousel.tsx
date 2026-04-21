@@ -56,7 +56,7 @@ export default function GrowthCarousel({ stages, plantName, isVegetable = false 
   return (
     <div className="relative">
       {/* Image area */}
-      <div className="relative w-full h-64 md:h-80 bg-gray-100 overflow-hidden">
+      <div className="relative w-full h-64 md:h-80 lg:h-[480px] bg-gray-100 overflow-hidden">
         <Image
           src={stages![current.key]!}
           alt={`${plantName} — ${current.label}`}
