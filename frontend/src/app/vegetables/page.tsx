@@ -1,17 +1,34 @@
-import { fetchVegetables } from "@/lib/api";
+"use client";
+import { useEffect, useState } from "react";
+import { useRegion } from "@/lib/region";
+import { fetchVegetables, Vegetable } from "@/lib/api";
 import VegetableCard from "@/components/VegetableCard";
-import { Vegetable } from "@/lib/api";
 
-export default async function VegetablesPage() {
-  const vegetables: Vegetable[] = await fetchVegetables();
+export default function VegetablesPage() {
+  const { region } = useRegion();
+  const [vegetables, setVegetables] = useState<Vegetable[]>([]);
+
+  useEffect(() => {
+    fetchVegetables(region).then(setVegetables);
+  }, [region]);
+
+  if (vegetables.length === 0) {
+    return <div className="animate-pulse space-y-4">
+      <div className="h-8 bg-gray-100 rounded w-1/3"></div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[1,2,3,4,5,6].map(i => <div key={i} className="h-48 bg-gray-100 rounded-lg"></div>)}
+      </div>
+    </div>;
+  }
 
   const categories = Array.from(new Set(vegetables.map((v) => v.category)));
+  const regionLabel = region === "christchurch" ? "Christchurch" : "Auckland";
 
   return (
     <div>
       <div className="mb-6">
         <h1 className="text-2xl font-bold mb-1">All Vegetables</h1>
-        <p className="text-gray-500">{vegetables.length} varieties for Auckland gardens</p>
+        <p className="text-gray-500">{vegetables.length} varieties for {regionLabel} gardens</p>
       </div>
 
       {categories.map((cat) => (
