@@ -79,9 +79,9 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
             </span>
           </div>
           <p className="text-sm text-gray-500 italic mb-2">{flower.botanical_name}</p>
-          <div className="flex gap-3 mt-auto pt-3 border-t border-gray-100">
-            <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">Vase: {flower.vase_life_days}d</span>
-            <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full">{flower.sun}</span>
+          <div className="flex gap-3 mt-auto pt-3 border-t border-[var(--border-soft)]">
+            <span className="text-xs bg-[var(--forest-50)] text-[var(--forest)] px-2 py-1 rounded-full">Vase: {flower.vase_life_days}d</span>
+            <span className="text-xs bg-[var(--sage-50)] text-[var(--sage-400)] px-2 py-1 rounded-full">{flower.sun}</span>
           </div>
         </div>
       </div>
@@ -91,11 +91,11 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
 
 function getTypeColorInline(type: string): string {
   switch (type) {
-    case "annual": return "bg-green-100 text-green-800";
-    case "perennial": return "bg-blue-100 text-blue-800";
-    case "biennial": return "bg-amber-100 text-amber-800";
-    case "corm": return "bg-purple-100 text-purple-800";
-    case "bulb": return "bg-purple-100 text-purple-800";
-    default: return "bg-gray-100 text-gray-800";
+    case "annual": return "bg-[var(--forest-100)] text-[var(--forest)]";
+    case "perennial": return "bg-[var(--sage-100)] text-[var(--sage-400)]";
+    case "biennial": return "bg-[var(--gold-100)] text-amber-900";
+    case "corm": return "bg-[var(--terracotta-100)] text-[var(--terracotta-500)]";
+    case "bulb": return "bg-[var(--terracotta-100)] text-[var(--terracotta-500)]";
+    default: return "bg-[var(--cream-200)] text-[var(--text-muted)]";
   }
 }

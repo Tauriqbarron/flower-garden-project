@@ -42,6 +42,36 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+function buildSlides(sowNow: HighlightItem[], harvestNow: HighlightItem[], basePath: string): Slide[] {
+  const items: Slide[] = [];
+
+  for (const s of sowNow) {
+    items.push({
+      name: s.name,
+      slug: s.slug,
+      imageUrl: s.growth_stages?.harvest ?? s.growth_stages?.seedling ?? null,
+      action: "Planting Now",
+      actionEmoji: "🌱",
+      badge: s.timing_label,
+      badgeColor: s.timing_color,
+      href: `${basePath}/${s.slug || encodeURIComponent(s.name)}`,
+    });
+  }
+
+  for (const h of harvestNow) {
+    items.push({
+      name: h.name,
+      slug: h.slug,
+      imageUrl: h.growth_stages?.harvest ?? null,
+      action: "Harvest Now",
+      actionEmoji: "✂️",
+      href: `${basePath}/${h.slug || encodeURIComponent(h.name)}`,
+    });
+  }
+
+  return items;
+}
+
 const INTERVAL_MS = 4000;
 
 export default function HighlightReel({
@@ -51,36 +81,15 @@ export default function HighlightReel({
 }: HighlightReelProps) {
   const basePath = type === "vegetables" ? "/vegetables" : "/flowers";
 
-  // Build and shuffle slides on mount
-  const [slides] = useState<Slide[]>(() => {
-    const items: Slide[] = [];
+  // Build slides in a deterministic order for SSR, shuffle on client after mount
+  const [slides, setSlides] = useState<Slide[]>(() =>
+    buildSlides(sowNow, harvestNow, basePath)
+  );
 
-    for (const s of sowNow) {
-      items.push({
-        name: s.name,
-        slug: s.slug,
-        imageUrl: s.growth_stages?.harvest ?? s.growth_stages?.seedling ?? null,
-        action: "Planting Now",
-        actionEmoji: "🌱",
-        badge: s.timing_label,
-        badgeColor: s.timing_color,
-        href: `${basePath}/${s.slug || encodeURIComponent(s.name)}`,
-      });
-    }
-
-    for (const h of harvestNow) {
-      items.push({
-        name: h.name,
-        slug: h.slug,
-        imageUrl: h.growth_stages?.harvest ?? null,
-        action: "Harvest Now",
-        actionEmoji: "✂️",
-        href: `${basePath}/${h.slug || encodeURIComponent(h.name)}`,
-      });
-    }
-
-    return shuffle(items);
-  });
+  // Shuffle only on client after hydration
+  useEffect(() => {
+    setSlides((prev) => shuffle(prev));
+  }, []);
 
   const [current, setCurrent] = useState(0);
   const total = slides.length;
@@ -101,12 +110,12 @@ export default function HighlightReel({
 
   const badgeClasses =
     slide.badgeColor === "green"
-      ? "bg-green-100 text-green-800"
+      ? "bg-[#d4e8dc] text-[#1B4332]"
       : slide.badgeColor === "amber"
-      ? "bg-amber-100 text-amber-800"
+      ? "bg-[#f9edd0] text-amber-900"
       : slide.badgeColor === "red"
-      ? "bg-red-100 text-red-800"
-      : "bg-gray-100 text-gray-600";
+      ? "bg-[#fbd5d9] text-[#C41E3A]"
+      : "bg-[#F5EDE3] text-[var(--text-muted)]";
 
   return (
     <div className="mb-8">

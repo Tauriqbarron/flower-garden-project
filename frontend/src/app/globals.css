@@ -1,40 +1,163 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ─── */
 :root {
-  --bg: #f8f6f1;
-  --card: #ffffff;
-  --text: #2d2d2d;
-  --text-muted: #6b7280;
-  --accent: #4a7c59;
-  --accent-light: #e8f5e9;
-  --border: #e5e7eb;
-  --pink: #ec4899;
-  --blue: #3b82f6;
-  --amber: #f59e0b;
-  --red: #ef4444;
-  --purple: #8b5cf6;
+  /* Primary palette */
+  --forest:    #1B4332;
+  --forest-50: #f0f7f3;
+  --forest-100: #d4e8dc;
+  --forest-200: #a8d1b8;
+  --forest-300: #6db58e;
+  --forest-400: #3d8f66;
+  --forest-500: #1B4332;
+  --forest-600: #153628;
+  --forest-700: #0f291e;
+
+  /* Accent */
+  --terracotta:    #C65D3B;
+  --terracotta-50: #fdf3ef;
+  --terracotta-100: #f9dfd4;
+  --terracotta-200: #f0b8a0;
+  --terracotta-300: #e08c67;
+  --terracotta-400: #C65D3B;
+  --terracotta-500: #a54d31;
+  --terracotta-600: #843d27;
+
+  /* Neutrals */
+  --cream:     #FFF8F0;
+  --cream-50:  #FFFDFB;
+  --cream-100: #FFF8F0;
+  --cream-200: #F5EDE3;
+  --cream-300: #E8DDD0;
+  --cream-400: #D4C8B8;
+
+  /* Secondary greens */
+  --sage:      #A7C4A0;
+  --sage-50:   #f3f8f2;
+  --sage-100:  #ddefdc;
+  --sage-200:  #A7C4A0;
+  --sage-300:  #7daa75;
+  --sage-400:  #5a8f52;
+
+  /* Pop accents */
+  --pohutukawa: #C41E3A;
+  --pohutukawa-50: #fef2f3;
+  --pohutukawa-100: #fbd5d9;
+  --pohutukawa-200: #f5a0a8;
+
+  --gold:      #D4A843;
+  --gold-50:   #fdf9ef;
+  --gold-100:  #f9edd0;
+  --gold-200:  #f0d89a;
+
+  /* Semantic surface tokens */
+  --bg:        var(--cream-100);
+  --card:      #ffffff;
+  --card-alt:  var(--cream-50);
+  --text:      #1a1a1a;
+  --text-muted:#6b7280;
+  --text-soft: #94a3b8;
+  --border:    var(--cream-300);
+  --border-soft: var(--cream-200);
+
+  /* Spacing scale */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+
+  /* Shadows — warm, layered */
+  --shadow-sm:  0 1px 2px rgba(27, 67, 50, 0.04), 0 1px 3px rgba(27, 67, 50, 0.06);
+  --shadow-md:  0 2px 4px rgba(27, 67, 50, 0.04), 0 4px 12px rgba(27, 67, 50, 0.08);
+  --shadow-lg:  0 4px 8px rgba(27, 67, 50, 0.04), 0 8px 24px rgba(27, 67, 50, 0.10);
+  --shadow-xl:  0 8px 16px rgba(27, 67, 50, 0.06), 0 16px 48px rgba(27, 67, 50, 0.12);
+
+  /* Border radius */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
 }
 
+/* ─── Base ─── */
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background: var(--bg);
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a { color: inherit; text-decoration: none; }
 
+/* ─── Component: glass-card ─── */
 .glass-card {
   background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--duration-normal) var(--ease-out);
 }
 
+.glass-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ─── Component: badge ─── */
 .badge {
   display: inline-flex;
   align-items: center;
   padding: 2px 10px;
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+/* ─── Component: button base ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all var(--duration-fast) var(--ease-out);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--forest);
+  color: var(--cream);
+}
+.btn-primary:hover {
+  background: var(--forest-600);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background: var(--terracotta);
+  color: var(--cream);
+}
+.btn-accent:hover {
+  background: var(--terracotta-500);
+  box-shadow: var(--shadow-md);
+}
+
+/* ─── Utility: text-gradient ─── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--forest), var(--sage-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

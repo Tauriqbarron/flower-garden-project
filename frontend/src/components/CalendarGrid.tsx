@@ -18,7 +18,7 @@ export function CalendarGrid({ months }: { months: MonthData[] }) {
         return (
           <div
             key={m.month_number}
-            className={`glass-card p-5 ${isCurrent ? "ring-2 ring-green-400" : ""}`}
+            className={`glass-card p-5 ${isCurrent ? "ring-2 ring-[var(--forest-300)]" : ""}`}
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-3">

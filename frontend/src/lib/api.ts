@@ -139,12 +139,12 @@ export async function fetchCalendar(): Promise<MonthData[]> {
 
 export function getTypeColor(type: string): string {
   switch (type) {
-    case "annual": return "bg-green-100 text-green-800";
-    case "perennial": return "bg-blue-100 text-blue-800";
-    case "biennial": return "bg-amber-100 text-amber-800";
-    case "corm": return "bg-purple-100 text-purple-800";
-    case "bulb": return "bg-purple-100 text-purple-800";
-    default: return "bg-gray-100 text-gray-800";
+    case "annual": return "bg-[var(--forest-100)] text-[var(--forest)]";
+    case "perennial": return "bg-[var(--sage-100)] text-[var(--sage-400)]";
+    case "biennial": return "bg-[var(--gold-100)] text-amber-900";
+    case "corm": return "bg-[var(--terracotta-100)] text-[var(--terracotta-500)]";
+    case "bulb": return "bg-[var(--terracotta-100)] text-[var(--terracotta-500)]";
+    default: return "bg-[var(--cream-200)] text-[var(--text-muted)]";
   }
 }
 
@@ -283,20 +283,20 @@ export async function fetchVegetableCalendar(): Promise<VegMonthData[]> {
 
 export function getCategoryColor(category: string): string {
   switch (category) {
-    case "staple": return "bg-amber-100 text-amber-800";
-    case "green": return "bg-green-100 text-green-800";
-    default: return "bg-gray-100 text-gray-800";
+    case "staple": return "bg-[var(--gold-100)] text-amber-900";
+    case "green": return "bg-[var(--forest-100)] text-[var(--forest)]";
+    default: return "bg-[var(--cream-200)] text-[var(--text-muted)]";
   }
 }
 
 export function getVegTypeColor(type: string): string {
   switch (type) {
-    case "root": return "bg-orange-100 text-orange-800";
-    case "leafy": return "bg-green-100 text-green-800";
-    case "fruit": return "bg-red-100 text-red-800";
-    case "allium": return "bg-purple-100 text-purple-800";
-    case "legume": return "bg-amber-100 text-amber-800";
-    case "brassica": return "bg-emerald-100 text-emerald-800";
-    default: return "bg-gray-100 text-gray-800";
+    case "root": return "bg-[var(--terracotta-100)] text-[var(--terracotta-500)]";
+    case "leafy": return "bg-[var(--forest-100)] text-[var(--forest)]";
+    case "fruit": return "bg-[var(--pohutukawa-100)] text-[var(--pohutukawa)]";
+    case "allium": return "bg-[var(--sage-100)] text-[var(--sage-400)]";
+    case "legume": return "bg-[var(--gold-100)] text-amber-900";
+    case "brassica": return "bg-[var(--forest-50)] text-[var(--forest-400)]";
+    default: return "bg-[var(--cream-200)] text-[var(--text-muted)]";
   }
 }

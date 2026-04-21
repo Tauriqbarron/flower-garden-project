@@ -4,17 +4,17 @@ import type { VegSowNowDetail } from "@/lib/api";
 export default function VegSowCard({ vegetable }: { vegetable: VegSowNowDetail }) {
   const borderColor =
     vegetable.timing_color === "green"
-      ? "border-green-300 bg-green-50"
+      ? "border-[var(--forest-200)] bg-[var(--forest-50)]"
       : vegetable.timing_color === "amber"
-      ? "border-amber-300 bg-amber-50"
-      : "border-red-300 bg-red-50";
+      ? "border-[var(--gold-200)] bg-[var(--gold-50)]"
+      : "border-[var(--pohutukawa-200)] bg-[var(--pohutukawa-50)]";
 
   const badgeColor =
     vegetable.timing_color === "green"
-      ? "bg-green-100 text-green-800"
+      ? "bg-[var(--forest-100)] text-[var(--forest)]"
       : vegetable.timing_color === "amber"
-      ? "bg-amber-100 text-amber-800"
-      : "bg-red-100 text-red-800";
+      ? "bg-[var(--gold-100)] text-amber-900"
+      : "bg-[var(--pohutukawa-100)] text-[var(--pohutukawa)]";
 
   return (
     <Link href={`/vegetables/${vegetable.slug || encodeURIComponent(vegetable.name)}`}>

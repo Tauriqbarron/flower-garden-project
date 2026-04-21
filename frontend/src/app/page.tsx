@@ -25,7 +25,7 @@ export default async function HomePage() {
       />
 
       {/* Sow Now — enriched with timing & bloom */}
-      <div className="glass-card p-6 mb-8 border border-green-200 bg-green-50/30">
+      <div className="glass-card p-6 mb-8 border border-[#a8d1b8] bg-[#f0f7f3]/30">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-2xl">🌱</span>
           <h2 className="font-bold text-xl">Sow Now</h2>
@@ -64,8 +64,8 @@ export default async function HomePage() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {data.top_vase_life.map((f) => (
             <Link key={f.name} href={`/flowers/${encodeURIComponent(f.name)}`}>
-              <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-lg p-4 text-center border border-pink-100 hover:shadow-md transition cursor-pointer">
-                <div className="text-2xl font-bold text-pink-600">{f.vase_life}</div>
+              <div className="bg-gradient-to-br from-[var(--pohutukawa-50)] to-[var(--terracotta-50)] rounded-lg p-4 text-center border border-[var(--pohutukawa-100)] hover:shadow-md transition cursor-pointer">
+                <div className="text-2xl font-bold text-[var(--pohutukawa)]">{f.vase_life}</div>
                 <div className="text-sm text-gray-600 mt-1">{f.name}</div>
               </div>
             </Link>
@@ -79,17 +79,17 @@ export default async function HomePage() {
 function SowCard({ flower }: { flower: SowNowDetail }) {
   const borderColor =
     flower.timing_color === "green"
-      ? "border-green-300 bg-green-50"
+      ? "border-[var(--forest-200)] bg-[var(--forest-50)]"
       : flower.timing_color === "amber"
-      ? "border-amber-300 bg-amber-50"
-      : "border-red-300 bg-red-50";
+      ? "border-[var(--gold-200)] bg-[var(--gold-50)]"
+      : "border-[var(--pohutukawa-200)] bg-[var(--pohutukawa-50)]";
 
   const badgeColor =
     flower.timing_color === "green"
-      ? "bg-green-100 text-green-800"
+      ? "bg-[var(--forest-100)] text-[var(--forest)]"
       : flower.timing_color === "amber"
-      ? "bg-amber-100 text-amber-800"
-      : "bg-red-100 text-red-800";
+      ? "bg-[var(--gold-100)] text-amber-900"
+      : "bg-[var(--pohutukawa-100)] text-[var(--pohutukawa)]";
 
   return (
     <Link href={`/flowers/${flower.slug || encodeURIComponent(flower.name)}`}>

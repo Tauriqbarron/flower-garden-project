@@ -94,18 +94,18 @@ export default function VegetableCard({ vegetable }: { vegetable: Vegetable }) {
             </div>
           </div>
           <p className="text-sm text-gray-500 italic mb-2">{vegetable.botanical_name}</p>
-          <div className="flex gap-2 mt-auto pt-3 border-t border-gray-100 flex-wrap">
+          <div className="flex gap-2 mt-auto pt-3 border-t border-[var(--border-soft)] flex-wrap">
             {vegetable.storage_life_weeks && (
-              <span className="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded-full">
+              <span className="text-xs bg-[var(--gold-50)] text-amber-900 px-2 py-1 rounded-full">
                 Stores: {vegetable.storage_life_weeks}w
               </span>
             )}
             {vegetable.pest_resistance && (
-              <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">
+              <span className="text-xs bg-[var(--forest-50)] text-[var(--forest)] px-2 py-1 rounded-full">
                 Pest: {vegetable.pest_resistance}
               </span>
             )}
-            <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full">{vegetable.sun}</span>
+            <span className="text-xs bg-[var(--sage-50)] text-[var(--sage-400)] px-2 py-1 rounded-full">{vegetable.sun}</span>
           </div>
         </div>
       </div>

@@ -1,39 +1,92 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Garden Planner - Auckland Flowers & Vegetables",
-  description: "Plan, sow, and track cut flowers and vegetables in Auckland, NZ",
+  title: "auckland.garden — Seasonal Planner for Auckland Growers",
+  description:
+    "Plan, sow, and track cut flowers and vegetables in Auckland, NZ. Auckland-specific seasonal guidance for your garden.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="min-h-screen">
-        <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <body className={`${inter.className} min-h-screen`}>
+        {/* Nav */}
+        <nav className="bg-white/80 backdrop-blur-md border-b border-[var(--border-soft)] sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl">&#x1F337;</span>
-              <span className="font-bold text-xl tracking-tight">FlowerGarden</span>
-              <span className="text-xs text-gray-400 ml-1 hidden sm:inline">Auckland, NZ</span>
+            <Link href="/" className="flex items-center gap-1.5 group">
+              <span className="text-xl">🌱</span>
+              <span className="font-extrabold text-lg tracking-tight text-[var(--forest)]">
+                auckland
+              </span>
+              <span className="text-[var(--terracotta)] font-extrabold text-lg">.</span>
+              <span className="font-extrabold text-lg tracking-tight text-[var(--forest)]">
+                garden
+              </span>
             </Link>
-            <div className="flex gap-4 text-sm font-medium">
-              <Link href="/" className="hover:text-green-700 transition">Flowers</Link>
-              <Link href="/flowers" className="hover:text-green-700 transition">Flower List</Link>
-              <Link href="/vegetables/dashboard" className="hover:text-green-700 transition">Vegetables</Link>
-              <Link href="/vegetables" className="hover:text-green-700 transition">Veg List</Link>
-              <Link href="/calendar" className="hover:text-green-700 transition">Calendar</Link>
+            <div className="flex gap-1 text-sm font-medium">
+              <NavLink href="/">Flowers Dashboard</NavLink>
+              <NavLink href="/flowers">Flowers</NavLink>
+              <NavLink href="/vegetables/dashboard">Vege Dashboard</NavLink>
+              <NavLink href="/vegetables">Veges</NavLink>
+              <NavLink href="/calendar">Calendar</NavLink>
             </div>
           </div>
         </nav>
-        <main className="max-w-6xl mx-auto px-4 py-6">
-          {children}
-        </main>
-        <footer className="text-center py-6 text-sm text-gray-400 border-t mt-12">
-          Garden Planner - Built for Auckland, New Zealand
+
+        {/* Main */}
+        <main className="max-w-6xl mx-auto px-4 py-6">{children}</main>
+
+        {/* Footer */}
+        <footer className="border-t border-[var(--border-soft)] mt-12 py-8">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-[var(--text-muted)]">
+            <div className="flex items-center gap-1.5">
+              <span>🌱</span>
+              <span className="font-semibold text-[var(--forest)]">
+                auckland<span className="text-[var(--terracotta)]">.</span>garden
+              </span>
+            </div>
+            <p>A seasonal planner for Auckland, New Zealand</p>
+            <a
+              href="https://github.com/Tauriqbarron/flower-garden-project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--forest)] transition"
+            >
+              Open Source ↗
+            </a>
+          </div>
         </footer>
       </body>
     </html>
+  );
+}
+
+function NavLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className="px-3 py-1.5 rounded-[var(--radius-sm)] hover:bg-[var(--forest-50)] hover:text-[var(--forest)] text-[var(--text-muted)] transition"
+    >
+      {children}
+    </Link>
   );
 }

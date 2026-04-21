@@ -42,7 +42,7 @@ export default function VegComingUpPanel({ actions }: { actions: VegUpcomingActi
 
   if (!hasAnyItems) {
     return (
-      <div className="glass-card p-6 mb-8 border border-green-200 bg-green-50/20">
+      <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[#f0f7f3]/20">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-2xl">🔮</span>
           <h2 className="font-bold text-xl">What&#39;s Coming Up</h2>
@@ -55,7 +55,7 @@ export default function VegComingUpPanel({ actions }: { actions: VegUpcomingActi
   }
 
   return (
-    <div className="glass-card p-6 mb-8 border border-green-200 bg-green-50/20">
+    <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[#f0f7f3]/20">
       <div className="flex items-center gap-2 mb-6">
         <span className="text-2xl">🔮</span>
         <h2 className="font-bold text-xl">What&#39;s Coming Up</h2>
@@ -104,22 +104,22 @@ function VegUpcomingCard({
 }) {
   const colorMap = {
     red: {
-      border: "border-red-200 bg-red-50/50",
-      badge: "bg-red-100 text-red-700",
-      bar: "bg-red-400",
-      barBg: "bg-red-100",
+      border: "border-[#f5a0a8] bg-[#fef2f3]/50",
+      badge: "bg-[#fbd5d9] text-[#C41E3A]",
+      bar: "bg-[#C41E3A]",
+      barBg: "bg-[#fbd5d9]",
     },
     green: {
-      border: "border-green-200 bg-green-50/50",
-      badge: "bg-green-100 text-green-700",
-      bar: "bg-green-400",
-      barBg: "bg-green-100",
+      border: "border-[#a8d1b8] bg-[#f0f7f3]/50",
+      badge: "bg-[#d4e8dc] text-[#1B4332]",
+      bar: "bg-[#3d8f66]",
+      barBg: "bg-[#d4e8dc]",
     },
     blue: {
-      border: "border-blue-200 bg-blue-50/50",
-      badge: "bg-blue-100 text-blue-700",
-      bar: "bg-blue-400",
-      barBg: "bg-blue-100",
+      border: "border-[#a8d1b8] bg-[#f0f7f3]/50",
+      badge: "bg-[#ddefdc] text-[#5a8f52]",
+      bar: "bg-[#A7C4A0]",
+      barBg: "bg-[#ddefdc]",
     },
   };
 

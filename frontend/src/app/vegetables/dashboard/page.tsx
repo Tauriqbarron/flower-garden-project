@@ -25,7 +25,7 @@ export default async function VegetableDashboardPage() {
       />
 
       {/* Sow Now */}
-      <div className="glass-card p-6 mb-8 border border-green-200 bg-green-50/30">
+      <div className="glass-card p-6 mb-8 border border-[#a8d1b8] bg-[#f0f7f3]/30">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-2xl">🌱</span>
           <h2 className="font-bold text-xl">Sow Now</h2>
@@ -56,8 +56,8 @@ export default async function VegetableDashboardPage() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {data.top_storage_life.map((v) => (
             <Link key={v.name} href={`/vegetables/${encodeURIComponent(v.name)}`}>
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-4 text-center border border-amber-100 hover:shadow-md transition cursor-pointer">
-                <div className="text-2xl font-bold text-amber-600">{v.storage_life_weeks}w</div>
+              <div className="bg-gradient-to-br from-[var(--gold-50)] to-[var(--terracotta-50)] rounded-lg p-4 text-center border border-[var(--gold-100)] hover:shadow-md transition cursor-pointer">
+                <div className="text-2xl font-bold text-[var(--terracotta)]">{v.storage_life_weeks}w</div>
                 <div className="text-sm text-gray-600 mt-1">{v.name}</div>
               </div>
             </Link>
