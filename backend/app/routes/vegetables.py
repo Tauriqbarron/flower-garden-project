@@ -14,6 +14,7 @@ router = APIRouter(prefix="/api/vegetables", tags=["vegetables"])
 def list_vegetables(
     vegetable_type: Optional[str] = Query(None, description="Filter by type: root, leafy, fruit, allium, legume, brassica"),
     category: Optional[str] = Query(None, description="Filter by category: staple, green"),
+    region: str = Query("auckland", description="Region: auckland or christchurch"),
 ):
     if vegetable_type:
         return get_vegetables_by_type(vegetable_type)
@@ -23,13 +24,13 @@ def list_vegetables(
 
 
 @router.get("/dashboard/calendar")
-def vegetable_calendar():
-    return get_vegetable_yearly_calendar()
+def vegetable_calendar(region: str = Query("auckland")):
+    return get_vegetable_yearly_calendar(region=region)
 
 
 @router.get("/dashboard/")
-def vegetable_dashboard():
-    return get_vegetable_dashboard_summary()
+def vegetable_dashboard(region: str = Query("auckland")):
+    return get_vegetable_dashboard_summary(region=region)
 
 
 @router.get("/slug/{slug}")

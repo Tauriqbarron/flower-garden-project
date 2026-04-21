@@ -8,6 +8,14 @@ export interface GrowthStages {
   young_plant: string | null;
 }
 
+export interface RegionData {
+  sow_start: number | null;
+  sow_end: number | null;
+  transplant_start: number | null;
+  transplant_end: number | null;
+  varieties: string;
+}
+
 export interface Flower {
   common_name: string;
   botanical_name: string;
@@ -23,10 +31,7 @@ export interface Flower {
   germination_days: string | null;
   days_to_maturity_sow: number | null;
   days_to_maturity_transplant: number | null;
-  auckland_sow_start: number | null;
-  auckland_sow_end: number | null;
-  auckland_transplant_start: number | null;
-  auckland_transplant_end: number | null;
+  regions: Record<string, RegionData>;
   flowering_start: number | null;
   flowering_end: number | null;
   vase_life_days: string;
@@ -35,7 +40,6 @@ export interface Flower {
   staking: boolean;
   deadheading: boolean;
   cut_flower_notes: string;
-  auckland_varieties: string;
   pest_disease_notes: string;
   growth_stages?: GrowthStages;
 }
@@ -107,13 +111,13 @@ export interface MonthData {
   harvest_now: string[];
 }
 
-export async function fetchDashboard(): Promise<DashboardData> {
-  const res = await fetch(`${API_BASE}/api/dashboard/`, { cache: "no-store" });
+export async function fetchDashboard(region: string = "auckland"): Promise<DashboardData> {
+  const res = await fetch(`${API_BASE}/api/dashboard/?region=${region}`, { cache: "no-store" });
   return res.json();
 }
 
-export async function fetchFlowers(): Promise<Flower[]> {
-  const res = await fetch(`${API_BASE}/api/flowers/`, { cache: "no-store" });
+export async function fetchFlowers(region: string = "auckland"): Promise<Flower[]> {
+  const res = await fetch(`${API_BASE}/api/flowers/?region=${region}`, { cache: "no-store" });
   return res.json();
 }
 
@@ -132,8 +136,8 @@ export async function fetchAllFlowerSlugs(): Promise<string[]> {
   return flowers.map((f: any) => f.slug || f.common_name.toLowerCase().replace(/ /g, "-"));
 }
 
-export async function fetchCalendar(): Promise<MonthData[]> {
-  const res = await fetch(`${API_BASE}/api/dashboard/calendar`, { cache: "no-store" });
+export async function fetchCalendar(region: string = "auckland"): Promise<MonthData[]> {
+  const res = await fetch(`${API_BASE}/api/dashboard/calendar?region=${region}`, { cache: "no-store" });
   return res.json();
 }
 
@@ -176,10 +180,7 @@ export interface Vegetable {
   germination_days: string | null;
   days_to_maturity_sow: number | null;
   days_to_maturity_transplant: number | null;
-  auckland_sow_start: number | null;
-  auckland_sow_end: number | null;
-  auckland_transplant_start: number | null;
-  auckland_transplant_end: number | null;
+  regions: Record<string, RegionData>;
   harvest_start: number | null;
   harvest_end: number | null;
   storage_life_weeks: string | null;
@@ -187,7 +188,6 @@ export interface Vegetable {
   pest_resistance: string | null;
   disease_resistance: string | null;
   growing_notes: string;
-  auckland_varieties: string;
   pest_disease_notes: string;
   growth_stages?: GrowthStages;
 }
@@ -251,13 +251,13 @@ export interface VegMonthData {
   harvest_now: string[];
 }
 
-export async function fetchVegetableDashboard(): Promise<VegetableDashboardData> {
-  const res = await fetch(`${API_BASE}/api/vegetables/dashboard/`, { cache: "no-store" });
+export async function fetchVegetableDashboard(region: string = "auckland"): Promise<VegetableDashboardData> {
+  const res = await fetch(`${API_BASE}/api/vegetables/dashboard/?region=${region}`, { cache: "no-store" });
   return res.json();
 }
 
-export async function fetchVegetables(): Promise<Vegetable[]> {
-  const res = await fetch(`${API_BASE}/api/vegetables/`, { cache: "no-store" });
+export async function fetchVegetables(region: string = "auckland"): Promise<Vegetable[]> {
+  const res = await fetch(`${API_BASE}/api/vegetables/?region=${region}`, { cache: "no-store" });
   return res.json();
 }
 
@@ -276,8 +276,8 @@ export async function fetchAllVegetableSlugs(): Promise<string[]> {
   return vegetables.map((v: any) => v.slug || v.common_name.toLowerCase().replace(/ /g, "-"));
 }
 
-export async function fetchVegetableCalendar(): Promise<VegMonthData[]> {
-  const res = await fetch(`${API_BASE}/api/vegetables/dashboard/calendar`, { cache: "no-store" });
+export async function fetchVegetableCalendar(region: string = "auckland"): Promise<VegMonthData[]> {
+  const res = await fetch(`${API_BASE}/api/vegetables/dashboard/calendar?region=${region}`, { cache: "no-store" });
   return res.json();
 }
 

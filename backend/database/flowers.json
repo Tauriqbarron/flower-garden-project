@@ -1,11 +1,20 @@
 {
   "metadata": {
-    "region": "Auckland, New Zealand",
-    "hardiness_zone": "10a",
+    "regions": {
+      "auckland": {
+        "label": "Auckland",
+        "hardiness_zone": "10a",
+        "climate_notes": "Mild temperate oceanic - frost rare, moderate rainfall year-round, humidity can be high"
+      },
+      "christchurch": {
+        "label": "Christchurch",
+        "hardiness_zone": "8a",
+        "climate_notes": "Cool temperate - cold winters with regular frost (Jun-Aug), dry summers, shorter growing season than Auckland"
+      }
+    },
     "hemisphere": "Southern",
-    "climate_notes": "Mild temperate oceanic - frost rare, moderate rainfall year-round, humidity can be high",
     "curated_from": "Horticultural knowledge, cross-referenced with Kings Seeds NZ catalog (244 cut flower varieties found)",
-    "last_updated": "2026-04-04"
+    "last_updated": "2026-04-21"
   },
   "flowers": [
     {
@@ -23,10 +32,6 @@
       "germination_days": "5-10",
       "days_to_maturity_sow": 65,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 9,
-      "auckland_sow_end": 2,
-      "auckland_transplant_start": 10,
-      "auckland_transplant_end": 3,
       "flowering_start": 11,
       "flowering_end": 4,
       "vase_life_days": "7-12",
@@ -35,13 +40,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Cut when flowers are nearly fully open and stems are firm. Remove lower foliage. Excellent vase life, improves in fresh water daily.",
-      "auckland_varieties": "Purple Prince, Benary Giant series, Queen Lime, State Fair",
       "pest_disease_notes": "Powdery mildew common in Auckland humidity - ensure good air circulation. Watch for aphids and two-spotted mite.",
       "slug": "zinnia",
       "growth_stages": {
         "harvest": "/images/flowers/zinnia/harvest.png",
         "seedling": "/images/flowers/zinnia/seedling.png",
         "young_plant": "/images/flowers/zinnia/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 9,
+          "sow_end": 2,
+          "transplant_start": 10,
+          "transplant_end": 3,
+          "varieties": "Purple Prince, Benary Giant series, Queen Lime, State Fair"
+        },
+        "christchurch": {
+          "sow_start": 10,
+          "sow_end": 12,
+          "transplant_start": 11,
+          "transplant_end": 1,
+          "varieties": "Purple Prince, Benary Giant series, Queen Lime, State Fair"
+        }
       }
     },
     {
@@ -59,10 +79,6 @@
       "germination_days": "7-10",
       "days_to_maturity_sow": 70,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 9,
-      "auckland_sow_end": 1,
-      "auckland_transplant_start": 10,
-      "auckland_transplant_end": 2,
       "flowering_start": 12,
       "flowering_end": 4,
       "vase_life_days": "6-10",
@@ -71,13 +87,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Cut when buds just open. Dip stem ends in boiling water for 10 seconds to help uptake. Good filler flower.",
-      "auckland_varieties": "Sensation Mixed, Sea Shells, Psyche, Double Click",
       "pest_disease_notes": "Generally hardy in Auckland. Earwigs may damage buds. Watch for slugs on young seedlings.",
       "slug": "cosmos",
       "growth_stages": {
         "harvest": "/images/flowers/cosmos/harvest.png",
         "seedling": "/images/flowers/cosmos/seedling.png",
         "young_plant": "/images/flowers/cosmos/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 9,
+          "sow_end": 1,
+          "transplant_start": 10,
+          "transplant_end": 2,
+          "varieties": "Sensation Mixed, Sea Shells, Psyche, Double Click"
+        },
+        "christchurch": {
+          "sow_start": 10,
+          "sow_end": 12,
+          "transplant_start": 11,
+          "transplant_end": 1,
+          "varieties": "Sensation Mixed, Sea Shells, Psyche, Double Click"
+        }
       }
     },
     {
@@ -95,10 +126,6 @@
       "germination_days": "10-21",
       "days_to_maturity_sow": 150,
       "days_to_maturity_transplant": 130,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 4,
-      "auckland_transplant_start": 4,
-      "auckland_transplant_end": 5,
       "flowering_start": 10,
       "flowering_end": 2,
       "vase_life_days": "7-12",
@@ -107,13 +134,28 @@
       "staking": true,
       "deadheading": true,
       "cut_flower_notes": "The king of cut flowers - superb fragrance and vase life. Pick early morning. Place in cool water. Excellent scent variety.",
-      "auckland_varieties": "Mammoth Mixed, Spencer Mix, Cupani (heirloom), Painted Lady",
       "pest_disease_notes": "In Auckland, sow in autumn for winter growth and spring flowering. Slugs are main pest. Powdery mildew in late season heat.",
       "slug": "sweet-pea",
       "growth_stages": {
         "harvest": "/images/flowers/sweet-pea/harvest.png",
         "seedling": "/images/flowers/sweet-pea/seedling.png",
         "young_plant": "/images/flowers/sweet-pea/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 4,
+          "transplant_start": 4,
+          "transplant_end": 5,
+          "varieties": "Mammoth Mixed, Spencer Mix, Cupani (heirloom), Painted Lady"
+        },
+        "christchurch": {
+          "sow_start": 4,
+          "sow_end": 5,
+          "transplant_start": 5,
+          "transplant_end": 6,
+          "varieties": "Mammoth Mixed, Spencer Mix, Cupani (heirloom), Painted Lady"
+        }
       }
     },
     {
@@ -131,10 +173,6 @@
       "germination_days": null,
       "days_to_maturity_sow": null,
       "days_to_maturity_transplant": 90,
-      "auckland_sow_start": null,
-      "auckland_sow_end": null,
-      "auckland_transplant_start": 9,
-      "auckland_transplant_end": 11,
       "flowering_start": 11,
       "flowering_end": 6,
       "vase_life_days": "5-8",
@@ -143,13 +181,28 @@
       "staking": true,
       "deadheading": true,
       "cut_flower_notes": "Cut when 3/4 open. Sear stem ends in boiling water or dip in alum powder. Dahlias are among the most versatile cut flowers for Auckland.",
-      "auckland_varieties": "Cafe au Lait, Bishop of Llandaff, Kelvin Floodlight, Pom-Pom mixes",
       "pest_disease_notes": "Slugs and snails eat tubers and young shoots. Two-spotted mite in Auckland summers. Tuber rot in waterlogged soil.",
       "slug": "dahlia",
       "growth_stages": {
         "harvest": "/images/flowers/dahlia/harvest.png",
         "seedling": "/images/flowers/dahlia/seedling.png",
         "young_plant": "/images/flowers/dahlia/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": null,
+          "sow_end": null,
+          "transplant_start": 9,
+          "transplant_end": 11,
+          "varieties": "Cafe au Lait, Bishop of Llandaff, Kelvin Floodlight, Pom-Pom mixes"
+        },
+        "christchurch": {
+          "sow_start": null,
+          "sow_end": null,
+          "transplant_start": 11,
+          "transplant_end": 12,
+          "varieties": "Cafe au Lait, Bishop of Llandaff, Kelvin Floodlight, Pom-Pom mixes"
+        }
       }
     },
     {
@@ -167,10 +220,6 @@
       "germination_days": "7-10",
       "days_to_maturity_sow": 55,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 9,
-      "auckland_sow_end": 2,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 11,
       "flowering_end": 4,
       "vase_life_days": "8-14",
@@ -179,13 +228,28 @@
       "staking": false,
       "deadheading": false,
       "cut_flower_notes": "Cut when petals just begin to open. Excellent vase life. Pollen-free varieties are essential for cut flower use.",
-      "auckland_varieties": "Sunrich series (pollen-free), ProCut series, Italian White, Chianti",
       "pest_disease_notes": "Aphids on buds. Birds may pull up seedlings. Generally easy in Auckland. Succession sow every 2-3 weeks.",
       "slug": "sunflower-cut-flower",
       "growth_stages": {
         "harvest": "/images/flowers/sunflower-cut-flower/harvest.png",
         "seedling": "/images/flowers/sunflower-cut-flower/seedling.png",
         "young_plant": "/images/flowers/sunflower-cut-flower/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 9,
+          "sow_end": 2,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Sunrich series (pollen-free), ProCut series, Italian White, Chianti"
+        },
+        "christchurch": {
+          "sow_start": 10,
+          "sow_end": 1,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Sunrich series (pollen-free), ProCut series, Italian White, Chianti"
+        }
       }
     },
     {
@@ -203,10 +267,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 95,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 8,
-      "auckland_sow_end": 2,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 12,
       "flowering_end": 4,
       "vase_life_days": "7-12",
@@ -215,13 +275,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Classic cut flower with excellent vase life. Cut when 1-2 florets open. Remove top florets for more compact bouquet look.",
-      "auckland_varieties": "Peter Pearce, Green Star, Espresso, Priscilla, Robinetta series",
       "pest_disease_notes": "Thrips are worst enemy in Auckland - they corms in storage and damage flowers. Keep soil well-drained. Corms may need lifting and storing in wet winters.",
       "slug": "gladiolus",
       "growth_stages": {
         "harvest": "/images/flowers/gladiolus/harvest.png",
         "seedling": "/images/flowers/gladiolus/seedling.png",
         "young_plant": "/images/flowers/gladiolus/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 8,
+          "sow_end": 2,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Peter Pearce, Green Star, Espresso, Priscilla, Robinetta series"
+        },
+        "christchurch": {
+          "sow_start": 10,
+          "sow_end": 1,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Peter Pearce, Green Star, Espresso, Priscilla, Robinetta series"
+        }
       }
     },
     {
@@ -239,10 +314,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 150,
       "days_to_maturity_transplant": 120,
-      "auckland_sow_start": 7,
-      "auckland_sow_end": 8,
-      "auckland_transplant_start": 9,
-      "auckland_transplant_end": 10,
       "flowering_start": 12,
       "flowering_end": 3,
       "vase_life_days": "10-14",
@@ -251,13 +322,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Exceptional vase life - one of the longest-lasting cut flowers. Rose-like appearance. Very high commercial value.",
-      "auckland_varieties": "Echo series, Mariachi series, Flare series, Champagne",
       "pest_disease_notes": "Damping-off is major risk for seedlings. Auckland humidity makes fungal diseases likely. Grow on benches if possible. Fusarium wilt in poorly drained soil.",
       "slug": "lisianthus",
       "growth_stages": {
         "harvest": "/images/flowers/lisianthus/harvest.png",
         "seedling": "/images/flowers/lisianthus/seedling.png",
         "young_plant": "/images/flowers/lisianthus/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 7,
+          "sow_end": 8,
+          "transplant_start": 9,
+          "transplant_end": 10,
+          "varieties": "Echo series, Mariachi series, Flare series, Champagne"
+        },
+        "christchurch": {
+          "sow_start": 8,
+          "sow_end": 9,
+          "transplant_start": 10,
+          "transplant_end": 11,
+          "varieties": "Echo series, Mariachi series, Flare series, Champagne"
+        }
       }
     },
     {
@@ -275,10 +361,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": null,
       "days_to_maturity_transplant": 90,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 6,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 9,
       "flowering_end": 1,
       "vase_life_days": "7-12",
@@ -287,13 +369,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Exceptional beauty with peony-like blooms and long vase life. Cut when buds just show colour but not fully open.",
-      "auckland_varieties": "Tecolote series, Bloomingdale, Ranofix Double Mix, Elegance",
       "pest_disease_notes": "Corms rot in wet Auckland winter soil. Consider growing in raised beds or pots. Soak corms before planting. Botrytis in high humidity.",
       "slug": "ranunculus",
       "growth_stages": {
         "harvest": "/images/flowers/ranunculus/harvest.png",
         "seedling": "/images/flowers/ranunculus/seedling.png",
         "young_plant": "/images/flowers/ranunculus/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 6,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Tecolote series, Bloomingdale, Ranofix Double Mix, Elegance"
+        },
+        "christchurch": {
+          "sow_start": 5,
+          "sow_end": 7,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Tecolote series, Bloomingdale, Ranofix Double Mix, Elegance"
+        }
       }
     },
     {
@@ -311,10 +408,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": null,
       "days_to_maturity_transplant": 90,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 6,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 9,
       "flowering_end": 1,
       "vase_life_days": "7-12",
@@ -323,13 +416,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Poppies of the flower world. Excellent vase life, striking colours. Cut when petals begin to open. Handle with care - petals bruise easily.",
-      "auckland_varieties": "De Caen Mix, Mount Everest (white), Lord Lieutenant, Bicolor series",
       "pest_disease_notes": "Same as Ranunculus - wet soil kills corms. Raised beds essential in Auckland. Mice may eat corms.",
       "slug": "anemone",
       "growth_stages": {
         "harvest": "/images/flowers/anemone/harvest.png",
         "seedling": "/images/flowers/anemone/seedling.png",
         "young_plant": "/images/flowers/anemone/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 6,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "De Caen Mix, Mount Everest (white), Lord Lieutenant, Bicolor series"
+        },
+        "christchurch": {
+          "sow_start": 5,
+          "sow_end": 7,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "De Caen Mix, Mount Everest (white), Lord Lieutenant, Bicolor series"
+        }
       }
     },
     {
@@ -347,10 +455,6 @@
       "germination_days": "14-18",
       "days_to_maturity_sow": null,
       "days_to_maturity_transplant": 100,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 4,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 9,
       "flowering_end": 11,
       "vase_life_days": "7-10",
@@ -359,13 +463,28 @@
       "staking": false,
       "deadheading": false,
       "cut_flower_notes": "Incredible fragrance - one of the most scented cut flowers. Cut when first floret opens. Classic bridal flower.",
-      "auckland_varieties": "Kings Seeds Double Mix, Pinnacle series, Blue Heaven, Golden Wave",
       "pest_disease_notes": "Needs cool winters to bloom well - Auckland's mild climate usually fine, but very warm winters can reduce flowering.",
       "slug": "freesia",
       "growth_stages": {
         "harvest": "/images/flowers/freesia/harvest.png",
         "seedling": "/images/flowers/freesia/seedling.png",
         "young_plant": "/images/flowers/freesia/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 4,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Kings Seeds Double Mix, Pinnacle series, Blue Heaven, Golden Wave"
+        },
+        "christchurch": {
+          "sow_start": 5,
+          "sow_end": 6,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Kings Seeds Double Mix, Pinnacle series, Blue Heaven, Golden Wave"
+        }
       }
     },
     {
@@ -383,10 +502,6 @@
       "germination_days": "10-14",
       "days_to_maturity_sow": 170,
       "days_to_maturity_transplant": 120,
-      "auckland_sow_start": 8,
-      "auckland_sow_end": 8,
-      "auckland_transplant_start": 9,
-      "auckland_transplant_end": 10,
       "flowering_start": 3,
       "flowering_end": 6,
       "vase_life_days": "10-14",
@@ -395,13 +510,28 @@
       "staking": true,
       "deadheading": true,
       "cut_flower_notes": "Outstanding vase life - one of the longest-lasting. Cut when buds show colour. Excellent for autumn bouquets.",
-      "auckland_varieties": "Decorative types (Pink Muppet, Yellow Star), Spray varieties, Pompon types",
       "pest_disease_notes": "Aphids on buds and new growth. Powdery mildew in Auckland humidity. Rust common. Plant in well-ventilated positions.",
       "slug": "chrysanthemum",
       "growth_stages": {
         "harvest": "/images/flowers/chrysanthemum/harvest.png",
         "seedling": "/images/flowers/chrysanthemum/seedling.png",
         "young_plant": "/images/flowers/chrysanthemum/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 8,
+          "sow_end": 8,
+          "transplant_start": 9,
+          "transplant_end": 10,
+          "varieties": "Decorative types (Pink Muppet, Yellow Star), Spray varieties, Pompon types"
+        },
+        "christchurch": {
+          "sow_start": 9,
+          "sow_end": 9,
+          "transplant_start": 10,
+          "transplant_end": 11,
+          "varieties": "Decorative types (Pink Muppet, Yellow Star), Spray varieties, Pompon types"
+        }
       }
     },
     {
@@ -419,10 +549,6 @@
       "germination_days": "10-14",
       "days_to_maturity_sow": 130,
       "days_to_maturity_transplant": 90,
-      "auckland_sow_start": 2,
-      "auckland_sow_end": 5,
-      "auckland_transplant_start": 3,
-      "auckland_transplant_end": 7,
       "flowering_start": 9,
       "flowering_end": 1,
       "vase_life_days": "7-10",
@@ -431,13 +557,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Excellent vertical element in bouquets. Cut when 1/3 of florets are open. Top bud often doesn't open - can be removed.",
-      "auckland_varieties": "Snapshot series, Madame Butterfly, Potomac series (extra-long stems), Rocket",
       "pest_disease_notes": "Rust is common in Auckland - avoid overhead watering. Snails and slugs on young plants. Generally easy to grow.",
       "slug": "snapdragon",
       "growth_stages": {
         "harvest": "/images/flowers/snapdragon/harvest.png",
         "seedling": "/images/flowers/snapdragon/seedling.png",
         "young_plant": "/images/flowers/snapdragon/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 2,
+          "sow_end": 5,
+          "transplant_start": 3,
+          "transplant_end": 7,
+          "varieties": "Snapshot series, Madame Butterfly, Potomac series (extra-long stems), Rocket"
+        },
+        "christchurch": {
+          "sow_start": 3,
+          "sow_end": 6,
+          "transplant_start": 5,
+          "transplant_end": 8,
+          "varieties": "Snapshot series, Madame Butterfly, Potomac series (extra-long stems), Rocket"
+        }
       }
     },
     {
@@ -455,10 +596,6 @@
       "germination_days": "7-10",
       "days_to_maturity_sow": 65,
       "days_to_maturity_transplant": 50,
-      "auckland_sow_start": 2,
-      "auckland_sow_end": 5,
-      "auckland_transplant_start": 3,
-      "auckland_transplant_end": 7,
       "flowering_start": 8,
       "flowering_end": 1,
       "vase_life_days": "7-10",
@@ -467,13 +604,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Cheerful cut flower with good vase life. Also medicinal. Self-seeds readily in Auckland gardens.",
-      "auckland_varieties": "Kings Seeds Citrus Cocktail, Pacific Beauty, Radio Orange",
       "pest_disease_notes": "Very easy in Auckland. May get powdery mildew in humid summers but rarely severe. Self-seeds prolifically.",
       "slug": "calendula",
       "growth_stages": {
         "harvest": "/images/flowers/calendula/harvest.png",
         "seedling": "/images/flowers/calendula/seedling.png",
         "young_plant": "/images/flowers/calendula/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 2,
+          "sow_end": 5,
+          "transplant_start": 3,
+          "transplant_end": 7,
+          "varieties": "Kings Seeds Citrus Cocktail, Pacific Beauty, Radio Orange"
+        },
+        "christchurch": {
+          "sow_start": 3,
+          "sow_end": 6,
+          "transplant_start": 4,
+          "transplant_end": 7,
+          "varieties": "Kings Seeds Citrus Cocktail, Pacific Beauty, Radio Orange"
+        }
       }
     },
     {
@@ -491,10 +643,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 180,
       "days_to_maturity_transplant": 150,
-      "auckland_sow_start": 7,
-      "auckland_sow_end": 8,
-      "auckland_transplant_start": 8,
-      "auckland_transplant_end": 9,
       "flowering_start": 11,
       "flowering_end": 2,
       "vase_life_days": "6-9",
@@ -503,13 +651,28 @@
       "staking": true,
       "deadheading": true,
       "cut_flower_notes": "Spectacular vertical blooms. May need staking in Auckland wind. Cut when 1/3-1/2 of florets are open.",
-      "auckland_varieties": "Pacific Giant, Blue Jay, Black Knight, Astolat",
       "pest_disease_notes": "Needs protection from Auckland hot afternoon sun. Crown rot in wet soil. Slugs on new growth. Second flush of flowers after cutting.",
       "slug": "delphinium",
       "growth_stages": {
         "harvest": "/images/flowers/delphinium/harvest.png",
         "seedling": "/images/flowers/delphinium/seedling.png",
         "young_plant": "/images/flowers/delphinium/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 7,
+          "sow_end": 8,
+          "transplant_start": 8,
+          "transplant_end": 9,
+          "varieties": "Pacific Giant, Blue Jay, Black Knight, Astolat"
+        },
+        "christchurch": {
+          "sow_start": 8,
+          "sow_end": 9,
+          "transplant_start": 9,
+          "transplant_end": 10,
+          "varieties": "Pacific Giant, Blue Jay, Black Knight, Astolat"
+        }
       }
     },
     {
@@ -527,10 +690,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 100,
       "days_to_maturity_transplant": 70,
-      "auckland_sow_start": 8,
-      "auckland_sow_end": 1,
-      "auckland_transplant_start": 9,
-      "auckland_transplant_end": 3,
       "flowering_start": 12,
       "flowering_end": 4,
       "vase_life_days": "10-14",
@@ -539,13 +698,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Exceptional fresh and dried vase life. Classic filler for arrangements. Does not wilt - retains colour for months when dried.",
-      "auckland_varieties": "Pastel Mix, Deep Blue, Iceberg White, Salmon",
       "pest_disease_notes": "Very easy in Auckland. Drought-tolerant once established. No major pest issues.",
       "slug": "statice",
       "growth_stages": {
         "harvest": "/images/flowers/statice.jpg",
         "seedling": "/images/flowers/statice/seedling.png",
         "young_plant": "/images/flowers/statice/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 8,
+          "sow_end": 1,
+          "transplant_start": 9,
+          "transplant_end": 3,
+          "varieties": "Pastel Mix, Deep Blue, Iceberg White, Salmon"
+        },
+        "christchurch": {
+          "sow_start": 9,
+          "sow_end": 2,
+          "transplant_start": 10,
+          "transplant_end": 3,
+          "varieties": "Pastel Mix, Deep Blue, Iceberg White, Salmon"
+        }
       }
     },
     {
@@ -563,10 +737,6 @@
       "germination_days": "7-14",
       "days_to_maturity_sow": 70,
       "days_to_maturity_transplant": 55,
-      "auckland_sow_start": 9,
-      "auckland_sow_end": 1,
-      "auckland_transplant_start": 10,
-      "auckland_transplant_end": 2,
       "flowering_start": 12,
       "flowering_end": 4,
       "vase_life_days": "8-12",
@@ -575,13 +745,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Drama in a vase. Excellent vase life and dries well. Plume types are best for cutting - Crested (cockscomb) type is shorter.",
-      "auckland_varieties": "Fresh Look series, Forest Fire, Century Mix, Dragon Breath",
       "pest_disease_notes": "Loves Auckland summer heat. Easy to grow. May get leaf spot in very humid conditions.",
       "slug": "celosia-plume",
       "growth_stages": {
         "harvest": "/images/flowers/celosia-plume.jpg",
         "seedling": "/images/flowers/celosia-plume/seedling.png",
         "young_plant": "/images/flowers/celosia-plume/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 9,
+          "sow_end": 1,
+          "transplant_start": 10,
+          "transplant_end": 2,
+          "varieties": "Fresh Look series, Forest Fire, Century Mix, Dragon Breath"
+        },
+        "christchurch": {
+          "sow_start": 10,
+          "sow_end": 12,
+          "transplant_start": 11,
+          "transplant_end": 1,
+          "varieties": "Fresh Look series, Forest Fire, Century Mix, Dragon Breath"
+        }
       }
     },
     {
@@ -599,10 +784,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 90,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 4,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 10,
       "flowering_end": 12,
       "vase_life_days": "5-8",
@@ -611,13 +792,28 @@
       "staking": false,
       "deadheading": false,
       "cut_flower_notes": "Ethereal blue flowers and attractive seed pods. Shorter vase life but worth growing for the charm. Pods useful dried.",
-      "auckland_varieties": "Persian Jewels, Miss Jekyll Mixed, Delft Blue",
-      "pest_disease_notes": "Very easy. Self-seeds prolifically in Auckland. Dislikes root disturbance \u2014 direct sow in autumn (Mar\u2013Apr) for Oct\u2013Dec flowering; plants grow slowly through winter so allow 6\u20138 months to bloom from an autumn sow.",
+      "pest_disease_notes": "Very easy. Self-seeds prolifically in Auckland. Dislikes root disturbance — direct sow in autumn (Mar–Apr) for Oct–Dec flowering; plants grow slowly through winter so allow 6–8 months to bloom from an autumn sow.",
       "slug": "nigella",
       "growth_stages": {
         "harvest": "/images/flowers/nigella.jpg",
         "seedling": "/images/flowers/nigella/seedling.png",
         "young_plant": "/images/flowers/nigella/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 4,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Persian Jewels, Miss Jekyll Mixed, Delft Blue"
+        },
+        "christchurch": {
+          "sow_start": 4,
+          "sow_end": 5,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Persian Jewels, Miss Jekyll Mixed, Delft Blue"
+        }
       }
     },
     {
@@ -635,10 +831,6 @@
       "germination_days": null,
       "days_to_maturity_sow": null,
       "days_to_maturity_transplant": 90,
-      "auckland_sow_start": null,
-      "auckland_sow_end": null,
-      "auckland_transplant_start": 7,
-      "auckland_transplant_end": 9,
       "flowering_start": 12,
       "flowering_end": 3,
       "vase_life_days": "5-8",
@@ -647,13 +839,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Strongly fragrant. Cut when 1/3 of flowers open. Good filler. Can become invasive - check before planting.",
-      "auckland_varieties": "Dwarf varieties are best: Miss Pearl, Buzz series",
       "pest_disease_notes": "In Auckland, grows like a weed. May need aggressive pruning. Watch for spider mite in dry periods.",
       "slug": "buddleja-butterfly-bush-cut",
       "growth_stages": {
         "harvest": "/images/flowers/buddleja-butterfly-bush-cut.jpg",
         "seedling": "/images/flowers/buddleja-butterfly-bush-cut/seedling.png",
         "young_plant": "/images/flowers/buddleja-butterfly-bush-cut/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": null,
+          "sow_end": null,
+          "transplant_start": 7,
+          "transplant_end": 9,
+          "varieties": "Dwarf varieties are best: Miss Pearl, Buzz series"
+        },
+        "christchurch": {
+          "sow_start": null,
+          "sow_end": null,
+          "transplant_start": 8,
+          "transplant_end": 10,
+          "varieties": "Dwarf varieties are best: Miss Pearl, Buzz series"
+        }
       }
     },
     {
@@ -671,10 +878,6 @@
       "germination_days": "15-30",
       "days_to_maturity_sow": 120,
       "days_to_maturity_transplant": 90,
-      "auckland_sow_start": 7,
-      "auckland_sow_end": 8,
-      "auckland_transplant_start": 9,
-      "auckland_transplant_end": 9,
       "flowering_start": 12,
       "flowering_end": 3,
       "vase_life_days": "5-7",
@@ -683,13 +886,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Rustic charm in mixed bouquets. Seed heads attractive dried and fresh. Medicinal bonus.",
-      "auckland_varieties": "White Swan, Magnus, Green Jewel, Cheyenne Spirit",
       "pest_disease_notes": "Very hardy in Auckland. Deer and rabbit resistant. May get aphids on flower buds. Tolerates Auckland humidity well.",
       "slug": "echinacea",
       "growth_stages": {
         "harvest": "/images/flowers/echinacea.jpg",
         "seedling": "/images/flowers/echinacea/seedling.png",
         "young_plant": "/images/flowers/echinacea/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 7,
+          "sow_end": 8,
+          "transplant_start": 9,
+          "transplant_end": 9,
+          "varieties": "White Swan, Magnus, Green Jewel, Cheyenne Spirit"
+        },
+        "christchurch": {
+          "sow_start": 8,
+          "sow_end": 9,
+          "transplant_start": 9,
+          "transplant_end": 10,
+          "varieties": "White Swan, Magnus, Green Jewel, Cheyenne Spirit"
+        }
       }
     },
     {
@@ -707,10 +925,6 @@
       "germination_days": "15-30",
       "days_to_maturity_sow": 130,
       "days_to_maturity_transplant": 90,
-      "auckland_sow_start": 7,
-      "auckland_sow_end": 9,
-      "auckland_transplant_start": 8,
-      "auckland_transplant_end": 10,
       "flowering_start": 12,
       "flowering_end": 5,
       "vase_life_days": "6-10",
@@ -719,13 +933,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Golden cheerful flowers. Good bulk filler in arrangements. Seed heads attractive for dried arrangements.",
-      "auckland_varieties": "Denver Daisy, Indian Summer, Cherokee Sunset, Irish Eyes",
       "pest_disease_notes": "Powdery mildew in Auckland humidity. Good air flow essential. Relatively pest-free otherwise.",
       "slug": "rudbeckia",
       "growth_stages": {
         "harvest": "/images/flowers/rudbeckia.jpg",
         "seedling": "/images/flowers/rudbeckia/seedling.png",
         "young_plant": "/images/flowers/rudbeckia/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 7,
+          "sow_end": 9,
+          "transplant_start": 8,
+          "transplant_end": 10,
+          "varieties": "Denver Daisy, Indian Summer, Cherokee Sunset, Irish Eyes"
+        },
+        "christchurch": {
+          "sow_start": 8,
+          "sow_end": 10,
+          "transplant_start": 9,
+          "transplant_end": 11,
+          "varieties": "Denver Daisy, Indian Summer, Cherokee Sunset, Irish Eyes"
+        }
       }
     },
     {
@@ -743,10 +972,6 @@
       "germination_days": "10-14",
       "days_to_maturity_sow": 80,
       "days_to_maturity_transplant": 55,
-      "auckland_sow_start": 8,
-      "auckland_sow_end": 2,
-      "auckland_transplant_start": 9,
-      "auckland_transplant_end": 3,
       "flowering_start": 12,
       "flowering_end": 4,
       "vase_life_days": "10-14",
@@ -755,13 +980,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Excellent dried flower. Also good fresh. Cut before flowers fully open - they continue to open in vase.",
-      "auckland_varieties": "Golden Everlasting (NZ native), Bikini Bikini, Mohave series",
       "pest_disease_notes": "Native to Australia - thrives in Auckland's warm climate. Very easy. May get leaf spot in wet periods.",
       "slug": "strawflower",
       "growth_stages": {
         "harvest": "/images/flowers/strawflower.jpg",
         "seedling": "/images/flowers/strawflower/seedling.png",
         "young_plant": "/images/flowers/strawflower/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 8,
+          "sow_end": 2,
+          "transplant_start": 9,
+          "transplant_end": 3,
+          "varieties": "Golden Everlasting (NZ native), Bikini Bikini, Mohave series"
+        },
+        "christchurch": {
+          "sow_start": 9,
+          "sow_end": 2,
+          "transplant_start": 10,
+          "transplant_end": 3,
+          "varieties": "Golden Everlasting, Bikini Bikini, Mohave series"
+        }
       }
     },
     {
@@ -779,10 +1019,6 @@
       "germination_days": "10-14",
       "days_to_maturity_sow": 130,
       "days_to_maturity_transplant": 90,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 5,
-      "auckland_transplant_start": 4,
-      "auckland_transplant_end": 7,
       "flowering_start": 9,
       "flowering_end": 12,
       "vase_life_days": "7-10",
@@ -791,13 +1027,28 @@
       "staking": false,
       "deadheading": false,
       "cut_flower_notes": "Intensely fragrant - fills a room. Excellent spring cut flower. Classic bridal bouquet flower.",
-      "auckland_varieties": "Cinderella series, Iron series, Goliath",
       "pest_disease_notes": "Needs cool temperatures for flowering - Auckland's mild winters are suitable but a warm winter reduces bloom. Clubroot can affect brassica-family plants.",
       "slug": "stock",
       "growth_stages": {
         "harvest": "/images/flowers/stock.jpg",
         "seedling": "/images/flowers/stock/seedling.png",
         "young_plant": "/images/flowers/stock/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 5,
+          "transplant_start": 4,
+          "transplant_end": 7,
+          "varieties": "Cinderella series, Iron series, Goliath"
+        },
+        "christchurch": {
+          "sow_start": 4,
+          "sow_end": 6,
+          "transplant_start": 5,
+          "transplant_end": 8,
+          "varieties": "Cinderella series, Iron series, Goliath"
+        }
       }
     },
     {
@@ -815,10 +1066,6 @@
       "germination_days": "10-14",
       "days_to_maturity_sow": 90,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 4,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 10,
       "flowering_end": 1,
       "vase_life_days": "5-8",
@@ -827,13 +1074,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Classic cottage garden. Dislikes root disturbance - direct sow. Good filler for informal arrangements.",
-      "auckland_varieties": "Blue Boy, Red Boy, Black Ball, Florence Pink",
       "pest_disease_notes": "Very easy in Auckland. Self-seeds freely. Dislikes root disturbance.",
       "slug": "cornflower",
       "growth_stages": {
         "harvest": "/images/flowers/cornflower.jpg",
         "seedling": "/images/flowers/cornflower/seedling.png",
         "young_plant": "/images/flowers/cornflower/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 4,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Blue Boy, Red Boy, Black Ball, Florence Pink"
+        },
+        "christchurch": {
+          "sow_start": 4,
+          "sow_end": 5,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Blue Boy, Red Boy, Black Ball, Florence Pink"
+        }
       }
     },
     {
@@ -851,10 +1113,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 90,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 4,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 10,
       "flowering_end": 12,
       "vase_life_days": "5-8",
@@ -863,13 +1121,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Elegant spires similar to Delphinium but easier to grow (annual). Excellent for cottage-style arrangements.",
-      "auckland_varieties": "Sublime series (F1 hybrids), Imperial Mixed, Pink Rose",
       "pest_disease_notes": "Needs cool weather to establish. Direct sow in Auckland autumn for spring flowering. Slugs on seedlings.",
       "slug": "larkspur-annual",
       "growth_stages": {
         "harvest": "/images/flowers/larkspur-annual.jpg",
         "seedling": "/images/flowers/larkspur-annual/seedling.png",
         "young_plant": "/images/flowers/larkspur-annual/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 4,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Sublime series (F1 hybrids), Imperial Mixed, Pink Rose"
+        },
+        "christchurch": {
+          "sow_start": 4,
+          "sow_end": 5,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Sublime series (F1 hybrids), Imperial Mixed, Pink Rose"
+        }
       }
     },
     {
@@ -887,10 +1160,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 140,
       "days_to_maturity_transplant": 100,
-      "auckland_sow_start": 7,
-      "auckland_sow_end": 9,
-      "auckland_transplant_start": 9,
-      "auckland_transplant_end": 11,
       "flowering_start": 10,
       "flowering_end": 3,
       "vase_life_days": "5-8",
@@ -899,13 +1168,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Pincushion flowers with excellent textural appeal. Butterfly magnet. Delicate and romantic in arrangements.",
-      "auckland_varieties": "Tall Double Mix, Fire King, Moon Dance",
       "pest_disease_notes": "Fairly easy in Auckland. May need staking in exposed positions. Slower to start than some annuals.",
       "slug": "scabiosa",
       "growth_stages": {
         "harvest": "/images/flowers/scabiosa.jpg",
         "seedling": "/images/flowers/scabiosa/seedling.png",
         "young_plant": "/images/flowers/scabiosa/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 7,
+          "sow_end": 9,
+          "transplant_start": 9,
+          "transplant_end": 11,
+          "varieties": "Tall Double Mix, Fire King, Moon Dance"
+        },
+        "christchurch": {
+          "sow_start": 8,
+          "sow_end": 10,
+          "transplant_start": 10,
+          "transplant_end": 11,
+          "varieties": "Tall Double Mix, Fire King, Moon Dance"
+        }
       }
     },
     {
@@ -923,10 +1207,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 90,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 8,
-      "auckland_sow_end": 1,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 12,
       "flowering_end": 4,
       "vase_life_days": "7-10",
@@ -935,13 +1215,28 @@
       "staking": false,
       "deadheading": false,
       "cut_flower_notes": "Professional favourite - essential chartreuse filler for high-end arrangements. Excellent vase life. Self-supporting stems.",
-      "auckland_varieties": "Greenout",
       "pest_disease_notes": "Very easy. Heat and drought tolerant. Excellent for Auckland summers.",
       "slug": "bupleurum",
       "growth_stages": {
         "harvest": "/images/flowers/bupleurum.jpg",
         "seedling": "/images/flowers/bupleurum/seedling.png",
         "young_plant": "/images/flowers/bupleurum/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 8,
+          "sow_end": 1,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Greenout"
+        },
+        "christchurch": {
+          "sow_start": 9,
+          "sow_end": 2,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Greenout"
+        }
       }
     },
     {
@@ -959,10 +1254,6 @@
       "germination_days": "14-21",
       "days_to_maturity_sow": 130,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 3,
-      "auckland_sow_end": 4,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 11,
       "flowering_end": 3,
       "vase_life_days": "7-10",
@@ -971,13 +1262,28 @@
       "staking": false,
       "deadheading": false,
       "cut_flower_notes": "Elegant white umbellifers - like baby's breath but taller and grander. The ultimate cottage garden filler.",
-      "auckland_varieties": "Standard Ammi majus",
-      "pest_disease_notes": "Very easy in Auckland. Self-seeds readily. Aphids may appear but natural predators handle them. Direct sow in autumn (Mar\u2013Apr) for spring-summer flowering; plants grow slowly through Auckland winter \u2014 allow 6\u20138 months to bloom from an autumn sow.",
+      "pest_disease_notes": "Very easy in Auckland. Self-seeds readily. Aphids may appear but natural predators handle them. Direct sow in autumn (Mar–Apr) for spring-summer flowering; plants grow slowly through Auckland winter — allow 6–8 months to bloom from an autumn sow.",
       "slug": "ammi-majus",
       "growth_stages": {
         "harvest": "/images/flowers/ammi-majus.jpg",
         "seedling": "/images/flowers/ammi-majus/seedling.png",
         "young_plant": "/images/flowers/ammi-majus/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 4,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Standard Ammi majus"
+        },
+        "christchurch": {
+          "sow_start": 4,
+          "sow_end": 5,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Standard Ammi majus"
+        }
       }
     },
     {
@@ -995,10 +1301,6 @@
       "germination_days": "7-14",
       "days_to_maturity_sow": 75,
       "days_to_maturity_transplant": 55,
-      "auckland_sow_start": 9,
-      "auckland_sow_end": 1,
-      "auckland_transplant_start": 10,
-      "auckland_transplant_end": 2,
       "flowering_start": 12,
       "flowering_end": 5,
       "vase_life_days": "14-21",
@@ -1007,13 +1309,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Unbeatable vase life - up to 3 weeks! Also excellent dried. Globe-shaped flowers add unique texture.",
-      "auckland_varieties": "Ping Pong series, Strawberry Fields, Fireworks, Nana Compacta",
       "pest_disease_notes": "Heat loving - thrives in Auckland summers. Very pest and disease resistant. Drought tolerant once established.",
       "slug": "gomphrena",
       "growth_stages": {
         "harvest": "/images/flowers/gomphrena.jpg",
         "seedling": "/images/flowers/gomphrena/seedling.png",
         "young_plant": "/images/flowers/gomphrena/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 9,
+          "sow_end": 1,
+          "transplant_start": 10,
+          "transplant_end": 2,
+          "varieties": "Ping Pong series, Strawberry Fields, Fireworks, Nana Compacta"
+        },
+        "christchurch": {
+          "sow_start": 10,
+          "sow_end": 12,
+          "transplant_start": 11,
+          "transplant_end": 1,
+          "varieties": "Ping Pong series, Strawberry Fields, Fireworks, Nana Compacta"
+        }
       }
     },
     {
@@ -1031,10 +1348,6 @@
       "germination_days": "10-14",
       "days_to_maturity_sow": 150,
       "days_to_maturity_transplant": 120,
-      "auckland_sow_start": 2,
-      "auckland_sow_end": 4,
-      "auckland_transplant_start": 3,
-      "auckland_transplant_end": 5,
       "flowering_start": 10,
       "flowering_end": 1,
       "vase_life_days": "7-10",
@@ -1043,13 +1356,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Sweetly scented classic. Long vase life. Tight clusters of flowers make excellent short arrangements.",
-      "auckland_varieties": "Sooty series (dark colours), Aurora, Amazon series",
       "pest_disease_notes": "Needs alkaline soil - add lime in Auckland (tends to be slightly acidic). Fusarium in poorly drained soils.",
       "slug": "sweet-william",
       "growth_stages": {
         "harvest": "/images/flowers/sweet-william.jpg",
         "seedling": "/images/flowers/sweet-william/seedling.png",
         "young_plant": "/images/flowers/sweet-william/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 2,
+          "sow_end": 4,
+          "transplant_start": 3,
+          "transplant_end": 5,
+          "varieties": "Sooty series (dark colours), Aurora, Amazon series"
+        },
+        "christchurch": {
+          "sow_start": 3,
+          "sow_end": 5,
+          "transplant_start": 4,
+          "transplant_end": 6,
+          "varieties": "Sooty series (dark colours), Aurora, Amazon series"
+        }
       }
     },
     {
@@ -1067,10 +1395,6 @@
       "germination_days": "10-14",
       "days_to_maturity_sow": 85,
       "days_to_maturity_transplant": null,
-      "auckland_sow_start": 9,
-      "auckland_sow_end": 2,
-      "auckland_transplant_start": null,
-      "auckland_transplant_end": null,
       "flowering_start": 12,
       "flowering_end": 3,
       "vase_life_days": "5-7",
@@ -1079,13 +1403,28 @@
       "staking": false,
       "deadheading": true,
       "cut_flower_notes": "Fast-growing, elegant hollyhock-like flowers. Good filler with beautiful translucent petals.",
-      "auckland_varieties": "Silver Cup, Blushing Beauty, Mont Blanc",
       "pest_disease_notes": "Hollyhock rust is common in Auckland humidity. Grow away from hollyhocks to avoid cross-infection. Otherwise easy.",
       "slug": "lavatera",
       "growth_stages": {
         "harvest": "/images/flowers/lavatera.jpg",
         "seedling": "/images/flowers/lavatera/seedling.png",
         "young_plant": "/images/flowers/lavatera/young-plant.png"
+      },
+      "regions": {
+        "auckland": {
+          "sow_start": 9,
+          "sow_end": 2,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Silver Cup, Blushing Beauty, Mont Blanc"
+        },
+        "christchurch": {
+          "sow_start": 10,
+          "sow_end": 12,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Silver Cup, Blushing Beauty, Mont Blanc"
+        }
       }
     }
   ]

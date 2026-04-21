@@ -7,10 +7,12 @@ router = APIRouter(prefix="/api/flowers", tags=["flowers"])
 
 
 @router.get("/")
-def list_flowers(flower_type: Optional[str] = Query(None, description="Filter by type: annual, perennial, biennial, corm")):
-    if flower_type:
-        return get_flowers_by_type(flower_type)
-    return get_all_flowers()
+def list_flowers(
+    flower_type: Optional[str] = Query(None, description="Filter by type: annual, perennial, biennial, corm"),
+    region: str = Query("auckland", description="Region: auckland or christchurch"),
+):
+    flowers = get_flowers_by_type(flower_type) if flower_type else get_all_flowers()
+    return flowers
 
 
 @router.get("/slug/{slug}")
@@ -23,11 +25,9 @@ def get_flower_by_slug_route(slug: str):
 
 @router.get("/{name}")
 def get_flower_by_name_route(name: str):
-    # Try exact name match first, then slug match as fallback
     flower = get_flower_by_name(name)
     if flower:
         return flower
-    # Fallback: try as slug
     flower = get_flower_by_slug(name)
     if flower:
         return flower

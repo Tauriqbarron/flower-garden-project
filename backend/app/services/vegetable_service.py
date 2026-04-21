@@ -59,7 +59,7 @@ def get_vegetables_by_category(category: str):
     return [v for v in vegetables if v["category"].lower() == category.lower()]
 
 
-def get_vegetables_for_month(month: int):
+def get_vegetables_for_month(month: int, region: str = "auckland"):
     """Get all vegetables that have activities for a given Auckland month."""
     vegetables = get_all_vegetables()
     sow_now = []
@@ -67,9 +67,10 @@ def get_vegetables_for_month(month: int):
     harvest_now = []
 
     for v in vegetables:
-        if is_month_in_range(month, v.get("auckland_sow_start"), v.get("auckland_sow_end")):
+        reg = v.get("regions", {}).get(region, {})
+        if is_month_in_range(month, reg.get("sow_start"), reg.get("sow_end")):
             sow_now.append(v["common_name"])
-        if is_month_in_range(month, v.get("auckland_transplant_start"), v.get("auckland_transplant_end")):
+        if is_month_in_range(month, reg.get("transplant_start"), reg.get("transplant_end")):
             transplant_now.append(v["common_name"])
         if is_month_in_range(month, v.get("harvest_start"), v.get("harvest_end")):
             harvest_now.append(v["common_name"])
@@ -190,14 +191,15 @@ def _compute_harvest_date(sow_date: date, days_to_maturity: int) -> dict:
     }
 
 
-def _enrich_veg_sow_item(vegetable: dict) -> dict:
+def _enrich_veg_sow_item(vegetable: dict, region: str = "auckland") -> dict:
     """Enrich a vegetable with sowing timing and expected harvest info."""
     today = date.today()
     current_week = today.isocalendar()[1]
     current_month = today.month
 
-    sow_start = vegetable.get("auckland_sow_start")
-    sow_end = vegetable.get("auckland_sow_end")
+    reg = vegetable.get("regions", {}).get(region, {})
+    sow_start = reg.get("sow_start")
+    sow_end = reg.get("sow_end")
     days_to_maturity = vegetable.get("days_to_maturity_sow")
 
     # Compute optimal month (midpoint of sow window, handling year wrap)
@@ -261,10 +263,10 @@ def _enrich_veg_sow_item(vegetable: dict) -> dict:
     return result
 
 
-def get_vegetable_dashboard_summary():
+def get_vegetable_dashboard_summary(region: str = "auckland"):
     """Get a summary of what to do right now based on current Auckland month."""
     current_month = datetime.now().month
-    month_info = get_vegetables_for_month(current_month)
+    month_info = get_vegetables_for_month(current_month, region=region)
     vegetables = get_all_vegetables()
 
     total_vegetables = len(vegetables)
@@ -286,7 +288,7 @@ def get_vegetable_dashboard_summary():
     for name in month_info.sow_now:
         vegetable = get_vegetable_by_name(name)
         if vegetable:
-            sow_vegetables.append(_enrich_veg_sow_item(vegetable))
+            sow_vegetables.append(_enrich_veg_sow_item(vegetable, region=region))
 
     # Sort: closest to optimal first
     sow_vegetables.sort(key=lambda v: abs(v["weeks_from_optimal"]))
@@ -295,9 +297,10 @@ def get_vegetable_dashboard_summary():
     sow_names = set(month_info.sow_now)
     all_enriched = []
     for v in vegetables:
-        if v.get("auckland_sow_start") and v.get("auckland_sow_end"):
+        reg = v.get("regions", {}).get(region, {})
+        if reg.get("sow_start") and reg.get("sow_end"):
             if v["common_name"] not in sow_names:
-                all_enriched.append(_enrich_veg_sow_item(v))
+                all_enriched.append(_enrich_veg_sow_item(v, region=region))
 
     closing_soon = sorted(
         [v for v in all_enriched if v.get("window_status") == "closing_soon"],
@@ -381,10 +384,10 @@ def delete_activity(activity_id: str):
     return {"deleted": activity_id}
 
 
-def get_vegetable_yearly_calendar():
+def get_vegetable_yearly_calendar(region: str = "auckland"):
     """Return a 12-month calendar showing what to sow, transplant, and harvest each month."""
     calendar = []
     for month in range(1, 13):
-        info = get_vegetables_for_month(month)
+        info = get_vegetables_for_month(month, region=region)
         calendar.append(info)
     return calendar

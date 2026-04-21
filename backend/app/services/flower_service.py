@@ -78,7 +78,7 @@ def get_flowers_by_type(flower_type: str):
     return [f for f in flowers if f["type"].lower() == flower_type.lower()]
 
 
-def get_flowers_for_month(month: int):
+def get_flowers_for_month(month: int, region: str = "auckland"):
     """Get all flowers that have activities for a given Auckland month."""
     flowers = get_all_flowers()
     sow_now = []
@@ -86,9 +86,10 @@ def get_flowers_for_month(month: int):
     harvest_now = []
 
     for f in flowers:
-        if is_month_in_range(month, f.get("auckland_sow_start"), f.get("auckland_sow_end")):
+        reg = f.get("regions", {}).get(region, {})
+        if is_month_in_range(month, reg.get("sow_start"), reg.get("sow_end")):
             sow_now.append(f["common_name"])
-        if is_month_in_range(month, f.get("auckland_transplant_start"), f.get("auckland_transplant_end")):
+        if is_month_in_range(month, reg.get("transplant_start"), reg.get("transplant_end")):
             transplant_now.append(f["common_name"])
         if is_month_in_range(month, f.get("flowering_start"), f.get("flowering_end")):
             harvest_now.append(f["common_name"])
@@ -211,14 +212,15 @@ def _compute_bloom_date(sow_date: date, days_to_maturity: int) -> dict:
     }
 
 
-def _enrich_sow_item(flower: dict) -> dict:
+def _enrich_sow_item(flower: dict, region: str = "auckland") -> dict:
     """Enrich a flower with sowing timing and expected bloom info."""
     today = date.today()
     current_week = today.isocalendar()[1]
     current_month = today.month
 
-    sow_start = flower.get("auckland_sow_start")
-    sow_end = flower.get("auckland_sow_end")
+    reg = flower.get("regions", {}).get(region, {})
+    sow_start = reg.get("sow_start")
+    sow_end = reg.get("sow_end")
     days_to_maturity = flower.get("days_to_maturity_sow")
 
     # Compute optimal month (midpoint of sow window, handling year wrap)
@@ -282,10 +284,10 @@ def _enrich_sow_item(flower: dict) -> dict:
     return result
 
 
-def get_dashboard_summary():
+def get_dashboard_summary(region: str = "auckland"):
     """Get a summary of what to do right now based on current Auckland month."""
     current_month = datetime.now().month
-    month_info = get_flowers_for_month(current_month)
+    month_info = get_flowers_for_month(current_month, region=region)
     flowers = get_all_flowers()
 
     total_flowers = len(flowers)
@@ -301,7 +303,7 @@ def get_dashboard_summary():
     for name in month_info.sow_now:
         flower = get_flower_by_name(name)
         if flower:
-            sow_flowers.append(_enrich_sow_item(flower))
+            sow_flowers.append(_enrich_sow_item(flower, region=region))
 
     # Sort: closest to optimal first
     sow_flowers.sort(key=lambda f: abs(f["weeks_from_optimal"]))
@@ -310,9 +312,10 @@ def get_dashboard_summary():
     sow_names = set(month_info.sow_now)
     all_enriched = []
     for f in flowers:
-        if f.get("auckland_sow_start") and f.get("auckland_sow_end"):
+        reg = f.get("regions", {}).get(region, {})
+        if reg.get("sow_start") and reg.get("sow_end"):
             if f["common_name"] not in sow_names:
-                all_enriched.append(_enrich_sow_item(f))
+                all_enriched.append(_enrich_sow_item(f, region=region))
 
     closing_soon = sorted(
         [f for f in all_enriched if f.get("window_status") == "closing_soon"],
@@ -398,10 +401,10 @@ def delete_activity(activity_id: str):
     return {"deleted": activity_id}
 
 
-def get_yearly_calendar():
+def get_yearly_calendar(region: str = "auckland"):
     """Return a 12-month calendar showing what to sow, transplant, and harvest each month."""
     calendar = []
     for month in range(1, 13):
-        info = get_flowers_for_month(month)
+        info = get_flowers_for_month(month, region=region)
         calendar.append(info)
     return calendar

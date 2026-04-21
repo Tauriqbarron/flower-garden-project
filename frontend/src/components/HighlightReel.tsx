@@ -127,7 +127,7 @@ export default function HighlightReel({
               alt={slide.name}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 800px"
+              sizes="100vw"
               priority
             />
           ) : (

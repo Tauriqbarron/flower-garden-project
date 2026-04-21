@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { RegionProvider } from "@/lib/region";
+import RegionSelector from "@/components/RegionSelector";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,19 +25,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen`}>
+        <RegionProvider>
         {/* Nav */}
         <nav className="bg-white/80 backdrop-blur-md border-b border-[var(--border-soft)] sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-1.5 group">
-              <span className="text-xl">🌱</span>
-              <span className="font-extrabold text-lg tracking-tight text-[var(--forest)]">
-                auckland
-              </span>
-              <span className="text-[var(--terracotta)] font-extrabold text-lg">.</span>
-              <span className="font-extrabold text-lg tracking-tight text-[var(--forest)]">
-                garden
-              </span>
-            </Link>
+            <div className="flex items-center gap-4">
+              <Link href="/" className="flex items-center gap-1.5 group">
+                <span className="text-xl">🌱</span>
+                <span className="font-extrabold text-lg tracking-tight text-[var(--forest)]">
+                  auckland
+                </span>
+                <span className="text-[var(--terracotta)] font-extrabold text-lg">.</span>
+                <span className="font-extrabold text-lg tracking-tight text-[var(--forest)]">
+                  garden
+                </span>
+              </Link>
+              <RegionSelector />
+            </div>
             <div className="flex gap-1 text-sm font-medium">
               <NavLink href="/">Flowers Dashboard</NavLink>
               <NavLink href="/flowers">Flowers</NavLink>
@@ -69,6 +75,7 @@ export default function RootLayout({
             </a>
           </div>
         </footer>
+        </RegionProvider>
       </body>
     </html>
   );

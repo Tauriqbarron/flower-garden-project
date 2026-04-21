@@ -63,7 +63,7 @@ export default function GrowthCarousel({ stages, plantName, isVegetable = false 
           fill
           className="object-cover transition-opacity duration-300"
           priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 

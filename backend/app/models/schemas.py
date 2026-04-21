@@ -9,6 +9,14 @@ class GrowthStages(BaseModel):
     young_plant: Optional[str] = None
 
 
+class RegionData(BaseModel):
+    sow_start: Optional[int]
+    sow_end: Optional[int]
+    transplant_start: Optional[int]
+    transplant_end: Optional[int]
+    varieties: str
+
+
 class FlowerActivity(BaseModel):
     id: str
     flower_name: str
@@ -33,10 +41,7 @@ class Flower(BaseModel):
     germination_days: Optional[str]
     days_to_maturity_sow: Optional[int]
     days_to_maturity_transplant: Optional[int]
-    auckland_sow_start: Optional[int]
-    auckland_sow_end: Optional[int]
-    auckland_transplant_start: Optional[int]
-    auckland_transplant_end: Optional[int]
+    regions: dict
     flowering_start: Optional[int]
     flowering_end: Optional[int]
     vase_life_days: str
@@ -45,7 +50,6 @@ class Flower(BaseModel):
     staking: bool
     deadheading: bool
     cut_flower_notes: str
-    auckland_varieties: str
     pest_disease_notes: str
     growth_stages: Optional[GrowthStages] = None
 
@@ -76,10 +80,7 @@ class Vegetable(BaseModel):
     germination_days: Optional[str]
     days_to_maturity_sow: Optional[int]
     days_to_maturity_transplant: Optional[int]
-    auckland_sow_start: Optional[int]
-    auckland_sow_end: Optional[int]
-    auckland_transplant_start: Optional[int]
-    auckland_transplant_end: Optional[int]
+    regions: dict
     harvest_start: Optional[int]
     harvest_end: Optional[int]
     storage_life_weeks: Optional[str]
@@ -87,7 +88,6 @@ class Vegetable(BaseModel):
     pest_resistance: Optional[str]
     disease_resistance: Optional[str]
     growing_notes: str
-    auckland_varieties: str
     pest_disease_notes: str
     growth_stages: Optional[GrowthStages] = None
 
