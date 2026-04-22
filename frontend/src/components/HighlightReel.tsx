@@ -110,17 +110,17 @@ export default function HighlightReel({
 
   const badgeClasses =
     slide.badgeColor === "green"
-      ? "bg-[#d4e8dc] text-[#1B4332]"
+      ? "bg-[#d4e8dc] text-[#1B4332] dark:bg-[#153628] dark:text-[#FFF8F0]"
       : slide.badgeColor === "amber"
-      ? "bg-[#f9edd0] text-amber-900"
+      ? "bg-[#f9edd0] text-amber-900 dark:bg-[#2e2515] dark:text-[#D4A843]"
       : slide.badgeColor === "red"
-      ? "bg-[#fbd5d9] text-[#C41E3A]"
-      : "bg-[#F5EDE3] text-[var(--text-muted)]";
+      ? "bg-[#fbd5d9] text-[#C41E3A] dark:bg-[#3d1520] dark:text-[#E05050]"
+      : "bg-[#F5EDE3] text-[var(--text-muted)] dark:bg-[#0f291e]";
 
   return (
     <div className="mb-8">
       <Link href={slide.href}>
-        <div className="relative w-full h-64 md:h-80 lg:h-[480px] rounded-xl overflow-hidden bg-gray-100 group cursor-pointer hover:shadow-lg transition-shadow">
+        <div className="relative w-full h-64 md:h-80 lg:h-[480px] rounded-xl overflow-hidden bg-[var(--card-alt)] group cursor-pointer hover:shadow-lg transition-shadow">
           {slide.imageUrl ? (
             <Image
               src={slide.imageUrl}
@@ -131,7 +131,7 @@ export default function HighlightReel({
               priority
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-50 to-amber-50">
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--forest-50)] to-[var(--gold-50)]">
               <span className="text-7xl">🌿</span>
             </div>
           )}
@@ -140,7 +140,7 @@ export default function HighlightReel({
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
           {/* Action badge — top left */}
-          <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow">
+          <div className="absolute top-4 left-4 bg-white/90 dark:bg-[var(--card)]/90 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow">
             <span>{slide.actionEmoji}</span>
             <span className="text-sm font-medium">{slide.action}</span>
           </div>
@@ -169,7 +169,7 @@ export default function HighlightReel({
         <div className="flex items-center justify-center gap-4 mt-3">
           <button
             onClick={prev}
-            className="bg-white/80 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow transition"
+            className="bg-white/80 dark:bg-[var(--card)]/80 hover:bg-white dark:hover:bg-[var(--card)] rounded-full w-9 h-9 flex items-center justify-center shadow transition"
             aria-label="Previous"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -184,7 +184,7 @@ export default function HighlightReel({
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`w-2 h-2 rounded-full transition ${
-                  i === current ? "bg-green-600 w-4" : "bg-gray-300"
+                  i === current ? "bg-[var(--forest)] w-4" : "bg-[var(--border)]"
                 }`}
                 aria-label={`Slide ${i + 1}`}
               />
@@ -193,7 +193,7 @@ export default function HighlightReel({
 
           <button
             onClick={next}
-            className="bg-white/80 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow transition"
+            className="bg-white/80 dark:bg-[var(--card)]/80 hover:bg-white dark:hover:bg-[var(--card)] rounded-full w-9 h-9 flex items-center justify-center shadow transition"
             aria-label="Next"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

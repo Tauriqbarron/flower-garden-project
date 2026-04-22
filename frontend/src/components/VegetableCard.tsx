@@ -55,7 +55,7 @@ export default function VegetableCard({ vegetable }: { vegetable: Vegetable }) {
               className="object-cover"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
-            <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-medium flex items-center gap-1">
+            <div className="absolute top-2 left-2 bg-white/90 dark:bg-[#0f291e]/90 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-medium flex items-center gap-1">
               <span>🌻</span> Harvest
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function VegetableCard({ vegetable }: { vegetable: Vegetable }) {
         )}
         {/* Growth stage indicators */}
         {stages && (
-          <div className="flex gap-2 justify-center py-2 bg-white/60 border-b border-gray-100">
+          <div className="flex gap-2 justify-center py-2 bg-white/60 dark:bg-[#0f291e]/60 border-b border-gray-100 dark:border-[#1B4332]">
             {["harvest", "seedling", "young_plant"].map((stage) => {
               const hasImage = stages[stage as keyof typeof stages];
               return (

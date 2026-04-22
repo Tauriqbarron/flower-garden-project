@@ -36,7 +36,7 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
     <Link href={`/flowers/${slug}`}>
       <div className="glass-card hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col overflow-hidden">
         {harvestImg ? (
-          <div className="relative w-full h-48 md:h-56 bg-gray-100">
+          <div className="relative w-full h-48 md:h-56 bg-[var(--card-alt)]">
             <Image
               src={harvestImg}
               alt={flower.common_name}
@@ -45,18 +45,18 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
             {/* Stage label on hover */}
-            <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-medium flex items-center gap-1">
+            <div className="absolute top-2 left-2 bg-white/90 dark:bg-[var(--card)]/90 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-medium flex items-center gap-1">
               <span>🌻</span> Harvest
             </div>
           </div>
         ) : (
-          <div className="w-full h-48 bg-gray-100 flex items-center justify-center text-5xl">
+          <div className="w-full h-48 bg-[var(--card-alt)] flex items-center justify-center text-5xl">
             &#x1F33C;
           </div>
         )}
         {/* Growth stage indicators */}
         {stages && (
-          <div className="flex gap-2 justify-center py-2 bg-white/60 border-b border-gray-100">
+          <div className="flex gap-2 justify-center py-2 bg-white/60 dark:bg-[var(--card)]/60 border-b border-[var(--border-soft)] dark:border-[var(--border)]">
             {["harvest", "seedling", "young_plant"].map((stage) => {
               const hasImage = stages[stage as keyof typeof stages];
               return (
@@ -78,7 +78,7 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
               {flower.type}
             </span>
           </div>
-          <p className="text-sm text-gray-500 italic mb-2">{flower.botanical_name}</p>
+          <p className="text-sm text-[var(--text-muted)] italic mb-2">{flower.botanical_name}</p>
           <div className="flex gap-3 mt-auto pt-3 border-t border-[var(--border-soft)]">
             <span className="text-xs bg-[var(--forest-50)] text-[var(--forest)] px-2 py-1 rounded-full">Vase: {flower.vase_life_days}d</span>
             <span className="text-xs bg-[var(--sage-50)] text-[var(--sage-400)] px-2 py-1 rounded-full">{flower.sun}</span>

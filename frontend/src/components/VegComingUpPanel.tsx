@@ -42,7 +42,7 @@ export default function VegComingUpPanel({ actions }: { actions: VegUpcomingActi
 
   if (!hasAnyItems) {
     return (
-      <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[#f0f7f3]/20">
+      <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[#f0f7f3]/20 dark:bg-[#0f291e]/20">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-2xl">🔮</span>
           <h2 className="font-bold text-xl">What&#39;s Coming Up</h2>
@@ -55,7 +55,7 @@ export default function VegComingUpPanel({ actions }: { actions: VegUpcomingActi
   }
 
   return (
-    <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[#f0f7f3]/20">
+    <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[#f0f7f3]/20 dark:bg-[#0f291e]/20">
       <div className="flex items-center gap-2 mb-6">
         <span className="text-2xl">🔮</span>
         <h2 className="font-bold text-xl">What&#39;s Coming Up</h2>
@@ -104,22 +104,22 @@ function VegUpcomingCard({
 }) {
   const colorMap = {
     red: {
-      border: "border-[#f5a0a8] bg-[#fef2f3]/50",
+      border: "border-[#f5a0a8] bg-[#fef2f3]/50 dark:border-[#5a2030] dark:bg-[#2a1015]/50",
       badge: "bg-[#fbd5d9] text-[#C41E3A]",
       bar: "bg-[#C41E3A]",
       barBg: "bg-[#fbd5d9]",
     },
     green: {
-      border: "border-[#a8d1b8] bg-[#f0f7f3]/50",
-      badge: "bg-[#d4e8dc] text-[#1B4332]",
+      border: "border-[#a8d1b8] bg-[#f0f7f3]/50 dark:border-[#1B4332] dark:bg-[#0f291e]/50",
+      badge: "bg-[#d4e8dc] text-[#1B4332] dark:bg-[#153628] dark:text-[#FFF8F0]",
       bar: "bg-[#3d8f66]",
-      barBg: "bg-[#d4e8dc]",
+      barBg: "bg-[#d4e8dc] dark:bg-[#153628]",
     },
     blue: {
-      border: "border-[#a8d1b8] bg-[#f0f7f3]/50",
-      badge: "bg-[#ddefdc] text-[#5a8f52]",
+      border: "border-[#a8d1b8] bg-[#f0f7f3]/50 dark:border-[#1B4332] dark:bg-[#0f291e]/50",
+      badge: "bg-[#ddefdc] text-[#5a8f52] dark:bg-[#153628] dark:text-[#FFF8F0]",
       bar: "bg-[#A7C4A0]",
-      barBg: "bg-[#ddefdc]",
+      barBg: "bg-[#ddefdc] dark:bg-[#153628]",
     },
   };
 
@@ -148,7 +148,7 @@ function VegUpcomingCard({
           />
         </div>
 
-        <div className="text-xs text-gray-600 space-y-1">
+        <div className="text-xs text-gray-600 dark:text-[#A7C4A0] space-y-1">
           <div className="flex items-center gap-1">
             <span>🎯</span>
             <span>

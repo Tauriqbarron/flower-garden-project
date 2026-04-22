@@ -42,12 +42,12 @@ export default function ComingUpPanel({ actions }: { actions: UpcomingActions })
 
   if (!hasAnyItems) {
     return (
-      <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[#f0f7f3]/20">
+      <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[var(--forest-50)]/20 dark:bg-[var(--forest-700)]/20">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-2xl">🔮</span>
           <h2 className="font-bold text-xl">What&#39;s Coming Up</h2>
         </div>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-[var(--text-soft)]">
           Nothing new coming up in the next few months — you&#39;re all caught up!
         </p>
       </div>
@@ -55,7 +55,7 @@ export default function ComingUpPanel({ actions }: { actions: UpcomingActions })
   }
 
   return (
-    <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[#f0f7f3]/20">
+    <div className="glass-card p-6 mb-8 border border-[var(--forest-200)] bg-[var(--forest-50)]/20 dark:bg-[var(--forest-700)]/20">
       <div className="flex items-center gap-2 mb-6">
         <span className="text-2xl">🔮</span>
         <h2 className="font-bold text-xl">What&#39;s Coming Up</h2>
@@ -69,7 +69,7 @@ export default function ComingUpPanel({ actions }: { actions: UpcomingActions })
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-lg">{section.emoji}</span>
                 <h3 className="font-semibold text-sm">{section.title}</h3>
-                <span className="text-xs text-gray-400 ml-1">
+                <span className="text-xs text-[var(--text-soft)] ml-1">
                   — {section.description}
                 </span>
               </div>
@@ -104,22 +104,22 @@ function UpcomingCard({
 }) {
   const colorMap = {
     red: {
-      border: "border-[#f5a0a8] bg-[#fef2f3]/50",
+      border: "border-[#f5a0a8] bg-[#fef2f3]/50 dark:border-[#5a2030] dark:bg-[#2a1015]/50",
       badge: "bg-[#fbd5d9] text-[#C41E3A]",
       bar: "bg-[#C41E3A]",
       barBg: "bg-[#fbd5d9]",
     },
     green: {
-      border: "border-[#a8d1b8] bg-[#f0f7f3]/50",
-      badge: "bg-[#d4e8dc] text-[#1B4332]",
+      border: "border-[#a8d1b8] bg-[#f0f7f3]/50 dark:border-[#1B4332] dark:bg-[#0f291e]/50",
+      badge: "bg-[#d4e8dc] text-[#1B4332] dark:bg-[#153628] dark:text-[#FFF8F0]",
       bar: "bg-[#3d8f66]",
-      barBg: "bg-[#d4e8dc]",
+      barBg: "bg-[#d4e8dc] dark:bg-[#153628]",
     },
     blue: {
-      border: "border-[#a8d1b8] bg-[#f0f7f3]/50",
-      badge: "bg-[#ddefdc] text-[#5a8f52]",
+      border: "border-[#a8d1b8] bg-[#f0f7f3]/50 dark:border-[#1B4332] dark:bg-[#0f291e]/50",
+      badge: "bg-[#ddefdc] text-[#5a8f52] dark:bg-[#153628] dark:text-[#FFF8F0]",
       bar: "bg-[#A7C4A0]",
-      barBg: "bg-[#ddefdc]",
+      barBg: "bg-[#ddefdc] dark:bg-[#153628]",
     },
   };
 
@@ -150,7 +150,7 @@ function UpcomingCard({
           />
         </div>
 
-        <div className="text-xs text-gray-600 space-y-1">
+        <div className="text-xs text-[var(--text-muted)] dark:text-[var(--text-muted)] space-y-1">
           <div className="flex items-center gap-1">
             <span>🎯</span>
             <span>

@@ -17,7 +17,7 @@ export default function RegionSelector() {
           onClick={() => setRegion(r.id)}
           className={`px-3 py-1.5 rounded-md text-sm font-medium transition cursor-pointer ${
             region === r.id
-              ? "bg-white shadow-sm text-[var(--forest)]"
+              ? "bg-white dark:bg-[#0f291e] shadow-sm text-[var(--forest)]"
               : "text-[var(--text-muted)] hover:text-[var(--forest)]"
           }`}
         >

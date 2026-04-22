@@ -26,7 +26,7 @@ export default function VegDashboardClient() {
   return (
     <div>
       {/* Season bar */}
-      <div className="glass-card px-6 py-3 mb-6 flex items-center gap-3 border border-amber-100">
+      <div className="glass-card px-6 py-3 mb-6 flex items-center gap-3 border border-amber-100 dark:border-[#2e2515]">
         <span className="text-lg">🥕</span>
         <p className="text-gray-700">
           <strong>{data.current_month}</strong> · {data.current_season}
@@ -41,7 +41,7 @@ export default function VegDashboardClient() {
       />
 
       {/* Sow Now */}
-      <div className="glass-card p-6 mb-8 border border-[#a8d1b8] bg-[#f0f7f3]/30">
+      <div className="glass-card p-6 mb-8 border border-[#a8d1b8] dark:border-[#1B4332] bg-[#f0f7f3]/30 dark:bg-[#0f291e]/30">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-2xl">🌱</span>
           <h2 className="font-bold text-xl">Sow Now</h2>
