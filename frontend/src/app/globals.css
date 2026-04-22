@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Use class-based dark mode (next-themes toggles .dark on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ─── Design Tokens ─── */
 :root {
   /* Primary palette */
@@ -53,7 +56,7 @@
   /* Semantic surface tokens */
   --bg:        var(--cream-100);
   --card:      #ffffff;
-  --card-alt:  var(--cream-50);
+  --card-alt:  #f3f4f6; /* matches original bg-gray-100 */
   --text:      #1a1a1a;
   --text-muted:#6b7280;
   --text-soft: #94a3b8;
@@ -161,3 +164,131 @@ a { color: inherit; text-decoration: none; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* ══════════════════════════════════════════════
+   Dark Mode — Forest Green + Gold
+   Inspired by launch-hero.png (#002411 bg, #D4A843 gold lines)
+   ══════════════════════════════════════════════ */
+
+.dark {
+  /* Override primary palette */
+  --forest:    #2E8B57;     /* lighter green for dark bg readability */
+  --forest-50: #0f291e;
+  --forest-100: #153628;
+  --forest-200: #1B4332;
+  --forest-300: #2E8B57;
+  --forest-400: #3d9f6e;
+  --forest-500: #2E8B57;
+  --forest-600: #4CAF50;
+  --forest-700: #6db58e;
+
+  --terracotta:    #E07050;  /* slightly lighter for dark bg */
+  --terracotta-50: #2a1510;
+  --terracotta-100: #3d1f17;
+  --terracotta-200: #5a2e22;
+  --terracotta-300: #843d27;
+  --terracotta-400: #C65D3B;
+  --terracotta-500: #E07050;
+  --terracotta-600: #f0a080;
+
+  --cream:     #002411;
+  --cream-50:  #001a0c;
+  --cream-100: #002411;     /* hero deep green as base bg */
+  --cream-200: #0a3319;
+  --cream-300: #0f3f20;
+  --cream-400: #1a5030;
+
+  --sage:      #A7C4A0;
+  --sage-50:   #0f291e;
+  --sage-100:  #153628;
+  --sage-200:  #1B4332;
+  --sage-300:  #2E8B57;
+  --sage-400:  #4CAF50;
+
+  --pohutukawa: #E05050;
+  --pohutukawa-50: #2a1015;
+  --pohutukawa-100: #3d1520;
+  --pohutukawa-200: #5a2030;
+
+  --gold:      #D4A843;
+  --gold-50:   #1f1a0e;
+  --gold-100:  #2e2515;
+  --gold-200:  #3d301c;
+
+  /* Semantic surface tokens */
+  --bg:        var(--cream-100);      /* #002411 deep forest */
+  --card:      #0f291e;               /* dark green card */
+  --card-alt:  #0a2116;
+  --text:      #FFF8F0;               /* cream text */
+  --text-muted:#A7C4A0;               /* sage muted */
+  --text-soft: #6b8a65;
+  --border:    #1B4332;
+  --border-soft: #153628;
+
+  /* Shadows — darker, subtle gold tint */
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(212, 168, 67, 0.05);
+  --shadow-md:  0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(212, 168, 67, 0.06);
+  --shadow-lg:  0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(212, 168, 67, 0.08);
+  --shadow-xl:  0 8px 16px rgba(0, 0, 0, 0.3), 0 16px 48px rgba(212, 168, 67, 0.10);
+}
+
+/* Dark mode text gradient — gold */
+.dark .text-gradient {
+  background: linear-gradient(135deg, var(--gold), #E8C96A, var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ══════════════════════════════════════════════
+   Dark mode — Override hardcoded Tailwind colors
+   These classes are used throughout components
+   with CSS-variable equivalents that respond to .dark
+   ══════════════════════════════════════════════ */
+
+.dark .bg-white { background-color: #0f291e; }
+.dark .bg-gray-50 { background-color: #0a2116; }
+.dark .bg-gray-100 { background-color: #0f291e; }
+.dark .bg-gray-200 { background-color: #153628; }
+.dark .border-gray-100 { border-color: #1B4332; }
+.dark .border-gray-200 { border-color: #1B4332; }
+.dark .text-gray-300 { color: #4a7a5a; }
+.dark .text-gray-400 { color: #6b8a65; }
+.dark .text-gray-500 { color: #7daa75; }
+.dark .text-gray-600 { color: #A7C4A0; }
+.dark .text-gray-700 { color: #FFF8F0; }
+.dark .text-gray-800 { color: #FFF8F0; }
+.dark .text-gray-900 { color: #FFFDFB; }
+
+/* Blue overrides — map to forest tones */
+.dark .bg-blue-50 { background-color: #0f291e; }
+.dark .bg-blue-100 { background-color: #153628; }
+.dark .text-blue-700 { color: #4CAF50; }
+.dark .text-blue-600 { color: #2E8B57; }
+.dark .border-blue-100 { border-color: #1B4332; }
+.dark [class*="hover:bg-blue-100"]:hover { background-color: #1B4332; }
+
+/* Green overrides — deeper greens */
+.dark .bg-green-50 { background-color: #0f291e; }
+.dark .bg-green-100 { background-color: #153628; }
+.dark .bg-green-600 { background-color: #2E8B57; }
+.dark .border-green-100 { border-color: #1B4332; }
+.dark .text-green-600 { color: #4CAF50; }
+.dark .text-green-700 { color: #2E8B57; }
+
+/* Amber overrides */
+.dark .bg-amber-50 { background-color: #1f1a0e; }
+.dark .border-amber-100 { border-color: #2e2515; }
+.dark .text-amber-900 { color: #D4A843; }
+
+/* Gray-100 bg used for image placeholders */
+.dark .group:hover .bg-gray-100,
+.dark .bg-gray-100.group { background-color: #0f291e; }
+
+/* Dot indicators */
+.dark .bg-gray-300 { background-color: #1B4332; }
+.dark .bg-green-600.w-4 { background-color: #D4A843; }
+
+/* Placeholder pulse animation backgrounds */
+.dark .animate-pulse > .bg-gray-100,
+.dark .animate-pulse .bg-gray-100 { background-color: #0f291e; }

@@ -11,10 +11,10 @@ export default function VegSowCard({ vegetable }: { vegetable: VegSowNowDetail }
 
   const badgeColor =
     vegetable.timing_color === "green"
-      ? "bg-[var(--forest-100)] text-[var(--forest)]"
+      ? "bg-[var(--forest-100)] text-[var(--forest)] dark:bg-[#153628] dark:text-[#FFF8F0]"
       : vegetable.timing_color === "amber"
-      ? "bg-[var(--gold-100)] text-amber-900"
-      : "bg-[var(--pohutukawa-100)] text-[var(--pohutukawa)]";
+      ? "bg-[var(--gold-100)] text-amber-900 dark:bg-[#2e2515] dark:text-[#D4A843]"
+      : "bg-[var(--pohutukawa-100)] text-[var(--pohutukawa)] dark:bg-[#3d1520] dark:text-[#E05050]";
 
   return (
     <Link href={`/vegetables/${vegetable.slug || encodeURIComponent(vegetable.name)}`}>
@@ -25,7 +25,7 @@ export default function VegSowCard({ vegetable }: { vegetable: VegSowNowDetail }
             {vegetable.timing_label}
           </span>
         </div>
-        <div className="text-xs text-gray-600 space-y-1">
+        <div className="text-xs text-gray-600 dark:text-[#A7C4A0] space-y-1">
           <div className="flex items-center gap-1">
             <span>🎯</span>
             <span>Optimal: <strong>{vegetable.optimal_month_name}</strong></span>

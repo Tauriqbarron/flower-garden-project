@@ -32,9 +32,9 @@ export default function GrowthCarousel({ stages, plantName, isVegetable = false 
   // Fallback: no images at all
   if (availableStages.length === 0) {
     return (
-      <div className="w-full h-64 md:h-80 bg-gradient-to-br from-green-50 to-amber-50 flex flex-col items-center justify-center gap-2">
+      <div className="w-full h-64 md:h-80 bg-gradient-to-br from-[var(--forest-50)] to-[var(--gold-50)] flex flex-col items-center justify-center gap-2">
         <span className="text-7xl">{isVegetable ? "🥕" : "🌻"}</span>
-        <span className="text-sm text-gray-400">No photos yet</span>
+        <span className="text-sm text-[var(--text-soft)]">No photos yet</span>
       </div>
     );
   }
@@ -56,7 +56,7 @@ export default function GrowthCarousel({ stages, plantName, isVegetable = false 
   return (
     <div className="relative">
       {/* Image area */}
-      <div className="relative w-full h-64 md:h-80 lg:h-[480px] bg-gray-100 overflow-hidden">
+      <div className="relative w-full h-64 md:h-80 lg:h-[480px] bg-[var(--card-alt)] overflow-hidden">
         <Image
           src={stages![current.key]!}
           alt={`${plantName} — ${current.label}`}
@@ -68,9 +68,9 @@ export default function GrowthCarousel({ stages, plantName, isVegetable = false 
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
         {/* Stage label badge */}
-        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow-md">
+        <div className="absolute top-3 left-3 bg-white/90 dark:bg-[var(--card)]/90 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow-md">
           <span className="text-lg">{current.emoji}</span>
-          <span className="text-sm font-semibold text-gray-800">{current.label}</span>
+          <span className="text-sm font-semibold text-[var(--text)] dark:text-[var(--text)]">{current.label}</span>
         </div>
 
         {/* Stage description */}
@@ -83,19 +83,19 @@ export default function GrowthCarousel({ stages, plantName, isVegetable = false 
           <>
             <button
               onClick={prev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow-md transition-colors"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-[var(--card)]/80 hover:bg-white dark:hover:bg-[var(--card)] rounded-full w-9 h-9 flex items-center justify-center shadow-md transition-colors"
               aria-label="Previous stage"
             >
-              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-[var(--text)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             <button
               onClick={next}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow-md transition-colors"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-[var(--card)]/80 hover:bg-white dark:hover:bg-[var(--card)] rounded-full w-9 h-9 flex items-center justify-center shadow-md transition-colors"
               aria-label="Next stage"
             >
-              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-[var(--text)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -105,15 +105,15 @@ export default function GrowthCarousel({ stages, plantName, isVegetable = false 
 
       {/* Stage indicator bar */}
       {availableStages.length > 1 && (
-        <div className="flex items-center justify-center gap-2 py-3 bg-white/80">
+        <div className="flex items-center justify-center gap-2 py-3 bg-white/80 dark:bg-[var(--card)]/80">
           {availableStages.map((stage, idx) => (
             <button
               key={stage.key}
               onClick={() => goTo(idx)}
               className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
                 idx === currentIndex
-                  ? "bg-amber-100 text-amber-800 ring-1 ring-amber-300"
-                  : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                  ? "bg-[var(--gold-100)] text-[var(--text)] ring-1 ring-[var(--gold-200)]"
+                  : "bg-[var(--card-alt)] text-[var(--text-soft)] hover:bg-[var(--cream-200)]"
               }`}
             >
               <span>{stage.emoji}</span>
