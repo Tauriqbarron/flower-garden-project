@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import RegionSelector from "@/components/RegionSelector";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const LINKS = [
   { href: "/", label: "Flowers Dashboard" },
@@ -33,16 +34,16 @@ export default function Nav() {
   }, [open]);
 
   return (
-    <nav className="bg-white/80 backdrop-blur-md border-b border-[var(--border-soft)] sticky top-0 z-50">
+    <nav className="bg-white/80 dark:bg-[var(--card)]/90 backdrop-blur-md border-b border-[var(--border-soft)] dark:border-[var(--border)] sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
         <div className="flex items-center gap-4 min-w-0">
           <Link href="/" className="flex items-center gap-1.5 group shrink-0">
             <span className="text-xl">🌱</span>
-            <span className="font-extrabold text-lg tracking-tight text-[var(--forest)]">
+            <span className="font-extrabold text-lg tracking-tight text-[var(--forest)] dark:text-[#4CAF50]">
               auckland
             </span>
             <span className="text-[var(--terracotta)] font-extrabold text-lg">.</span>
-            <span className="font-extrabold text-lg tracking-tight text-[var(--forest)]">
+            <span className="font-extrabold text-lg tracking-tight text-[var(--forest)] dark:text-[#4CAF50]">
               garden
             </span>
           </Link>
@@ -52,31 +53,35 @@ export default function Nav() {
         </div>
 
         {/* Desktop links */}
-        <div className="hidden min-[1100px]:flex gap-1 text-sm font-medium">
+        <div className="hidden min-[1100px]:flex items-center gap-1 text-sm font-medium">
           {LINKS.map((l) => (
             <NavLink key={l.href} href={l.href} active={l.href === activeHref}>
               {l.label}
             </NavLink>
           ))}
+          <ThemeToggle />
         </div>
 
         {/* Mobile toggle */}
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          onClick={() => setOpen((v) => !v)}
-          className="min-[1100px]:hidden inline-flex items-center justify-center w-10 h-10 rounded-[var(--radius-sm)] text-[var(--forest)] hover:bg-[var(--forest-50)] transition"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-1 min-[1100px]:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex items-center justify-center w-10 h-10 rounded-[var(--radius-sm)] text-[var(--forest)] dark:text-[#4CAF50] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 transition"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile drawer */}
       <div
         id="mobile-menu"
-        className={`min-[1100px]:hidden overflow-hidden border-t border-[var(--border-soft)] bg-white transition-[max-height] duration-300 ease-out ${
+        className={`min-[1100px]:hidden overflow-hidden border-t border-[var(--border-soft)] dark:border-[var(--border)] bg-white dark:bg-[var(--card)] transition-[max-height] duration-300 ease-out ${
           open ? "max-h-[80vh]" : "max-h-0"
         }`}
       >
@@ -89,8 +94,8 @@ export default function Nav() {
                 href={l.href}
                 className={`px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium transition ${
                   l.href === activeHref
-                    ? "bg-[var(--forest-50)] text-[var(--forest)]"
-                    : "text-[var(--text-muted)] hover:bg-[var(--forest-50)] hover:text-[var(--forest)]"
+                    ? "bg-[var(--forest-50)] dark:bg-[#1B4332]/50 text-[var(--forest)] dark:text-[#4CAF50]"
+                    : "text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
                 }`}
               >
                 {l.label}
@@ -117,8 +122,8 @@ function NavLink({
       href={href}
       className={`px-3 py-1.5 rounded-[var(--radius-sm)] whitespace-nowrap transition ${
         active
-          ? "bg-[var(--forest-50)] text-[var(--forest)]"
-          : "text-[var(--text-muted)] hover:bg-[var(--forest-50)] hover:text-[var(--forest)]"
+          ? "bg-[var(--forest-50)] dark:bg-[#1B4332]/50 text-[var(--forest)] dark:text-[#4CAF50]"
+          : "text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
       }`}
     >
       {children}
