@@ -792,7 +792,7 @@
       "staking": false,
       "deadheading": false,
       "cut_flower_notes": "Ethereal blue flowers and attractive seed pods. Shorter vase life but worth growing for the charm. Pods useful dried.",
-      "pest_disease_notes": "Very easy. Self-seeds prolifically in Auckland. Dislikes root disturbance — direct sow in autumn (Mar–Apr) for Oct–Dec flowering; plants grow slowly through winter so allow 6–8 months to bloom from an autumn sow.",
+      "pest_disease_notes": "Very easy. Self-seeds prolifically in Auckland. Dislikes root disturbance \u2014 direct sow in autumn (Mar\u2013Apr) for Oct\u2013Dec flowering; plants grow slowly through winter so allow 6\u20138 months to bloom from an autumn sow.",
       "slug": "nigella",
       "growth_stages": {
         "harvest": "/images/flowers/nigella.jpg",
@@ -1262,7 +1262,7 @@
       "staking": false,
       "deadheading": false,
       "cut_flower_notes": "Elegant white umbellifers - like baby's breath but taller and grander. The ultimate cottage garden filler.",
-      "pest_disease_notes": "Very easy in Auckland. Self-seeds readily. Aphids may appear but natural predators handle them. Direct sow in autumn (Mar–Apr) for spring-summer flowering; plants grow slowly through Auckland winter — allow 6–8 months to bloom from an autumn sow.",
+      "pest_disease_notes": "Very easy in Auckland. Self-seeds readily. Aphids may appear but natural predators handle them. Direct sow in autumn (Mar\u2013Apr) for spring-summer flowering; plants grow slowly through Auckland winter \u2014 allow 6\u20138 months to bloom from an autumn sow.",
       "slug": "ammi-majus",
       "growth_stages": {
         "harvest": "/images/flowers/ammi-majus.jpg",
@@ -1424,6 +1424,92 @@
           "transplant_start": null,
           "transplant_end": null,
           "varieties": "Silver Cup, Blushing Beauty, Mont Blanc"
+        }
+      }
+    },
+    {
+      "common_name": "Daffodil",
+      "botanical_name": "Narcissus spp.",
+      "family": "Amaryllidaceae",
+      "type": "bulb",
+      "sun": "full sun to partial shade",
+      "soil_ph": "6.0-7.0",
+      "soil_type": "well-drained, moderately fertile",
+      "spacing_cm": 15,
+      "row_spacing_cm": 20,
+      "sow_depth_cm": 15,
+      "germination_temp_c": "10-15",
+      "germination_days": "30-60",
+      "days_to_maturity_sow": null,
+      "days_to_maturity_transplant": null,
+      "flowering_start": 8,
+      "flowering_end": 10,
+      "vase_life_days": "5-7",
+      "stem_length_cm": "30-60",
+      "pinching": false,
+      "staking": false,
+      "deadheading": true,
+      "cut_flower_notes": "Harvest at 'goose-neck' stage. Condition separately for 6+ hours due to toxic sap that can harm other flowers. Use sharp scissors. Store cold and upright. Early spring premium.",
+      "pest_disease_notes": "Generally pest-resistant. Watch for bulb rot in poorly drained soil. Deer and rabbit resistant.",
+      "slug": "daffodil",
+      "growth_stages": {},
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 5,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Carlton, Dutch Master, Ice Follies, Pink Charm, Tahiti, Dick Wilden"
+        },
+        "christchurch": {
+          "sow_start": 3,
+          "sow_end": 4,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Carlton, Dutch Master, Ice Follies, Pink Charm, Tahiti, Dick Wilden"
+        }
+      }
+    },
+    {
+      "common_name": "Dutch Iris",
+      "botanical_name": "Iris \u00d7 hollandica",
+      "family": "Iridaceae",
+      "type": "bulb",
+      "sun": "full sun",
+      "soil_ph": "6.0-7.0",
+      "soil_type": "well-drained, fertile",
+      "spacing_cm": 10,
+      "row_spacing_cm": 15,
+      "sow_depth_cm": 8,
+      "germination_temp_c": "15-20",
+      "germination_days": "30-45",
+      "days_to_maturity_sow": null,
+      "days_to_maturity_transplant": null,
+      "flowering_start": 10,
+      "flowering_end": 12,
+      "vase_life_days": "3-5",
+      "stem_length_cm": "45-60",
+      "pinching": false,
+      "staking": true,
+      "deadheading": true,
+      "cut_flower_notes": "Harvest at 'pencil' stage (color visible through sheath). Re-cut stems under water. Use floral preservative. No toxic sap, safe to mix with other flowers. Delicate stems, handle gently.",
+      "pest_disease_notes": "Watch for iris borer and fungal diseases. Ensure good air circulation. Bulbs may need lifting in wet winters.",
+      "slug": "dutch-iris",
+      "growth_stages": {},
+      "regions": {
+        "auckland": {
+          "sow_start": 3,
+          "sow_end": 5,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Blue Magic, Blue Pearl, Sapphire Beauty, White van Vliet"
+        },
+        "christchurch": {
+          "sow_start": 3,
+          "sow_end": 4,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Blue Magic, Blue Pearl, Sapphire Beauty, White van Vliet"
         }
       }
     }
