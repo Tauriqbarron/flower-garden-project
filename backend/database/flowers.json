@@ -1452,7 +1452,11 @@
       "cut_flower_notes": "Harvest at 'goose-neck' stage. Condition separately for 6+ hours due to toxic sap that can harm other flowers. Use sharp scissors. Store cold and upright. Early spring premium.",
       "pest_disease_notes": "Generally pest-resistant. Watch for bulb rot in poorly drained soil. Deer and rabbit resistant.",
       "slug": "daffodil",
-      "growth_stages": {},
+      "growth_stages": {
+        "harvest": "/images/flowers/daffodil/harvest.png",
+        "seedling": "/images/flowers/daffodil/seedling.png",
+        "young_plant": "/images/flowers/daffodil/young-plant.png"
+      },
       "regions": {
         "auckland": {
           "sow_start": 3,
@@ -1495,7 +1499,11 @@
       "cut_flower_notes": "Harvest at 'pencil' stage (color visible through sheath). Re-cut stems under water. Use floral preservative. No toxic sap, safe to mix with other flowers. Delicate stems, handle gently.",
       "pest_disease_notes": "Watch for iris borer and fungal diseases. Ensure good air circulation. Bulbs may need lifting in wet winters.",
       "slug": "dutch-iris",
-      "growth_stages": {},
+      "growth_stages": {
+        "harvest": "/images/flowers/dutch-iris/harvest.png",
+        "seedling": "/images/flowers/dutch-iris/seedling.png",
+        "young_plant": "/images/flowers/dutch-iris/young-plant.png"
+      },
       "regions": {
         "auckland": {
           "sow_start": 3,
