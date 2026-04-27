@@ -137,6 +137,42 @@ def _timing_color(weeks_diff: int) -> str:
         return "red"
 
 
+def _compute_total_window_weeks(window_start_week: int, window_end_week: int) -> int:
+    """Calculate total number of weeks in a sow window, handling year wrap."""
+    if window_start_week <= window_end_week:
+        return window_end_week - window_start_week
+    else:
+        return (53 - window_start_week) + window_end_week
+
+def _compute_window_position(
+    current_week: int,
+    window_start_week: int,
+    window_end_week: int,
+    total_window_weeks: int
+) -> tuple[str, str, str]:
+    """Determine position within the sowing window using hybrid thresholds."""
+    weeks_into_window = _weeks_between(window_start_week, current_week)
+    if total_window_weeks <= 1:
+        position_ratio = 0.0
+    else:
+        position_ratio = weeks_into_window / total_window_weeks
+    if total_window_weeks >= 8:
+        if position_ratio < 0.25:
+            return "early", "Early window 🌱", "blue"
+        elif position_ratio > 0.75:
+            return "late", "Late window ⏰", "amber"
+        else:
+            return "peak", "Peak time! 🎯", "green"
+    else:
+        if weeks_into_window < 2:
+            return "early", "Early window 🌱", "blue"
+        elif total_window_weeks - weeks_into_window <= 3:
+            return "late", "Late window ⏰", "amber"
+        else:
+            return "peak", "Peak time! 🎯", "green"
+
+
+
 def _compute_urgency(current_month: int, sow_start: int | None, sow_end: int | None) -> dict:
     """Compute urgency fields: weeks until window opens/closes, and status category."""
     if sow_start is None or sow_end is None:
@@ -202,6 +238,11 @@ def _enrich_veg_sow_item(vegetable: dict, region: str = "auckland") -> dict:
     sow_end = reg.get("sow_end")
     days_to_maturity = vegetable.get("days_to_maturity_sow")
 
+    # Position-aware fields (only set when in_window)
+    window_position = None
+    position_label = None
+    position_color = None
+
     # Compute optimal month (midpoint of sow window, handling year wrap)
     if sow_start is not None and sow_end is not None:
         if sow_start <= sow_end:
@@ -210,7 +251,7 @@ def _enrich_veg_sow_item(vegetable: dict, region: str = "auckland") -> dict:
             window_months = list(range(sow_start, 13)) + list(range(1, sow_end + 1))
         optimal_month = window_months[len(window_months) // 2]
 
-        # Get full sow window week range (not just optimal month)
+        # Get full sow window week range
         window_start_week, _ = _month_to_week_range(sow_start)
         _, window_end_week = _month_to_week_range(sow_end)
 
@@ -218,16 +259,18 @@ def _enrich_veg_sow_item(vegetable: dict, region: str = "auckland") -> dict:
         if sow_start <= sow_end:
             in_window = window_start_week <= current_week <= window_end_week
         else:
-            # Year wrap: window spans Dec→Jan
             in_window = current_week >= window_start_week or current_week <= window_end_week
 
         if in_window:
-            weeks_from_optimal = 0
+            total_window_weeks = _compute_total_window_weeks(window_start_week, window_end_week)
+            window_position, position_label, position_color = _compute_window_position(
+                current_week, window_start_week, window_end_week, total_window_weeks
+            )
+            optimal_week, _ = _month_to_week_range(optimal_month)
+            weeks_from_optimal = _weeks_between(current_week, optimal_week)
         else:
-            # Calculate weeks to nearest edge of sow window
             weeks_to_start = _weeks_between(current_week, window_start_week)
             weeks_to_end = _weeks_between(current_week, window_end_week)
-            # Use the edge with smallest absolute distance
             if abs(weeks_to_start) <= abs(weeks_to_end):
                 weeks_from_optimal = weeks_to_start
             else:
@@ -244,10 +287,16 @@ def _enrich_veg_sow_item(vegetable: dict, region: str = "auckland") -> dict:
         "optimal_month": optimal_month,
         "optimal_month_name": NZ_MONTHS.get(optimal_month, {}).get("name", ""),
         "weeks_from_optimal": weeks_from_optimal,
-        "timing_label": _timing_label(weeks_from_optimal),
-        "timing_color": _timing_color(weeks_from_optimal),
+        "timing_label": position_label if position_label else _timing_label(weeks_from_optimal),
+        "timing_color": position_color if position_color else _timing_color(weeks_from_optimal),
+        "window_position": window_position,
         "growth_stages": vegetable.get("growth_stages"),
     }
+
+    if position_label:
+        result["position_label"] = position_label
+    if position_color:
+        result["position_color"] = position_color
 
     # Urgency fields
     urgency = _compute_urgency(current_month, sow_start, sow_end)
@@ -261,6 +310,7 @@ def _enrich_veg_sow_item(vegetable: dict, region: str = "auckland") -> dict:
         result["expected_harvest_text"] = "Harvest time varies"
 
     return result
+
 
 
 def get_vegetable_dashboard_summary(region: str = "auckland"):

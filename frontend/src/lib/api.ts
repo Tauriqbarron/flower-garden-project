@@ -61,6 +61,9 @@ export interface SowNowDetail {
   weeks_until_window_ends?: number | null;
   weeks_until_window_starts?: number | null;
   window_status?: string;
+  window_position?: "early" | "peak" | "late" | null;  // NEW — position within window
+  position_label?: string;      // NEW — display label (overrides timing_label when in_window)
+  position_color?: string;      // NEW — badge color (overrides timing_color when in_window)
   growth_stages?: GrowthStages | null;
 }
 
@@ -209,6 +212,9 @@ export interface VegSowNowDetail {
   weeks_until_window_ends?: number | null;
   weeks_until_window_starts?: number | null;
   window_status?: string;
+  window_position?: "early" | "peak" | "late" | null;  // NEW — position within window
+  position_label?: string;      // NEW — display label (overrides timing_label when in_window)
+  position_color?: string;      // NEW — badge color (overrides timing_color when in_window)
   growth_stages?: GrowthStages | null;
 }
 
