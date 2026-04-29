@@ -12,6 +12,7 @@ const LINKS = [
   { href: "/flowers", label: "Flowers" },
   { href: "/vegetables/dashboard", label: "Vege Dashboard" },
   { href: "/vegetables", label: "Veges" },
+  { href: "/natives", label: "Natives" },
   { href: "/calendar", label: "Calendar" },
 ];
 

@@ -7,6 +7,7 @@ from app.routes.flowers import router as flowers_router
 from app.routes.activities import router as activities_router
 from app.routes.dashboard import router as dashboard_router
 from app.routes.vegetables import router as vegetables_router
+from app.routes.natives import router as natives_router
 
 app = FastAPI(
     title="Flower Garden Project",
@@ -27,6 +28,7 @@ app.include_router(flowers_router)
 app.include_router(activities_router)
 app.include_router(dashboard_router)
 app.include_router(vegetables_router)
+app.include_router(natives_router)
 
 
 @app.get("/health")

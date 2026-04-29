@@ -109,3 +109,29 @@ class VegetableMonth(BaseModel):
     sow_now: List[str]
     transplant_now: List[str]
     harvest_now: List[str]
+
+
+class Native(BaseModel):
+    common_name: str
+    botanical_name: str
+    māori_name: Optional[str] = None
+    family: str
+    life_cycle: str  # tree, shrub, groundcover, climber, fern
+    is_deciduous: bool
+    sun: str
+    soil_ph: str
+    soil_type: str
+    max_height_m: float
+    max_spread_m: float
+    growth_rate: str  # slow, slow_moderate, moderate, fast
+    life_expectancy_years: int
+    propagation_method: str  # seed, cutting, division
+    sow_depth_cm: Optional[float] = None
+    germination_days: Optional[str] = None
+    time_to_maturity_years: int
+    flowering_months: List[int] = []
+    fruiting_months: List[int] = []
+    birds_attracted: List[str] = []
+    slug: str
+    growth_stages: Optional[GrowthStages] = None
+    regions: dict

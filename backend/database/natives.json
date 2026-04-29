@@ -1,0 +1,1577 @@
+{
+  "database_info": {
+    "version": "1.0.0",
+    "last_updated": "2026-04-30",
+    "source": "NZ Plant Conservation Network (nzpcn.org.nz), Department of Conservation T.E.R:R:A.I.N., Auckland Council native plant guides, Christchurch City Council planting resources, Trees That Count",
+    "hemisphere": "Southern"
+  },
+  "natives": [
+    {
+      "common_name": "K\u014dwhai",
+      "botanical_name": "Sophora microphylla",
+      "m\u0101ori_name": "K\u014dwhai",
+      "family": "Fabaceae",
+      "life_cycle": "tree",
+      "is_deciduous": true,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, adaptable",
+      "max_height_m": 8.0,
+      "max_spread_m": 6.0,
+      "growth_rate": "slow_moderate",
+      "life_expectancy_years": 100,
+      "propagation_method": "seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "variable (hot water treatment recommended)",
+      "time_to_maturity_years": 10,
+      "flowering_months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        11,
+        12,
+        1
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "kerer\u016b",
+        "bellbird",
+        "morepork"
+      ],
+      "traditional_uses": "T\u0101 moko dye (yellow), medicine (coughs and colds), nectar used as sweetener, wood for tools",
+      "cultural_significance": "National flower of NZ; blooms when whales migrate (traditional marker of seasonal change); considered r\u0101kau rangatira (chiefly tree)",
+      "coastal_notes": "Some coastal tolerance; young plants need protection from salt-laden winds",
+      "riparian_use": "Good for streambank stabilisation; tolerates periodic flooding",
+      "pest_disease_notes": "Watch for k\u014dwhai pine sawfly; generally hardy once established",
+      "slug": "kowhai",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant after last frost; water regularly first 2 years; mulch well",
+          "established_years": 3
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Protect from late frosts; young plants benefit from wind shelter; may need staking",
+          "established_years": 4
+        }
+      }
+    },
+    {
+      "common_name": "P\u014dhutukawa",
+      "botanical_name": "Metrosideros excelsa",
+      "m\u0101ori_name": "P\u014dhutukawa",
+      "family": "Myrtaceae",
+      "life_cycle": "tree",
+      "is_deciduous": false,
+      "sun": "full sun",
+      "soil_ph": "5.5-7.0",
+      "soil_type": "sandy, well-draining, coastal soils",
+      "max_height_m": 20.0,
+      "max_spread_m": 25.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 500,
+      "propagation_method": "seed",
+      "sow_depth_cm": null,
+      "germination_days": "14-28 (fresh seed)",
+      "time_to_maturity_years": 20,
+      "flowering_months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        1,
+        2,
+        3
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "k\u0101k\u0101",
+        "honeyeaters"
+      ],
+      "traditional_uses": "Bark used medicinally as astringent; flowers for red dye; wood for tools and smoking",
+      "cultural_significance": "Known as the 'New Zealand Christmas tree'; iconic coastal tree; symbol of resilience and strength",
+      "coastal_notes": "Excellent coastal tolerance; salt-spray and wind hardy; perfect for cliffs and exposed sites",
+      "riparian_use": "Stabilises coastal cliffs and dunes; good for erosion control in windy sites",
+      "pest_disease_notes": "Myrtle rust (Austropuccinia psidii) \u2014 monitor; scale insects can occur; generally tough",
+      "slug": "pohutukawa",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in sheltered spot first winter; water deeply until established; avoid fertiliser",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Protect from cold winds first 2 years; water in dry spells; hardy once established",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Kauri",
+      "botanical_name": "Agathis australis",
+      "m\u0101ori_name": "Kauri",
+      "family": "Araucariaceae",
+      "life_cycle": "tree",
+      "is_deciduous": false,
+      "sun": "full sun",
+      "soil_ph": "5.0-6.5",
+      "soil_type": "deep, well-draining, fertile",
+      "max_height_m": 50.0,
+      "max_spread_m": 20.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 2000,
+      "propagation_method": "seed",
+      "sow_depth_cm": 2.5,
+      "germination_days": "30-60 (fresh seed)",
+      "time_to_maturity_years": 80,
+      "flowering_months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "kerer\u016b",
+        "k\u0101k\u0101",
+        "t\u016b\u012b"
+      ],
+      "traditional_uses": "Wood for waka (canoes), carving, housing; resin (gum) for medicine and varnish; bark for roofing",
+      "cultural_significance": "One of the most sacred trees to M\u0101ori; largest and longest-lived in NZ; features in many legends",
+      "coastal_notes": "Prefers inland sites; not salt tolerant; young trees need wind protection",
+      "riparian_use": "Deep roots stabilise slopes; not for wet sites",
+      "pest_disease_notes": "Kauri dieback (Phytophthora agathidicida) \u2014 critical biosecurity risk; clean footwear before entering areas with kauri",
+      "slug": "kauri",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in deep, well-drained soil; protect from wind and frost; water regularly first 3 years; avoid compacted soil",
+          "established_years": 5
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; choose sheltered spot; may struggle in heavy clay; excellent drainage essential",
+          "established_years": 6
+        }
+      }
+    },
+    {
+      "common_name": "T\u014dtara",
+      "botanical_name": "Podocarpus totara",
+      "m\u0101ori_name": "T\u014dtara",
+      "family": "Podocarpaceae",
+      "life_cycle": "tree",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.0",
+      "soil_type": "well-draining, adaptable to clay",
+      "max_height_m": 30.0,
+      "max_spread_m": 15.0,
+      "growth_rate": "slow_moderate",
+      "life_expectancy_years": 800,
+      "propagation_method": "seed",
+      "sow_depth_cm": 1.0,
+      "germination_days": "60-120 (variable)",
+      "time_to_maturity_years": 50,
+      "flowering_months": [
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "kerer\u016b",
+        "k\u0101k\u0101",
+        "t\u016b\u012b",
+        "bellbird"
+      ],
+      "traditional_uses": "Wood for waka, houses, carving; bark for roofing and medicine; resin for glue and incense",
+      "cultural_significance": "Sacred to M\u0101ori; often planted in important places (marae, urup\u0101); symbol of strength and longevity",
+      "coastal_notes": "Some coastal tolerance but prefers inland; young trees need wind shelter",
+      "riparian_use": "Good for stabilising banks; tolerates some wet conditions",
+      "pest_disease_notes": "Generally healthy; watch\tfor root rot in poorly drained soils",
+      "slug": "totara",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in well-drained soil; water first 2 summers; mulch; slow starter but very hardy once established",
+          "established_years": 4
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Protect from cold winds; plant after frost risk; tolerant of dry conditions once established",
+          "established_years": 5
+        }
+      }
+    },
+    {
+      "common_name": "M\u0101nuka",
+      "botanical_name": "Leptospermum scoparium",
+      "m\u0101ori_name": "M\u0101nuka",
+      "family": "Myrtaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, dry to moist, adaptable, poor soils OK",
+      "max_height_m": 5.0,
+      "max_spread_m": 4.0,
+      "growth_rate": "slow_moderate",
+      "life_expectancy_years": 200,
+      "propagation_method": "seed",
+      "sow_depth_cm": null,
+      "germination_days": "14-60 (variable, smoke treatment improves)",
+      "time_to_maturity_years": 8,
+      "flowering_months": [
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        1,
+        2,
+        3
+      ],
+      "birds_attracted": [
+        "bees",
+        "native insects",
+        "bellbird",
+        "t\u016b\u012b"
+      ],
+      "traditional_uses": "Medicinal (m\u0101nuka honey antibacterial, tea from leaves for colds), firewood, tool handles, smoke for preserving",
+      "cultural_significance": "M\u0101nuka honey is a taonga; plant considered r\u0101kau rangatira (chiefly tree); used in traditional healing",
+      "coastal_notes": "Tolerates coastal conditions; salt spray OK; wind hardy",
+      "riparian_use": "Good for erosion control on slopes; tolerates periodic dryness",
+      "pest_disease_notes": "Myrtle rust risk; generally low maintenance; may get scale insects",
+      "slug": "manuka",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Direct sow or raise seedlings; water first summer; minimal care once established; prune for shape",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frost danger; drought tolerant once established; full sun essential for flowering",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "K\u0101nuka",
+      "botanical_name": "Kunzea ericoides",
+      "m\u0101ori_name": "K\u0101nuka",
+      "family": "Myrtaceae",
+      "life_cycle": "tree",
+      "is_deciduous": false,
+      "sun": "full sun",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, dry to moist, adaptable",
+      "max_height_m": 10.0,
+      "max_spread_m": 6.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 300,
+      "propagation_method": "seed",
+      "sow_depth_cm": null,
+      "germination_days": "14-30",
+      "time_to_maturity_years": 10,
+      "flowering_months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "native bees",
+        "t\u016b\u012b",
+        "bellbird",
+        "small birds"
+      ],
+      "traditional_uses": "Similar uses to m\u0101nuka \u2014 honey ( kanuka honey), firewood, medicine (leaves for infusions), fence posts",
+      "cultural_significance": "Often confused with m\u0101nuka; distinct ecological role as nurse crop; valuable for regeneration",
+      "coastal_notes": "Coastal to montane; more tolerant of wet soils than m\u0101nuka; wind resistant",
+      "riparian_use": "Streambank stabilisation; nurse crop for forest regeneration; tolerates periodic wet feet",
+      "pest_disease_notes": "Myrtle rust monitoring required; otherwise very healthy",
+      "slug": "kanuka",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Sow seed directly or in trays; protect from birds; water first summer",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Sow after autumn rains; germination variable; hardy once established",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Karaka",
+      "botanical_name": "Corynocarpus laevigatus",
+      "m\u0101ori_name": "Karaka",
+      "family": "Corynocarpaceae",
+      "life_cycle": "tree",
+      "is_deciduous": "partial",
+      "sun": "full sun to part shade",
+      "soil_ph": "6.0-7.5",
+      "soil_type": "well-draining, adaptable, tolerates coastal",
+      "max_height_m": 15.0,
+      "max_spread_m": 10.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 300,
+      "propagation_method": "seed",
+      "sow_depth_cm": 2.5,
+      "germination_days": "60-120 (fresh seed, remove fleshy aril)",
+      "time_to_maturity_years": 15,
+      "flowering_months": [
+        10,
+        11,
+        12,
+        1
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "kerer\u016b",
+        "k\u0101k\u0101",
+        "t\u016b\u012b",
+        "starlings"
+      ],
+      "traditional_uses": "Fruit cooked and soaked to remove toxins; kernel food source; leaves used medicinally; wood for carving",
+      "cultural_significance": "Important food tree for M\u0101ori; widely planted around p\u0101; distinctive orange berry",
+      "coastal_notes": "Very coastal tolerant; salt spray and wind hardy; excellent for exposed sites",
+      "riparian_use": "Can stabilise banks but prefers well-drained; not for constantly wet sites",
+      "pest_disease_notes": "Generally healthy; sooty mould on honeydew from scale insects; possums love fruit",
+      "slug": "karaka",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in any well-drained soil; establish with summer water; prune for shape; toxic fruit until processed",
+          "established_years": 3
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; hardy once established; tolerates dry conditions",
+          "established_years": 4
+        }
+      }
+    },
+    {
+      "common_name": "T\u012b k\u014duka",
+      "botanical_name": "Cordyline australis",
+      "m\u0101ori_name": "T\u012b k\u014duka",
+      "family": "Asparagaceae",
+      "life_cycle": "tree",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "6.0-7.5",
+      "soil_type": "well-draining, adaptable, tolerates clay",
+      "max_height_m": 20.0,
+      "max_spread_m": 4.0,
+      "growth_rate": "slow_moderate",
+      "life_expectancy_years": 200,
+      "propagation_method": "stem cuttings, division",
+      "sow_depth_cm": null,
+      "germination_days": null,
+      "time_to_maturity_years": 20,
+      "flowering_months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        " Waxeyes"
+      ],
+      "traditional_uses": "Fibre for weaving (kete, mats); food (cooked heart); medicinal (bark for wounds); fire starter (old leaves dry quickly)",
+      "cultural_significance": "Very important to M\u0101ori; numerous Culinary and material uses; often planted at marae; clusters indicate fertile soil",
+      "coastal_notes": "Good coastal tolerance; wind and salt spray OK; young plants need some shelter",
+      "riparian_use": "Tolerates periodic wet feet; good for riparian edges",
+      "pest_disease_notes": "Sudden decline disease (pathogen unknown) can affect older trees; generally tough",
+      "slug": "ti-kouka",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in any well-drained site; summer water first year; divide suckers for propagation",
+          "established_years": 3
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frost; tolerant of dry soils; may need winter protection first year",
+          "established_years": 4
+        }
+      }
+    },
+    {
+      "common_name": "Rewarewa",
+      "botanical_name": "Knightia excelsa",
+      "m\u0101ori_name": "Rewarewa",
+      "family": "Proteaceae",
+      "life_cycle": "tree",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-6.5",
+      "soil_type": "well-draining, moist, fertile",
+      "max_height_m": 30.0,
+      "max_spread_m": 8.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 200,
+      "propagation_method": "seed",
+      "sow_depth_cm": 1.0,
+      "germination_days": "30-60 (fresh seed)",
+      "time_to_maturity_years": 25,
+      "flowering_months": [
+        10,
+        11,
+        12,
+        1
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "honeyeaters",
+        "kerer\u016b"
+      ],
+      "traditional_uses": "Wood highly valued for its figuring (tiger-stripe pattern) \u2013 used for furniture, carving, decorative items; nectar from flowers was collected for sweetener",
+      "cultural_significance": "Renowned for beautiful timber; often called 'New Zealand walnut'; important to carving traditions",
+      "coastal_notes": "Prefers inland; not particularly salt tolerant; needs shelter from strong winds",
+      "riparian_use": "Prefers well-drained slopes; not for constantly wet sites",
+      "pest_disease_notes": "Generally healthy; watch for sooty mould on scale insects; root rot in waterlogged soil",
+      "slug": "rewarewa",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in deep, moist, well-drained soil; partial shade OK when young; water in dry periods",
+          "established_years": 4
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; choose sheltered position; mulch through summer; drought sensitive",
+          "established_years": 5
+        }
+      }
+    },
+    {
+      "common_name": "Rimu",
+      "botanical_name": "Dacrydium cupressinum",
+      "m\u0101ori_name": "Rimu",
+      "family": "Podocarpaceae",
+      "life_cycle": "tree",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.0-6.5",
+      "soil_type": "deep, moist, well-draining, fertile",
+      "max_height_m": 35.0,
+      "max_spread_m": 12.0,
+      "growth_rate": "slow",
+      "life_expectancy_years": 600,
+      "propagation_method": "seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "90-180 (fresh seed, slow)",
+      "time_to_maturity_years": 60,
+      "flowering_months": [
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "kerer\u016b",
+        "k\u0101k\u0101",
+        "t\u016b\u012b"
+      ],
+      "traditional_uses": "Wood for construction, furniture, veneer (prized timber); resin (gum) for varnish and medicine",
+      "cultural_significance": "Important timber tree historically; distinctive drooping branchlets; characteristic of lowland forest",
+      "coastal_notes": "Lowland species; not for exposed coastal sites",
+      "riparian_use": "Prefers moist valleys and slopes; good for forest restoration in wetter areas",
+      "pest_disease_notes": "Generally healthy in suitable habitat; can suffer in urban pollution",
+      "slug": "rimu",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in moist, shady to semi-shady spot; keep moist; slow but long-lived; good understorey tree",
+          "established_years": 5
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frosts; needs reliable moisture; benefits from shelter; slow grower",
+          "established_years": 6
+        }
+      }
+    },
+    {
+      "common_name": "Akeake",
+      "botanical_name": "Dodonaea viscosa",
+      "m\u0101ori_name": "Akeake",
+      "family": "Sapindaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": true,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, sandy, dry, poor soils OK",
+      "max_height_m": 4.0,
+      "max_spread_m": 3.0,
+      "growth_rate": "fast",
+      "life_expectancy_years": 100,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "21-60 (hard seed coat, nick to improve)",
+      "time_to_maturity_years": 4,
+      "flowering_months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "birds_attracted": [
+        "native insects",
+        "small birds"
+      ],
+      "traditional_uses": "Wood very tough \u2014 used for tools, weapons, beaters; medicinal (bark for wounds); leaves for thatching",
+      "cultural_significance": "Name means 'to burn' \u2014 wood burns fiercely; valued for its tough, resilient wood; kaitiaki (guardian) plant in some traditions",
+      "coastal_notes": "Excellent coastal tolerance; salt spray and wind hardy; ideal for exposed sites and sand dunes",
+      "riparian_use": "Good for stabilising banks and slopes; drought tolerant once established",
+      "pest_disease_notes": "Very hardy; minimal issues; occasional aphids",
+      "slug": "akeake",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Very easy; plant anytime; from cuttings or seed; prune to shape; drought tolerant once established",
+          "established_years": 1
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; extremely hardy; tolerates dry, windy conditions; minimal care",
+          "established_years": 2
+        }
+      }
+    },
+    {
+      "common_name": "Karo",
+      "botanical_name": "Pittosporum crassifolium",
+      "m\u0101ori_name": "Karo",
+      "family": "Pittosporaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "6.0-7.5",
+      "soil_type": "well-draining, adaptable, tolerates clay",
+      "max_height_m": 5.0,
+      "max_spread_m": 3.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 150,
+      "propagation_method": "seed, cuttings",
+      "sow_depth_cm": 1.0,
+      "germination_days": "30-90",
+      "time_to_maturity_years": 5,
+      "flowering_months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes",
+        "native insects"
+      ],
+      "traditional_uses": "Resin (gum) used medicinally as antiseptic and for skin conditions; leaves as poultices; wood for small tools",
+      "cultural_significance": "Commonly used in traditional M\u0101ori healing; the resin has a distinctive scent; often planted around historic sites",
+      "coastal_notes": "Good coastal tolerance; salt spray and wind hardy; naturally found on coastal cliffs",
+      "riparian_use": "Tolerates some wet conditions but prefers well-drained; good for stabilising slopes and banks",
+      "pest_disease_notes": "Generally healthy; can get pittosporum scale; bronze bug (Thaumastocoris) occasional",
+      "slug": "karo",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Very adaptable; plant in any well-drained soil; prune to maintain shape; drought tolerant once established",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; hardy once established; tolerates dry conditions; wind resistant",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Harakeke / Flax",
+      "botanical_name": "Phormium tenax",
+      "m\u0101ori_name": "Harakeke",
+      "family": "Asphodelaceae",
+      "life_cycle": "flax",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "6.0-7.5",
+      "soil_type": "wet to moist, tolerates heavy soil",
+      "max_height_m": 4.0,
+      "max_spread_m": 3.0,
+      "growth_rate": "fast",
+      "life_expectancy_years": "indeterminate",
+      "propagation_method": "division",
+      "sow_depth_cm": null,
+      "germination_days": null,
+      "time_to_maturity_years": 5,
+      "flowering_months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        12,
+        1,
+        2
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "starlings",
+        "honeyeaters",
+        "morepork"
+      ],
+      "traditional_uses": "Weaving (kete, cloaks, mats, ropes), medicinal (sap as antiseptic), food (nectar from flowers), cordage, sails",
+      "cultural_significance": "Essential to M\u0101ori material culture; taonga species; specific varieties (k\u014dtuare) have high spiritual value; often grown on marae",
+      "coastal_notes": "Excellent coastal and estuarine tolerance; salt spray OK; wind hardy; stabilises dunes",
+      "riparian_use": "Excellent for riparian planting and wetland edges; tolerates periodic flooding",
+      "pest_disease_notes": "Slug and snail damage to young leaves; otherwise very hardy; excess fertilizer causes leaf drop",
+      "slug": "harakeke",
+      "regions": {
+        "auckland": {
+          "planting_season": "year_round",
+          "planting_notes": "Plant divisions in autumn; keep moist until established; divide clumps every few years; deadhead spent flower spikes",
+          "established_years": 1
+        },
+        "christchurch": {
+          "planting_season": "year_round",
+          "planting_notes": "Plant anytime frost-free; protect first winter in cold gardens; prefers moist soil; very tolerant",
+          "established_years": 2
+        }
+      }
+    },
+    {
+      "common_name": "Mingimingi",
+      "botanical_name": "Coprosma propinqua",
+      "m\u0101ori_name": "Mingimingi",
+      "family": "Rubiaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.0",
+      "soil_type": "well-draining, dry to moist, adaptable",
+      "max_height_m": 2.5,
+      "max_spread_m": 2.0,
+      "growth_rate": "slow_moderate",
+      "life_expectancy_years": 80,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "30-90 (varies)",
+      "time_to_maturity_years": 4,
+      "flowering_months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "birds_attracted": [
+        "bellbird",
+        "t\u016b\u012b",
+        "Waxeyes",
+        "kerer\u016b"
+      ],
+      "traditional_uses": "Berries edible though tasteless; medicinal (bark as poultice); wood for small implements; leaves used in folk medicine for skin conditions",
+      "cultural_significance": "Widespread native shrub; important food source for birds; valued for its tiny purple berries",
+      "coastal_notes": "Coastal and inland; tolerates salt spray and wind; good for exposed sites",
+      "riparian_use": "Good for stabilising banks and slopes; tolerates dry to moist conditions",
+      "pest_disease_notes": "Very hardy; minimal issues; occasional aphids or scale insects",
+      "slug": "mingimingi",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Very easy from cuttings; plant in any well-drained soil; prune to maintain bushy shape; drought tolerant",
+          "established_years": 1
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frost; hardy once established; tolerates dry soils; full sun for best berry production",
+          "established_years": 2
+        }
+      }
+    },
+    {
+      "common_name": "Pat\u0113 / Broadleaf",
+      "botanical_name": "Griselinia littoralis",
+      "m\u0101ori_name": "Pat\u0113",
+      "family": "Griseliniaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade, tolerates shade",
+      "soil_ph": "6.0-7.5",
+      "soil_type": "well-draining, adaptable, tolerates clay",
+      "max_height_m": 5.0,
+      "max_spread_m": 3.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 100,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "60-120",
+      "time_to_maturity_years": 8,
+      "flowering_months": [
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        3,
+        4,
+        5
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes",
+        "small birds"
+      ],
+      "traditional_uses": "Wood for small implements; leaves used medicinally for skin conditions; bark for rope; shade and shelter",
+      "cultural_significance": "Common around traditional settlements; valued as hedging and shelter plant; indicator species for fertile soil",
+      "coastal_notes": "Coastal and lowland; tolerates salt spray and wind; naturalises in coastal gardens",
+      "riparian_use": "Good for stabilising banks and slopes; tolerates some wet feet",
+      "pest_disease_notes": "Very healthy; minimal pest issues; may get leaf spot in humid conditions",
+      "slug": "pate",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Very tolerant; plant anytime; from cuttings or seed; excellent hedge plant; prune hard to maintain shape",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; very adaptable; can handle dry conditions once established; good windbreak",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Koromiko",
+      "botanical_name": "Veronica stricta",
+      "m\u0101ori_name": "Koromiko",
+      "family": "Plantaginaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, moist, fertile",
+      "max_height_m": 2.0,
+      "max_spread_m": 1.5,
+      "growth_rate": "fast",
+      "life_expectancy_years": 30,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "14-30",
+      "time_to_maturity_years": 2,
+      "flowering_months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "fruiting_months": [
+        3,
+        4,
+        5
+      ],
+      "birds_attracted": [
+        "bees",
+        "native insects",
+        "butterflies",
+        "small birds"
+      ],
+      "traditional_uses": "Medicinal (infusions from leaves for diarrhoea, skin conditions); poultices; sometimes used as rongo\u0101 for internal ailments",
+      "cultural_significance": "Important medicinal plant (rongo\u0101); widely used by M\u0101ori healers; quick-growing and easily accessible",
+      "coastal_notes": "Inland species; not particularly salt tolerant; prefers sheltered sites",
+      "riparian_use": "Good for stabilising damp banks; tolerates moist conditions",
+      "pest_disease_notes": "Very healthy; few issues; can get powdery mildew in damp shady spots",
+      "slug": "koromiko",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Easy from cuttings; plant in moist well-drained soil; prune after flowering to maintain shape; flowers attract bees",
+          "established_years": 1
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; tolerates dryish soil; full sun for best flowering; hardy once established",
+          "established_years": 2
+        }
+      }
+    },
+    {
+      "common_name": "Hebe",
+      "botanical_name": "Hebe speciosa",
+      "m\u0101ori_name": "Koromiko (some varieties)",
+      "family": "Plantaginaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun",
+      "soil_ph": "6.0-7.5",
+      "soil_type": "well-draining, dry to moist, tolerates poor soils",
+      "max_height_m": 1.5,
+      "max_spread_m": 1.5,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 15,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "14-42",
+      "time_to_maturity_years": 3,
+      "flowering_months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "fruiting_months": [
+        3,
+        4,
+        5
+      ],
+      "birds_attracted": [
+        "bees",
+        "native insects",
+        "butterflies",
+        "honeyeaters"
+      ],
+      "traditional_uses": "Some species used medicinally; ornamental beauty appreciated; nectar source for birds",
+      "cultural_significance": "Many species endemic; important in native gardens; showy flowers valued; some are threatened in the wild",
+      "coastal_notes": "Some coastal tolerance; wind hardy; salt-spray OK in sheltered spots",
+      "riparian_use": "Suited to rock gardens and stabilising banks; prefers well-drained; not for constantly wet sites",
+      "pest_disease_notes": "Phytophthora root rot can affect poorly-drained plants; generally tough when sited correctly",
+      "slug": "hebe-speciosa",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Easy from semi-ripe cuttings; plant in sunny well-drained spot; prune lightly after flowering; drought tolerant once established",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frosts; full sun essential; excellent drainage; protect from severe winter wet",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Koh\u016bh\u016b",
+      "botanical_name": "Pittosporum tenuifolium",
+      "m\u0101ori_name": "Koh\u016bh\u016b",
+      "family": "Pittosporaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade, full shade OK",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, adaptable, tolerates clay",
+      "max_height_m": 4.0,
+      "max_spread_m": 3.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 100,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "60-120",
+      "time_to_maturity_years": 6,
+      "flowering_months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "fruiting_months": [
+        12,
+        1,
+        2
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes"
+      ],
+      "traditional_uses": "Fragrant leaves used in perfumes and sachets; wood for small implements; resin (gum) medicinally; hedging and shelter",
+      "cultural_significance": "Recognised by its distinctive dark-green wavy leaves and fragrant night-blooming flowers; used in traditional scent bags",
+      "coastal_notes": "Coastal and inland; tolerates wind and salt-spray when established; good for coastal gardens",
+      "riparian_use": "Tolerates some wet conditions; good for stabilising slopes and banks",
+      "pest_disease_notes": "Bronze bug (Thaumastocoris) can defoliate; pittosporum scale; generally tough when healthy",
+      "slug": "kohuhu",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Very adaptable; plant in any well-drained soil; prune to maintain shape; fragrant evening flowers attract moths",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; tolerates dry soils; wind hardy; minimal care once established",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Lemonwood / Tarata",
+      "botanical_name": "Pittosporum eugenioides",
+      "m\u0101ori_name": "Tarata",
+      "family": "Pittosporaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "6.0-7.5",
+      "soil_type": "well-draining, moist, fertile",
+      "max_height_m": 6.0,
+      "max_spread_m": 4.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 100,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "30-90",
+      "time_to_maturity_years": 8,
+      "flowering_months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        12,
+        1,
+        2
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes",
+        "native insects"
+      ],
+      "traditional_uses": "Leaves have strong lemon scent \u2014 used in perfumes, placed among clothing; medicinal (infusions for colds); ornamental",
+      "cultural_significance": "Valued for its fragrant leaves; often planted near sleeping areas; associated with purity and protection",
+      "coastal_notes": "Lowland and coastal; tolerates some salt-spray; prefers sheltered inland sites",
+      "riparian_use": "Good for stabilising banks; prefers moist well-drained soil; not for constantly wet sites",
+      "pest_disease_notes": "Bronze bug and pittosporum scale can affect; generally healthy in good conditions",
+      "slug": "tarata",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in moist well-drained soil; partial shade OK; prune to shape; fragrance strongest in warm weather",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; protect from cold winds; water during dry spells; scent less pronounced in cold climates",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Mapou / M\u0101t\u0101\u012b",
+      "botanical_name": "Myrsine australis",
+      "m\u0101ori_name": "Mapou",
+      "family": "Primulaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade, full shade OK",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, adaptable, tolerates clay and dry",
+      "max_height_m": 4.0,
+      "max_spread_m": 2.5,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 150,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "30-90",
+      "time_to_maturity_years": 6,
+      "flowering_months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes",
+        "kerer\u016b"
+      ],
+      "traditional_uses": "Wood for small implements; berries eaten by children (mildly toxic raw, cooked); medicinal (bark for skin conditions); hedging and binding soil",
+      "cultural_significance": "Common around old settlement sites; indicator of fertile soil; sometimes used in rongo\u0101",
+      "coastal_notes": "Coastal and inland; tolerates wind and salt-spray; good for exposed gardens",
+      "riparian_use": "Excellent for stabilising slopes and banks; tolerates dry to moist conditions",
+      "pest_disease_notes": "Very hardy; minimal issues; occasional aphids or mealybugs",
+      "slug": "mapou",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Very tolerant; plant in any well-drained soil; prune hard to maintain as shrub; berries attract birds",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frost; very adaptable; tolerates dry soils and wind; excellent hardy shrub",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Five Finger / Pseudopanax",
+      "botanical_name": "Pseudopanax arboreus",
+      "m\u0101ori_name": "K\u014dtuku (some regions)",
+      "family": "Araliaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade, shade tolerant",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, moist, fertile",
+      "max_height_m": 3.0,
+      "max_spread_m": 2.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 80,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "30-90",
+      "time_to_maturity_years": 5,
+      "flowering_months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes",
+        "kerer\u016b"
+      ],
+      "traditional_uses": "Leaves and shoots eaten in times of scarcity (cooked); medicinal (bark and leaves as poultices); wood for small tools; important for bird-attracting",
+      "cultural_significance": "Distinctive palmate leaves; common in coastal and lowland forest; larval food for some native butterflies",
+      "coastal_notes": "Common coastal shrub; salt-tolerance good; wind hardy when established",
+      "riparian_use": "Good for stabilising banks and slopes; prefers moist well-drained soil",
+      "pest_disease_notes": "Very healthy; few pest issues; can suffer in extreme drought",
+      "slug": "five-finger",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Easy from semi-hard cuttings; plant in moist well-drained soil; tolerates shade; good for understorey",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; prefers moist sheltered site; tolerates dry shade once established",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Lancewood / Horoeka",
+      "botanical_name": "Pseudopanax crassifolius",
+      "m\u0101ori_name": "Horoeka",
+      "family": "Araliaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, adaptable",
+      "max_height_m": 3.0,
+      "max_spread_m": 1.5,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 60,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "30-90",
+      "time_to_maturity_years": 5,
+      "flowering_months": [
+        10,
+        11,
+        12,
+        1
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes"
+      ],
+      "traditional_uses": "Young leaves cooked and eaten in times of scarcity; wood very tough \u2014 used for implements; medicinal (bark); distinctive juvenile form valued in gardens",
+      "cultural_significance": "Distinctive juvenile and adult forms (transformation over decades); symbol of change; important in M\u0101ori tradition as marker of forest succession",
+      "coastal_notes": "Coastal and inland; tolerates wind and salt-spray; good for exposed gardens",
+      "riparian_use": "Good for stabilising slopes and banks; tolerates dry to moist conditions",
+      "pest_disease_notes": "Very hardy; minimal issues; may get leaf spot in humid conditions",
+      "slug": "lancewood",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Easy from cuttings; plant in any well-drained soil; prune to maintain striking juvenile foliage; drought tolerant",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frost; very hardy; tolerates dry soils and wind; minimal care once established",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Cabbage Tree / T\u012b",
+      "botanical_name": "Cordyline australis",
+      "m\u0101ori_name": "T\u012b",
+      "family": "Asparagaceae",
+      "life_cycle": "tree",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "6.0-7.5",
+      "soil_type": "well-draining, adaptable, tolerates clay",
+      "max_height_m": 20.0,
+      "max_spread_m": 4.0,
+      "growth_rate": "slow_moderate",
+      "life_expectancy_years": 200,
+      "propagation_method": "stem cuttings, division",
+      "sow_depth_cm": null,
+      "germination_days": null,
+      "time_to_maturity_years": 20,
+      "flowering_months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes",
+        "kerer\u016b"
+      ],
+      "traditional_uses": "Fibre for weaving (kete, mats); food (cooked heart); medicinal (bark for wounds); fire starter (old leaves dry quickly); thatching",
+      "cultural_significance": "One of the most iconic NZ plants; often features in M\u0101ori legends; clusters indicate fertile soil; planted at marae",
+      "coastal_notes": "Good coastal tolerance; salt spray and wind OK when established; young plants need some shelter",
+      "riparian_use": "Tolerates periodic wet feet; good for riparian edges and gully planting",
+      "pest_disease_notes": "Sudden decline disease affects older trees; generally very tough; CBD cabbage trees can have issues",
+      "slug": "cabbage-tree",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in any well-drained site; summer water first year; divide suckers; prune dead leaves; watch for sudden decline",
+          "established_years": 3
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frost; tolerates dry soils; may need winter protection first year; hardy once established",
+          "established_years": 4
+        }
+      }
+    },
+    {
+      "common_name": "Silver Fern / Ponga",
+      "botanical_name": "Cyathea dealbata",
+      "m\u0101ori_name": "Ponga",
+      "family": "Cyatheaceae",
+      "life_cycle": "fern",
+      "is_deciduous": false,
+      "sun": "part shade to full shade",
+      "soil_ph": "5.5-6.5",
+      "soil_type": "moist, well-draining, rich organic matter",
+      "max_height_m": 10.0,
+      "max_spread_m": 3.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 150,
+      "propagation_method": "spore, division",
+      "sow_depth_cm": null,
+      "germination_days": "spores take months; difficult from seed",
+      "time_to_maturity_years": 10,
+      "flowering_months": null,
+      "fruiting_months": null,
+      "birds_attracted": [
+        "native insects",
+        "ferny habitat for small birds"
+      ],
+      "traditional_uses": "Fronds used for roofing,linings; silver underside used for marking trails; medicinal (pith for wounds); food (pith and young fiddleheads cooked)",
+      "cultural_significance": "Iconic emblem of NZ; silver underside recognised worldwide; used in M\u0101ori carving and tattoos; national symbol",
+      "coastal_notes": "Lowland and montane; prefers sheltered forest conditions; not for exposed coastal sites",
+      "riparian_use": "Good for stabilising moist banks and gullies; prefers constant moisture",
+      "pest_disease_notes": "Scale insects can infest; needs consistent moisture; will suffer in dry exposed sites",
+      "slug": "ponga",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in moist shady spot; summer water essential; mulch thickly; avoid hot afternoon sun; not drought tolerant",
+          "established_years": 5
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frosts; choose sheltered moist site; protection from drying winds; may need winter watering in dry years",
+          "established_years": 6
+        }
+      }
+    },
+    {
+      "common_name": "Toetoe",
+      "botanical_name": "Austroderia toetoe",
+      "m\u0101ori_name": "Toetoe",
+      "family": "Poaceae",
+      "life_cycle": "grass",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "moist to wet, tolerates periodic flooding, clay OK",
+      "max_height_m": 3.0,
+      "max_spread_m": 2.0,
+      "growth_rate": "fast",
+      "life_expectancy_years": "long-lived perennial",
+      "propagation_method": "division",
+      "sow_depth_cm": null,
+      "germination_days": null,
+      "time_to_maturity_years": 3,
+      "flowering_months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        12,
+        1,
+        2
+      ],
+      "birds_attracted": [
+        "native skinks",
+        "lizards",
+        "ground-nesting birds",
+        "insects"
+      ],
+      "traditional_uses": "Thatching for roofs (traditional whare); woven mats, baskets, and toys; bedding; medicinal (ash for wounds); windbreak and sand stabilisation",
+      "cultural_significance": "Important traditional material plant; toetoe thatch considered durable and waterproof; often planted around marae and settlements",
+      "coastal_notes": "Excellent coastal tolerance; salt spray and wind hardy; stabilises dunes and coastal cliffs",
+      "riparian_use": "Excellent for riparian planting; tolerates periodic flooding; stabilises stream banks",
+      "pest_disease_notes": "Very hardy; minimal issues; can get rust in very humid conditions; generally pest-free",
+      "slug": "toetoe",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant divisions anytime; establish with water first summer; cut back old foliage annually; spreads slowly by rhizomes",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; very tolerant of wet soils; cut back in late winter; excellent for erosion control",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Kawakawa",
+      "botanical_name": "Macropiper excelsum",
+      "m\u0101ori_name": "Kawakawa",
+      "family": "Piperaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full shade to part shade",
+      "soil_ph": "5.5-6.5",
+      "soil_type": "moist, rich, well-draining, heavy shade OK",
+      "max_height_m": 4.0,
+      "max_spread_m": 3.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 50,
+      "propagation_method": "seed, cuttings",
+      "sow_depth_cm": 0.5,
+      "germination_days": "90-180 (slow)",
+      "time_to_maturity_years": 5,
+      "flowering_months": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "kerer\u016b",
+        "bellbird"
+      ],
+      "traditional_uses": "Leaves used medicinally as rongo\u0101 for wounds, skin conditions, and as relaxant; leaves used in traditional karakia and purification; fruit edible in small quantities",
+      "cultural_significance": "Sacred plant used in M\u0101ori ceremony and healing; distinctive heart-shaped leaves; associated with water and healing; kawakawa is a taonga",
+      "coastal_notes": "Lowland forest species; not coastal; needs sheltered, humid conditions",
+      "riparian_use": "Excellent for shady streambanks and gully planting; loves moist conditions",
+      "pest_disease_notes": "Leaf miner can affect; otherwise healthy in right conditions; needs constant moisture and shelter",
+      "slug": "kawakawa",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in deep shade or dappled light; keep moist constantly; mulch; not for hot dry gardens; perfect for underplanting",
+          "established_years": 3
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frosts; choose very sheltered moist spot; challenging in drier climates; may need irrigation",
+          "established_years": 4
+        }
+      }
+    },
+    {
+      "common_name": "Mountain Flax / Wharariki",
+      "botanical_name": "Phormium cookianum",
+      "m\u0101ori_name": "Wharariki",
+      "family": "Asphodelaceae",
+      "life_cycle": "flax",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, dry to moist, tolerates poor soils",
+      "max_height_m": 2.5,
+      "max_spread_m": 2.0,
+      "growth_rate": "moderate",
+      "life_expectancy_years": "indeterminate",
+      "propagation_method": "division",
+      "sow_depth_cm": null,
+      "germination_days": null,
+      "time_to_maturity_years": 4,
+      "flowering_months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "fruiting_months": [
+        12,
+        1,
+        2
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes"
+      ],
+      "traditional_uses": "Weaving (finer than harakeke \u2014 used for delicate work: kete, piupiu, cloaks); medicinal; fibre for fishing lines and traps",
+      "cultural_significance": "Superior weaving flax; taonga species; specific varieties highly prized for weaving quality; mountain flax considered highest quality",
+      "coastal_notes": "Coastal and alpine; more tolerant of dry conditions than harakeke; salt-spray OK",
+      "riparian_use": "Good for riparian planting; tolerates some wet but prefers well-drained",
+      "pest_disease_notes": "Slug and snail damage; otherwise hardy; excess fertiliser causes leaf drop",
+      "slug": "mountain-flax",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant divisions; well-drained soil essential; less water than harakeke; prune old leaves; excellent for weaving",
+          "established_years": 2
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frost; very drought tolerant once established; well-drained soil; full sun; excellent for dry gardens",
+          "established_years": 3
+        }
+      }
+    },
+    {
+      "common_name": "Coprosma",
+      "botanical_name": "Coprosma robusta",
+      "m\u0101ori_name": "Karam\u016b",
+      "family": "Rubiaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade",
+      "soil_ph": "5.5-7.5",
+      "soil_type": "well-draining, adaptable, tolerates clay and dry",
+      "max_height_m": 4.0,
+      "max_spread_m": 3.0,
+      "growth_rate": "fast",
+      "life_expectancy_years": 50,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "30-90 (improve with smoke)",
+      "time_to_maturity_years": 4,
+      "flowering_months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes",
+        "kerer\u016b"
+      ],
+      "traditional_uses": "Leaves used medicinally as rongo\u0101 for skin conditions, wounds, and as a purifying agent; fumigation; sometimes used in traditional healing. [truncated in source research for brevity \u2014 please expand]",
+      "cultural_significance": "Common throughout NZ; important food source for birds; used in traditional medicine and as a general purpose shrub",
+      "coastal_notes": "Coastal and inland; tolerates salt spray and wind; excellent for exposed gardens",
+      "riparian_use": "Good for stabilising slopes and banks; tolerates dry to moist conditions",
+      "pest_disease_notes": "Very hardy; minimal issues; occasional aphids; can get leaf spot in humid conditions",
+      "slug": "karamu",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Very easy from cuttings; plant in any well-drained soil; prune hard to maintain bushiness; excellent bird attractor",
+          "established_years": 1
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after last frost; tolerates dry soils and wind; hardy and adaptable; prune after flowering",
+          "established_years": 2
+        }
+      }
+    },
+    {
+      "common_name": "Hangehange",
+      "botanical_name": "Geniostoma ligustrifolium",
+      "m\u0101ori_name": "Hangehange",
+      "family": "Loganiaceae",
+      "life_cycle": "shrub",
+      "is_deciduous": false,
+      "sun": "full sun to part shade, shade tolerant",
+      "soil_ph": "5.5-7.0",
+      "soil_type": "moist, well-draining, rich organic matter",
+      "max_height_m": 2.5,
+      "max_spread_m": 1.5,
+      "growth_rate": "moderate",
+      "life_expectancy_years": 40,
+      "propagation_method": "cuttings, seed",
+      "sow_depth_cm": 0.5,
+      "germination_days": "30-90",
+      "time_to_maturity_years": 4,
+      "flowering_months": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "fruiting_months": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "birds_attracted": [
+        "t\u016b\u012b",
+        "bellbird",
+        "Waxeyes",
+        "small birds"
+      ],
+      "traditional_uses": "Leaves used medicinally as rongo\u0101 for skin conditions, wounds, and as a purifying agent; fumigation; sometimes used in \u0634\u0639\u0631",
+      "cultural_significance": "Traditional medicinal plant; used in purification ceremonies; fragrant leaves; common in native gardens",
+      "coastal_notes": "Lowland and coastal; tolerates light salt spray; prefers sheltered inland sites",
+      "riparian_use": "Good for stabilising banks in shady gullies; loves consistent moisture",
+      "pest_disease_notes": "Very healthy; few issues; can get scale insects; needs moist conditions",
+      "slug": "hangehange",
+      "regions": {
+        "auckland": {
+          "planting_season": "autumn_spring",
+          "planting_notes": "Plant in moist well-drained soil; shade or dappled light; keep moist; prune for shape; fragrant leaves",
+          "established_years": 3
+        },
+        "christchurch": {
+          "planting_season": "spring",
+          "planting_notes": "Plant after frosts; choose sheltered moist site; protection from dry winds; may need irrigation",
+          "established_years": 4
+        }
+      }
+    }
+  ]
+}

@@ -306,3 +306,92 @@ export function getVegTypeColor(type: string): string {
     default: return "bg-[var(--cream-200)] text-[var(--text-muted)]";
   }
 }
+
+// ─── Native types and API ───
+
+export interface Native {
+  common_name: string;
+  botanical_name: string;
+  māori_name: string | null;
+  family: string;
+  life_cycle: string;  // tree, shrub, groundcover, climber, fern
+  is_deciduous: boolean;
+  sun: string;
+  soil_ph: string;
+  soil_type: string;
+  max_height_m: number;
+  max_spread_m: number;
+  growth_rate: string;
+  life_expectancy_years: number;
+  propagation_method: string;
+  sow_depth_cm: number | null;
+  germination_days: string | null;
+  time_to_maturity_years: number;
+  flowering_months: number[];
+  fruiting_months: number[];
+  birds_attracted: string[];
+  slug: string;
+  growth_stages?: GrowthStages;
+  regions: Record<string, RegionData>;
+  // Extra fields from JSON
+  traditional_uses?: string;
+  cultural_significance?: string;
+  coastal_notes?: string;
+  riparian_use?: string;
+  pest_disease_notes?: string;
+}
+
+export interface NativeMonthData {
+  month_number: number;
+  name: string;
+  nz_season: string;
+  flowering_now: { name: string; slug: string }[];
+  fruiting_now: { name: string; slug: string }[];
+  total_natives: number;
+}
+
+export interface NativeDashboardData {
+  current_month: string;
+  current_season: string;
+  month_number: number;
+  total_natives: number;
+  life_cycles: Record<string, number>;
+  flowering_now: { name: string; slug: string }[];
+  fruiting_now: { name: string; slug: string }[];
+}
+
+export async function fetchNatives(region: string = "auckland"): Promise<Native[]> {
+  const res = await fetch(`${API_BASE}/api/natives/?region=${region}`, { cache: "no-store" });
+  return res.json();
+}
+
+export async function fetchNative(name: string): Promise<Native> {
+  const res = await fetch(`${API_BASE}/api/natives/${encodeURIComponent(name)}`, { cache: "no-store" });
+  return res.json();
+}
+
+export async function fetchNativeBySlug(slug: string): Promise<Native> {
+  const res = await fetch(`${API_BASE}/api/natives/slug/${encodeURIComponent(slug)}`, { cache: "no-store" });
+  return res.json();
+}
+
+export async function fetchNativeDashboard(region: string = "auckland"): Promise<NativeDashboardData> {
+  const res = await fetch(`${API_BASE}/api/natives/dashboard/?region=${region}`, { cache: "no-store" });
+  return res.json();
+}
+
+export async function fetchNativeCalendar(): Promise<NativeMonthData[]> {
+  const res = await fetch(`${API_BASE}/api/natives/calendar/`, { cache: "no-store" });
+  return res.json();
+}
+
+export function getNativeLifeCycleColor(life_cycle: string): string {
+  switch (life_cycle) {
+    case "tree": return "bg-[var(--forest-100)] text-[var(--forest)]";
+    case "shrub": return "bg-[var(--sage-100)] text-[var(--sage-400)]";
+    case "groundcover": return "bg-[var(--terracotta-100)] text-[var(--terracotta-500)]";
+    case "climber": return "bg-[var(--pohutukawa-100)] text-[var(--pohutukawa)]";
+    case "fern": return "bg-[var(--gold-100)] text-amber-900";
+    default: return "bg-[var(--cream-200)] text-[var(--text-muted)]";
+  }
+}
