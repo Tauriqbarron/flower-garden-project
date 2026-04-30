@@ -7,9 +7,9 @@
   },
   "natives": [
     {
-      "common_name": "K\u014dwhai",
+      "common_name": "Kōwhai",
       "botanical_name": "Sophora microphylla",
-      "m\u0101ori_name": "K\u014dwhai",
+      "māori_name": "Kōwhai",
       "family": "Fabaceae",
       "life_cycle": "tree",
       "is_deciduous": true,
@@ -36,16 +36,16 @@
         1
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
-        "kerer\u016b",
+        "tūī",
+        "kererū",
         "bellbird",
         "morepork"
       ],
-      "traditional_uses": "T\u0101 moko dye (yellow), medicine (coughs and colds), nectar used as sweetener, wood for tools",
-      "cultural_significance": "National flower of NZ; blooms when whales migrate (traditional marker of seasonal change); considered r\u0101kau rangatira (chiefly tree)",
+      "traditional_uses": "Tā moko dye (yellow), medicine (coughs and colds), nectar used as sweetener, wood for tools",
+      "cultural_significance": "National flower of NZ; blooms when whales migrate (traditional marker of seasonal change); considered rākau rangatira (chiefly tree)",
       "coastal_notes": "Some coastal tolerance; young plants need protection from salt-laden winds",
       "riparian_use": "Good for streambank stabilisation; tolerates periodic flooding",
-      "pest_disease_notes": "Watch for k\u014dwhai pine sawfly; generally hardy once established",
+      "pest_disease_notes": "Watch for kōwhai pine sawfly; generally hardy once established",
       "slug": "kowhai",
       "regions": {
         "auckland": {
@@ -58,12 +58,17 @@
           "planting_notes": "Protect from late frosts; young plants benefit from wind shelter; may need staking",
           "established_years": 4
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/kowhai/harvest.png",
+        "seedling": "/images/natives/kowhai/seedling.png",
+        "young_plant": "/images/natives/kowhai/young-plant.png"
       }
     },
     {
-      "common_name": "P\u014dhutukawa",
+      "common_name": "Pōhutukawa",
       "botanical_name": "Metrosideros excelsa",
-      "m\u0101ori_name": "P\u014dhutukawa",
+      "māori_name": "Pōhutukawa",
       "family": "Myrtaceae",
       "life_cycle": "tree",
       "is_deciduous": false,
@@ -90,16 +95,16 @@
         3
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
-        "k\u0101k\u0101",
+        "kākā",
         "honeyeaters"
       ],
       "traditional_uses": "Bark used medicinally as astringent; flowers for red dye; wood for tools and smoking",
       "cultural_significance": "Known as the 'New Zealand Christmas tree'; iconic coastal tree; symbol of resilience and strength",
       "coastal_notes": "Excellent coastal tolerance; salt-spray and wind hardy; perfect for cliffs and exposed sites",
       "riparian_use": "Stabilises coastal cliffs and dunes; good for erosion control in windy sites",
-      "pest_disease_notes": "Myrtle rust (Austropuccinia psidii) \u2014 monitor; scale insects can occur; generally tough",
+      "pest_disease_notes": "Myrtle rust (Austropuccinia psidii) — monitor; scale insects can occur; generally tough",
       "slug": "pohutukawa",
       "regions": {
         "auckland": {
@@ -112,12 +117,17 @@
           "planting_notes": "Protect from cold winds first 2 years; water in dry spells; hardy once established",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/pohutukawa/harvest.png",
+        "seedling": "/images/natives/pohutukawa/seedling.png",
+        "young_plant": "/images/natives/pohutukawa/young-plant.png"
       }
     },
     {
       "common_name": "Kauri",
       "botanical_name": "Agathis australis",
-      "m\u0101ori_name": "Kauri",
+      "māori_name": "Kauri",
       "family": "Araucariaceae",
       "life_cycle": "tree",
       "is_deciduous": false,
@@ -144,15 +154,15 @@
         4
       ],
       "birds_attracted": [
-        "kerer\u016b",
-        "k\u0101k\u0101",
-        "t\u016b\u012b"
+        "kererū",
+        "kākā",
+        "tūī"
       ],
       "traditional_uses": "Wood for waka (canoes), carving, housing; resin (gum) for medicine and varnish; bark for roofing",
-      "cultural_significance": "One of the most sacred trees to M\u0101ori; largest and longest-lived in NZ; features in many legends",
+      "cultural_significance": "One of the most sacred trees to Māori; largest and longest-lived in NZ; features in many legends",
       "coastal_notes": "Prefers inland sites; not salt tolerant; young trees need wind protection",
       "riparian_use": "Deep roots stabilise slopes; not for wet sites",
-      "pest_disease_notes": "Kauri dieback (Phytophthora agathidicida) \u2014 critical biosecurity risk; clean footwear before entering areas with kauri",
+      "pest_disease_notes": "Kauri dieback (Phytophthora agathidicida) — critical biosecurity risk; clean footwear before entering areas with kauri",
       "slug": "kauri",
       "regions": {
         "auckland": {
@@ -165,12 +175,17 @@
           "planting_notes": "Plant after last frost; choose sheltered spot; may struggle in heavy clay; excellent drainage essential",
           "established_years": 6
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/kauri/harvest.png",
+        "seedling": "/images/natives/kauri/seedling.png",
+        "young_plant": "/images/natives/kauri/young-plant.png"
       }
     },
     {
-      "common_name": "T\u014dtara",
+      "common_name": "Tōtara",
       "botanical_name": "Podocarpus totara",
-      "m\u0101ori_name": "T\u014dtara",
+      "māori_name": "Tōtara",
       "family": "Podocarpaceae",
       "life_cycle": "tree",
       "is_deciduous": false,
@@ -196,13 +211,13 @@
         4
       ],
       "birds_attracted": [
-        "kerer\u016b",
-        "k\u0101k\u0101",
-        "t\u016b\u012b",
+        "kererū",
+        "kākā",
+        "tūī",
         "bellbird"
       ],
       "traditional_uses": "Wood for waka, houses, carving; bark for roofing and medicine; resin for glue and incense",
-      "cultural_significance": "Sacred to M\u0101ori; often planted in important places (marae, urup\u0101); symbol of strength and longevity",
+      "cultural_significance": "Sacred to Māori; often planted in important places (marae, urupā); symbol of strength and longevity",
       "coastal_notes": "Some coastal tolerance but prefers inland; young trees need wind shelter",
       "riparian_use": "Good for stabilising banks; tolerates some wet conditions",
       "pest_disease_notes": "Generally healthy; watch\tfor root rot in poorly drained soils",
@@ -218,12 +233,17 @@
           "planting_notes": "Protect from cold winds; plant after frost risk; tolerant of dry conditions once established",
           "established_years": 5
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/totara/harvest.png",
+        "seedling": "/images/natives/totara/seedling.png",
+        "young_plant": "/images/natives/totara/young-plant.png"
       }
     },
     {
-      "common_name": "M\u0101nuka",
+      "common_name": "Mānuka",
       "botanical_name": "Leptospermum scoparium",
-      "m\u0101ori_name": "M\u0101nuka",
+      "māori_name": "Mānuka",
       "family": "Myrtaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -254,10 +274,10 @@
         "bees",
         "native insects",
         "bellbird",
-        "t\u016b\u012b"
+        "tūī"
       ],
-      "traditional_uses": "Medicinal (m\u0101nuka honey antibacterial, tea from leaves for colds), firewood, tool handles, smoke for preserving",
-      "cultural_significance": "M\u0101nuka honey is a taonga; plant considered r\u0101kau rangatira (chiefly tree); used in traditional healing",
+      "traditional_uses": "Medicinal (mānuka honey antibacterial, tea from leaves for colds), firewood, tool handles, smoke for preserving",
+      "cultural_significance": "Mānuka honey is a taonga; plant considered rākau rangatira (chiefly tree); used in traditional healing",
       "coastal_notes": "Tolerates coastal conditions; salt spray OK; wind hardy",
       "riparian_use": "Good for erosion control on slopes; tolerates periodic dryness",
       "pest_disease_notes": "Myrtle rust risk; generally low maintenance; may get scale insects",
@@ -273,12 +293,17 @@
           "planting_notes": "Plant after frost danger; drought tolerant once established; full sun essential for flowering",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/manuka/harvest.png",
+        "seedling": "/images/natives/manuka/seedling.png",
+        "young_plant": "/images/natives/manuka/young-plant.png"
       }
     },
     {
-      "common_name": "K\u0101nuka",
+      "common_name": "Kānuka",
       "botanical_name": "Kunzea ericoides",
-      "m\u0101ori_name": "K\u0101nuka",
+      "māori_name": "Kānuka",
       "family": "Myrtaceae",
       "life_cycle": "tree",
       "is_deciduous": false,
@@ -306,13 +331,13 @@
       ],
       "birds_attracted": [
         "native bees",
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "small birds"
       ],
-      "traditional_uses": "Similar uses to m\u0101nuka \u2014 honey ( kanuka honey), firewood, medicine (leaves for infusions), fence posts",
-      "cultural_significance": "Often confused with m\u0101nuka; distinct ecological role as nurse crop; valuable for regeneration",
-      "coastal_notes": "Coastal to montane; more tolerant of wet soils than m\u0101nuka; wind resistant",
+      "traditional_uses": "Similar uses to mānuka — honey ( kanuka honey), firewood, medicine (leaves for infusions), fence posts",
+      "cultural_significance": "Often confused with mānuka; distinct ecological role as nurse crop; valuable for regeneration",
+      "coastal_notes": "Coastal to montane; more tolerant of wet soils than mānuka; wind resistant",
       "riparian_use": "Streambank stabilisation; nurse crop for forest regeneration; tolerates periodic wet feet",
       "pest_disease_notes": "Myrtle rust monitoring required; otherwise very healthy",
       "slug": "kanuka",
@@ -327,12 +352,17 @@
           "planting_notes": "Sow after autumn rains; germination variable; hardy once established",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/kanuka/harvest.png",
+        "seedling": "/images/natives/kanuka/seedling.png",
+        "young_plant": "/images/natives/kanuka/young-plant.png"
       }
     },
     {
       "common_name": "Karaka",
       "botanical_name": "Corynocarpus laevigatus",
-      "m\u0101ori_name": "Karaka",
+      "māori_name": "Karaka",
       "family": "Corynocarpaceae",
       "life_cycle": "tree",
       "is_deciduous": "partial",
@@ -359,13 +389,13 @@
         4
       ],
       "birds_attracted": [
-        "kerer\u016b",
-        "k\u0101k\u0101",
-        "t\u016b\u012b",
+        "kererū",
+        "kākā",
+        "tūī",
         "starlings"
       ],
       "traditional_uses": "Fruit cooked and soaked to remove toxins; kernel food source; leaves used medicinally; wood for carving",
-      "cultural_significance": "Important food tree for M\u0101ori; widely planted around p\u0101; distinctive orange berry",
+      "cultural_significance": "Important food tree for Māori; widely planted around pā; distinctive orange berry",
       "coastal_notes": "Very coastal tolerant; salt spray and wind hardy; excellent for exposed sites",
       "riparian_use": "Can stabilise banks but prefers well-drained; not for constantly wet sites",
       "pest_disease_notes": "Generally healthy; sooty mould on honeydew from scale insects; possums love fruit",
@@ -381,12 +411,17 @@
           "planting_notes": "Plant after last frost; hardy once established; tolerates dry conditions",
           "established_years": 4
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/karaka/harvest.png",
+        "seedling": "/images/natives/karaka/seedling.png",
+        "young_plant": "/images/natives/karaka/young-plant.png"
       }
     },
     {
-      "common_name": "T\u012b k\u014duka",
+      "common_name": "Tī kōuka",
       "botanical_name": "Cordyline australis",
-      "m\u0101ori_name": "T\u012b k\u014duka",
+      "māori_name": "Tī kōuka",
       "family": "Asparagaceae",
       "life_cycle": "tree",
       "is_deciduous": false,
@@ -413,12 +448,12 @@
         4
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         " Waxeyes"
       ],
       "traditional_uses": "Fibre for weaving (kete, mats); food (cooked heart); medicinal (bark for wounds); fire starter (old leaves dry quickly)",
-      "cultural_significance": "Very important to M\u0101ori; numerous Culinary and material uses; often planted at marae; clusters indicate fertile soil",
+      "cultural_significance": "Very important to Māori; numerous Culinary and material uses; often planted at marae; clusters indicate fertile soil",
       "coastal_notes": "Good coastal tolerance; wind and salt spray OK; young plants need some shelter",
       "riparian_use": "Tolerates periodic wet feet; good for riparian edges",
       "pest_disease_notes": "Sudden decline disease (pathogen unknown) can affect older trees; generally tough",
@@ -434,12 +469,17 @@
           "planting_notes": "Plant after frost; tolerant of dry soils; may need winter protection first year",
           "established_years": 4
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/ti-kouka/harvest.png",
+        "seedling": "/images/natives/ti-kouka/seedling.png",
+        "young_plant": "/images/natives/ti-kouka/young-plant.png"
       }
     },
     {
       "common_name": "Rewarewa",
       "botanical_name": "Knightia excelsa",
-      "m\u0101ori_name": "Rewarewa",
+      "māori_name": "Rewarewa",
       "family": "Proteaceae",
       "life_cycle": "tree",
       "is_deciduous": false,
@@ -466,12 +506,12 @@
         4
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "honeyeaters",
-        "kerer\u016b"
+        "kererū"
       ],
-      "traditional_uses": "Wood highly valued for its figuring (tiger-stripe pattern) \u2013 used for furniture, carving, decorative items; nectar from flowers was collected for sweetener",
+      "traditional_uses": "Wood highly valued for its figuring (tiger-stripe pattern) – used for furniture, carving, decorative items; nectar from flowers was collected for sweetener",
       "cultural_significance": "Renowned for beautiful timber; often called 'New Zealand walnut'; important to carving traditions",
       "coastal_notes": "Prefers inland; not particularly salt tolerant; needs shelter from strong winds",
       "riparian_use": "Prefers well-drained slopes; not for constantly wet sites",
@@ -488,12 +528,17 @@
           "planting_notes": "Plant after last frost; choose sheltered position; mulch through summer; drought sensitive",
           "established_years": 5
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/rewarewa/harvest.png",
+        "seedling": "/images/natives/rewarewa/seedling.png",
+        "young_plant": "/images/natives/rewarewa/young-plant.png"
       }
     },
     {
       "common_name": "Rimu",
       "botanical_name": "Dacrydium cupressinum",
-      "m\u0101ori_name": "Rimu",
+      "māori_name": "Rimu",
       "family": "Podocarpaceae",
       "life_cycle": "tree",
       "is_deciduous": false,
@@ -519,9 +564,9 @@
         4
       ],
       "birds_attracted": [
-        "kerer\u016b",
-        "k\u0101k\u0101",
-        "t\u016b\u012b"
+        "kererū",
+        "kākā",
+        "tūī"
       ],
       "traditional_uses": "Wood for construction, furniture, veneer (prized timber); resin (gum) for varnish and medicine",
       "cultural_significance": "Important timber tree historically; distinctive drooping branchlets; characteristic of lowland forest",
@@ -540,12 +585,17 @@
           "planting_notes": "Plant after frosts; needs reliable moisture; benefits from shelter; slow grower",
           "established_years": 6
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/rimu/harvest.png",
+        "seedling": "/images/natives/rimu/seedling.png",
+        "young_plant": "/images/natives/rimu/young-plant.png"
       }
     },
     {
       "common_name": "Akeake",
       "botanical_name": "Dodonaea viscosa",
-      "m\u0101ori_name": "Akeake",
+      "māori_name": "Akeake",
       "family": "Sapindaceae",
       "life_cycle": "shrub",
       "is_deciduous": true,
@@ -578,8 +628,8 @@
         "native insects",
         "small birds"
       ],
-      "traditional_uses": "Wood very tough \u2014 used for tools, weapons, beaters; medicinal (bark for wounds); leaves for thatching",
-      "cultural_significance": "Name means 'to burn' \u2014 wood burns fiercely; valued for its tough, resilient wood; kaitiaki (guardian) plant in some traditions",
+      "traditional_uses": "Wood very tough — used for tools, weapons, beaters; medicinal (bark for wounds); leaves for thatching",
+      "cultural_significance": "Name means 'to burn' — wood burns fiercely; valued for its tough, resilient wood; kaitiaki (guardian) plant in some traditions",
       "coastal_notes": "Excellent coastal tolerance; salt spray and wind hardy; ideal for exposed sites and sand dunes",
       "riparian_use": "Good for stabilising banks and slopes; drought tolerant once established",
       "pest_disease_notes": "Very hardy; minimal issues; occasional aphids",
@@ -595,12 +645,17 @@
           "planting_notes": "Plant after last frost; extremely hardy; tolerates dry, windy conditions; minimal care",
           "established_years": 2
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/akeake/harvest.png",
+        "seedling": "/images/natives/akeake/seedling.png",
+        "young_plant": "/images/natives/akeake/young-plant.png"
       }
     },
     {
       "common_name": "Karo",
       "botanical_name": "Pittosporum crassifolium",
-      "m\u0101ori_name": "Karo",
+      "māori_name": "Karo",
       "family": "Pittosporaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -628,13 +683,13 @@
         2
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes",
         "native insects"
       ],
       "traditional_uses": "Resin (gum) used medicinally as antiseptic and for skin conditions; leaves as poultices; wood for small tools",
-      "cultural_significance": "Commonly used in traditional M\u0101ori healing; the resin has a distinctive scent; often planted around historic sites",
+      "cultural_significance": "Commonly used in traditional Māori healing; the resin has a distinctive scent; often planted around historic sites",
       "coastal_notes": "Good coastal tolerance; salt spray and wind hardy; naturally found on coastal cliffs",
       "riparian_use": "Tolerates some wet conditions but prefers well-drained; good for stabilising slopes and banks",
       "pest_disease_notes": "Generally healthy; can get pittosporum scale; bronze bug (Thaumastocoris) occasional",
@@ -650,12 +705,17 @@
           "planting_notes": "Plant after last frost; hardy once established; tolerates dry conditions; wind resistant",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/karo/harvest.png",
+        "seedling": "/images/natives/karo/seedling.png",
+        "young_plant": "/images/natives/karo/young-plant.png"
       }
     },
     {
       "common_name": "Harakeke / Flax",
       "botanical_name": "Phormium tenax",
-      "m\u0101ori_name": "Harakeke",
+      "māori_name": "Harakeke",
       "family": "Asphodelaceae",
       "life_cycle": "flax",
       "is_deciduous": false,
@@ -684,14 +744,14 @@
         2
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "starlings",
         "honeyeaters",
         "morepork"
       ],
       "traditional_uses": "Weaving (kete, cloaks, mats, ropes), medicinal (sap as antiseptic), food (nectar from flowers), cordage, sails",
-      "cultural_significance": "Essential to M\u0101ori material culture; taonga species; specific varieties (k\u014dtuare) have high spiritual value; often grown on marae",
+      "cultural_significance": "Essential to Māori material culture; taonga species; specific varieties (kōtuare) have high spiritual value; often grown on marae",
       "coastal_notes": "Excellent coastal and estuarine tolerance; salt spray OK; wind hardy; stabilises dunes",
       "riparian_use": "Excellent for riparian planting and wetland edges; tolerates periodic flooding",
       "pest_disease_notes": "Slug and snail damage to young leaves; otherwise very hardy; excess fertilizer causes leaf drop",
@@ -707,12 +767,17 @@
           "planting_notes": "Plant anytime frost-free; protect first winter in cold gardens; prefers moist soil; very tolerant",
           "established_years": 2
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/harakeke/harvest.png",
+        "seedling": "/images/natives/harakeke/seedling.png",
+        "young_plant": "/images/natives/harakeke/young-plant.png"
       }
     },
     {
       "common_name": "Mingimingi",
       "botanical_name": "Coprosma propinqua",
-      "m\u0101ori_name": "Mingimingi",
+      "māori_name": "Mingimingi",
       "family": "Rubiaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -741,9 +806,9 @@
       ],
       "birds_attracted": [
         "bellbird",
-        "t\u016b\u012b",
+        "tūī",
         "Waxeyes",
-        "kerer\u016b"
+        "kererū"
       ],
       "traditional_uses": "Berries edible though tasteless; medicinal (bark as poultice); wood for small implements; leaves used in folk medicine for skin conditions",
       "cultural_significance": "Widespread native shrub; important food source for birds; valued for its tiny purple berries",
@@ -762,12 +827,17 @@
           "planting_notes": "Plant after frost; hardy once established; tolerates dry soils; full sun for best berry production",
           "established_years": 2
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/mingimingi/harvest.png",
+        "seedling": "/images/natives/mingimingi/seedling.png",
+        "young_plant": "/images/natives/mingimingi/young-plant.png"
       }
     },
     {
-      "common_name": "Pat\u0113 / Broadleaf",
+      "common_name": "Patē / Broadleaf",
       "botanical_name": "Griselinia littoralis",
-      "m\u0101ori_name": "Pat\u0113",
+      "māori_name": "Patē",
       "family": "Griseliniaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -793,7 +863,7 @@
         5
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes",
         "small birds"
@@ -815,12 +885,17 @@
           "planting_notes": "Plant after last frost; very adaptable; can handle dry conditions once established; good windbreak",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/pate/harvest.png",
+        "seedling": "/images/natives/pate/seedling.png",
+        "young_plant": "/images/natives/pate/young-plant.png"
       }
     },
     {
       "common_name": "Koromiko",
       "botanical_name": "Veronica stricta",
-      "m\u0101ori_name": "Koromiko",
+      "māori_name": "Koromiko",
       "family": "Plantaginaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -856,8 +931,8 @@
         "butterflies",
         "small birds"
       ],
-      "traditional_uses": "Medicinal (infusions from leaves for diarrhoea, skin conditions); poultices; sometimes used as rongo\u0101 for internal ailments",
-      "cultural_significance": "Important medicinal plant (rongo\u0101); widely used by M\u0101ori healers; quick-growing and easily accessible",
+      "traditional_uses": "Medicinal (infusions from leaves for diarrhoea, skin conditions); poultices; sometimes used as rongoā for internal ailments",
+      "cultural_significance": "Important medicinal plant (rongoā); widely used by Māori healers; quick-growing and easily accessible",
       "coastal_notes": "Inland species; not particularly salt tolerant; prefers sheltered sites",
       "riparian_use": "Good for stabilising damp banks; tolerates moist conditions",
       "pest_disease_notes": "Very healthy; few issues; can get powdery mildew in damp shady spots",
@@ -873,12 +948,17 @@
           "planting_notes": "Plant after last frost; tolerates dryish soil; full sun for best flowering; hardy once established",
           "established_years": 2
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/koromiko/harvest.png",
+        "seedling": "/images/natives/koromiko/seedling.png",
+        "young_plant": "/images/natives/koromiko/young-plant.png"
       }
     },
     {
       "common_name": "Hebe",
       "botanical_name": "Hebe speciosa",
-      "m\u0101ori_name": "Koromiko (some varieties)",
+      "māori_name": "Koromiko (some varieties)",
       "family": "Plantaginaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -929,12 +1009,17 @@
           "planting_notes": "Plant after frosts; full sun essential; excellent drainage; protect from severe winter wet",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/hebe-speciosa/harvest.png",
+        "seedling": "/images/natives/hebe-speciosa/seedling.png",
+        "young_plant": "/images/natives/hebe-speciosa/young-plant.png"
       }
     },
     {
-      "common_name": "Koh\u016bh\u016b",
+      "common_name": "Kohūhū",
       "botanical_name": "Pittosporum tenuifolium",
-      "m\u0101ori_name": "Koh\u016bh\u016b",
+      "māori_name": "Kohūhū",
       "family": "Pittosporaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -961,7 +1046,7 @@
         2
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes"
       ],
@@ -982,12 +1067,17 @@
           "planting_notes": "Plant after last frost; tolerates dry soils; wind hardy; minimal care once established",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/kohuhu/harvest.png",
+        "seedling": "/images/natives/kohuhu/seedling.png",
+        "young_plant": "/images/natives/kohuhu/young-plant.png"
       }
     },
     {
       "common_name": "Lemonwood / Tarata",
       "botanical_name": "Pittosporum eugenioides",
-      "m\u0101ori_name": "Tarata",
+      "māori_name": "Tarata",
       "family": "Pittosporaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -1014,12 +1104,12 @@
         2
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes",
         "native insects"
       ],
-      "traditional_uses": "Leaves have strong lemon scent \u2014 used in perfumes, placed among clothing; medicinal (infusions for colds); ornamental",
+      "traditional_uses": "Leaves have strong lemon scent — used in perfumes, placed among clothing; medicinal (infusions for colds); ornamental",
       "cultural_significance": "Valued for its fragrant leaves; often planted near sleeping areas; associated with purity and protection",
       "coastal_notes": "Lowland and coastal; tolerates some salt-spray; prefers sheltered inland sites",
       "riparian_use": "Good for stabilising banks; prefers moist well-drained soil; not for constantly wet sites",
@@ -1036,12 +1126,17 @@
           "planting_notes": "Plant after last frost; protect from cold winds; water during dry spells; scent less pronounced in cold climates",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/tarata/harvest.png",
+        "seedling": "/images/natives/tarata/seedling.png",
+        "young_plant": "/images/natives/tarata/young-plant.png"
       }
     },
     {
-      "common_name": "Mapou / M\u0101t\u0101\u012b",
+      "common_name": "Mapou / Mātāī",
       "botanical_name": "Myrsine australis",
-      "m\u0101ori_name": "Mapou",
+      "māori_name": "Mapou",
       "family": "Primulaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -1069,13 +1164,13 @@
         3
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes",
-        "kerer\u016b"
+        "kererū"
       ],
       "traditional_uses": "Wood for small implements; berries eaten by children (mildly toxic raw, cooked); medicinal (bark for skin conditions); hedging and binding soil",
-      "cultural_significance": "Common around old settlement sites; indicator of fertile soil; sometimes used in rongo\u0101",
+      "cultural_significance": "Common around old settlement sites; indicator of fertile soil; sometimes used in rongoā",
       "coastal_notes": "Coastal and inland; tolerates wind and salt-spray; good for exposed gardens",
       "riparian_use": "Excellent for stabilising slopes and banks; tolerates dry to moist conditions",
       "pest_disease_notes": "Very hardy; minimal issues; occasional aphids or mealybugs",
@@ -1091,12 +1186,17 @@
           "planting_notes": "Plant after frost; very adaptable; tolerates dry soils and wind; excellent hardy shrub",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/mapou/harvest.png",
+        "seedling": "/images/natives/mapou/seedling.png",
+        "young_plant": "/images/natives/mapou/young-plant.png"
       }
     },
     {
       "common_name": "Five Finger / Pseudopanax",
       "botanical_name": "Pseudopanax arboreus",
-      "m\u0101ori_name": "K\u014dtuku (some regions)",
+      "māori_name": "Kōtuku (some regions)",
       "family": "Araliaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -1123,10 +1223,10 @@
         4
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes",
-        "kerer\u016b"
+        "kererū"
       ],
       "traditional_uses": "Leaves and shoots eaten in times of scarcity (cooked); medicinal (bark and leaves as poultices); wood for small tools; important for bird-attracting",
       "cultural_significance": "Distinctive palmate leaves; common in coastal and lowland forest; larval food for some native butterflies",
@@ -1145,12 +1245,17 @@
           "planting_notes": "Plant after last frost; prefers moist sheltered site; tolerates dry shade once established",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/five-finger/harvest.png",
+        "seedling": "/images/natives/five-finger/seedling.png",
+        "young_plant": "/images/natives/five-finger/young-plant.png"
       }
     },
     {
       "common_name": "Lancewood / Horoeka",
       "botanical_name": "Pseudopanax crassifolius",
-      "m\u0101ori_name": "Horoeka",
+      "māori_name": "Horoeka",
       "family": "Araliaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -1177,12 +1282,12 @@
         4
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes"
       ],
-      "traditional_uses": "Young leaves cooked and eaten in times of scarcity; wood very tough \u2014 used for implements; medicinal (bark); distinctive juvenile form valued in gardens",
-      "cultural_significance": "Distinctive juvenile and adult forms (transformation over decades); symbol of change; important in M\u0101ori tradition as marker of forest succession",
+      "traditional_uses": "Young leaves cooked and eaten in times of scarcity; wood very tough — used for implements; medicinal (bark); distinctive juvenile form valued in gardens",
+      "cultural_significance": "Distinctive juvenile and adult forms (transformation over decades); symbol of change; important in Māori tradition as marker of forest succession",
       "coastal_notes": "Coastal and inland; tolerates wind and salt-spray; good for exposed gardens",
       "riparian_use": "Good for stabilising slopes and banks; tolerates dry to moist conditions",
       "pest_disease_notes": "Very hardy; minimal issues; may get leaf spot in humid conditions",
@@ -1198,12 +1303,17 @@
           "planting_notes": "Plant after frost; very hardy; tolerates dry soils and wind; minimal care once established",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/lancewood/harvest.png",
+        "seedling": "/images/natives/lancewood/seedling.png",
+        "young_plant": "/images/natives/lancewood/young-plant.png"
       }
     },
     {
-      "common_name": "Cabbage Tree / T\u012b",
+      "common_name": "Cabbage Tree / Tī",
       "botanical_name": "Cordyline australis",
-      "m\u0101ori_name": "T\u012b",
+      "māori_name": "Tī",
       "family": "Asparagaceae",
       "life_cycle": "tree",
       "is_deciduous": false,
@@ -1230,13 +1340,13 @@
         4
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes",
-        "kerer\u016b"
+        "kererū"
       ],
       "traditional_uses": "Fibre for weaving (kete, mats); food (cooked heart); medicinal (bark for wounds); fire starter (old leaves dry quickly); thatching",
-      "cultural_significance": "One of the most iconic NZ plants; often features in M\u0101ori legends; clusters indicate fertile soil; planted at marae",
+      "cultural_significance": "One of the most iconic NZ plants; often features in Māori legends; clusters indicate fertile soil; planted at marae",
       "coastal_notes": "Good coastal tolerance; salt spray and wind OK when established; young plants need some shelter",
       "riparian_use": "Tolerates periodic wet feet; good for riparian edges and gully planting",
       "pest_disease_notes": "Sudden decline disease affects older trees; generally very tough; CBD cabbage trees can have issues",
@@ -1252,12 +1362,17 @@
           "planting_notes": "Plant after frost; tolerates dry soils; may need winter protection first year; hardy once established",
           "established_years": 4
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/cabbage-tree/harvest.png",
+        "seedling": "/images/natives/cabbage-tree/seedling.png",
+        "young_plant": "/images/natives/cabbage-tree/young-plant.png"
       }
     },
     {
       "common_name": "Silver Fern / Ponga",
       "botanical_name": "Cyathea dealbata",
-      "m\u0101ori_name": "Ponga",
+      "māori_name": "Ponga",
       "family": "Cyatheaceae",
       "life_cycle": "fern",
       "is_deciduous": false,
@@ -1279,7 +1394,7 @@
         "ferny habitat for small birds"
       ],
       "traditional_uses": "Fronds used for roofing,linings; silver underside used for marking trails; medicinal (pith for wounds); food (pith and young fiddleheads cooked)",
-      "cultural_significance": "Iconic emblem of NZ; silver underside recognised worldwide; used in M\u0101ori carving and tattoos; national symbol",
+      "cultural_significance": "Iconic emblem of NZ; silver underside recognised worldwide; used in Māori carving and tattoos; national symbol",
       "coastal_notes": "Lowland and montane; prefers sheltered forest conditions; not for exposed coastal sites",
       "riparian_use": "Good for stabilising moist banks and gullies; prefers constant moisture",
       "pest_disease_notes": "Scale insects can infest; needs consistent moisture; will suffer in dry exposed sites",
@@ -1295,12 +1410,17 @@
           "planting_notes": "Plant after frosts; choose sheltered moist site; protection from drying winds; may need winter watering in dry years",
           "established_years": 6
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/ponga/harvest.png",
+        "seedling": "/images/natives/ponga/seedling.png",
+        "young_plant": "/images/natives/ponga/young-plant.png"
       }
     },
     {
       "common_name": "Toetoe",
       "botanical_name": "Austroderia toetoe",
-      "m\u0101ori_name": "Toetoe",
+      "māori_name": "Toetoe",
       "family": "Poaceae",
       "life_cycle": "grass",
       "is_deciduous": false,
@@ -1351,12 +1471,17 @@
           "planting_notes": "Plant after last frost; very tolerant of wet soils; cut back in late winter; excellent for erosion control",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/toetoe/harvest.png",
+        "seedling": "/images/natives/toetoe/seedling.png",
+        "young_plant": "/images/natives/toetoe/young-plant.png"
       }
     },
     {
       "common_name": "Kawakawa",
       "botanical_name": "Macropiper excelsum",
-      "m\u0101ori_name": "Kawakawa",
+      "māori_name": "Kawakawa",
       "family": "Piperaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -1384,12 +1509,12 @@
         4
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
-        "kerer\u016b",
+        "tūī",
+        "kererū",
         "bellbird"
       ],
-      "traditional_uses": "Leaves used medicinally as rongo\u0101 for wounds, skin conditions, and as relaxant; leaves used in traditional karakia and purification; fruit edible in small quantities",
-      "cultural_significance": "Sacred plant used in M\u0101ori ceremony and healing; distinctive heart-shaped leaves; associated with water and healing; kawakawa is a taonga",
+      "traditional_uses": "Leaves used medicinally as rongoā for wounds, skin conditions, and as relaxant; leaves used in traditional karakia and purification; fruit edible in small quantities",
+      "cultural_significance": "Sacred plant used in Māori ceremony and healing; distinctive heart-shaped leaves; associated with water and healing; kawakawa is a taonga",
       "coastal_notes": "Lowland forest species; not coastal; needs sheltered, humid conditions",
       "riparian_use": "Excellent for shady streambanks and gully planting; loves moist conditions",
       "pest_disease_notes": "Leaf miner can affect; otherwise healthy in right conditions; needs constant moisture and shelter",
@@ -1405,12 +1530,17 @@
           "planting_notes": "Plant after frosts; choose very sheltered moist spot; challenging in drier climates; may need irrigation",
           "established_years": 4
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/kawakawa/harvest.png",
+        "seedling": "/images/natives/kawakawa/seedling.png",
+        "young_plant": "/images/natives/kawakawa/young-plant.png"
       }
     },
     {
       "common_name": "Mountain Flax / Wharariki",
       "botanical_name": "Phormium cookianum",
-      "m\u0101ori_name": "Wharariki",
+      "māori_name": "Wharariki",
       "family": "Asphodelaceae",
       "life_cycle": "flax",
       "is_deciduous": false,
@@ -1439,11 +1569,11 @@
         2
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes"
       ],
-      "traditional_uses": "Weaving (finer than harakeke \u2014 used for delicate work: kete, piupiu, cloaks); medicinal; fibre for fishing lines and traps",
+      "traditional_uses": "Weaving (finer than harakeke — used for delicate work: kete, piupiu, cloaks); medicinal; fibre for fishing lines and traps",
       "cultural_significance": "Superior weaving flax; taonga species; specific varieties highly prized for weaving quality; mountain flax considered highest quality",
       "coastal_notes": "Coastal and alpine; more tolerant of dry conditions than harakeke; salt-spray OK",
       "riparian_use": "Good for riparian planting; tolerates some wet but prefers well-drained",
@@ -1460,12 +1590,17 @@
           "planting_notes": "Plant after frost; very drought tolerant once established; well-drained soil; full sun; excellent for dry gardens",
           "established_years": 3
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/mountain-flax/harvest.png",
+        "seedling": "/images/natives/mountain-flax/seedling.png",
+        "young_plant": "/images/natives/mountain-flax/young-plant.png"
       }
     },
     {
       "common_name": "Coprosma",
       "botanical_name": "Coprosma robusta",
-      "m\u0101ori_name": "Karam\u016b",
+      "māori_name": "Karamū",
       "family": "Rubiaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -1493,12 +1628,12 @@
         5
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes",
-        "kerer\u016b"
+        "kererū"
       ],
-      "traditional_uses": "Leaves used medicinally as rongo\u0101 for skin conditions, wounds, and as a purifying agent; fumigation; sometimes used in traditional healing. [truncated in source research for brevity \u2014 please expand]",
+      "traditional_uses": "Leaves used medicinally as rongoā for skin conditions, wounds, and as a purifying agent; fumigation; sometimes used in traditional healing. [truncated in source research for brevity — please expand]",
       "cultural_significance": "Common throughout NZ; important food source for birds; used in traditional medicine and as a general purpose shrub",
       "coastal_notes": "Coastal and inland; tolerates salt spray and wind; excellent for exposed gardens",
       "riparian_use": "Good for stabilising slopes and banks; tolerates dry to moist conditions",
@@ -1515,12 +1650,17 @@
           "planting_notes": "Plant after last frost; tolerates dry soils and wind; hardy and adaptable; prune after flowering",
           "established_years": 2
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/karamu/harvest.png",
+        "seedling": "/images/natives/karamu/seedling.png",
+        "young_plant": "/images/natives/karamu/young-plant.png"
       }
     },
     {
       "common_name": "Hangehange",
       "botanical_name": "Geniostoma ligustrifolium",
-      "m\u0101ori_name": "Hangehange",
+      "māori_name": "Hangehange",
       "family": "Loganiaceae",
       "life_cycle": "shrub",
       "is_deciduous": false,
@@ -1549,12 +1689,12 @@
         5
       ],
       "birds_attracted": [
-        "t\u016b\u012b",
+        "tūī",
         "bellbird",
         "Waxeyes",
         "small birds"
       ],
-      "traditional_uses": "Leaves used medicinally as rongo\u0101 for skin conditions, wounds, and as a purifying agent; fumigation; sometimes used in \u0634\u0639\u0631",
+      "traditional_uses": "Leaves used medicinally as rongoā for skin conditions, wounds, and as a purifying agent; fumigation; sometimes used in شعر",
       "cultural_significance": "Traditional medicinal plant; used in purification ceremonies; fragrant leaves; common in native gardens",
       "coastal_notes": "Lowland and coastal; tolerates light salt spray; prefers sheltered inland sites",
       "riparian_use": "Good for stabilising banks in shady gullies; loves consistent moisture",
@@ -1571,6 +1711,11 @@
           "planting_notes": "Plant after frosts; choose sheltered moist site; protection from dry winds; may need irrigation",
           "established_years": 4
         }
+      },
+      "growth_stages": {
+        "harvest": "/images/natives/hangehange/harvest.png",
+        "seedling": "/images/natives/hangehange/seedling.png",
+        "young_plant": "/images/natives/hangehange/young-plant.png"
       }
     }
   ]

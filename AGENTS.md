@@ -23,9 +23,12 @@ New Zealand cut flower and vegetable garden planner. Region-specific growing cal
 ## Local Development
 
 ```bash
-# Backend — port 8000, MUST use --reload
+# Start Docker PostgreSQL (shared with Gatherlings, ParishHub)
+docker start parish-db
+
+# Backend — port 8001, MUST use --reload
 cd ~/Github/flower-garden-project/backend
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
 
 # Frontend — port 3001 (port 3000 is occupied by WhatsApp bridge)
 cd ~/Github/flower-garden-project/frontend
@@ -108,3 +111,14 @@ Compares current week against full sow window (not just midpoint). Generates `ti
 - **Shared components:** flower and veg types are structurally similar but NOT identical. Define minimal prop interfaces for shared components.
 - **Southern Hemisphere:** seasons are inverted — months mapped to NZ seasons in `NZ_MONTHS` dict
 - **Production:** port 8080 (not 80), `NEXT_PUBLIC_API_BASE` must be a Docker build ARG, pages that fetch data must be `"use client"` components
+
+## Port Allocation
+
+| Service | Port | Notes |
+|---------|------|-------|
+| Frontend (dev) | 3001 | 3000 occupied by WhatsApp bridge |
+| Backend API (dev) | 8001 | Avoids conflict with ParishHub (8000) |
+
+**Do NOT use port 8000** — that is allocated to ParishHub backend. Port 8001 is reserved for Flower Garden across all three project environments (local, Docker prod, staging).
+
+For full multi-project port policy, see `~/Github/Parishhubdev/dev-port-config.md`.
