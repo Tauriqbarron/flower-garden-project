@@ -23,10 +23,6 @@ class User(BaseModel):
     created_at: str
 
 
-class UserInDB(User):
-    password_hash: str
-
-
 class Token(BaseModel):
     access_token: str
     token_type: str = "bearer"
@@ -36,7 +32,7 @@ class TokenData(BaseModel):
     user_id: Optional[str] = None
 
 
-# ── Calendar Entry schemas ─────────────────────────────────────────────────────
+# ── Calendar Entry schemas ───────────────────────────────────────────────────
 
 class CalendarEntryCreate(BaseModel):
     plant_type: str  # "flower" | "vegetable" | "native"
@@ -118,10 +114,19 @@ class Flower(BaseModel):
     fragrance: Optional[str] = None
     frost_tolerance: Optional[str] = None
     drought_tolerance: Optional[str] = None
-    slug: Optional[str] = None
 
     class Config:
         extra = "allow"
+
+
+class SeasonMonth(BaseModel):
+    month_number: int
+    name: str
+    nz_season: str
+    tasks: List[str]
+    sow_now: List[str]
+    transplant_now: List[str]
+    harvest_now: List[str]
 
 
 class Vegetable(BaseModel):
@@ -149,10 +154,28 @@ class Vegetable(BaseModel):
     harvest_end: Optional[int] = None
     harvest_months: Optional[List[int]] = None
     regions: dict
-    slug: Optional[str] = None
 
     class Config:
         extra = "allow"
+
+
+class VegetableActivity(BaseModel):
+    id: str
+    vegetable_name: str
+    activity_type: str  # sow, transplant, feed, water, harvest, cure, store
+    date: str
+    notes: Optional[str] = None
+    created_at: str
+
+
+class VegetableMonth(BaseModel):
+    month_number: int
+    name: str
+    nz_season: str
+    tasks: List[str]
+    sow_now: List[str]
+    transplant_now: List[str]
+    harvest_now: List[str]
 
 
 class Native(BaseModel):
@@ -178,6 +201,8 @@ class Native(BaseModel):
     flowering_months: List[int] = []
     fruiting_months: List[int] = []
     birds_attracted: List[str] = []
-    slug: str
     growth_stages: Optional[GrowthStages] = None
     regions: dict
+
+    class Config:
+        extra = "allow"
