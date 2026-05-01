@@ -1,7 +1,67 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from typing import Optional, List
 from datetime import datetime
 
+
+# ── Auth schemas ──────────────────────────────────────────────────────────────
+
+class UserCreate(BaseModel):
+    email: EmailStr
+    password: str
+    name: str
+
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
+
+
+class User(BaseModel):
+    id: str
+    email: str
+    name: str
+    created_at: str
+
+
+class UserInDB(User):
+    password_hash: str
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+
+
+class TokenData(BaseModel):
+    user_id: Optional[str] = None
+
+
+# ── Calendar Entry schemas ─────────────────────────────────────────────────────
+
+class CalendarEntryCreate(BaseModel):
+    plant_type: str  # "flower" | "vegetable" | "native"
+    plant_slug: str
+    plant_name: str
+    action: str  # "sow" | "transplant" | "harvest" | "flower" | "fruit"
+    month: int    # 1-12
+    year: int
+    notes: Optional[str] = None
+
+
+class CalendarEntry(BaseModel):
+    id: str
+    user_id: str
+    plant_type: str
+    plant_slug: str
+    plant_name: str
+    action: str
+    month: int
+    year: int
+    notes: Optional[str] = None
+    created_at: str
+
+
+# ── Existing schemas ─────────────────────────────────────────────────────────
 
 class GrowthStages(BaseModel):
     harvest: Optional[str] = None      # FIRST — most recognizable
@@ -28,94 +88,80 @@ class FlowerActivity(BaseModel):
 
 class Flower(BaseModel):
     common_name: str
-    botanical_name: str
-    family: str
-    type: str
-    sun: str
-    soil_ph: str
-    soil_type: str
-    spacing_cm: int
-    row_spacing_cm: int
-    sow_depth_cm: Optional[float]
-    germination_temp_c: Optional[str]
-    germination_days: Optional[str]
-    days_to_maturity_sow: Optional[int]
-    days_to_maturity_transplant: Optional[int]
+    slug: str
+    botanical_name: Optional[str] = None
+    family: Optional[str] = None
+    description: Optional[str] = None
+    flower_colours: List[str] = []
+    type: str  # annual, perennial, biennial, corm
+    sow_indoors: Optional[str] = None
+    sow_outdoor: Optional[str] = None
+    planting_depth: Optional[str] = None
+    spacing: Optional[str] = None
+    height: Optional[str] = None
+    width: Optional[str] = None
+    harvest: Optional[str] = None
+    flowering_months: List[int] = []
+    status: Optional[str] = None
+    image_url: Optional[str] = None
     regions: dict
-    flowering_start: Optional[int]
-    flowering_end: Optional[int]
-    vase_life_days: str
-    stem_length_cm: str
-    pinching: bool
-    staking: bool
-    deadheading: bool
-    cut_flower_notes: str
-    pest_disease_notes: str
-    growth_stages: Optional[GrowthStages] = None
+    flower_colour: Optional[List[str]] = None
+    growth_rate: Optional[str] = None
+    sun: Optional[str] = None
+    water: Optional[str] = None
+    soil: Optional[str] = None
+    feed: Optional[str] = None
+    petal_count: Optional[str] = None
+    stem_length: Optional[str] = None
+    vase_life: Optional[str] = None
+    picking: Optional[str] = None
+    fragrance: Optional[str] = None
+    frost_tolerance: Optional[str] = None
+    drought_tolerance: Optional[str] = None
+    slug: Optional[str] = None
 
-
-class SeasonMonth(BaseModel):
-    month_number: int
-    name: str
-    nz_season: str
-    tasks: List[str]
-    sow_now: List[str]
-    transplant_now: List[str]
-    harvest_now: List[str]
+    class Config:
+        extra = "allow"
 
 
 class Vegetable(BaseModel):
     common_name: str
-    botanical_name: str
-    family: str
-    type: str
-    category: str  # "staple" or "green"
-    sun: str
-    soil_ph: str
-    soil_type: str
-    spacing_cm: int
-    row_spacing_cm: int
-    sow_depth_cm: Optional[float]
-    germination_temp_c: Optional[str]
-    germination_days: Optional[str]
-    days_to_maturity_sow: Optional[int]
-    days_to_maturity_transplant: Optional[int]
+    slug: str
+    vegetable_type: str  # root, leafy, fruit, allium, legume, brassica
+    category: str  # staple, green
+    sow_indoors: Optional[str] = None
+    sow_outdoor: Optional[str] = None
+    harvest: Optional[str] = None
+    spacing_cm: Optional[int] = None
+    height_cm: Optional[int] = None
+    days_to_maturity_sow: Optional[int] = None
+    days_to_maturity_transplant: Optional[int] = None
+    frost_hardy: Optional[bool] = None
+    hybrid: Optional[bool] = None
+    organic: Optional[bool] = None
+    image_url: Optional[str] = None
+    description: Optional[str] = None
+    storage: Optional[str] = None
+    pest_resistance: Optional[str] = None
+    notable_preference: Optional[str] = None
+    avoid: Optional[str] = None
+    harvest_start: Optional[int] = None
+    harvest_end: Optional[int] = None
+    harvest_months: Optional[List[int]] = None
     regions: dict
-    harvest_start: Optional[int]
-    harvest_end: Optional[int]
-    storage_life_weeks: Optional[str]
-    storage_method: Optional[str]
-    pest_resistance: Optional[str]
-    disease_resistance: Optional[str]
-    growing_notes: str
-    pest_disease_notes: str
-    growth_stages: Optional[GrowthStages] = None
+    slug: Optional[str] = None
 
-
-class VegetableActivity(BaseModel):
-    id: str
-    vegetable_name: str
-    activity_type: str  # sow, transplant, feed, water, harvest, cure, store
-    date: str
-    notes: Optional[str] = None
-    created_at: str
-
-
-class VegetableMonth(BaseModel):
-    month_number: int
-    name: str
-    nz_season: str
-    tasks: List[str]
-    sow_now: List[str]
-    transplant_now: List[str]
-    harvest_now: List[str]
+    class Config:
+        extra = "allow"
 
 
 class Native(BaseModel):
     common_name: str
-    botanical_name: str
-    māori_name: Optional[str] = None
-    family: str
+    slug: str
+    botanical_name: Optional[str] = None
+    family: Optional[str] = None
+    description: Optional[str] = None
+    type: Optional[str] = None
     life_cycle: str  # tree, shrub, groundcover, climber, fern
     is_deciduous: bool
     sun: str
