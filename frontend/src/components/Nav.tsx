@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogOut, User } from "lucide-react";
 import RegionSelector from "@/components/RegionSelector";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useAuth } from "@/lib/auth";
 
 const LINKS = [
   { href: "/", label: "Flowers Dashboard" },
@@ -19,6 +20,7 @@ const LINKS = [
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const { user, isLoggedIn, logout, isLoading } = useAuth();
   const activeHref = getActiveHref(pathname);
 
   useEffect(() => {
@@ -60,6 +62,41 @@ export default function Nav() {
               {l.label}
             </NavLink>
           ))}
+
+          {/* Auth-aware links */}
+          {isLoggedIn ? (
+            <>
+              <NavLink href="/my-calendar" active={pathname === "/my-calendar"}>
+                My Calendar
+              </NavLink>
+              <NavLink href="/my-dashboard" active={pathname === "/my-dashboard"}>
+                My Dashboard
+              </NavLink>
+              <span className="flex items-center gap-1.5 pl-3 text-sm text-gray-500">
+                <User size={14} />
+                {user?.name}
+              </span>
+              <button
+                onClick={logout}
+                className="p-2 rounded-[var(--radius-sm)] text-gray-400 hover:text-red-500 hover:bg-red-50 transition ml-1"
+                title="Sign out"
+              >
+                <LogOut size={16} />
+              </button>
+            </>
+          ) : (
+            <>
+              <NavLink href="/login" active={pathname === "/login"}>
+                Sign in
+              </NavLink>
+              <Link
+                href="/register"
+                className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm bg-[var(--forest)] text-white hover:opacity-90 transition"
+              >
+                Get started
+              </Link>
+            </>
+          )}
           <ThemeToggle />
         </div>
 
@@ -102,6 +139,45 @@ export default function Nav() {
                 {l.label}
               </Link>
             ))}
+
+            {/* Auth-aware mobile links */}
+            {isLoggedIn ? (
+              <>
+                <Link
+                  href="/my-calendar"
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--forest)]"
+                >
+                  My Calendar
+                </Link>
+                <Link
+                  href="/my-dashboard"
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--forest)]"
+                >
+                  My Dashboard
+                </Link>
+                <button
+                  onClick={logout}
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-left text-red-500 hover:bg-red-50 transition"
+                >
+                  Sign out ({user?.name})
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--text-muted)]"
+                >
+                  Sign in
+                </Link>
+                <Link
+                  href="/register"
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium bg-[var(--forest)] text-white text-center hover:opacity-90"
+                >
+                  Get started
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

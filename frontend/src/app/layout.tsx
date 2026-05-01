@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { RegionProvider } from "@/lib/region";
+import { AuthProvider } from "@/lib/auth";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Nav from "@/components/Nav";
 
@@ -26,7 +27,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <RegionProvider>
+        <RegionProvider>
+          <AuthProvider>
             <Nav />
 
             {/* Main */}
@@ -52,7 +54,8 @@ export default function RootLayout({
                 </a>
               </div>
             </footer>
-          </RegionProvider>
+          </AuthProvider>
+        </RegionProvider>
         </ThemeProvider>
       </body>
     </html>
