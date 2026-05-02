@@ -3,11 +3,12 @@ Activity logging middleware for FastAPI.
 
 Logs every API request as structured JSONL to /app/data/analytics/events-YYYY-MM-DD.jsonl.
 Non-blocking — never rejects a request, even if logging fails.
-Buffers writes for performance (flushes every 100 events or 30 seconds).
+Writes directly to disk (buffered by OS page cache for performance).
 """
 
 import json
 import os
+import sys
 import time
 import uuid
 from datetime import datetime, timezone
@@ -30,42 +31,18 @@ ANALYTICS_DIR = os.environ.get("ANALYTICS_DIR", "/app/data/analytics")
 JWT_SECRET = os.environ.get("JWT_SECRET", "dev-secret-change-in-production")
 JWT_ALGORITHM = "HS256"
 
-BUFFER_MAX_SIZE = 100      # flush after this many events
-BUFFER_MAX_AGE = 30.0       # flush after this many seconds
 
-
-# ── Buffer state ────────────────────────────────────────────────────────────
-
-_buffer: list[dict] = []
-_buffer_lock = __import__("threading").Lock()
-_last_flush = time.time()
-
-
-def _flush_buffer() -> None:
-    """Flush buffered events to today's JSONL file. Thread-safe."""
-    global _last_flush
-    with _buffer_lock:
-        if not _buffer:
-            return
-        events, _buffer[:] = _buffer, []
-        _last_flush = time.time()
-
+def _write_event(event: dict) -> None:
+    """Write a single event to today's JSONL file. Silent on failure."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    os.makedirs(ANALYTICS_DIR, exist_ok=True)
     filepath = os.path.join(ANALYTICS_DIR, f"events-{today}.jsonl")
-
     try:
+        os.makedirs(ANALYTICS_DIR, exist_ok=True)
         with open(filepath, "a") as f:
-            for event in events:
-                f.write(json.dumps(event, default=str) + "\n")
-    except Exception:
-        pass  # Never crash on logging failure
-
-
-def _should_flush() -> bool:
-    """Check if buffer should be flushed (size or age threshold)."""
-    with _buffer_lock:
-        return len(_buffer) >= BUFFER_MAX_SIZE or (time.time() - _last_flush) >= BUFFER_MAX_AGE
+            f.write(json.dumps(event, default=str) + "\n")
+    except Exception as e:
+        # Never crash on logging failure, but log to stderr for debugging
+        print(f"[analytics] write error: {e}", file=sys.stderr)
 
 
 def _try_decode_user(authorization: Optional[str]) -> Optional[dict]:
@@ -85,7 +62,7 @@ def _try_decode_user(authorization: Optional[str]) -> Optional[dict]:
 # ── Middleware ──────────────────────────────────────────────────────────────
 
 class ActivityLoggerMiddleware(BaseHTTPMiddleware):
-    """Log every request to JSONL analytics."""
+    """Log every request to JSONL analytics (one write per request, OS-buffered)."""
 
     async def dispatch(self, request: Request, call_next) -> Response:
         start_time = time.time()
@@ -108,7 +85,7 @@ class ActivityLoggerMiddleware(BaseHTTPMiddleware):
         response = await call_next(request)
         duration_ms = round((time.time() - start_time) * 1000, 2)
 
-        # Build event
+        # Build event and write immediately
         event = {
             "event_id": str(uuid.uuid4()),
             "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -120,16 +97,10 @@ class ActivityLoggerMiddleware(BaseHTTPMiddleware):
             "user_id": user_info["user_id"] if user_info else None,
             "user_email": user_info.get("email") if user_info else None,
             "ip_address": client_ip,
-            "user_agent": user_agent[:500],  # truncate long UAs
+            "user_agent": user_agent[:500],
             "referrer": referrer[:500] if referrer else None,
             "session_id": session_id or None,
         }
-
-        # Buffer the event
-        with _buffer_lock:
-            _buffer.append(event)
-
-        if _should_flush():
-            _flush_buffer()
+        _write_event(event)
 
         return response
