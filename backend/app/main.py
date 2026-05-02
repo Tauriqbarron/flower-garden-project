@@ -10,6 +10,8 @@ from app.routes.activities import router as activities_router
 from app.routes.dashboard import router as dashboard_router
 from app.routes.vegetables import router as vegetables_router
 from app.routes.natives import router as natives_router
+from app.routes.analytics import router as analytics_router
+from app.middleware.activity_logger import ActivityLoggerMiddleware
 
 app = FastAPI(
     title="Flower Garden Project",
@@ -18,6 +20,8 @@ app = FastAPI(
 )
 
 allowed_origins = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001").split(",")
+
+app.add_middleware(ActivityLoggerMiddleware)
 
 app.add_middleware(
     CORSMiddleware,
@@ -33,6 +37,7 @@ app.include_router(activities_router)
 app.include_router(dashboard_router)
 app.include_router(vegetables_router)
 app.include_router(natives_router)
+app.include_router(analytics_router)
 
 
 @app.get("/health")

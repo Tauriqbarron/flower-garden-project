@@ -7,12 +7,13 @@ import { Menu, X, LogOut, User } from "lucide-react";
 import RegionSelector from "@/components/RegionSelector";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useAuth } from "@/lib/auth";
+import { useAuthModal } from "@/lib/auth-modal";
 
 const LINKS = [
-  { href: "/", label: "Flowers Dashboard" },
+  { href: "/", label: "Home" },
   { href: "/flowers", label: "Flowers" },
-  { href: "/vegetables/dashboard", label: "Vege Dashboard" },
-  { href: "/vegetables", label: "Veges" },
+  { href: "/vegetables/dashboard", label: "Veges" },
+  { href: "/vegetables", label: "All Veges" },
   { href: "/natives", label: "Natives" },
   { href: "/calendar", label: "Calendar" },
 ];
@@ -21,6 +22,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const { user, isLoggedIn, logout, isLoading } = useAuth();
+  const { openAuthModal } = useAuthModal();
   const activeHref = getActiveHref(pathname);
 
   useEffect(() => {
@@ -38,25 +40,25 @@ export default function Nav() {
 
   return (
     <nav className="bg-white/80 dark:bg-[var(--card)]/90 backdrop-blur-md border-b border-[var(--border-soft)] dark:border-[var(--border)] sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-4 min-w-0">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2 min-w-0">
           <Link href="/" className="flex items-center gap-1.5 group shrink-0">
             <span className="text-xl">🌱</span>
-            <span className="font-extrabold text-lg tracking-tight text-[var(--forest)] dark:text-[#4CAF50]">
+            <span className="font-bold text-base tracking-tight text-[var(--forest)] dark:text-[#4CAF50]">
               auckland
             </span>
-            <span className="text-[var(--terracotta)] font-extrabold text-lg">.</span>
-            <span className="font-extrabold text-lg tracking-tight text-[var(--forest)] dark:text-[#4CAF50]">
+            <span className="text-[var(--terracotta)] font-bold text-base">.</span>
+            <span className="font-bold text-base tracking-tight text-[var(--forest)] dark:text-[#4CAF50]">
               garden
             </span>
           </Link>
-          <div className="hidden min-[1100px]:block">
+          <div className="hidden min-[1200px]:block">
             <RegionSelector />
           </div>
         </div>
 
         {/* Desktop links */}
-        <div className="hidden min-[1100px]:flex items-center gap-1 text-sm font-medium">
+        <div className="hidden min-[1200px]:flex items-center gap-1 text-sm font-medium">
           {LINKS.map((l) => (
             <NavLink key={l.href} href={l.href} active={l.href === activeHref}>
               {l.label}
@@ -86,22 +88,25 @@ export default function Nav() {
             </>
           ) : (
             <>
-              <NavLink href="/login" active={pathname === "/login"}>
+              <button
+                onClick={() => openAuthModal("signin")}
+                className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm text-[var(--text-muted)] dark:text-[#A7C4A0] hover:text-[var(--forest)] dark:hover:text-[#4CAF50] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 transition"
+              >
                 Sign in
-              </NavLink>
-              <Link
-                href="/register"
+              </button>
+              <button
+                onClick={() => openAuthModal("signup")}
                 className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm bg-[var(--forest)] text-white hover:opacity-90 transition"
               >
                 Get started
-              </Link>
+              </button>
             </>
           )}
           <ThemeToggle />
         </div>
 
         {/* Mobile toggle */}
-        <div className="flex items-center gap-1 min-[1100px]:hidden">
+        <div className="flex items-center gap-1 min-[1200px]:hidden">
           <ThemeToggle />
           <button
             type="button"
@@ -119,7 +124,7 @@ export default function Nav() {
       {/* Mobile drawer */}
       <div
         id="mobile-menu"
-        className={`min-[1100px]:hidden overflow-hidden border-t border-[var(--border-soft)] dark:border-[var(--border)] bg-white dark:bg-[var(--card)] transition-[max-height] duration-300 ease-out ${
+        className={`min-[1200px]:hidden overflow-hidden border-t border-[var(--border-soft)] dark:border-[var(--border)] bg-white dark:bg-[var(--card)] transition-[max-height] duration-300 ease-out ${
           open ? "max-h-[80vh]" : "max-h-0"
         }`}
       >
@@ -164,23 +169,24 @@ export default function Nav() {
               </>
             ) : (
               <>
-                <Link
-                  href="/login"
-                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--text-muted)]"
+                <button
+                  onClick={() => openAuthModal("signin")}
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--text-muted)] hover:bg-[var(--forest-50)] transition"
                 >
                   Sign in
-                </Link>
-                <Link
-                  href="/register"
+                </button>
+                <button
+                  onClick={() => openAuthModal("signup")}
                   className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium bg-[var(--forest)] text-white text-center hover:opacity-90"
                 >
                   Get started
-                </Link>
+                </button>
               </>
             )}
           </div>
         </div>
       </div>
+
     </nav>
   );
 }

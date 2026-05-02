@@ -6,6 +6,10 @@ services:
     restart: unless-stopped
     volumes:
       - ./backend/database:/app/database:ro
+      - analytics_data:/app/data/analytics
+    environment:
+      - ANALYTICS_DIR=/app/data/analytics
+      - ANALYTICS_API_KEY=${ANALYTICS_API_KEY:-flower-analytics-key-change-me}
     networks:
       - flower-network
     healthcheck:
@@ -35,6 +39,7 @@ services:
       - "127.0.0.1:8080:80"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - analytics_nginx:/var/log/nginx
     depends_on:
       - frontend
       - backend
@@ -44,3 +49,7 @@ services:
 networks:
   flower-network:
     driver: bridge
+
+volumes:
+  analytics_data:
+  analytics_nginx:

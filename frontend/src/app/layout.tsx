@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { RegionProvider } from "@/lib/region";
 import { AuthProvider } from "@/lib/auth";
+import { AuthModalProvider } from "@/lib/auth-modal";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Nav from "@/components/Nav";
+import PageViewTracker from "@/components/PageViewTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,8 +31,14 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <RegionProvider>
-          <AuthProvider>
+        <AuthProvider>
+        <AuthModalProvider>
             <Nav />
+
+            {/* Analytics — tracks page views silently */}
+            <Suspense fallback={null}>
+              <PageViewTracker />
+            </Suspense>
 
             {/* Main */}
             <main className="max-w-6xl mx-auto px-4 py-6">{children}</main>
@@ -54,6 +63,7 @@ export default function RootLayout({
                 </a>
               </div>
             </footer>
+        </AuthModalProvider>
           </AuthProvider>
         </RegionProvider>
         </ThemeProvider>

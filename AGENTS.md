@@ -112,6 +112,24 @@ Compares current week against full sow window (not just midpoint). Generates `ti
 - **Southern Hemisphere:** seasons are inverted — months mapped to NZ seasons in `NZ_MONTHS` dict
 - **Production:** port 8080 (not 80), `NEXT_PUBLIC_API_BASE` must be a Docker build ARG, pages that fetch data must be `"use client"` components
 
+## Auth + Personal Calendar (Issues #53–55)
+
+### User Auth
+- **Users:** `backend/database/users.json` — `{users: [{id, email, password_hash, name, created_at}]}`
+- **Auth service:** `backend/app/services/auth_service.py` — bcrypt + python-jose JWT
+- **Auth routes:** `backend/app/routes/auth.py` — `POST /api/auth/register`, `POST /api/auth/login`, `GET /api/auth/me`
+- **JWT secret:** env var `JWT_SECRET`, 7-day expiry, HS256
+- **Frontend auth:** `frontend/src/lib/auth.tsx` — `AuthContext`, token in `localStorage` as `flower_garden_token`
+- **Login/Register pages:** `frontend/src/app/login/page.tsx`, `/register/page.tsx`
+
+### Planting Calendar
+- **Entries:** `backend/database/calendar_entries.json` — `{entries: [{id, user_id, plant_type, plant_slug, plant_name, action, month, year, notes, created_at}]}`
+- **Plant types:** `flower` | `vegetable` | `native`
+- **Actions:** `sow` | `transplant` | `harvest` | `flower` | `fruit`
+- **Calendar routes:** `backend/app/routes/calendar_entries.py` — CRUD under `/api/calendar/entries`
+- **Add-to-calendar modal:** `frontend/src/components/AddToCalendarModal.tsx` — reusable across all detail + dashboard pages
+- **Personal pages:** `/my-calendar/page.tsx` (12-month view), `/my-dashboard/page.tsx` (stats + recent)
+
 ## Port Allocation
 
 | Service | Port | Notes |
