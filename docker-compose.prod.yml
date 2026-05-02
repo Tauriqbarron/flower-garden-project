@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./backend/database:/app/database:ro
-      - analytics_data:/app/data/analytics
+      - ./data/analytics:/app/data/analytics
     environment:
       - ANALYTICS_DIR=/app/data/analytics
       - ANALYTICS_API_KEY=${ANALYTICS_API_KEY:-flower-analytics-key-change-me}
@@ -52,5 +52,4 @@ networks:
     driver: bridge
 
 volumes:
-  analytics_data:
   analytics_nginx:

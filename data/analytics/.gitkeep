@@ -1,0 +1,2 @@
+# Analytics data directory — Docker bind mount target
+# Contents: events-YYYY-MM-DD.jsonl files
