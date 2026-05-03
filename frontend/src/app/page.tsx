@@ -1,5 +1,5 @@
-import FlowerDashboardClient from "@/components/FlowerDashboardClient";
+import VegDashboardClient from "@/components/VegDashboardClient";
 
 export default function HomePage() {
-  return <FlowerDashboardClient />;
+  return <VegDashboardClient />;
 }
