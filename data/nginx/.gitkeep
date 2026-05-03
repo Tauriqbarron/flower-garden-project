@@ -1,0 +1,2 @@
+# Nginx logs directory — Docker bind mount target
+# Contents: access.log, error.log, auckland.garden.analytics.json

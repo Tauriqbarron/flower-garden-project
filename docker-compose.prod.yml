@@ -40,7 +40,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      - analytics_nginx:/var/log/nginx
+      - ./data/nginx:/var/log/nginx
     depends_on:
       - frontend
       - backend
@@ -50,6 +50,3 @@ services:
 networks:
   flower-network:
     driver: bridge
-
-volumes:
-  analytics_nginx:
