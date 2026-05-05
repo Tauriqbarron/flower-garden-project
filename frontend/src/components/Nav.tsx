@@ -86,22 +86,7 @@ export default function Nav() {
                 <LogOut size={16} />
               </button>
             </>
-          ) : (
-            <>
-              <button
-                onClick={() => openAuthModal("signin")}
-                className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm text-[var(--text-muted)] dark:text-[#A7C4A0] hover:text-[var(--forest)] dark:hover:text-[#4CAF50] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 transition"
-              >
-                Sign in
-              </button>
-              <button
-                onClick={() => openAuthModal("signup")}
-                className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm bg-[var(--forest)] text-white hover:opacity-90 transition"
-              >
-                Get started
-              </button>
-            </>
-          )}
+          ) : null}
           <ThemeToggle />
         </div>
 
@@ -167,22 +152,7 @@ export default function Nav() {
                   Sign out ({user?.name})
                 </button>
               </>
-            ) : (
-              <>
-                <button
-                  onClick={() => openAuthModal("signin")}
-                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--text-muted)] hover:bg-[var(--forest-50)] transition"
-                >
-                  Sign in
-                </button>
-                <button
-                  onClick={() => openAuthModal("signup")}
-                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium bg-[var(--forest)] text-white text-center hover:opacity-90"
-                >
-                  Get started
-                </button>
-              </>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
