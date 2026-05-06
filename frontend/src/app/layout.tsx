@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "auckland.garden — Seasonal Planner for Auckland Growers",
   description:
     "Plan, sow, and track cut flowers and vegetables in Auckland, NZ. Auckland-specific seasonal guidance for your garden.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
