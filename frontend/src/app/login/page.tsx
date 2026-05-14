@@ -57,6 +57,18 @@ export default function LoginPage() {
       headline="Sign in to your account"
       error={error}
       isLoading={isLoading}
+      footer={
+        <p className="text-center text-sm" style={{ color: "var(--text-muted)" }}>
+          Don&apos;t have an account?{" "}
+          <Link
+            href="/register"
+            className="font-semibold hover:underline"
+            style={{ color: "var(--terracotta)" }}
+          >
+            Create one — it&apos;s free
+          </Link>
+        </p>
+      }
     >
       {/* Email */}
       <div>
@@ -183,26 +195,6 @@ export default function LoginPage() {
         )}
       </button>
 
-      {/* Divider */}
-      <div className="flex items-center gap-3">
-        <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
-        <span className="text-xs" style={{ color: "var(--text-soft)" }}>
-          or
-        </span>
-        <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
-      </div>
-
-      {/* Register link */}
-      <p className="text-center text-sm" style={{ color: "var(--text-muted)" }}>
-        Don&apos;t have an account?{" "}
-        <Link
-          href="/register"
-          className="font-semibold hover:underline"
-          style={{ color: "var(--terracotta)" }}
-        >
-          Create one — it&apos;s free
-        </Link>
-      </p>
     </AuthCard>
   );
 }
