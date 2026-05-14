@@ -33,6 +33,25 @@ def get_all_vegetables():
     return data.get("vegetables", [])
 
 
+def get_all_vegetables_enriched(region: str = "auckland"):
+    """Return all vegetables with sowing timing enrichment merged into each dict."""
+    vegetables = get_all_vegetables()
+    enriched = []
+    for v in vegetables:
+        timing = _enrich_veg_sow_item(v, region=region)
+        merged = {**v}  # shallow copy
+        # Merge timing fields into the vegetable dict
+        for key in ("timing_label", "timing_color", "optimal_month", "optimal_month_name",
+                     "weeks_from_optimal", "window_position", "position_label", "position_color",
+                     "window_status", "weeks_until_window_ends", "weeks_until_window_starts",
+                     "expected_harvest_month", "expected_harvest_month_name",
+                     "expected_harvest_weeks", "expected_harvest_text"):
+            if key in timing:
+                merged[key] = timing[key]
+        enriched.append(merged)
+    return enriched
+
+
 def get_vegetable_by_name(name: str):
     vegetables = get_all_vegetables()
     for v in vegetables:
@@ -268,6 +287,19 @@ def _enrich_veg_sow_item(vegetable: dict, region: str = "auckland") -> dict:
             )
             optimal_week, _ = _month_to_week_range(optimal_month)
             weeks_from_optimal = _weeks_between(current_week, optimal_week)
+
+            # Correct position for long windows: if ratio says "peak" but we're
+            # >3 weeks from optimal, the plant hasn't really reached peak yet
+            # Note: positive weeks_from_optimal = optimal is ahead (future)
+            if window_position == "peak" and abs(weeks_from_optimal) > 3:
+                if weeks_from_optimal > 0:
+                    window_position = "early"
+                    position_label = "Early window 🌱"
+                    position_color = "blue"
+                else:
+                    window_position = "late"
+                    position_label = "Late window ⏰"
+                    position_color = "amber"
         else:
             weeks_to_start = _weeks_between(current_week, window_start_week)
             weeks_to_end = _weeks_between(current_week, window_end_week)
@@ -301,6 +333,25 @@ def _enrich_veg_sow_item(vegetable: dict, region: str = "auckland") -> dict:
     # Urgency fields
     urgency = _compute_urgency(current_month, sow_start, sow_end)
     result.update(urgency)
+
+    # Override timing label for outside-window plants based on urgency status
+    status = result.get("window_status")
+    if status == "opening_soon":
+        weeks = result.get("weeks_until_window_starts")
+        if weeks:
+            result["timing_label"] = f"Opens in {weeks} week{'s' if weeks != 1 else ''}"
+        else:
+            result["timing_label"] = f"Opens {result['optimal_month_name']}"
+        result["timing_color"] = "blue"
+    elif status == "far_ahead":
+        result["timing_label"] = f"Opens {result['optimal_month_name']}"
+        result["timing_color"] = "blue"
+    elif status == "past":
+        result["timing_label"] = "Window closed"
+        result["timing_color"] = "red"
+    elif status == "closing_soon":
+        result["timing_label"] = "Closing soon ⏰"
+        result["timing_color"] = "amber"
 
     # Expected harvest if sown today
     if days_to_maturity:

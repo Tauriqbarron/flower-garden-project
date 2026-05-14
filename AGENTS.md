@@ -55,6 +55,13 @@ frontend/
 │   └── lib/
 │       ├── api.ts            # All interfaces + fetch functions
 │       └── region.tsx        # RegionContext (Auckland/Christchurch toggle)
+
+analytics/                    # Page view tracking + dashboard analytics
+brand/                        # Design assets, brand guidelines
+data/                         # CSV/JSON seed data for flowers, vegetables, natives
+scripts/                      # Data import, image processing, deployment helpers
+docs/                         # Accuracy reports, production plans, server docs
+nginx/                        # Production Nginx config
 ```
 
 ## Key Data Patterns

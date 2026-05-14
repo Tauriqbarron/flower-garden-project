@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Query
 from typing import Optional
 
-from app.services.flower_service import get_all_flowers, get_flower_by_name, get_flower_by_slug, get_flowers_by_type
+from app.services.flower_service import get_all_flowers, get_all_flowers_enriched, get_flower_by_name, get_flower_by_slug, get_flowers_by_type
 
 router = APIRouter(prefix="/api/flowers", tags=["flowers"])
 
@@ -11,8 +11,9 @@ def list_flowers(
     flower_type: Optional[str] = Query(None, description="Filter by type: annual, perennial, biennial, corm"),
     region: str = Query("auckland", description="Region: auckland or christchurch"),
 ):
-    flowers = get_flowers_by_type(flower_type) if flower_type else get_all_flowers()
-    return flowers
+    if flower_type:
+        return get_flowers_by_type(flower_type)
+    return get_all_flowers_enriched(region=region)
 
 
 @router.get("/slug/{slug}")

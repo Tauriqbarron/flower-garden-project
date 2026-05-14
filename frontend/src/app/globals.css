@@ -261,20 +261,29 @@ a { color: inherit; text-decoration: none; }
 .dark .text-gray-900 { color: #FFFDFB; }
 
 /* Blue overrides — map to forest tones */
-.dark .bg-blue-50 { background-color: #0f291e; }
+.dark .bg-blue-50 { background-color: #0a2a1a; }
 .dark .bg-blue-100 { background-color: #153628; }
-.dark .text-blue-700 { color: #4CAF50; }
-.dark .text-blue-600 { color: #2E8B57; }
+.dark .text-blue-700 { color: #66BB6A; }
+.dark .text-blue-600 { color: #4CAF50; }
 .dark .border-blue-100 { border-color: #1B4332; }
+.dark .border-blue-200 { border-color: #1B4332; }
 .dark [class*="hover:bg-blue-100"]:hover { background-color: #1B4332; }
 
 /* Green overrides — deeper greens */
-.dark .bg-green-50 { background-color: #0f291e; }
+.dark .bg-green-50 { background-color: #0a2a1a; }
 .dark .bg-green-100 { background-color: #153628; }
 .dark .bg-green-600 { background-color: #2E8B57; }
 .dark .border-green-100 { border-color: #1B4332; }
+.dark .border-green-200 { border-color: #1B4332; }
 .dark .text-green-600 { color: #4CAF50; }
-.dark .text-green-700 { color: #2E8B57; }
+.dark .text-green-700 { color: #81C784; }
+
+/* Pink overrides */
+.dark .bg-pink-50 { background-color: #2a151a; }
+.dark .bg-pink-100 { background-color: #3d1520; }
+.dark .text-pink-700 { color: #F48FB1; }
+.dark .text-pink-600 { color: #EC407A; }
+.dark .border-pink-200 { border-color: #5a2030; }
 
 /* Amber overrides */
 .dark .bg-amber-50 { background-color: #1f1a0e; }

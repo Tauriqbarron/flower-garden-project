@@ -29,3 +29,6 @@ Thumbs.db
 
 # Hermes
 .hermes/
+
+# App data
+analytics/raw/

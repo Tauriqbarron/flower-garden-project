@@ -31,6 +31,7 @@ interface AddToCalendarModalProps {
   plantName: string;
   defaultMonth?: number;
   defaultAction?: ActionType;
+  onSaved?: () => void;
 }
 
 export default function AddToCalendarModal({
@@ -39,6 +40,7 @@ export default function AddToCalendarModal({
   plantName,
   defaultMonth,
   defaultAction,
+  onSaved,
 }: AddToCalendarModalProps) {
   const { isLoggedIn, isLoading: authLoading } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
@@ -109,6 +111,7 @@ export default function AddToCalendarModal({
         setIsOpen(false);
         setSuccess(false);
         setNotes("");
+        onSaved?.();
       }, 1500);
     } catch {
       setError("Network error — is the backend running?");

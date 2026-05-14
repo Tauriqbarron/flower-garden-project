@@ -1,3 +1,112 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "id": "8736c054-5cbe-43ef-b3f6-f0cf8b404c60",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "flower",
+      "plant_slug": "ranunculus",
+      "plant_name": "Ranunculus",
+      "action": "sow",
+      "month": 5,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T07:27:15.440287"
+    },
+    {
+      "id": "80f8bff0-ea69-4702-b23b-8bb23cbabbe8",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "flower",
+      "plant_slug": "anemone",
+      "plant_name": "Anemone",
+      "action": "sow",
+      "month": 5,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T07:27:16.358423"
+    },
+    {
+      "id": "003584f3-2369-4970-b30a-81191afa6af4",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "flower",
+      "plant_slug": "snapdragon",
+      "plant_name": "Snapdragon",
+      "action": "sow",
+      "month": 4,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T07:27:17.192313"
+    },
+    {
+      "id": "87bdc337-cec0-4d8d-82b4-3d8941d7d47b",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "vegetable",
+      "plant_slug": "carrot",
+      "plant_name": "Carrot",
+      "action": "sow",
+      "month": 5,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T11:48:37.309224"
+    },
+    {
+      "id": "dfe917bf-8099-464a-897a-f1fe742daf8d",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "vegetable",
+      "plant_slug": "beetroot",
+      "plant_name": "Beetroot",
+      "action": "sow",
+      "month": 6,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T11:48:38.855642"
+    },
+    {
+      "id": "7561eb0e-45de-4a9d-9a61-f53ae94b4af0",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "vegetable",
+      "plant_slug": "parsnip",
+      "plant_name": "Parsnip",
+      "action": "sow",
+      "month": 4,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T11:48:42.857901"
+    },
+    {
+      "id": "33b048c7-61b4-4443-8bd7-89797d8fee77",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "vegetable",
+      "plant_slug": "pumpkin",
+      "plant_name": "Pumpkin",
+      "action": "sow",
+      "month": 10,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T11:49:00.860050"
+    },
+    {
+      "id": "1478e699-bfa3-43a3-bcd1-0388bc88d012",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "vegetable",
+      "plant_slug": "celeriac",
+      "plant_name": "Celeriac",
+      "action": "sow",
+      "month": 10,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T11:49:20.492655"
+    },
+    {
+      "id": "3041f9d0-8e70-4578-92cc-a009fc243b3b",
+      "user_id": "302cfe43-9367-4d57-bec3-1b65744c2e9c",
+      "plant_type": "vegetable",
+      "plant_slug": "potato",
+      "plant_name": "Potato",
+      "action": "sow",
+      "month": 10,
+      "year": 2026,
+      "notes": null,
+      "created_at": "2026-05-04T11:49:39.324808"
+    }
+  ]
 }

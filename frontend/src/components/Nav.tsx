@@ -9,22 +9,26 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { useAuth } from "@/lib/auth";
 import { useAuthModal } from "@/lib/auth-modal";
 
-const LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/flowers", label: "Flowers" },
-  { href: "/vegetables/dashboard", label: "Veges" },
+const PLANTS_LINKS = [
+  { href: "/flowers/dashboard", label: "Flowers" },
+  { href: "/vegetables/dashboard", label: "Vegetables" },
+  { href: "/flowers", label: "All Flowers" },
   { href: "/vegetables", label: "All Veges" },
   { href: "/natives", label: "Natives" },
-  { href: "/calendar", label: "Calendar" },
 ];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const { user, isLoggedIn, logout, isLoading } = useAuth();
+  const { isLoggedIn, logout, isLoading } = useAuth();
   const { openAuthModal } = useAuthModal();
-  const activeHref = getActiveHref(pathname);
 
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname?.startsWith(href + "/");
+  }
+
+  // Close on route change
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
@@ -59,33 +63,33 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div className="hidden min-[1200px]:flex items-center gap-1 text-sm font-medium">
-          {LINKS.map((l) => (
-            <NavLink key={l.href} href={l.href} active={l.href === activeHref}>
+          {PLANTS_LINKS.map((l) => (
+            <NavLink key={l.href} href={l.href} active={isActive(l.href)}>
               {l.label}
             </NavLink>
           ))}
 
-          {/* Auth-aware links */}
+          <NavLink href="/calendar" active={isActive("/calendar")}>
+            Calendar
+          </NavLink>
+
+          {/* Auth */}
           {isLoggedIn ? (
-            <>
-              <NavLink href="/my-calendar" active={pathname === "/my-calendar"}>
-                My Calendar
-              </NavLink>
-              <NavLink href="/my-dashboard" active={pathname === "/my-dashboard"}>
-                My Dashboard
-              </NavLink>
-              <span className="flex items-center gap-1.5 pl-3 text-sm text-gray-500">
+            <div className="flex items-center gap-1">
+              <Link
+                href="/"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-sm)] text-sm transition text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
+              >
                 <User size={14} />
-                {user?.name}
-              </span>
+                My Garden
+              </Link>
               <button
                 onClick={logout}
-                className="p-2 rounded-[var(--radius-sm)] text-gray-400 hover:text-red-500 hover:bg-red-50 transition ml-1"
-                title="Sign out"
+                className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
               >
-                <LogOut size={16} />
+                Sign out
               </button>
-            </>
+            </div>
           ) : null}
           <ThemeToggle />
         </div>
@@ -116,12 +120,12 @@ export default function Nav() {
         <div className="px-4 py-4 flex flex-col gap-4">
           <RegionSelector />
           <div className="flex flex-col">
-            {LINKS.map((l) => (
+            {PLANTS_LINKS.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 className={`px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium transition ${
-                  l.href === activeHref
+                  isActive(l.href)
                     ? "bg-[var(--forest-50)] dark:bg-[#1B4332]/50 text-[var(--forest)] dark:text-[#4CAF50]"
                     : "text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
                 }`}
@@ -130,33 +134,38 @@ export default function Nav() {
               </Link>
             ))}
 
+            <Link
+              href="/calendar"
+              className={`px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium transition ${
+                isActive("/calendar")
+                  ? "bg-[var(--forest-50)] dark:bg-[#1B4332]/50 text-[var(--forest)] dark:text-[#4CAF50]"
+                  : "text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
+              }`}
+            >
+              Calendar
+            </Link>
+
             {/* Auth-aware mobile links */}
             {isLoggedIn ? (
               <>
+                <div className="h-px bg-[var(--border-soft)] dark:border-[var(--border)] my-1" />
                 <Link
-                  href="/my-calendar"
-                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--forest)]"
+                  href="/"
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
                 >
-                  My Calendar
-                </Link>
-                <Link
-                  href="/my-dashboard"
-                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--forest)]"
-                >
-                  My Dashboard
+                  My Garden
                 </Link>
                 <button
                   onClick={logout}
-                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-left text-red-500 hover:bg-red-50 transition"
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-left text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
                 >
-                  Sign out ({user?.name})
+                  Sign out
                 </button>
               </>
             ) : null}
           </div>
         </div>
       </div>
-
     </nav>
   );
 }
@@ -182,13 +191,4 @@ function NavLink({
       {children}
     </Link>
   );
-}
-
-function getActiveHref(pathname: string | null): string | null {
-  if (!pathname) return null;
-  const matches = LINKS.filter((l) =>
-    l.href === "/" ? pathname === "/" : pathname === l.href || pathname.startsWith(l.href + "/"),
-  );
-  if (matches.length === 0) return null;
-  return matches.reduce((a, b) => (b.href.length > a.href.length ? b : a)).href;
 }

@@ -32,6 +32,23 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
   const slug = (flower as any).slug || toSlug(flower.common_name);
   const stages = flower.growth_stages;
 
+  const timingLabel = flower.timing_label;
+  const timingColor = flower.timing_color || "green";
+
+  const timingBadgeColors: Record<string, string> = {
+    green: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    amber: "bg-amber-100 text-amber-800 border-amber-200",
+    red: "bg-red-100 text-red-800 border-red-200",
+    blue: "bg-blue-100 text-blue-800 border-blue-200",
+  };
+
+  const timingEmoji: Record<string, string> = {
+    green: "🎯",
+    amber: "⏰",
+    red: "🔴",
+    blue: "📅",
+  };
+
   return (
     <Link href={`/flowers/${slug}`}>
       <div className="glass-card hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col overflow-hidden">
@@ -44,10 +61,11 @@ export default function FlowerCard({ flower }: { flower: Flower }) {
               className="object-cover"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
-            {/* Stage label on hover */}
-            <div className="absolute top-2 left-2 bg-white/90 dark:bg-[var(--card)]/90 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-medium flex items-center gap-1">
-              <span>🌻</span> Harvest
-            </div>
+            {timingLabel && (
+              <div className={`absolute top-2 left-2 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-medium flex items-center gap-1 border ${timingBadgeColors[timingColor] || timingBadgeColors.green}`}>
+                <span>{timingEmoji[timingColor] || "📅"}</span> {timingLabel}
+              </div>
+            )}
           </div>
         ) : (
           <div className="w-full h-48 bg-[var(--card-alt)] flex items-center justify-center text-5xl">

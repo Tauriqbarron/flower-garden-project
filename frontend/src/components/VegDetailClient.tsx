@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRegion } from "@/lib/region";
-import { fetchVegetableBySlug, Vegetable } from "@/lib/api";
+import { fetchVegetableBySlug, Vegetable, computeOptimalSowMonth } from "@/lib/api";
 import Link from "next/link";
 import { MonthBar } from "@/components/MonthBar";
 import GrowthCarousel from "@/components/GrowthCarousel";
+import AddToMyGardenButton from "@/components/AddToMyGardenButton";
 
 export default function VegDetailClient({ slug }: { slug: string }) {
   const { region } = useRegion();
@@ -52,6 +53,15 @@ export default function VegDetailClient({ slug }: { slug: string }) {
                 <div className="text-sm text-gray-500">storage life</div>
               </div>
             )}
+          </div>
+
+          <div className="mb-6">
+            <AddToMyGardenButton
+              plantType="vegetable"
+              plantSlug={slug}
+              plantName={vegetable.common_name}
+              sowMonth={computeOptimalSowMonth(regionData.sow_start, regionData.sow_end)}
+            />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">

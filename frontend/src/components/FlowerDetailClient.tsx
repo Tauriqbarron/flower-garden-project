@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRegion } from "@/lib/region";
-import { fetchFlowerBySlug, Flower } from "@/lib/api";
+import { fetchFlowerBySlug, Flower, computeOptimalSowMonth } from "@/lib/api";
 import Link from "next/link";
 import { MonthBar } from "@/components/MonthBar";
 import GrowthCarousel from "@/components/GrowthCarousel";
+import AddToMyGardenButton from "@/components/AddToMyGardenButton";
 
 export default function FlowerDetailClient({ slug }: { slug: string }) {
   const { region } = useRegion();
@@ -48,6 +49,15 @@ export default function FlowerDetailClient({ slug }: { slug: string }) {
             <div className="text-3xl font-bold text-green-600">{flower.vase_life_days}d</div>
             <div className="text-sm text-gray-500">vase life</div>
           </div>
+        </div>
+
+        <div className="mb-6">
+          <AddToMyGardenButton
+            plantType="flower"
+            plantSlug={slug}
+            plantName={flower.common_name}
+            sowMonth={computeOptimalSowMonth(regionData.sow_start, regionData.sow_end)}
+          />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">

@@ -42,6 +42,16 @@ export interface Flower {
   cut_flower_notes: string;
   pest_disease_notes: string;
   growth_stages?: GrowthStages;
+  // Timing enrichment (from backend enrichment)
+  timing_label?: string;
+  timing_color?: string;
+  window_position?: "early" | "peak" | "late" | null;
+  position_label?: string;
+  position_color?: string;
+  window_status?: string;
+  weeks_until_window_ends?: number | null;
+  weeks_until_window_starts?: number | null;
+  expected_bloom_text?: string;
 }
 
 export interface SowNowDetail {
@@ -165,6 +175,18 @@ export function monthFull(n: number): string {
   return names[n] || "";
 }
 
+export function computeOptimalSowMonth(sowStart: number | null, sowEnd: number | null): number | undefined {
+  if (sowStart == null || sowEnd == null) return undefined;
+  const windowMonths: number[] = [];
+  if (sowStart <= sowEnd) {
+    for (let m = sowStart; m <= sowEnd; m++) windowMonths.push(m);
+  } else {
+    for (let m = sowStart; m <= 12; m++) windowMonths.push(m);
+    for (let m = 1; m <= sowEnd; m++) windowMonths.push(m);
+  }
+  return windowMonths[Math.floor(windowMonths.length / 2)];
+}
+
 // ─── Vegetable types and API ───
 
 export interface Vegetable {
@@ -193,6 +215,16 @@ export interface Vegetable {
   growing_notes: string;
   pest_disease_notes: string;
   growth_stages?: GrowthStages;
+  // Timing enrichment (from backend enrichment)
+  timing_label?: string;
+  timing_color?: string;
+  window_position?: "early" | "peak" | "late" | null;
+  position_label?: string;
+  position_color?: string;
+  window_status?: string;
+  weeks_until_window_ends?: number | null;
+  weeks_until_window_starts?: number | null;
+  expected_harvest_text?: string;
 }
 
 export interface VegSowNowDetail {
@@ -395,3 +427,77 @@ export function getNativeLifeCycleColor(life_cycle: string): string {
     default: return "bg-[var(--cream-200)] text-[var(--text-muted)]";
   }
 }
+
+// ─── Calendar Entries (User's personal planting calendar) ───
+
+export interface CalendarEntry {
+  id: string;
+  user_id: string;
+  plant_type: string;   // "flower" | "vegetable" | "native"
+  plant_slug: string;
+  plant_name: string;
+  action: string;        // "sow" | "transplant" | "harvest" | "flower" | "fruit"
+  month: number;         // 1-12
+  year: number;
+  notes: string | null;
+  created_at: string;
+}
+
+export interface CalendarEntryCreate {
+  plant_type: string;
+  plant_slug: string;
+  plant_name: string;
+  action: string;
+  month: number;
+  year: number;
+  notes?: string;
+}
+
+export async function fetchCalendarEntries(token: string): Promise<CalendarEntry[]> {
+  const res = await fetch(`${API_BASE}/api/calendar/entries/`, {
+    cache: "no-store",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) return [];
+  return res.json();
+}
+
+export async function createCalendarEntry(
+  token: string,
+  data: CalendarEntryCreate,
+): Promise<CalendarEntry | null> {
+  const res = await fetch(`${API_BASE}/api/calendar/entries/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) return null;
+  return res.json();
+}
+
+export async function deleteCalendarEntry(token: string, entryId: string): Promise<boolean> {
+  const res = await fetch(`${API_BASE}/api/calendar/entries/${entryId}`, {
+    method: "DELETE",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  return res.ok;
+}
+
+export const ACTION_LABELS: Record<string, string> = {
+  sow: "Sow",
+  transplant: "Transplant",
+  harvest: "Harvest",
+  flower: "Flowering",
+  fruit: "Fruiting",
+};
+
+export const ACTION_EMOJI: Record<string, string> = {
+  sow: "🌱",
+  transplant: "🪴",
+  harvest: "✂️",
+  flower: "🌸",
+  fruit: "🍓",
+};

@@ -2,7 +2,7 @@ from fastapi import APIRouter, Query
 from typing import Optional
 
 from app.services.vegetable_service import (
-    get_all_vegetables, get_vegetable_by_name, get_vegetable_by_slug,
+    get_all_vegetables, get_all_vegetables_enriched, get_vegetable_by_name, get_vegetable_by_slug,
     get_vegetables_by_type, get_vegetables_by_category,
     get_vegetable_dashboard_summary, get_vegetable_yearly_calendar,
 )
@@ -20,7 +20,7 @@ def list_vegetables(
         return get_vegetables_by_type(vegetable_type)
     if category:
         return get_vegetables_by_category(category)
-    return get_all_vegetables()
+    return get_all_vegetables_enriched(region=region)
 
 
 @router.get("/dashboard/calendar")
