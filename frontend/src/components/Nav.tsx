@@ -77,7 +77,7 @@ export default function Nav() {
           {isLoggedIn ? (
             <div className="flex items-center gap-1">
               <Link
-                href="/"
+                href="/my-dashboard"
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-sm)] text-sm transition text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
               >
                 <User size={14} />
@@ -150,7 +150,7 @@ export default function Nav() {
               <>
                 <div className="h-px bg-[var(--border-soft)] dark:border-[var(--border)] my-1" />
                 <Link
-                  href="/"
+                  href="/my-dashboard"
                   className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
                 >
                   My Garden
