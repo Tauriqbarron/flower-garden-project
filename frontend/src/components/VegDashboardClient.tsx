@@ -6,10 +6,12 @@ import Link from "next/link";
 import VegSowCard from "@/components/VegSowCard";
 import VegComingUpPanel from "@/components/VegComingUpPanel";
 import HighlightReel from "@/components/HighlightReel";
+import { useAuthModal } from "@/lib/auth-modal";
 
 export default function VegDashboardClient() {
   const { region } = useRegion();
   const [data, setData] = useState<VegetableDashboardData | null>(null);
+  const { openAuthModal } = useAuthModal();
 
   useEffect(() => {
     fetchVegetableDashboard(region).then(setData);
@@ -31,6 +33,28 @@ export default function VegDashboardClient() {
         <p className="text-gray-700">
           <strong>{data.current_month}</strong> · {data.current_season}
         </p>
+      </div>
+
+      {/* Sign in / Get started CTA */}
+      <div className="glass-card px-6 py-5 mb-6 border border-[var(--forest-100)] dark:border-[#1B4332] bg-[var(--forest-50)] dark:bg-[#0f291e]/50 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div className="flex-1">
+          <h3 className="font-semibold text-[var(--text)] dark:text-white">Track your personal garden</h3>
+          <p className="text-sm text-[var(--text-muted)] mt-0.5">Save plants to your own garden, get a personalized sowing calendar, and more.</p>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            onClick={() => openAuthModal("signin")}
+            className="px-4 py-2 rounded-[var(--radius-sm)] text-sm font-medium border border-[var(--border)] text-[var(--text)] dark:text-white dark:border-[var(--border)] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 transition"
+          >
+            Sign in
+          </button>
+          <button
+            onClick={() => openAuthModal("signup")}
+            className="px-4 py-2 rounded-[var(--radius-sm)] text-sm font-semibold bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] transition"
+          >
+            Get started — free
+          </button>
+        </div>
       </div>
 
       {/* Highlight Reel */}
