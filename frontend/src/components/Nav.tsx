@@ -92,7 +92,7 @@ export default function Nav() {
             </div>
           ) : (
             <button
-              onClick={openAuthModal}
+              onClick={() => openAuthModal("signin")}
               className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm font-medium bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] transition"
             >
               Sign in
@@ -173,7 +173,7 @@ export default function Nav() {
               <>
                 <div className="h-px bg-[var(--border-soft)] dark:border-[var(--border)] my-1" />
                 <button
-                  onClick={openAuthModal}
+                  onClick={() => openAuthModal("signin")}
                   className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-left bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] transition"
                 >
                   Sign in
