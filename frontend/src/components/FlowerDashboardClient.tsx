@@ -33,6 +33,12 @@ export default function FlowerDashboardClient() {
         <p className="text-gray-700">
           <strong>{data.current_month}</strong> · {data.current_season}
         </p>
+        <Link
+          href="/flowers"
+          className="ml-auto text-sm font-medium text-[var(--forest)] dark:text-[#4CAF50] hover:underline whitespace-nowrap"
+        >
+          View all flowers →
+        </Link>
       </div>
 
       {/* Sign in / Get started CTA */}
