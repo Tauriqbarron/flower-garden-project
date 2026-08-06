@@ -1520,6 +1520,53 @@
           "varieties": "Blue Magic, Blue Pearl, Sapphire Beauty, White van Vliet"
         }
       }
+    },
+    {
+      "common_name": "Rose",
+      "botanical_name": "Rosa spp.",
+      "family": "Rosaceae",
+      "type": "perennial",
+      "sun": "full sun",
+      "soil_ph": "6.0-7.0",
+      "soil_type": "well-draining, fertile, loamy",
+      "spacing_cm": 60,
+      "row_spacing_cm": 90,
+      "sow_depth_cm": null,
+      "germination_temp_c": null,
+      "germination_days": null,
+      "days_to_maturity_sow": null,
+      "days_to_maturity_transplant": null,
+      "flowering_start": 10,
+      "flowering_end": 5,
+      "vase_life_days": "5-10",
+      "stem_length_cm": "30-90",
+      "pinching": false,
+      "staking": false,
+      "deadheading": true,
+      "cut_flower_notes": "Cut stems early morning when buds are showing colour but not fully open. Remove thorns and lower leaves, and condition in warm water for several hours before arranging.",
+      "pest_disease_notes": "Watch for black spot and powdery mildew in humid Auckland conditions; ensure good air circulation and water at base. Aphids and thrips can be problematic; use insecticidal soap or neem oil.",
+      "regions": {
+        "auckland": {
+          "sow_start": 6,
+          "sow_end": 8,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Iceberg, Mr. Lincoln, Just Joey, Graham Thomas"
+        },
+        "christchurch": {
+          "sow_start": 7,
+          "sow_end": 9,
+          "transplant_start": null,
+          "transplant_end": null,
+          "varieties": "Iceberg, Mr. Lincoln, Just Joey, Graham Thomas"
+        }
+      },
+      "slug": "rose",
+      "growth_stages": {
+        "harvest": "/images/flower/rose/harvest.jpg",
+        "seedling": "/images/flower/rose/seedling.jpg",
+        "young_plant": "/images/flower/rose/young_plant.jpg"
+      }
     }
   ]
 }
