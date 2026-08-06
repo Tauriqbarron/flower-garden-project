@@ -124,20 +124,27 @@ def validate_entry(entry, plant_type, catalog):
     if not slug:
         return None, "slug is empty"
 
-    # Common required text fields
-    for field in ("botanical_name", "family", "sun", "soil_ph", "soil_type",
-                  "germination_temp_c", "germination_days"):
+    # Common required text fields (germination may be null for non-seed-grown flowers)
+    for field in ("botanical_name", "family", "sun", "soil_ph", "soil_type"):
         if not str(entry.get(field, "")).strip():
             return None, _err(entry, f"missing required field '{field}'")
+    for field in ("germination_temp_c", "germination_days"):
+        v = entry.get(field)
+        if v is not None and not str(v).strip():
+            return None, _err(entry, f"missing required field '{field}'")
 
-    # Numbers
-    for field in ("spacing_cm", "row_spacing_cm", "days_to_maturity_sow"):
+    # Numbers — seed-metric fields may be null for plants grown from cuttings,
+    # bulbs, corms or tubers (e.g. roses); spacing is always required.
+    for field in ("spacing_cm", "row_spacing_cm"):
         val = entry.get(field)
         if not isinstance(val, int) or val <= 0:
             return None, _err(entry, f"'{field}' must be a positive integer")
+    dtm = entry.get("days_to_maturity_sow")
+    if dtm is not None and (not isinstance(dtm, int) or dtm <= 0):
+        return None, _err(entry, "'days_to_maturity_sow' must be a positive integer or null")
     sow_depth = entry.get("sow_depth_cm")
-    if not isinstance(sow_depth, (int, float)) or sow_depth <= 0:
-        return None, _err(entry, "'sow_depth_cm' must be a positive number")
+    if sow_depth is not None and (not isinstance(sow_depth, (int, float)) or sow_depth <= 0):
+        return None, _err(entry, "'sow_depth_cm' must be a positive number or null")
 
     # Regions
     regions = entry.get("regions")
@@ -166,9 +173,12 @@ def validate_entry(entry, plant_type, catalog):
             if entry.get(mf) not in VALID_MONTHS:
                 return None, _err(entry, f"'{mf}' must be 1-12")
         for field in ("storage_life_weeks", "storage_method", "pest_resistance",
-                      "disease_resistance", "growing_notes", "pest_disease_notes"):
+                      "disease_resistance", "growing_notes", "pest_disease_notes",
+                      "germination_temp_c", "germination_days"):
             if not str(entry.get(field, "")).strip():
                 return None, _err(entry, f"missing required field '{field}'")
+        if entry.get("days_to_maturity_sow") is None:
+            return None, _err(entry, "'days_to_maturity_sow' is required for vegetables")
     else:  # flower
         if entry.get("type") not in FLOWER_TYPES:
             return None, _err(entry, f"type must be one of {sorted(FLOWER_TYPES)}")
@@ -267,6 +277,9 @@ def research(common_name, plant_type):
         "slugs, thrips where relevant).\n"
         "- spacing_cm / row_spacing_cm / days_to_maturity_sow are integers; sow_depth_cm a "
         "number; germination_temp_c / germination_days strings like '18-24' / '7-14'.\n"
+        "- If the plant is NOT typically grown from seed (perennials from cuttings, "
+        "roses, bulbs, corms, tubers): set days_to_maturity_sow, sow_depth_cm, "
+        "germination_temp_c and germination_days to null instead of inventing values.\n"
         "- soil_ph a string range like '5.5-7.5'.\n"
         "- Respond with ONLY the JSON object — no markdown, no commentary."
     )

@@ -18,6 +18,7 @@ export interface RegionData {
 
 export interface Flower {
   common_name: string;
+  slug: string;
   botanical_name: string;
   family: string;
   type: string;
@@ -191,6 +192,7 @@ export function computeOptimalSowMonth(sowStart: number | null, sowEnd: number |
 
 export interface Vegetable {
   common_name: string;
+  slug: string;
   botanical_name: string;
   family: string;
   type: string;

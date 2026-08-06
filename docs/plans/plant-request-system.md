@@ -1,7 +1,7 @@
 # Plant Request + Notification System — auckland.garden
 
 ## Status
-**Approved with amendments** — D1 auto-publish ✅, D2 email deferred ✅, D3 images Wikimedia→FLUX ✅, D4 pipeline runs on ProDesk (no Hermes) ✅. Ready for Phase 1.
+**Approved with amendments** — D1 auto-publish ✅, D2 email deferred ✅, D3 images Wikimedia→FLUX ✅, D4 pipeline runs on ProDesk (no Hermes) ✅. **Phases 1–3 shipped** (notifications, request intake, build pipeline). Phase 4 (email) deferred.
 
 ## Context
 
