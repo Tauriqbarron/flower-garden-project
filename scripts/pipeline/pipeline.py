@@ -156,10 +156,10 @@ def validate_entry(entry, plant_type, catalog):
             return None, _err(entry, f"regions.{rname} missing")
         for mf in ("sow_start", "sow_end"):
             if r.get(mf) not in VALID_MONTHS:
-                return None, _err(entry, f"regions.{rname}.{mf} must be 1-12")
+                return None, _err(entry, f"regions.{rname}.{mf} must be 1-12 (got {r.get(mf)!r})")
         for mf in ("transplant_start", "transplant_end"):
             if r.get(mf) is not None and r.get(mf) not in VALID_MONTHS:
-                return None, _err(entry, f"regions.{rname}.{mf} must be 1-12 or null")
+                return None, _err(entry, f"regions.{rname}.{mf} must be 1-12 or null (got {r.get(mf)!r})")
         if not str(r.get("varieties", "")).strip():
             return None, _err(entry, f"regions.{rname}.varieties is required")
 
@@ -278,8 +278,14 @@ def research(common_name, plant_type):
         "- spacing_cm / row_spacing_cm / days_to_maturity_sow are integers; sow_depth_cm a "
         "number; germination_temp_c / germination_days strings like '18-24' / '7-14'.\n"
         "- If the plant is NOT typically grown from seed (perennials from cuttings, "
-        "roses, bulbs, corms, tubers): set days_to_maturity_sow, sow_depth_cm, "
-        "germination_temp_c and germination_days to null instead of inventing values.\n"
+        "roses, bulbs, corms, tubers): set ONLY days_to_maturity_sow, sow_depth_cm, "
+        "germination_temp_c and germination_days to null instead of inventing values. "
+        "Do NOT null any other field.\n"
+        "- regions.auckland and regions.christchurch sow_start/sow_end are ALWAYS "
+        "integers 1-12 (never null). For non-seed-grown plants interpret sow as the "
+        "best PLANTING months (e.g. bare-root roses plant in winter: Auckland sow_start 6, "
+        "sow_end 8; Christchurch sow_start 7, sow_end 9). transplant_start/end: null "
+        "unless the plant is normally raised in trays then transplanted.\n"
         "- soil_ph a string range like '5.5-7.5'.\n"
         "- Respond with ONLY the JSON object — no markdown, no commentary."
     )
