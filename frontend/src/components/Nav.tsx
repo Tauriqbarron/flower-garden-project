@@ -7,6 +7,7 @@ import { Menu, X, LogOut, User, Sprout } from "lucide-react";
 import RegionSelector from "@/components/RegionSelector";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import NotificationBell from "@/components/NotificationBell";
+import GlobalSearch from "@/components/GlobalSearch";
 import { useAuth } from "@/lib/auth";
 import { useAuthModal } from "@/lib/auth-modal";
 
@@ -83,6 +84,8 @@ export default function Nav() {
             Calendar
           </NavLink>
 
+          <GlobalSearch />
+
           {/* Auth */}
           {isLoggedIn ? (
             <div className="flex items-center gap-1">
@@ -122,6 +125,7 @@ export default function Nav() {
         {/* Mobile toggle */}
         <div className="flex items-center gap-1 min-[1280px]:hidden">
           <NotificationBell />
+          <GlobalSearch />
           <ThemeToggle />
           <button
             type="button"
