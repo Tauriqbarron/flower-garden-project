@@ -16,7 +16,10 @@ log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"; }
 log "=== Deploy started ==="
 cd "$DEPLOY_DIR"
 
-PREVIOUS_COMMIT="$(git rev-parse HEAD)"
+# Compare against the last-known REMOTE state (not local HEAD): the request
+# pipeline commits+pushes from this same checkout, so local HEAD may already
+# equal origin/main when the runner fires — that must still trigger a rebuild.
+PREVIOUS_COMMIT="$(git rev-parse origin/main 2>/dev/null || git rev-parse HEAD)"
 log "Pulling latest..."
 git fetch origin main
 git reset --hard origin/main
