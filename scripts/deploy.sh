@@ -16,16 +16,26 @@ log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"; }
 log "=== Deploy started ==="
 cd "$DEPLOY_DIR"
 
+# Single-instance lock — the runner, the deploy heartbeat cron and the request
+# pipeline can all fire deploy.sh; never run two at once (git reset races).
+LOCK_FILE="/tmp/flower-deploy.lock"
+exec 9>"$LOCK_FILE"
+if ! flock -n 9; then
+    log "Another deploy is in progress — skipping this run."
+    exit 0
+fi
+
 # Compare against the last-known REMOTE state (not local HEAD): the request
 # pipeline commits+pushes from this same checkout, so local HEAD may already
 # equal origin/main when the runner fires — that must still trigger a rebuild.
+# FORCE_DEPLOY=1 (deploy heartbeat) skips the check entirely.
 PREVIOUS_COMMIT="$(git rev-parse origin/main 2>/dev/null || git rev-parse HEAD)"
 log "Pulling latest..."
 git fetch origin main
 git reset --hard origin/main
 CURRENT_COMMIT="$(git rev-parse HEAD)"
 
-if [ "$PREVIOUS_COMMIT" = "$CURRENT_COMMIT" ]; then
+if [ -z "${FORCE_DEPLOY:-}" ] && [ "$PREVIOUS_COMMIT" = "$CURRENT_COMMIT" ]; then
     if curl -sf "$HEALTH_URL" > /dev/null 2>&1; then
         log "No changes. Healthy. Done."
         exit 0
