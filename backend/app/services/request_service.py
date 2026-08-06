@@ -230,12 +230,15 @@ def update_request_status(
                 link,
             )
         elif status == STATUS_REJECTED:
-            reason = reject_reason or "It didn't pass validation this time."
+            # Generic body on purpose — the technical reject_reason stays on the
+            # request record (admin/debug) and in pipeline logs, never in the
+            # user-facing notification.
             notify(
                 r["user_id"],
                 TYPE_REQUEST_REJECTED,
                 f"We couldn't add {r['common_name']}",
-                reason,
+                "Something went wrong while building this entry. We've noted it and "
+                "will take a look — please try again in a few days.",
                 None,
             )
         elif status == STATUS_DUPLICATE and r["slug"]:

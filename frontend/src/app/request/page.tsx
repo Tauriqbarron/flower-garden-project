@@ -385,7 +385,6 @@ export default function RequestPage() {
                     </div>
                     <p className="text-xs text-[var(--text-muted)] dark:text-[#A7C4A0] mt-1">
                       {timeAgo(r.created_at)}
-                      {r.reject_reason ? ` · ${r.reject_reason}` : ""}
                     </p>
                   </div>
                   <div className="shrink-0 flex items-center gap-2">
