@@ -32,6 +32,19 @@ class TokenData(BaseModel):
     user_id: Optional[str] = None
 
 
+# ── Notification schemas ────────────────────────────────────────────────────
+
+class Notification(BaseModel):
+    id: str
+    user_id: str
+    type: str  # request_received | entry_published | already_exists | request_rejected | image_pending
+    title: str
+    body: str
+    link: Optional[str] = None
+    read: bool = False
+    created_at: str
+
+
 # ── Calendar Entry schemas ───────────────────────────────────────────────────
 
 class CalendarEntryCreate(BaseModel):

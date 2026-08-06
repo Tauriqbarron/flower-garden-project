@@ -32,3 +32,4 @@ Thumbs.db
 
 # App data
 analytics/raw/
+data/runtime/

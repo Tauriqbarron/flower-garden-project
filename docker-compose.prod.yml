@@ -7,9 +7,11 @@ services:
     volumes:
       - ./backend/database:/app/database:ro
       - ./data/analytics:/app/data/analytics
+      - runtime-data:/app/data/runtime
     environment:
       - ANALYTICS_DIR=/app/data/analytics
       - ANALYTICS_API_KEY=${ANALYTICS_API_KEY:-flower-analytics-key-change-me}
+      - RUNTIME_DATA_DIR=/app/data/runtime
     networks:
       - flower-network
     healthcheck:
@@ -50,3 +52,6 @@ services:
 networks:
   flower-network:
     driver: bridge
+
+volumes:
+  runtime-data:

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, LogOut, User } from "lucide-react";
 import RegionSelector from "@/components/RegionSelector";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import NotificationBell from "@/components/NotificationBell";
 import { useAuth } from "@/lib/auth";
 import { useAuthModal } from "@/lib/auth-modal";
 
@@ -76,6 +77,7 @@ export default function Nav() {
           {/* Auth */}
           {isLoggedIn ? (
             <div className="flex items-center gap-1">
+              <NotificationBell />
               <Link
                 href="/my-dashboard"
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-sm)] text-sm transition text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
@@ -103,6 +105,7 @@ export default function Nav() {
 
         {/* Mobile toggle */}
         <div className="flex items-center gap-1 min-[1200px]:hidden">
+          <NotificationBell />
           <ThemeToggle />
           <button
             type="button"

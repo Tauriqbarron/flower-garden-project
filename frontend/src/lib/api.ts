@@ -501,3 +501,69 @@ export const ACTION_EMOJI: Record<string, string> = {
   flower: "🌸",
   fruit: "🍓",
 };
+
+// ─── Notifications (in-app bell + page) ───
+
+export interface AppNotification {
+  id: string;
+  user_id: string;
+  type: string; // request_received | entry_published | already_exists | request_rejected | image_pending
+  title: string;
+  body: string;
+  link: string | null;
+  read: boolean;
+  created_at: string;
+}
+
+export async function fetchNotifications(token: string, limit: number = 100): Promise<AppNotification[]> {
+  const res = await fetch(`${API_BASE}/api/notifications/?limit=${limit}`, {
+    cache: "no-store",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) return [];
+  return res.json();
+}
+
+export async function fetchUnreadCount(token: string): Promise<number> {
+  const res = await fetch(`${API_BASE}/api/notifications/unread-count`, {
+    cache: "no-store",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) return 0;
+  const data = await res.json();
+  return data.count ?? 0;
+}
+
+export async function markNotificationRead(token: string, id: string): Promise<AppNotification | null> {
+  const res = await fetch(`${API_BASE}/api/notifications/${id}/read`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) return null;
+  return res.json();
+}
+
+export async function markAllNotificationsRead(token: string): Promise<number> {
+  const res = await fetch(`${API_BASE}/api/notifications/read-all`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) return 0;
+  const data = await res.json();
+  return data.updated ?? 0;
+}
+
+/** Relative time helper ("just now", "12m ago", "3h ago", "2d ago"). */
+export function timeAgo(iso: string): string {
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) return "";
+  const diffSec = Math.max(0, Math.floor((Date.now() - then) / 1000));
+  if (diffSec < 60) return "just now";
+  const mins = Math.floor(diffSec / 60);
+  if (mins < 60) return `${mins}m ago`;
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+  const days = Math.floor(hours / 24);
+  if (days < 7) return `${days}d ago`;
+  return new Date(iso).toLocaleDateString();
+}

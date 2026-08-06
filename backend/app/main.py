@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes.auth import router as auth_router
+from app.routes.notifications import router as notifications_router
 from app.routes.calendar_entries import router as calendar_entries_router
 from app.routes.flowers import router as flowers_router
 from app.routes.activities import router as activities_router
@@ -31,6 +32,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_router)
+app.include_router(notifications_router)
 app.include_router(calendar_entries_router)
 app.include_router(flowers_router)
 app.include_router(activities_router)
