@@ -12,6 +12,7 @@ services:
       - ANALYTICS_DIR=/app/data/analytics
       - ANALYTICS_API_KEY=${ANALYTICS_API_KEY:-flower-analytics-key-change-me}
       - RUNTIME_DATA_DIR=/app/data/runtime
+      - JWT_SECRET=${JWT_SECRET}
     networks:
       - flower-network
     healthcheck:
