@@ -45,6 +45,33 @@ class Notification(BaseModel):
     created_at: str
 
 
+# ── Plant request schemas ───────────────────────────────────────────────────
+
+class PlantRequestCreate(BaseModel):
+    plant_type: str  # "flower" | "vegetable"
+    common_name: str
+    notes: Optional[str] = None
+
+
+class PlantRequest(BaseModel):
+    id: str
+    user_id: str
+    plant_type: str
+    common_name: str
+    notes: Optional[str] = None
+    status: str  # pending | building | published | rejected | duplicate
+    slug: Optional[str] = None
+    reject_reason: Optional[str] = None
+    created_at: str
+    updated_at: str
+
+
+class PlantRequestStatusUpdate(BaseModel):
+    status: str  # building | published | rejected | duplicate
+    slug: Optional[str] = None
+    reject_reason: Optional[str] = None
+
+
 # ── Calendar Entry schemas ───────────────────────────────────────────────────
 
 class CalendarEntryCreate(BaseModel):

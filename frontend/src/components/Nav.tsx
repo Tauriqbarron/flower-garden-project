@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, LogOut, User } from "lucide-react";
+import { Menu, X, LogOut, User, Sprout } from "lucide-react";
 import RegionSelector from "@/components/RegionSelector";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import NotificationBell from "@/components/NotificationBell";
@@ -85,6 +85,13 @@ export default function Nav() {
                 <User size={14} />
                 My Garden
               </Link>
+              <Link
+                href="/request"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-sm)] text-sm transition text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
+              >
+                <Sprout size={14} />
+                Request a plant
+              </Link>
               <button
                 onClick={logout}
                 className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
@@ -164,6 +171,12 @@ export default function Nav() {
                   className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
                 >
                   My Garden
+                </Link>
+                <Link
+                  href="/request"
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
+                >
+                  Request a plant
                 </Link>
                 <button
                   onClick={logout}

@@ -567,3 +567,87 @@ export function timeAgo(iso: string): string {
   if (days < 7) return `${days}d ago`;
   return new Date(iso).toLocaleDateString();
 }
+
+// ─── Plant requests (add to garden) ───
+
+export interface PlantRequest {
+  id: string;
+  user_id: string;
+  plant_type: string; // "flower" | "vegetable"
+  common_name: string;
+  notes: string | null;
+  status: string; // pending | building | published | rejected | duplicate
+  slug: string | null;
+  reject_reason: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface PlantRequestCreate {
+  plant_type: string;
+  common_name: string;
+  notes?: string;
+}
+
+export const REQUEST_STATUS_META: Record<string, { label: string; badge: string }> = {
+  pending: {
+    label: "In queue",
+    badge: "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
+  },
+  building: {
+    label: "Being built",
+    badge: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
+  },
+  published: {
+    label: "Live in the garden",
+    badge: "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300",
+  },
+  rejected: {
+    label: "Couldn't add",
+    badge: "bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300",
+  },
+  duplicate: {
+    label: "Already in the garden",
+    badge: "bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300",
+  },
+};
+
+export async function fetchRequests(token: string): Promise<PlantRequest[]> {
+  const res = await fetch(`${API_BASE}/api/requests/`, {
+    cache: "no-store",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) return [];
+  return res.json();
+}
+
+export async function createPlantRequest(
+  token: string,
+  data: PlantRequestCreate,
+): Promise<{ request: PlantRequest | null; error: string | null }> {
+  const res = await fetch(`${API_BASE}/api/requests/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) {
+    let error = "Couldn't submit your request. Please try again.";
+    try {
+      const body = await res.json();
+      if (body?.detail) error = body.detail;
+    } catch {
+      // keep default
+    }
+    return { request: null, error };
+  }
+  return { request: await res.json(), error: null };
+}
+
+/** Link for a request that resolved to a catalog plant. */
+export function requestLink(r: PlantRequest): string | null {
+  if (!r.slug) return null;
+  return `/${r.plant_type === "flower" ? "flowers" : "vegetables"}/${r.slug}`;
+}

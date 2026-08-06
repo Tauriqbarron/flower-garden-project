@@ -288,7 +288,7 @@ export default function MyDashboardPage() {
       )}
 
       {/* Dashboard shortcuts */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Link
           href="/flowers/dashboard"
           className="glass-card p-5 border border-[var(--forest-200)] dark:border-[#1B4332] bg-[var(--forest-50)]/50 dark:bg-[#153628]/30 hover:shadow-md transition group"
@@ -317,6 +317,22 @@ export default function MyDashboardPage() {
               </div>
               <div className="text-sm text-[var(--text-muted)] dark:text-[#A7C4A0] mt-0.5">
                 Seasonal veges, harvest guide, storage life tips
+              </div>
+            </div>
+          </div>
+        </Link>
+        <Link
+          href="/request"
+          className="glass-card p-5 border border-[var(--sage-200)] dark:border-[#2e4a35] bg-[var(--sage-50)]/50 dark:bg-[#1d3325]/30 hover:shadow-md transition group"
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">🌱</span>
+            <div>
+              <div className="font-semibold text-[var(--forest)] dark:text-[#4CAF50] group-hover:underline">
+                Request a plant
+              </div>
+              <div className="text-sm text-[var(--text-muted)] dark:text-[#A7C4A0] mt-0.5">
+                Can&apos;t find it? Ask and we&apos;ll grow it for you
               </div>
             </div>
           </div>
