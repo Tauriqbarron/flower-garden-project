@@ -238,7 +238,7 @@ def update_request_status(
                 TYPE_REQUEST_REJECTED,
                 f"We couldn't add {r['common_name']}",
                 "Something went wrong while building this entry. We've noted it and "
-                "will take a look — please try again in a few days.",
+                "will take a look — we'll notify you when this is sorted.",
                 None,
             )
         elif status == STATUS_DUPLICATE and r["slug"]:
