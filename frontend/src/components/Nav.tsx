@@ -57,13 +57,13 @@ export default function Nav() {
               garden
             </span>
           </Link>
-          <div className="hidden min-[1200px]:block">
+          <div className="hidden min-[1320px]:block">
             <RegionSelector />
           </div>
         </div>
 
         {/* Desktop links */}
-        <div className="hidden min-[1200px]:flex items-center gap-1 text-sm font-medium">
+        <div className="hidden min-[1320px]:flex items-center gap-1 text-sm font-medium">
           {PLANTS_LINKS.map((l) => (
             <NavLink key={l.href} href={l.href} active={isActive(l.href)}>
               {l.label}
@@ -80,14 +80,14 @@ export default function Nav() {
               <NotificationBell />
               <Link
                 href="/my-dashboard"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-sm)] text-sm transition text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-sm)] text-sm whitespace-nowrap transition text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
               >
                 <User size={14} />
                 My Garden
               </Link>
               <Link
                 href="/request"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-sm)] text-sm transition text-[var(--text-muted)] dark:text-[#A7C4A0] hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 hover:text-[var(--forest)] dark:hover:text-[#4CAF50]"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-sm)] text-sm font-medium whitespace-nowrap bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] dark:bg-[#2D6A4F] dark:hover:bg-[#40916C] transition"
               >
                 <Sprout size={14} />
                 Request a plant
@@ -111,7 +111,7 @@ export default function Nav() {
         </div>
 
         {/* Mobile toggle */}
-        <div className="flex items-center gap-1 min-[1200px]:hidden">
+        <div className="flex items-center gap-1 min-[1320px]:hidden">
           <NotificationBell />
           <ThemeToggle />
           <button
@@ -130,7 +130,7 @@ export default function Nav() {
       {/* Mobile drawer */}
       <div
         id="mobile-menu"
-        className={`min-[1200px]:hidden overflow-hidden border-t border-[var(--border-soft)] dark:border-[var(--border)] bg-white dark:bg-[var(--card)] transition-[max-height] duration-300 ease-out ${
+        className={`min-[1320px]:hidden overflow-hidden border-t border-[var(--border-soft)] dark:border-[var(--border)] bg-white dark:bg-[var(--card)] transition-[max-height] duration-300 ease-out ${
           open ? "max-h-[80vh]" : "max-h-0"
         }`}
       >
