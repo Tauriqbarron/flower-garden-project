@@ -1563,9 +1563,9 @@
       },
       "slug": "rose",
       "growth_stages": {
-        "harvest": "/images/flower/rose/harvest.jpg",
-        "seedling": "/images/flower/rose/seedling.jpg",
-        "young_plant": "/images/flower/rose/young_plant.jpg"
+        "harvest": "/images/flowers/rose/harvest.jpg",
+        "seedling": "/images/flowers/rose/seedling.jpg",
+        "young_plant": "/images/flowers/rose/young_plant.jpg"
       }
     }
   ]
