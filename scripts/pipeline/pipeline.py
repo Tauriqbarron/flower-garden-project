@@ -42,6 +42,15 @@ VEG_CATS = {"staple", "green"}
 FLOWER_TYPES = {"annual", "perennial", "biennial", "corm"}
 STAGES = ["harvest", "seedling", "young_plant"]
 
+# Commons junk filters — skip catalog scans, PDF page renders, and known
+# mislabeled/non-Rosa files that pollute generic queries.
+BAD_TITLE = re.compile(
+    r"(catalog|wholesale|trade|immigrant|IA_CAT|bulletin|manual|guide|report|index|journal|"
+    r"mandevilla|allamanda|siachen|myricaria|adenium|hibiscus|musa|macroptilium)",
+    re.I,
+)
+BAD_URL = re.compile(r"(/page\d-|\.pdf/)", re.I)
+
 
 # ── HTTP helpers ─────────────────────────────────────────────────────────────
 
@@ -322,7 +331,7 @@ def research(common_name, plant_type):
 
 # ── Images (Wikimedia Commons) ───────────────────────────────────────────────
 
-def _commons_search(query, limit=3):
+def _commons_search(query, limit=6):
     params = {
         "action": "query", "format": "json", "generator": "search",
         "gsrsearch": query, "gsrlimit": limit, "gsrnamespace": 6,
@@ -333,12 +342,14 @@ def _commons_search(query, limit=3):
     pages = (data or {}).get("query", {}).get("pages", {})
     best = None
     for p in pages.values():
+        title = p.get("title", "")
         info = (p.get("imageinfo") or [{}])[0]
         w = info.get("width") or 0
-        if w >= 600:
-            thumb = info.get("thumburl") or info.get("url") or ""
-            if thumb and (best is None or w > best[0]):
-                best = (w, thumb, info.get("url") or "")
+        thumb = info.get("thumburl") or info.get("url") or ""
+        if BAD_TITLE.search(title) or BAD_URL.search(thumb) or w < 600:
+            continue
+        if thumb and (best is None or w > best[0]):
+            best = (w, thumb, info.get("url") or "")
     return best
 
 
@@ -350,12 +361,12 @@ def fetch_images(entry, plant_type, staging_dir):
     botanical = entry.get("botanical_name", "")
     common = entry.get("common_name", "")
     queries = {
-        "seedling": [f"{botanical} seedling", f"{common} seedling"],
-        "young_plant": [f"{botanical} young plant", f"{common} young plant", f"{botanical} plant"],
+        "seedling": [f"{botanical} seedling", f"{common} seedling", f"{botanical} young seedling"],
+        "young_plant": [f"{botanical} young plant", f"{common} young plant", f"{botanical} plant", f"{common} plant"],
         "harvest": (
-            [f"{botanical} flower", f"{common} flower bloom"]
+            [f"{botanical} flower", f"{common} flower bloom", f"{common} flower", f"{botanical} bloom"]
             if plant_type == "flower"
-            else [f"{botanical} vegetable", f"{common} vegetable", f"{botanical} root"]
+            else [f"{botanical} vegetable", f"{common} vegetable", f"{botanical} root", f"{common} harvest"]
         ),
     }
     os.makedirs(staging_dir, exist_ok=True)
@@ -382,7 +393,7 @@ def fetch_images(entry, plant_type, staging_dir):
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=60) as r, open(dest, "wb") as f:
                 f.write(r.read())
-            stages[stage] = f"/images/{plant_type if plant_type == 'flower' else 'vegetables'}/{entry['slug']}/{stage}{ext.lower()}"
+            stages[stage] = f"/images/{'flowers' if plant_type == 'flower' else 'vegetables'}/{entry['slug']}/{stage}{ext.lower()}"
             log.info("image %s: %s (%s bytes)", stage, url, os.path.getsize(dest))
         except Exception as e:
             log.warning("download %s failed: %s", url, e)
