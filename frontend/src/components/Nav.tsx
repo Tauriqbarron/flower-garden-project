@@ -18,6 +18,15 @@ const PLANTS_LINKS = [
   { href: "/natives", label: "Natives" },
 ];
 
+// Desktop row is space-constrained (nav max-w ~1500): the full-list links
+// ("All Flowers"/"All Veges") live in the drawer instead — the dashboards
+// already surface both list views.
+const DESKTOP_LINKS = [
+  { href: "/flowers/dashboard", label: "Flowers" },
+  { href: "/vegetables/dashboard", label: "Vegetables" },
+  { href: "/natives", label: "Natives" },
+];
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -45,7 +54,7 @@ export default function Nav() {
 
   return (
     <nav className="bg-white/80 dark:bg-[var(--card)]/90 backdrop-blur-md border-b border-[var(--border-soft)] dark:border-[var(--border)] sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+      <div className="max-w-[1500px] mx-auto px-4 py-3 flex items-center justify-between gap-3">
         <div className="flex items-center gap-2 min-w-0">
           <Link href="/" className="flex items-center gap-1.5 group shrink-0">
             <span className="text-xl">🌱</span>
@@ -57,14 +66,14 @@ export default function Nav() {
               garden
             </span>
           </Link>
-          <div className="hidden min-[1320px]:block">
+          <div className="hidden min-[1280px]:block">
             <RegionSelector />
           </div>
         </div>
 
         {/* Desktop links */}
-        <div className="hidden min-[1320px]:flex items-center gap-1 text-sm font-medium">
-          {PLANTS_LINKS.map((l) => (
+        <div className="hidden min-[1280px]:flex items-center gap-1 text-sm font-medium">
+          {DESKTOP_LINKS.map((l) => (
             <NavLink key={l.href} href={l.href} active={isActive(l.href)}>
               {l.label}
             </NavLink>
@@ -111,7 +120,7 @@ export default function Nav() {
         </div>
 
         {/* Mobile toggle */}
-        <div className="flex items-center gap-1 min-[1320px]:hidden">
+        <div className="flex items-center gap-1 min-[1280px]:hidden">
           <NotificationBell />
           <ThemeToggle />
           <button
@@ -130,7 +139,7 @@ export default function Nav() {
       {/* Mobile drawer */}
       <div
         id="mobile-menu"
-        className={`min-[1320px]:hidden overflow-hidden border-t border-[var(--border-soft)] dark:border-[var(--border)] bg-white dark:bg-[var(--card)] transition-[max-height] duration-300 ease-out ${
+        className={`min-[1280px]:hidden overflow-hidden border-t border-[var(--border-soft)] dark:border-[var(--border)] bg-white dark:bg-[var(--card)] transition-[max-height] duration-300 ease-out ${
           open ? "max-h-[80vh]" : "max-h-0"
         }`}
       >
