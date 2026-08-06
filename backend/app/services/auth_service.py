@@ -5,11 +5,11 @@ from datetime import datetime, timedelta
 from typing import Optional
 
 from app.models.schemas import User, UserCreate, UserLogin
+from app.services.notification_service import RUNTIME_DATA_DIR
 
-USERS_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-    "database", "users.json"
-)
+# Users are runtime data (registration must work in prod where backend/database
+# is mounted read-only). Store: data/runtime/users.json (writable volume).
+USERS_PATH = os.path.join(RUNTIME_DATA_DIR, "users.json")
 
 # JWT — set JWT_SECRET env var in backend/.env
 JWT_SECRET = os.getenv("JWT_SECRET", "")
@@ -33,6 +33,7 @@ def _load_users():
 
 
 def _save_users(users):
+    os.makedirs(os.path.dirname(USERS_PATH), exist_ok=True)
     with open(USERS_PATH, "w") as f:
         json.dump({"users": users}, f, indent=2)
 
