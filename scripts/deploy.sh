@@ -43,8 +43,24 @@ if [ -z "${FORCE_DEPLOY:-}" ] && [ "$PREVIOUS_COMMIT" = "$CURRENT_COMMIT" ]; the
     log "No changes but unhealthy — rebuilding..."
 fi
 
+# Always --pull. Both Dockerfiles use floating base tags (python:3.11-slim,
+# node:22-alpine), so pulling is what actually picks up upstream security
+# patches. When the base digest changes every layer below FROM rebuilds anyway,
+# including the frontend's `apk upgrade` — which is the property the old blanket
+# --no-cache was really buying. When nothing upstream moved and deps are
+# unchanged, the cached layers are reused and no new ones accumulate.
+#
+# Blanket --no-cache rebuilt every layer on every deploy. With deploys firing as
+# often as every 5 minutes (heartbeat) it grew 51 GB of build cache and filled
+# the disk to 85%. Set FORCE_REBUILD=1 to opt back into a full clean rebuild.
+BUILD_ARGS=(--pull)
+if [ -n "${FORCE_REBUILD:-}" ]; then
+    log "FORCE_REBUILD set — full clean rebuild"
+    BUILD_ARGS+=(--no-cache)
+fi
+
 log "Building images..."
-docker compose -f "$COMPOSE_FILE" build --no-cache backend frontend
+docker compose -f "$COMPOSE_FILE" build "${BUILD_ARGS[@]}" backend frontend
 
 log "Starting services..."
 docker compose -f "$COMPOSE_FILE" up -d --force-recreate
@@ -54,6 +70,10 @@ for i in $(seq 1 "$MAX_RETRIES"); do
     if curl -sf "$HEALTH_URL" > /dev/null 2>&1; then
         log "Healthy (attempt $i). Deploy complete."
         docker image prune -f > /dev/null 2>&1
+        # Cap build-cache growth. Anything untouched for a week is not being
+        # reused by incremental builds, so dropping it costs nothing but keeps
+        # the 98 GB root from filling again.
+        docker builder prune -f --filter until=168h > /dev/null 2>&1 || true
         exit 0
     fi
     sleep "$INTERVAL"
