@@ -102,6 +102,20 @@ H2's `generate_stage_image()` should build on:
   exit code alone; Hermes may exit 0 while reporting a tool failure.
 - Capture `stderr` to a log so cron doesn't email you a wall of ANSI.
 
+## Prompt-shape gotcha for photorealism (found during H2)
+
+Hermes' image-gen tool defaults to whatever style the prompt implies. A
+prompt like *"a tomato, watercolor style"* returns a watercolor; a bare
+*"a tomato"* often returns a stylised or illustrated result. The site's
+existing images are **hyper-realistic DSLR-style photographs**, so callers
+must force that explicitly. `scripts/pipeline/hermes_image.py` bakes a
+mandatory photorealism specification into every wrapped prompt (see the
+module's `PHOTOREALISM_SPEC` constant) — do not bypass it.
+
+Verified once against Portal: prompt *"a rocket (Eruca sativa) seedling in
+dark garden soil"* + the spec → sharp 1024×576 PNG, natural daylight,
+realistic leaf/soil textures, no artefacts. Attached to PR #86 and #84's PR.
+
 ## What's deliberately not set up yet
 
 - `hermes gateway` (Telegram/Discord/etc.). Skipped — outside this feature.
