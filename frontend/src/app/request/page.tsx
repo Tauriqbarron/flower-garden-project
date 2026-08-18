@@ -9,6 +9,7 @@ import {
   createPlantRequest,
   fetchRequests,
   fetchCatalogSearch,
+  fetchCatalogSuggest,
   requestLink,
   timeAgo,
   REQUEST_STATUS_META,
@@ -16,6 +17,8 @@ import {
   type PlantRequest,
 } from "@/lib/api";
 import { hitHref, pickExact } from "@/lib/catalog";
+
+type SuggestionHit = CatalogHit & { source: "catalog" | "ai" };
 
 function titleCase(s: string): string {
   return s
@@ -29,7 +32,7 @@ export default function RequestPage() {
   const { token, isLoggedIn, isLoading: authLoading } = useAuth();
   const router = useRouter();
 
-  const [hits, setHits] = useState<CatalogHit[]>([]);
+  const [hits, setHits] = useState<SuggestionHit[]>([]);
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
 
@@ -60,8 +63,9 @@ export default function RequestPage() {
 
   const q = query.trim();
 
-  // Debounced remote search against the catalog. Cancels stale results if the
-  // user keeps typing or switches type.
+  // Debounced remote search against the catalog. If the static catalog has
+  // nothing useful and the query is long enough, fall back to the LLM. Both
+  // calls respect the current type toggle and cancel stale results.
   useEffect(() => {
     if (q.length < 2) {
       setHits([]);
@@ -69,8 +73,19 @@ export default function RequestPage() {
     }
     let cancelled = false;
     const id = setTimeout(async () => {
-      const results = await fetchCatalogSearch(q, plantType, 8);
-      if (!cancelled) setHits(results);
+      const staticHits = await fetchCatalogSearch(q, plantType, 8);
+      if (cancelled) return;
+      if (staticHits.length > 0) {
+        setHits(staticHits.map((h) => ({ ...h, source: "catalog" as const })));
+        return;
+      }
+      if (q.length < 3) {
+        setHits([]);
+        return;
+      }
+      const aiHits = await fetchCatalogSuggest(q, plantType, 6);
+      if (cancelled) return;
+      setHits(aiHits.map((h) => ({ ...h, source: "ai" as const })));
     }, 250);
     return () => {
       cancelled = true;
@@ -188,7 +203,7 @@ export default function RequestPage() {
                     {h.name}
                   </span>
                   <span className="ml-auto text-xs text-[var(--text-muted)] dark:text-[#A7C4A0]">
-                    Not here yet · request →
+                    {h.source === "ai" ? "AI suggestion · request →" : "Not here yet · request →"}
                   </span>
                 </button>
               );
