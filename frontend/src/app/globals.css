@@ -273,6 +273,10 @@ body {
 .dark .bg-blue-100 { background-color: #153628; }
 .dark .text-blue-700 { color: #66BB6A; }
 .dark .text-blue-600 { color: #4CAF50; }
+/* bg-blue-100 is remapped to dark green above, but text-blue-800 wasn't —
+   left dark-blue-on-dark-green (~1.4:1) on timing badges ("Opens in N weeks"),
+   the "Stake" tag, and the calendar Winter badge. Pair it with a light tint. */
+.dark .text-blue-800 { color: #8fc5ea; }
 .dark .border-blue-100 { border-color: #1B4332; }
 .dark .border-blue-200 { border-color: #1B4332; }
 .dark [class*="hover:bg-blue-100"]:hover { background-color: #1B4332; }
