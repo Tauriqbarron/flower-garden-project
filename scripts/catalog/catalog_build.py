@@ -42,22 +42,25 @@ def dedup_plants(plants: list[dict]) -> list[dict]:
     """
     merged: dict[tuple[str, str], dict] = {}
     for p in plants:
-        name = p.get("name", "")
+        name = normalize_name(p.get("name", ""))
         type_ = p.get("type", "")
-        aliases = [a for a in p.get("aliases", []) if a]
+        # An alias equal to the canonical display name is redundant clutter.
+        aliases = [
+            a for a in dict.fromkeys(p.get("aliases", []) or []) if a and a != name
+        ]
         k = _key(type_, name)
         if k not in merged:
             merged[k] = {
-                "name": normalize_name(name),
+                "name": name,
                 "type": type_,
-                "aliases": list(dict.fromkeys(aliases)),
+                "aliases": aliases,
                 "onSite": False,
                 "slug": None,
             }
         else:
             existing = merged[k]
             for a in aliases:
-                if a not in existing["aliases"]:
+                if a not in existing["aliases"] and a != existing["name"]:
                     existing["aliases"].append(a)
     return list(merged.values())
 
@@ -108,24 +111,58 @@ def ensure_on_site_superset(
     its real slug), so a plant that exists on the site is never shown as merely
     "requestable". Adds any on-site entry not already covered by name or slug.
 
+    For on-site plants already in the catalog under a different display name
+    (e.g. the model returned "Kokihi" but the site calls it "New Zealand
+    Spinach"), re-canonicalise: promote the on-site ``common_name`` to
+    ``name`` and demote the previous name into ``aliases``. The site's
+    naming is what users read on the rest of the app, so it wins.
+
     Call AFTER ``mark_on_site``. ``flowers`` map to type "flower", ``vegetables``
     to type "vegetable".
     """
+    by_slug = {p["slug"]: p for p in plants if p.get("onSite") and p.get("slug")}
     have_keys = {(p["type"], normalize_name(p["name"]).lower()) for p in plants}
-    have_slugs = {p["slug"] for p in plants if p.get("onSite") and p.get("slug")}
+
     for entries, type_ in ((flowers, "flower"), (vegetables, "vegetable")):
         for entry in entries:
-            name = normalize_name(entry.get("common_name", ""))
+            site_name = normalize_name(entry.get("common_name", ""))
             slug = entry.get("slug")
-            if not name or not slug:
+            if not site_name or not slug:
                 continue
-            if (type_, name.lower()) in have_keys or slug in have_slugs:
+
+            existing = by_slug.get(slug)
+            if existing:
+                if existing["name"] != site_name:
+                    # Fold the old display name into aliases, promote the site name.
+                    if existing["name"] and existing["name"] not in existing["aliases"]:
+                        existing["aliases"].insert(0, existing["name"])
+                    existing["name"] = site_name
+                # An alias that equals the canonical name is redundant clutter.
+                existing["aliases"] = [
+                    a for a in existing["aliases"] if a != site_name
+                ]
                 continue
+
+            if (type_, site_name.lower()) in have_keys:
+                # Already present under this name/type but not linked by slug —
+                # link it and canonicalise.
+                for p in plants:
+                    if (
+                        p["type"] == type_
+                        and normalize_name(p["name"]).lower() == site_name.lower()
+                    ):
+                        p["onSite"] = True
+                        p["slug"] = slug
+                        p["name"] = site_name
+                        by_slug[slug] = p
+                        break
+                continue
+
             plants.append(
-                {"name": name, "type": type_, "aliases": [], "onSite": True, "slug": slug}
+                {"name": site_name, "type": type_, "aliases": [], "onSite": True, "slug": slug}
             )
-            have_keys.add((type_, name.lower()))
-            have_slugs.add(slug)
+            have_keys.add((type_, site_name.lower()))
+            by_slug[slug] = plants[-1]
     return plants
 
 

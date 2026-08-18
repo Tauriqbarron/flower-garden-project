@@ -725,21 +725,6 @@
       "slug": "delphinium"
     },
     {
-      "name": "Dianthus",
-      "type": "flower",
-      "aliases": [
-        "Dianthus plumarius",
-        "Pinks",
-        "Garden Pink",
-        "Sweet William",
-        "Dianthus barbatus",
-        "Bunch Pink",
-        "Bearded Pink"
-      ],
-      "onSite": true,
-      "slug": "sweet-william"
-    },
-    {
       "name": "Digitalis",
       "type": "flower",
       "aliases": [
@@ -1622,8 +1607,7 @@
       "type": "flower",
       "aliases": [
         "Melicytus ramiflorus",
-        "Whiteywood",
-        "Mahoe"
+        "Whiteywood"
       ],
       "onSite": false,
       "slug": null
@@ -1755,8 +1739,7 @@
       "type": "flower",
       "aliases": [
         "Nothofagus cliffortioides",
-        "Tawhai rauriki",
-        "Mountain Beech"
+        "Tawhai rauriki"
       ],
       "onSite": false,
       "slug": null
@@ -2505,8 +2488,7 @@
       "type": "flower",
       "aliases": [
         "Nothofagus menziesii",
-        "Tawhai",
-        "Silver Beech"
+        "Tawhai"
       ],
       "onSite": false,
       "slug": null
@@ -2578,6 +2560,17 @@
       "slug": "stock"
     },
     {
+      "name": "Strawflower",
+      "type": "flower",
+      "aliases": [
+        "Xerochrysum",
+        "Xerochrysum bracteatum",
+        "Golden Everlasting"
+      ],
+      "onSite": true,
+      "slug": "strawflower"
+    },
+    {
       "name": "Sunflower",
       "type": "flower",
       "aliases": [
@@ -2605,6 +2598,21 @@
       ],
       "onSite": true,
       "slug": "sweet-pea"
+    },
+    {
+      "name": "Sweet William",
+      "type": "flower",
+      "aliases": [
+        "Dianthus",
+        "Dianthus plumarius",
+        "Pinks",
+        "Garden Pink",
+        "Dianthus barbatus",
+        "Bunch Pink",
+        "Bearded Pink"
+      ],
+      "onSite": true,
+      "slug": "sweet-william"
     },
     {
       "name": "Tanacetum",
@@ -2958,17 +2966,6 @@
       ],
       "onSite": false,
       "slug": null
-    },
-    {
-      "name": "Xerochrysum",
-      "type": "flower",
-      "aliases": [
-        "Xerochrysum bracteatum",
-        "Strawflower",
-        "Golden Everlasting"
-      ],
-      "onSite": true,
-      "slug": "strawflower"
     },
     {
       "name": "Yarrow",
@@ -4419,22 +4416,6 @@
       "slug": null
     },
     {
-      "name": "Kokihi",
-      "type": "vegetable",
-      "aliases": [
-        "Tetragonia tetragonioides",
-        "New Zealand Spinach",
-        "Warrigal Greens",
-        "Native Spinach",
-        "Spinach",
-        "Spinacia oleracea",
-        "English Spinach",
-        "Perpetual Spinach"
-      ],
-      "onSite": true,
-      "slug": "nz-spinach"
-    },
-    {
       "name": "Komatsuna",
       "type": "vegetable",
       "aliases": [
@@ -4853,6 +4834,22 @@
       ],
       "onSite": false,
       "slug": null
+    },
+    {
+      "name": "New Zealand Spinach",
+      "type": "vegetable",
+      "aliases": [
+        "Kokihi",
+        "Tetragonia tetragonioides",
+        "Warrigal Greens",
+        "Native Spinach",
+        "Spinach",
+        "Spinacia oleracea",
+        "English Spinach",
+        "Perpetual Spinach"
+      ],
+      "onSite": true,
+      "slug": "nz-spinach"
     },
     {
       "name": "Nigella Seed",

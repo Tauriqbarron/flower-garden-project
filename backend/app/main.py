@@ -13,6 +13,7 @@ from app.routes.dashboard import router as dashboard_router
 from app.routes.vegetables import router as vegetables_router
 from app.routes.natives import router as natives_router
 from app.routes.analytics import router as analytics_router
+from app.routes.catalog import router as catalog_router
 from app.middleware.activity_logger import ActivityLoggerMiddleware
 
 app = FastAPI(
@@ -43,6 +44,7 @@ app.include_router(dashboard_router)
 app.include_router(vegetables_router)
 app.include_router(natives_router)
 app.include_router(analytics_router)
+app.include_router(catalog_router)
 
 
 @app.get("/health")
