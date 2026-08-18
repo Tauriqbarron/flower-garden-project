@@ -1,0 +1,5911 @@
+{
+  "plants": [
+    {
+      "name": "Acanthus",
+      "type": "flower",
+      "aliases": [
+        "Acanthus mollis",
+        "Bear's Breeches",
+        "Oyster Plant"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Achillea",
+      "type": "flower",
+      "aliases": [
+        "Achillea millefolium",
+        "Yarrow",
+        "Milfoil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Agapanthus",
+      "type": "flower",
+      "aliases": [
+        "Agapanthus praecox",
+        "African Lily",
+        "Lily of the Nile"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Alchemilla",
+      "type": "flower",
+      "aliases": [
+        "Alchemilla mollis",
+        "Lady's Mantle",
+        "Lion's Foot"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Allium",
+      "type": "flower",
+      "aliases": [
+        "Allium giganteum",
+        "Ornamental Onion",
+        "Giant Allium"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Alstroemeria",
+      "type": "flower",
+      "aliases": [
+        "Alstroemeria aurea",
+        "Peruvian Lily",
+        "Lily of the Incas"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Alyssum",
+      "type": "flower",
+      "aliases": [
+        "Lobularia maritima",
+        "Sweet Alyssum",
+        "Carpet Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Amaranthus",
+      "type": "flower",
+      "aliases": [
+        "Amaranthus caudatus",
+        "Love-lies-bleeding",
+        "Tassel Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Amaryllis",
+      "type": "flower",
+      "aliases": [
+        "Hippeastrum spp.",
+        "Belladonna Lily",
+        "Naked Lady"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ammi Majus",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "ammi-majus"
+    },
+    {
+      "name": "Anchusa",
+      "type": "flower",
+      "aliases": [
+        "Anchusa azurea",
+        "Italian Alkanet",
+        "Bugloss"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Anemone",
+      "type": "flower",
+      "aliases": [
+        "Anemone coronaria",
+        "Poppy Anemone",
+        "Windflower"
+      ],
+      "onSite": true,
+      "slug": "anemone"
+    },
+    {
+      "name": "Aquilegia",
+      "type": "flower",
+      "aliases": [
+        "Aquilegia canadensis",
+        "Canadian Columbine",
+        "Rock Bells"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Arundo",
+      "type": "flower",
+      "aliases": [
+        "Arundo donax",
+        "Giant Reed",
+        "Spanish Cane"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Astelia",
+      "type": "flower",
+      "aliases": [
+        "Astelia chathamica",
+        "Silver Spear",
+        "Kowharawhara"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Aster",
+      "type": "flower",
+      "aliases": [
+        "Aster amellus",
+        "Callistephus chinensis",
+        "China Aster",
+        "Michaelmas Daisy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Astilbe",
+      "type": "flower",
+      "aliases": [
+        "Astilbe arendsii",
+        "False Spirea",
+        "Goat's Beard"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Auricula",
+      "type": "flower",
+      "aliases": [
+        "Primula auricula",
+        "Bear's Ear",
+        "Mountain Cowslip"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bamboo",
+      "type": "flower",
+      "aliases": [
+        "Bambusa oldhamii",
+        "Clumping Bamboo",
+        "Giant Bamboo"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Banksia",
+      "type": "flower",
+      "aliases": [
+        "Banksia spinulosa",
+        "Hairpin Banksia",
+        "Coastal Banksia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Baptisia",
+      "type": "flower",
+      "aliases": [
+        "Baptisia australis",
+        "False Indigo",
+        "Blue Wild Indigo"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Baumea",
+      "type": "flower",
+      "aliases": [
+        "Baumea rubiginosa",
+        "Twig Rush",
+        "Rusty Sedge"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Beech",
+      "type": "flower",
+      "aliases": [
+        "Nothofagus solandri",
+        "Black Beech",
+        "Tawhai"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Begonia",
+      "type": "flower",
+      "aliases": [
+        "Begonia semperflorens",
+        "Wax Begonia",
+        "Tuberous Begonia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bergenia",
+      "type": "flower",
+      "aliases": [
+        "Bergenia cordifolia",
+        "Elephant's Ears",
+        "Pigsqueak"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bleeding Heart",
+      "type": "flower",
+      "aliases": [
+        "Dicentra spectabilis",
+        "Lamprocapnos spectabilis",
+        "Lady in the Bath"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Borage",
+      "type": "flower",
+      "aliases": [
+        "Borago officinalis",
+        "Starflower",
+        "Bee Plant"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bottlebrush",
+      "type": "flower",
+      "aliases": [
+        "Callistemon citrinus",
+        "Crimson Bottlebrush",
+        "Lemon Bottlebrush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Buddleja (Butterfly Bush) - Cut",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "buddleja-butterfly-bush-cut"
+    },
+    {
+      "name": "Bupleurum",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "bupleurum"
+    },
+    {
+      "name": "Cabbage Tree",
+      "type": "flower",
+      "aliases": [
+        "Cordyline australis",
+        "Ti Kouka",
+        "Palm Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Calendula",
+      "type": "flower",
+      "aliases": [
+        "Calendula officinalis",
+        "Pot Marigold",
+        "English Marigold"
+      ],
+      "onSite": true,
+      "slug": "calendula"
+    },
+    {
+      "name": "California Poppy",
+      "type": "flower",
+      "aliases": [
+        "Eschscholzia californica",
+        "Golden Poppy",
+        "Cup of Gold"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Calla Lily",
+      "type": "flower",
+      "aliases": [
+        "Zantedeschia aethiopica",
+        "Arum Lily",
+        "Pig Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Campanula",
+      "type": "flower",
+      "aliases": [
+        "Campanula persicifolia",
+        "Peach-leaved Bellflower",
+        "Canterbury Bells"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Canna Lily",
+      "type": "flower",
+      "aliases": [
+        "Canna indica",
+        "Indian Shot",
+        "Canna"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Canterbury Bells",
+      "type": "flower",
+      "aliases": [
+        "Campanula medium",
+        "Bellflower",
+        "Coventry Bells"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Carex",
+      "type": "flower",
+      "aliases": [
+        "Carex secta",
+        "Pukio",
+        "Sedge"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Carnation",
+      "type": "flower",
+      "aliases": [
+        "Dianthus caryophyllus",
+        "Clove Pink",
+        "Border Carnation"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Celmisia",
+      "type": "flower",
+      "aliases": [
+        "Celmisia gracilenta",
+        "Grassland Daisy",
+        "Silver Daisy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Celosia",
+      "type": "flower",
+      "aliases": [
+        "Celosia argentea",
+        "Cockscomb",
+        "Woolflower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Celosia - Plume",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "celosia-plume"
+    },
+    {
+      "name": "Centaurea",
+      "type": "flower",
+      "aliases": [
+        "Centaurea montana",
+        "Mountain Bluet",
+        "Perennial Cornflower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chamomile",
+      "type": "flower",
+      "aliases": [
+        "Chamaemelum nobile",
+        "Roman Chamomile",
+        "English Chamomile"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chatham Island Forget-me-not",
+      "type": "flower",
+      "aliases": [
+        "Myosotidium hortensia",
+        "Chatham Islands Forget-me-not",
+        "Giant Forget-me-not"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chrysanthemum",
+      "type": "flower",
+      "aliases": [
+        "Chrysanthemum morifolium",
+        "Mums",
+        "Florist's Chrysanthemum"
+      ],
+      "onSite": true,
+      "slug": "chrysanthemum"
+    },
+    {
+      "name": "Cimicifuga",
+      "type": "flower",
+      "aliases": [
+        "Actaea racemosa",
+        "Black Cohosh",
+        "Bugbane"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Clematis",
+      "type": "flower",
+      "aliases": [
+        "Clematis montana",
+        "Anemone Clematis",
+        "Traveler's Joy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cleome",
+      "type": "flower",
+      "aliases": [
+        "Cleome hassleriana",
+        "Spider Flower",
+        "Grandmother's Whiskers"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Clivia",
+      "type": "flower",
+      "aliases": [
+        "Clivia miniata",
+        "Bush Lily",
+        "Kaffir Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Columbine",
+      "type": "flower",
+      "aliases": [
+        "Aquilegia vulgaris",
+        "Granny's Bonnet",
+        "European Columbine"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Convolvulus",
+      "type": "flower",
+      "aliases": [
+        "Convolvulus tricolor",
+        "Dwarf Morning Glory",
+        "Blue Bindweed"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Coprosma",
+      "type": "flower",
+      "aliases": [
+        "Coprosma repens",
+        "Mirror Plant",
+        "Taupata"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Coreopsis",
+      "type": "flower",
+      "aliases": [
+        "Coreopsis grandiflora",
+        "Tickseed",
+        "Calliopsis"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cornflower",
+      "type": "flower",
+      "aliases": [
+        "Centaurea cyanus",
+        "Bachelor's Button",
+        "Bluebottle"
+      ],
+      "onSite": true,
+      "slug": "cornflower"
+    },
+    {
+      "name": "Correa",
+      "type": "flower",
+      "aliases": [
+        "Correa reflexa",
+        "Native Fuchsia",
+        "Common Correa"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cortaderia",
+      "type": "flower",
+      "aliases": [
+        "Cortaderia richardii",
+        "Toetoe",
+        "New Zealand Toetoe"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cosmos",
+      "type": "flower",
+      "aliases": [
+        "Cosmos bipinnatus",
+        "Cosmos sulphureus",
+        "Mexican Aster"
+      ],
+      "onSite": true,
+      "slug": "cosmos"
+    },
+    {
+      "name": "Cowslip",
+      "type": "flower",
+      "aliases": [
+        "Primula veris",
+        "Common Cowslip",
+        "Paigle"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Craspedia",
+      "type": "flower",
+      "aliases": [
+        "Craspedia globosa",
+        "Billy Buttons",
+        "Drumstick Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Crocosmia",
+      "type": "flower",
+      "aliases": [
+        "Crocosmia x crocosmiiflora",
+        "Montbretia",
+        "Copper Tips"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cyclamen",
+      "type": "flower",
+      "aliases": [
+        "Cyclamen persicum",
+        "Florist's Cyclamen",
+        "Persian Violet"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Daffodil",
+      "type": "flower",
+      "aliases": [
+        "Narcissus pseudonarcissus",
+        "Narcissus spp.",
+        "Jonquil",
+        "Paperwhite"
+      ],
+      "onSite": true,
+      "slug": "daffodil"
+    },
+    {
+      "name": "Dahlia",
+      "type": "flower",
+      "aliases": [
+        "Dahlia pinnata",
+        "Dahlia hybrids",
+        "Garden Dahlia",
+        "Bedding Dahlia"
+      ],
+      "onSite": true,
+      "slug": "dahlia"
+    },
+    {
+      "name": "Datura",
+      "type": "flower",
+      "aliases": [
+        "Datura stramonium",
+        "Jimsonweed",
+        "Devil's Trumpet"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Daylily",
+      "type": "flower",
+      "aliases": [
+        "Hemerocallis fulva",
+        "Hemerocallis hybrids",
+        "Common Daylily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Delphinium",
+      "type": "flower",
+      "aliases": [
+        "Delphinium elatum",
+        "Candle Larkspur",
+        "Perennial Larkspur"
+      ],
+      "onSite": true,
+      "slug": "delphinium"
+    },
+    {
+      "name": "Dianthus",
+      "type": "flower",
+      "aliases": [
+        "Dianthus plumarius",
+        "Pinks",
+        "Garden Pink",
+        "Sweet William",
+        "Dianthus barbatus",
+        "Bunch Pink",
+        "Bearded Pink"
+      ],
+      "onSite": true,
+      "slug": "sweet-william"
+    },
+    {
+      "name": "Digitalis",
+      "type": "flower",
+      "aliases": [
+        "Digitalis grandiflora",
+        "Yellow Foxglove",
+        "Large Yellow Foxglove"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Dracophyllum",
+      "type": "flower",
+      "aliases": [
+        "Dracophyllum longifolium",
+        "Inanga",
+        "Neinei"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Dutch Iris",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "dutch-iris"
+    },
+    {
+      "name": "Echinacea",
+      "type": "flower",
+      "aliases": [
+        "Echinacea purpurea",
+        "Purple Coneflower",
+        "Hedgehog Coneflower"
+      ],
+      "onSite": true,
+      "slug": "echinacea"
+    },
+    {
+      "name": "Echinops",
+      "type": "flower",
+      "aliases": [
+        "Echinops ritro",
+        "Globe Thistle",
+        "Blue Globe Thistle"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Eleocharis",
+      "type": "flower",
+      "aliases": [
+        "Eleocharis acuta",
+        "Spike Rush",
+        "Water Spike Rush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Eryngium",
+      "type": "flower",
+      "aliases": [
+        "Eryngium planum",
+        "Sea Holly",
+        "Blue Eryngo"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Eupatorium",
+      "type": "flower",
+      "aliases": [
+        "Eupatorium purpureum",
+        "Joe Pye Weed",
+        "Purple Boneset"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Euphorbia",
+      "type": "flower",
+      "aliases": [
+        "Euphorbia characias",
+        "Mediterranean Spurge",
+        "Cushion Spurge"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Everlasting Daisy",
+      "type": "flower",
+      "aliases": [
+        "Helipterum roseum",
+        "Acroclinium",
+        "Pink Paper Daisy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Feverfew",
+      "type": "flower",
+      "aliases": [
+        "Tanacetum parthenium",
+        "Matricaria parthenium",
+        "Bachelor's Button"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Five-finger",
+      "type": "flower",
+      "aliases": [
+        "Pseudopanax arboreus",
+        "Whauwhaupaku",
+        "Puahou"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Flannel Flower",
+      "type": "flower",
+      "aliases": [
+        "Actinotus helianthi",
+        "Sydney Flannel Flower",
+        "Common Flannel Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Forget-me-not",
+      "type": "flower",
+      "aliases": [
+        "Myosotis sylvatica",
+        "Wood Forget-me-not",
+        "Scorpion Grass"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Foxglove",
+      "type": "flower",
+      "aliases": [
+        "Digitalis purpurea",
+        "Common Foxglove",
+        "Purple Foxglove"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Freesia",
+      "type": "flower",
+      "aliases": [
+        "Freesia refracta",
+        "Freesia alba",
+        "Cape Lily"
+      ],
+      "onSite": true,
+      "slug": "freesia"
+    },
+    {
+      "name": "Fritillaria",
+      "type": "flower",
+      "aliases": [
+        "Fritillaria imperialis",
+        "Crown Imperial",
+        "Fritillary"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Gahnia",
+      "type": "flower",
+      "aliases": [
+        "Gahnia setifolia",
+        "Cutty Grass",
+        "Māpere"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Gaillardia",
+      "type": "flower",
+      "aliases": [
+        "Gaillardia aristata",
+        "Blanket Flower",
+        "Firewheel"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Gaura",
+      "type": "flower",
+      "aliases": [
+        "Oenothera lindheimeri",
+        "Whirling Butterflies",
+        "Bee Blossom"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Gentian",
+      "type": "flower",
+      "aliases": [
+        "Gentiana acaulis",
+        "Stemless Gentian",
+        "Trumpet Gentian"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Geranium",
+      "type": "flower",
+      "aliases": [
+        "Pelargonium x hortorum",
+        "Zonal Geranium",
+        "Common Geranium"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Geum",
+      "type": "flower",
+      "aliases": [
+        "Geum coccineum",
+        "Avens",
+        "Bennet's Root"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Gladiolus",
+      "type": "flower",
+      "aliases": [
+        "Gladiolus x hortulanus",
+        "Sword Lily",
+        "Glads"
+      ],
+      "onSite": true,
+      "slug": "gladiolus"
+    },
+    {
+      "name": "Gomphrena",
+      "type": "flower",
+      "aliases": [
+        "Gomphrena globosa",
+        "Globe Amaranth",
+        "Bachelor's Button"
+      ],
+      "onSite": true,
+      "slug": "gomphrena"
+    },
+    {
+      "name": "Grevillea",
+      "type": "flower",
+      "aliases": [
+        "Grevillea robusta",
+        "Silky Oak",
+        "Spider Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Gypsophila",
+      "type": "flower",
+      "aliases": [
+        "Gypsophila paniculata",
+        "Baby's Breath",
+        "Common Gypsophila"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hangehange",
+      "type": "flower",
+      "aliases": [
+        "Geniostoma ligustrifolium",
+        "Hangehange Tree",
+        "New Zealand Privet"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Harakeke",
+      "type": "flower",
+      "aliases": [
+        "Phormium tenax",
+        "New Zealand Flax",
+        "Flax Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hebe",
+      "type": "flower",
+      "aliases": [
+        "Hebe speciosa",
+        "Shrubby Veronica",
+        "Veronica"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Helenium",
+      "type": "flower",
+      "aliases": [
+        "Helenium autumnale",
+        "Sneezeweed",
+        "Helen's Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Helianthus",
+      "type": "flower",
+      "aliases": [
+        "Helianthus salicifolius",
+        "Willow-leaved Sunflower",
+        "Perennial Sunflower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Helichrysum",
+      "type": "flower",
+      "aliases": [
+        "Helichrysum italicum",
+        "Curry Plant",
+        "Everlasting Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hellebore",
+      "type": "flower",
+      "aliases": [
+        "Helleborus niger",
+        "Christmas Rose",
+        "Helleborus orientalis",
+        "Lenten Rose"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hemerocallis",
+      "type": "flower",
+      "aliases": [
+        "Hemerocallis lilioasphodelus",
+        "Lemon Lily",
+        "Yellow Daylily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Heuchera",
+      "type": "flower",
+      "aliases": [
+        "Heuchera sanguinea",
+        "Coral Bells",
+        "Alumroot"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hibiscus",
+      "type": "flower",
+      "aliases": [
+        "Hibiscus rosa-sinensis",
+        "Chinese Hibiscus",
+        "Shoeblack Plant"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hinau",
+      "type": "flower",
+      "aliases": [
+        "Elaeocarpus dentatus",
+        "Hinau Tree",
+        "New Zealand Elaeocarpus"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hollyhock",
+      "type": "flower",
+      "aliases": [
+        "Alcea rosea",
+        "Althaea rosea",
+        "Common Hollyhock"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Honeysuckle",
+      "type": "flower",
+      "aliases": [
+        "Lonicera periclymenum",
+        "Woodbine",
+        "Common Honeysuckle"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hosta",
+      "type": "flower",
+      "aliases": [
+        "Hosta plantaginea",
+        "Plantain Lily",
+        "Funkia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hyacinth",
+      "type": "flower",
+      "aliases": [
+        "Hyacinthus orientalis",
+        "Dutch Hyacinth",
+        "Common Hyacinth"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Impatiens",
+      "type": "flower",
+      "aliases": [
+        "Impatiens walleriana",
+        "Busy Lizzie",
+        "Patience Plant"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Iris",
+      "type": "flower",
+      "aliases": [
+        "Iris germanica",
+        "Bearded Iris",
+        "Siberian Iris",
+        "Japanese Iris"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ixia",
+      "type": "flower",
+      "aliases": [
+        "Ixia maculata",
+        "African Corn Lily",
+        "Wand Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Jasmine",
+      "type": "flower",
+      "aliases": [
+        "Jasminum officinale",
+        "Common Jasmine",
+        "Poet's Jasmine"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Juncus",
+      "type": "flower",
+      "aliases": [
+        "Juncus effusus",
+        "Soft Rush",
+        "Common Rush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kahikatea",
+      "type": "flower",
+      "aliases": [
+        "Dacrycarpus dacrydioides",
+        "White Pine",
+        "Kahikatea Pine"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kaikomako",
+      "type": "flower",
+      "aliases": [
+        "Pennantia corymbosa",
+        "Bellbird Tree",
+        "Kaikomako Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kaka Beak",
+      "type": "flower",
+      "aliases": [
+        "Clianthus puniceus",
+        "Lobster Claw",
+        "Parrot's Beak"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kangaroo Paw",
+      "type": "flower",
+      "aliases": [
+        "Anigozanthos flavidus",
+        "Anigozanthos spp.",
+        "Cat's Paw"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kanuka",
+      "type": "flower",
+      "aliases": [
+        "Kunzea ericoides",
+        "White Tea Tree",
+        "Tree Manuka"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Karaka",
+      "type": "flower",
+      "aliases": [
+        "Corynocarpus laevigatus",
+        "New Zealand Laurel",
+        "Kopi"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Karo",
+      "type": "flower",
+      "aliases": [
+        "Pittosporum crassifolium",
+        "Stiffleaf Cheesewood",
+        "Karo Pittosporum"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kauri",
+      "type": "flower",
+      "aliases": [
+        "Agathis australis",
+        "New Zealand Kauri",
+        "Kauri Pine"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kawakawa",
+      "type": "flower",
+      "aliases": [
+        "Piper excelsum",
+        "Pepper Tree",
+        "Kawakawa Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Knautia",
+      "type": "flower",
+      "aliases": [
+        "Knautia macedonica",
+        "Macedonian Scabious",
+        "Crimson Scabious"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kniphofia",
+      "type": "flower",
+      "aliases": [
+        "Kniphofia uvaria",
+        "Red Hot Poker",
+        "Torch Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kohuhu",
+      "type": "flower",
+      "aliases": [
+        "Pittosporum eugenioides",
+        "Tarata",
+        "Lemonwood"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Koromiko",
+      "type": "flower",
+      "aliases": [
+        "Veronica salicifolia",
+        "Willow-leaved Hebe",
+        "Koromiko Hebe"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kowhai",
+      "type": "flower",
+      "aliases": [
+        "Sophora microphylla",
+        "Sophora tetraptera",
+        "New Zealand Kowhai"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kowhai Ngutu-kaka",
+      "type": "flower",
+      "aliases": [
+        "Clianthus maximus",
+        "Red Kaka Beak",
+        "Scarlet Kaka Beak"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lacebark",
+      "type": "flower",
+      "aliases": [
+        "Hoheria populnea",
+        "Houhere",
+        "New Zealand Lacebark"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lancewood",
+      "type": "flower",
+      "aliases": [
+        "Pseudopanax crassifolius",
+        "Horoeka",
+        "Toothbrush Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Larkspur",
+      "type": "flower",
+      "aliases": [
+        "Consolida ajacis",
+        "Delphinium consolida",
+        "Annual Larkspur"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Larkspur (Annual)",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "larkspur-annual"
+    },
+    {
+      "name": "Lavatera",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "lavatera"
+    },
+    {
+      "name": "Lavender",
+      "type": "flower",
+      "aliases": [
+        "Lavandula angustifolia",
+        "English Lavender",
+        "Common Lavender"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lemon Balm",
+      "type": "flower",
+      "aliases": [
+        "Melissa officinalis",
+        "Balm",
+        "Sweet Balm"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lenten Rose",
+      "type": "flower",
+      "aliases": [
+        "Helleborus orientalis",
+        "Winter Rose",
+        "Hellebore"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Leucospermum",
+      "type": "flower",
+      "aliases": [
+        "Leucospermum cordifolium",
+        "Pincushion Protea",
+        "Nodding Pincushion"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Liatris",
+      "type": "flower",
+      "aliases": [
+        "Liatris spicata",
+        "Blazing Star",
+        "Gayfeather"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Libertia",
+      "type": "flower",
+      "aliases": [
+        "Libertia grandiflora",
+        "New Zealand Iris",
+        "Mikoikoi"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lily",
+      "type": "flower",
+      "aliases": [
+        "Lilium spp.",
+        "Asiatic Lily",
+        "Oriental Lily",
+        "Trumpet Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Linaria",
+      "type": "flower",
+      "aliases": [
+        "Linaria purpurea",
+        "Purple Toadflax",
+        "Perennial Toadflax"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lisianthus",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "lisianthus"
+    },
+    {
+      "name": "Lobelia",
+      "type": "flower",
+      "aliases": [
+        "Lobelia erinus",
+        "Edging Lobelia",
+        "Trailing Lobelia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lobelia Cardinalis",
+      "type": "flower",
+      "aliases": [
+        "Cardinal Flower",
+        "Scarlet Lobelia",
+        "Red Lobelia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lunaria",
+      "type": "flower",
+      "aliases": [
+        "Lunaria annua",
+        "Honesty",
+        "Silver Dollar"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lupin",
+      "type": "flower",
+      "aliases": [
+        "Lupinus polyphyllus",
+        "Russell Lupin",
+        "Garden Lupin"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lychnis",
+      "type": "flower",
+      "aliases": [
+        "Lychnis chalcedonica",
+        "Maltese Cross",
+        "Jerusalem Cross"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mahoe",
+      "type": "flower",
+      "aliases": [
+        "Melicytus ramiflorus",
+        "Whiteywood",
+        "Mahoe"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Malva",
+      "type": "flower",
+      "aliases": [
+        "Malva sylvestris",
+        "Common Mallow",
+        "Cheeses"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mamaku",
+      "type": "flower",
+      "aliases": [
+        "Cyathea medullaris",
+        "Black Tree Fern",
+        "Mamaku Fern"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Manuka",
+      "type": "flower",
+      "aliases": [
+        "Leptospermum scoparium",
+        "Tea Tree",
+        "New Zealand Tea Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Marigold",
+      "type": "flower",
+      "aliases": [
+        "Tagetes erecta",
+        "Tagetes patula",
+        "African Marigold",
+        "French Marigold"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Marjoram",
+      "type": "flower",
+      "aliases": [
+        "Origanum majorana",
+        "Sweet Marjoram",
+        "Knotted Marjoram"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Matai",
+      "type": "flower",
+      "aliases": [
+        "Prumnopitys taxifolia",
+        "Black Pine",
+        "Matai Pine"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mingimingi",
+      "type": "flower",
+      "aliases": [
+        "Leucopogon fasciculatus",
+        "Tall Mingimingi",
+        "Mingimingi Shrub"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mint",
+      "type": "flower",
+      "aliases": [
+        "Mentha spicata",
+        "Spearmint",
+        "Garden Mint"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Miro",
+      "type": "flower",
+      "aliases": [
+        "Prumnopitys ferruginea",
+        "Brown Pine",
+        "Miro Pine"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Miscanthus",
+      "type": "flower",
+      "aliases": [
+        "Miscanthus sinensis",
+        "Chinese Silver Grass",
+        "Eulalia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Monarda",
+      "type": "flower",
+      "aliases": [
+        "Monarda didyma",
+        "Bee Balm",
+        "Bergamot"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mountain Beech",
+      "type": "flower",
+      "aliases": [
+        "Nothofagus cliffortioides",
+        "Tawhai rauriki",
+        "Mountain Beech"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mountain Daisy",
+      "type": "flower",
+      "aliases": [
+        "Celmisia spectabilis",
+        "Common Mountain Daisy",
+        "Celmisia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Nandina",
+      "type": "flower",
+      "aliases": [
+        "Nandina domestica",
+        "Heavenly Bamboo",
+        "Sacred Bamboo"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Nasturtium",
+      "type": "flower",
+      "aliases": [
+        "Tropaeolum majus",
+        "Indian Cress",
+        "Garden Nasturtium"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Neinei",
+      "type": "flower",
+      "aliases": [
+        "Dracophyllum latifolium",
+        "Spiderwood",
+        "Neinei Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Nepeta",
+      "type": "flower",
+      "aliases": [
+        "Nepeta cataria",
+        "Catmint",
+        "Catnip"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Nerine",
+      "type": "flower",
+      "aliases": [
+        "Nerine bowdenii",
+        "Guernsey Lily",
+        "Spider Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Nigella",
+      "type": "flower",
+      "aliases": [
+        "Nigella damascena",
+        "Love-in-a-mist",
+        "Devil-in-the-bush"
+      ],
+      "onSite": true,
+      "slug": "nigella"
+    },
+    {
+      "name": "Nikau",
+      "type": "flower",
+      "aliases": [
+        "Rhopalostylis sapida",
+        "Nikau Palm",
+        "Feather Duster Palm"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Oenothera",
+      "type": "flower",
+      "aliases": [
+        "Oenothera biennis",
+        "Evening Primrose",
+        "Common Evening Primrose"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Oregano",
+      "type": "flower",
+      "aliases": [
+        "Origanum vulgare",
+        "Wild Marjoram",
+        "Pizza Herb"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Oriental Poppy",
+      "type": "flower",
+      "aliases": [
+        "Papaver orientale",
+        "Turkish Poppy",
+        "Giant Poppy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pampas Grass",
+      "type": "flower",
+      "aliases": [
+        "Cortaderia selloana",
+        "Pampas",
+        "Silver Pampas"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pansy",
+      "type": "flower",
+      "aliases": [
+        "Viola tricolor var. hortensis",
+        "Viola x wittrockiana",
+        "Garden Pansy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Papaver",
+      "type": "flower",
+      "aliases": [
+        "Papaver rhoeas",
+        "Field Poppy",
+        "Corn Poppy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Paper Daisy",
+      "type": "flower",
+      "aliases": [
+        "Rhodanthe manglesii",
+        "Mangles Everlasting",
+        "Silver Bells"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pate",
+      "type": "flower",
+      "aliases": [
+        "Schefflera digitata",
+        "Seven-finger",
+        "Pate Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pelargonium",
+      "type": "flower",
+      "aliases": [
+        "Pelargonium domesticum",
+        "Regal Geranium",
+        "Scented Geranium"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Penstemon",
+      "type": "flower",
+      "aliases": [
+        "Penstemon barbatus",
+        "Beardtongue",
+        "Scarlet Bugler"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Peony",
+      "type": "flower",
+      "aliases": [
+        "Paeonia lactiflora",
+        "Paeonia officinalis",
+        "Herbaceous Peony"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Peony Poppy",
+      "type": "flower",
+      "aliases": [
+        "Papaver paeoniflorum",
+        "Double Poppy",
+        "Peony-flowered Poppy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Perovskia",
+      "type": "flower",
+      "aliases": [
+        "Salvia yangii",
+        "Russian Sage",
+        "Azure Sage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Petunia",
+      "type": "flower",
+      "aliases": [
+        "Petunia x hybrida",
+        "Garden Petunia",
+        "Grandiflora Petunia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Phlox",
+      "type": "flower",
+      "aliases": [
+        "Phlox paniculata",
+        "Garden Phlox",
+        "Perennial Phlox"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Phragmites",
+      "type": "flower",
+      "aliases": [
+        "Phragmites australis",
+        "Common Reed",
+        "Southern Reed"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Physostegia",
+      "type": "flower",
+      "aliases": [
+        "Physostegia virginiana",
+        "Obedient Plant",
+        "False Dragonhead"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pimelea",
+      "type": "flower",
+      "aliases": [
+        "Pimelea prostrata",
+        "Rice Flower",
+        "New Zealand Daphne"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pittosporum",
+      "type": "flower",
+      "aliases": [
+        "Pittosporum tenuifolium",
+        "Kohuhu",
+        "Black Matipo"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Platycodon",
+      "type": "flower",
+      "aliases": [
+        "Platycodon grandiflorus",
+        "Balloon Flower",
+        "Chinese Bellflower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pohutukawa",
+      "type": "flower",
+      "aliases": [
+        "Metrosideros excelsa",
+        "New Zealand Christmas Tree",
+        "Iron Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pokaka",
+      "type": "flower",
+      "aliases": [
+        "Elaeocarpus hookerianus",
+        "Pokaka Tree",
+        "Hooker's Elaeocarpus"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Polemonium",
+      "type": "flower",
+      "aliases": [
+        "Polemonium caeruleum",
+        "Jacob's Ladder",
+        "Greek Valerian"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Polyanthus",
+      "type": "flower",
+      "aliases": [
+        "Primula x polyantha",
+        "Polyanthus Primrose",
+        "Primula"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ponga",
+      "type": "flower",
+      "aliases": [
+        "Cyathea dealbata",
+        "Silver Fern",
+        "Ponga Fern"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Poppy",
+      "type": "flower",
+      "aliases": [
+        "Papaver somniferum",
+        "Papaver nudicaule",
+        "Opium Poppy",
+        "Iceland Poppy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Potentilla",
+      "type": "flower",
+      "aliases": [
+        "Potentilla fruticosa",
+        "Shrubby Cinquefoil",
+        "Bush Cinquefoil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Primrose",
+      "type": "flower",
+      "aliases": [
+        "Primula vulgaris",
+        "English Primrose",
+        "Common Primrose"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Protea",
+      "type": "flower",
+      "aliases": [
+        "Protea cynaroides",
+        "King Protea",
+        "Giant Protea"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pua O Whiti",
+      "type": "flower",
+      "aliases": [
+        "Sophora fulvida",
+        "Yellow Kowhai",
+        "Kowhai"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pulmonaria",
+      "type": "flower",
+      "aliases": [
+        "Pulmonaria officinalis",
+        "Lungwort",
+        "Jerusalem Cowslip"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Puriri",
+      "type": "flower",
+      "aliases": [
+        "Vitex lucens",
+        "New Zealand Chaste Tree",
+        "Puriri Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rangiora",
+      "type": "flower",
+      "aliases": [
+        "Brachyglottis repanda",
+        "Bushman's Friend",
+        "Rangiora Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ranunculus",
+      "type": "flower",
+      "aliases": [
+        "Ranunculus asiaticus",
+        "Persian Buttercup",
+        "Persian Ranunculus"
+      ],
+      "onSite": true,
+      "slug": "ranunculus"
+    },
+    {
+      "name": "Rata",
+      "type": "flower",
+      "aliases": [
+        "Metrosideros robusta",
+        "Northern Rata",
+        "Southern Rata"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ratibida",
+      "type": "flower",
+      "aliases": [
+        "Ratibida columnifera",
+        "Prairie Coneflower",
+        "Mexican Hat"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Raukawa",
+      "type": "flower",
+      "aliases": [
+        "Raukaua edgerleyi",
+        "Raukawa Five-finger",
+        "Edgerley's Five-finger"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Red Beech",
+      "type": "flower",
+      "aliases": [
+        "Nothofagus fusca",
+        "Tawhai raunui",
+        "New Zealand Red Beech"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rengarenga",
+      "type": "flower",
+      "aliases": [
+        "Arthropodium cirratum",
+        "Renga Lily",
+        "New Zealand Rock Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rhodanthe",
+      "type": "flower",
+      "aliases": [
+        "Rhodanthe chlorocephala",
+        "Pink Everlasting",
+        "Paper Daisy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ribbonwood",
+      "type": "flower",
+      "aliases": [
+        "Plagianthus regius",
+        "Manatu",
+        "Lowland Ribbonwood"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rice Flower",
+      "type": "flower",
+      "aliases": [
+        "Ozothamnus diosmifolius",
+        "Sago Flower",
+        "White Dogwood"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rimu",
+      "type": "flower",
+      "aliases": [
+        "Dacrydium cupressinum",
+        "Red Pine",
+        "Rimu Pine"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rodgersia",
+      "type": "flower",
+      "aliases": [
+        "Rodgersia pinnata",
+        "Featherleaf Rodgersia",
+        "Bronze Leaf"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rose",
+      "type": "flower",
+      "aliases": [
+        "Rosa spp.",
+        "Garden Rose",
+        "Hybrid Tea Rose",
+        "Floribunda Rose"
+      ],
+      "onSite": true,
+      "slug": "rose"
+    },
+    {
+      "name": "Rosemary",
+      "type": "flower",
+      "aliases": [
+        "Salvia rosmarinus",
+        "Rosmarinus officinalis",
+        "Garden Rosemary"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rudbeckia",
+      "type": "flower",
+      "aliases": [
+        "Rudbeckia hirta",
+        "Black-eyed Susan",
+        "Gloriosa Daisy"
+      ],
+      "onSite": true,
+      "slug": "rudbeckia"
+    },
+    {
+      "name": "Rudbeckia Fulgida",
+      "type": "flower",
+      "aliases": [
+        "Orange Coneflower",
+        "Black-eyed Susan",
+        "Goldsturm"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sage",
+      "type": "flower",
+      "aliases": [
+        "Salvia officinalis",
+        "Common Sage",
+        "Garden Sage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Salvia",
+      "type": "flower",
+      "aliases": [
+        "Salvia splendens",
+        "Scarlet Sage",
+        "Annual Sage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Salvia Nemorosa",
+      "type": "flower",
+      "aliases": [
+        "Woodland Sage",
+        "Balkan Sage",
+        "Perennial Salvia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Saponaria",
+      "type": "flower",
+      "aliases": [
+        "Saponaria officinalis",
+        "Soapwort",
+        "Bouncing Bet"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Scabiosa",
+      "type": "flower",
+      "aliases": [
+        "Scabiosa atropurpurea",
+        "Pincushion Flower",
+        "Sweet Scabious"
+      ],
+      "onSite": true,
+      "slug": "scabiosa"
+    },
+    {
+      "name": "Schoenoplectus",
+      "type": "flower",
+      "aliases": [
+        "Schoenoplectus tabernaemontani",
+        "Bulrush",
+        "Club Rush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Schoenus",
+      "type": "flower",
+      "aliases": [
+        "Schoenus pauciflorus",
+        "Bog Rush",
+        "Wire Rush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Scutellaria",
+      "type": "flower",
+      "aliases": [
+        "Scutellaria incana",
+        "Skullcap",
+        "Hooded Willowherb"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sedum",
+      "type": "flower",
+      "aliases": [
+        "Sedum spectabile",
+        "Stonecrop",
+        "Ice Plant"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sempervivum",
+      "type": "flower",
+      "aliases": [
+        "Sempervivum tectorum",
+        "Houseleek",
+        "Hens and Chicks"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sidalcea",
+      "type": "flower",
+      "aliases": [
+        "Sidalcea malviflora",
+        "Prairie Mallow",
+        "Checkerbloom"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Silver Beech",
+      "type": "flower",
+      "aliases": [
+        "Nothofagus menziesii",
+        "Tawhai",
+        "Silver Beech"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Snapdragon",
+      "type": "flower",
+      "aliases": [
+        "Antirrhinum majus",
+        "Dragon Flower",
+        "Common Snapdragon"
+      ],
+      "onSite": true,
+      "slug": "snapdragon"
+    },
+    {
+      "name": "Solidago",
+      "type": "flower",
+      "aliases": [
+        "Solidago canadensis",
+        "Goldenrod",
+        "Canada Goldenrod"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sparaxis",
+      "type": "flower",
+      "aliases": [
+        "Sparaxis tricolor",
+        "Harlequin Flower",
+        "Wand Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Stachys",
+      "type": "flower",
+      "aliases": [
+        "Stachys byzantina",
+        "Lamb's Ear",
+        "Woolly Betony"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Statice",
+      "type": "flower",
+      "aliases": [
+        "Limonium sinuatum",
+        "Sea Lavender",
+        "Winged Statice"
+      ],
+      "onSite": true,
+      "slug": "statice"
+    },
+    {
+      "name": "Stock",
+      "type": "flower",
+      "aliases": [
+        "Matthiola incana",
+        "Gillyflower",
+        "Hoary Stock"
+      ],
+      "onSite": true,
+      "slug": "stock"
+    },
+    {
+      "name": "Sunflower",
+      "type": "flower",
+      "aliases": [
+        "Helianthus annuus",
+        "Common Sunflower",
+        "Annual Sunflower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sunflower - Cut Flower",
+      "type": "flower",
+      "aliases": [],
+      "onSite": true,
+      "slug": "sunflower-cut-flower"
+    },
+    {
+      "name": "Sweet Pea",
+      "type": "flower",
+      "aliases": [
+        "Lathyrus odoratus",
+        "Vetchling",
+        "Annual Sweet Pea"
+      ],
+      "onSite": true,
+      "slug": "sweet-pea"
+    },
+    {
+      "name": "Tanacetum",
+      "type": "flower",
+      "aliases": [
+        "Tanacetum coccineum",
+        "Painted Daisy",
+        "Pyrethrum"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tarata",
+      "type": "flower",
+      "aliases": [
+        "Pittosporum eugenioides",
+        "Lemonwood",
+        "Tarata Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tauhinu",
+      "type": "flower",
+      "aliases": [
+        "Ozothamnus leptophyllus",
+        "Cottonwood",
+        "Tauhinu Shrub"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tawa",
+      "type": "flower",
+      "aliases": [
+        "Beilschmiedia tawa",
+        "Tawa Tree",
+        "Tawa Beech"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Thalictrum",
+      "type": "flower",
+      "aliases": [
+        "Thalictrum aquilegifolium",
+        "Meadow Rue",
+        "Columbine Meadow Rue"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Thyme",
+      "type": "flower",
+      "aliases": [
+        "Thymus vulgaris",
+        "Common Thyme",
+        "Garden Thyme"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tiarella",
+      "type": "flower",
+      "aliases": [
+        "Tiarella cordifolia",
+        "Foamflower",
+        "Heartleaf Foamflower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Titoki",
+      "type": "flower",
+      "aliases": [
+        "Alectryon excelsus",
+        "New Zealand Oak",
+        "Titoki Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Toetoe",
+      "type": "flower",
+      "aliases": [
+        "Austroderia toetoe",
+        "Toetoe Grass",
+        "Cutty Grass"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Totara",
+      "type": "flower",
+      "aliases": [
+        "Podocarpus totara",
+        "New Zealand Yew",
+        "Totara Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tradescantia",
+      "type": "flower",
+      "aliases": [
+        "Tradescantia virginiana",
+        "Spiderwort",
+        "Virginia Spiderwort"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tricyrtis",
+      "type": "flower",
+      "aliases": [
+        "Tricyrtis hirta",
+        "Toad Lily",
+        "Hairy Toad Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Trollius",
+      "type": "flower",
+      "aliases": [
+        "Trollius europaeus",
+        "Globe Flower",
+        "European Globe Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tulip",
+      "type": "flower",
+      "aliases": [
+        "Tulipa spp.",
+        "Garden Tulip",
+        "Darwin Tulip"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Turutu",
+      "type": "flower",
+      "aliases": [
+        "Dianella nigra",
+        "New Zealand Blueberry",
+        "Blue Flax Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Typha",
+      "type": "flower",
+      "aliases": [
+        "Typha orientalis",
+        "Raupo",
+        "Bulrush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Uncinia",
+      "type": "flower",
+      "aliases": [
+        "Uncinia uncinata",
+        "Hook Sedge",
+        "Matau"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Valerian",
+      "type": "flower",
+      "aliases": [
+        "Valeriana officinalis",
+        "Garden Valerian",
+        "All-heal"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Veratrum",
+      "type": "flower",
+      "aliases": [
+        "Veratrum album",
+        "White Hellebore",
+        "False Hellebore"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Verbena",
+      "type": "flower",
+      "aliases": [
+        "Verbena bonariensis",
+        "Verbena hybrida",
+        "Tall Verbena",
+        "Garden Verbena"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Veronica",
+      "type": "flower",
+      "aliases": [
+        "Veronica stricta",
+        "Koromiko",
+        "Hebe"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Veronica Spicata",
+      "type": "flower",
+      "aliases": [
+        "Spike Speedwell",
+        "Royal Candles",
+        "Speedwell"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Viburnum",
+      "type": "flower",
+      "aliases": [
+        "Viburnum opulus",
+        "Guelder Rose",
+        "Snowball Bush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Viola",
+      "type": "flower",
+      "aliases": [
+        "Viola cornuta",
+        "Horned Violet",
+        "Johnny Jump-up"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Waratah",
+      "type": "flower",
+      "aliases": [
+        "Telopea speciosissima",
+        "New South Wales Waratah",
+        "Red Waratah"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Watsonia",
+      "type": "flower",
+      "aliases": [
+        "Watsonia borbonica",
+        "Bugle Lily",
+        "Wild Watsonia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Waxflower",
+      "type": "flower",
+      "aliases": [
+        "Chamelaucium uncinatum",
+        "Geraldton Wax",
+        "Wax Plant"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Weigela",
+      "type": "flower",
+      "aliases": [
+        "Weigela florida",
+        "Old-fashioned Weigela",
+        "Cardinal Shrub"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Wharariki",
+      "type": "flower",
+      "aliases": [
+        "Phormium cookianum",
+        "Mountain Flax",
+        "Coastal Flax"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Whau",
+      "type": "flower",
+      "aliases": [
+        "Entelea arborescens",
+        "Corkwood",
+        "Whau Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Wheki",
+      "type": "flower",
+      "aliases": [
+        "Dicksonia squarrosa",
+        "Rough Tree Fern",
+        "Wheki-ponga"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Wisteria",
+      "type": "flower",
+      "aliases": [
+        "Wisteria sinensis",
+        "Chinese Wisteria",
+        "Purple Wisteria"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Xerochrysum",
+      "type": "flower",
+      "aliases": [
+        "Xerochrysum bracteatum",
+        "Strawflower",
+        "Golden Everlasting"
+      ],
+      "onSite": true,
+      "slug": "strawflower"
+    },
+    {
+      "name": "Yarrow",
+      "type": "flower",
+      "aliases": [
+        "Achillea filipendulina",
+        "Fern-leaf Yarrow",
+        "Gold Yarrow"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zantedeschia",
+      "type": "flower",
+      "aliases": [
+        "Zantedeschia rehmannii",
+        "Pink Calla",
+        "Red Calla"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zephyranthes",
+      "type": "flower",
+      "aliases": [
+        "Zephyranthes candida",
+        "Rain Lily",
+        "Fairy Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia",
+      "type": "flower",
+      "aliases": [
+        "Zinnia elegans",
+        "Youth-and-age",
+        "Common Zinnia"
+      ],
+      "onSite": true,
+      "slug": "zinnia"
+    },
+    {
+      "name": "Zinnia Acerosa",
+      "type": "flower",
+      "aliases": [
+        "Desert Zinnia",
+        "White Zinnia",
+        "Dwarf Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Angustifolia",
+      "type": "flower",
+      "aliases": [
+        "Narrow-leaf Zinnia",
+        "Creeping Zinnia",
+        "Mexican Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Elegans",
+      "type": "flower",
+      "aliases": [
+        "Common Zinnia",
+        "Youth-and-age",
+        "Elegant Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Elegans 'Benary's Giant'",
+      "type": "flower",
+      "aliases": [
+        "Benary's Giant Zinnia",
+        "Giant Dahlia-flowered Zinnia",
+        "Cut Flower Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Elegans 'Cactus'",
+      "type": "flower",
+      "aliases": [
+        "Cactus Zinnia",
+        "Spider Zinnia",
+        "Quilled Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Elegans 'Cut And Come Again'",
+      "type": "flower",
+      "aliases": [
+        "Cut and Come Again Zinnia",
+        "Repeat Bloomer Zinnia",
+        "Garden Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Elegans 'Lilliput'",
+      "type": "flower",
+      "aliases": [
+        "Lilliput Zinnia",
+        "Pompon Zinnia",
+        "Button Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Elegans 'Scabiosa'",
+      "type": "flower",
+      "aliases": [
+        "Scabiosa-flowered Zinnia",
+        "Pincushion Zinnia",
+        "Double Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Elegans 'State Fair'",
+      "type": "flower",
+      "aliases": [
+        "State Fair Zinnia",
+        "Giant Zinnia",
+        "Dahlia Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Grandiflora",
+      "type": "flower",
+      "aliases": [
+        "Rocky Mountain Zinnia",
+        "Prairie Zinnia",
+        "Golden Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Haageana",
+      "type": "flower",
+      "aliases": [
+        "Mexican Zinnia",
+        "Narrow-leaf Zinnia",
+        "Haage's Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Linearis",
+      "type": "flower",
+      "aliases": [
+        "Linear-leaf Zinnia",
+        "Narrow-leaf Zinnia",
+        "Golden Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Marylandica",
+      "type": "flower",
+      "aliases": [
+        "Maryland Zinnia",
+        "Profusion Zinnia",
+        "Zahara Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Multiflora",
+      "type": "flower",
+      "aliases": [
+        "Many-flowered Zinnia",
+        "Cluster Zinnia",
+        "Bush Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Pauciflora",
+      "type": "flower",
+      "aliases": [
+        "Few-flowered Zinnia",
+        "Scarce Zinnia",
+        "Small Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Peruviana",
+      "type": "flower",
+      "aliases": [
+        "Peruvian Zinnia",
+        "Field Zinnia",
+        "Wild Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Tenuifolia",
+      "type": "flower",
+      "aliases": [
+        "Slender Zinnia",
+        "Red Zinnia",
+        "Mexican Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zinnia Violacea",
+      "type": "flower",
+      "aliases": [
+        "Violet Zinnia",
+        "Purple Zinnia",
+        "Common Zinnia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Acorn Squash",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita pepo",
+        "Table Queen",
+        "Pepper Squash"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Adzuki Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Vigna angularis",
+        "Red Bean",
+        "Azuki",
+        "Aduki"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Amaranth",
+      "type": "vegetable",
+      "aliases": [
+        "Amaranthus spp.",
+        "Chinese Spinach",
+        "Callaloo",
+        "Red Amaranth",
+        "Green Amaranth"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Anise",
+      "type": "vegetable",
+      "aliases": [
+        "Pimpinella anisum",
+        "Aniseed",
+        "Sweet Anise"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Anise Basil",
+      "type": "vegetable",
+      "aliases": [
+        "Ocimum basilicum 'Anise'",
+        "Licorice Basil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Arrowroot",
+      "type": "vegetable",
+      "aliases": [
+        "Maranta arundinacea",
+        "West Indian Arrowroot",
+        "Pia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Artichoke",
+      "type": "vegetable",
+      "aliases": [
+        "Globe Artichoke",
+        "Cynara scolymus",
+        "Green Globe",
+        "Imperial Star",
+        "Purple Artichoke"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Asparagus",
+      "type": "vegetable",
+      "aliases": [
+        "Asparagus officinalis",
+        "Mary Washington",
+        "Jersey Giant",
+        "Purple Passion"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Barley",
+      "type": "vegetable",
+      "aliases": [
+        "Hordeum vulgare",
+        "Pearl Barley",
+        "Hulless Barley"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Basil",
+      "type": "vegetable",
+      "aliases": [
+        "Ocimum basilicum",
+        "Sweet Basil",
+        "Genovese",
+        "Thai Basil",
+        "Lemon Basil",
+        "Purple Basil",
+        "Holy Basil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bay Leaf",
+      "type": "vegetable",
+      "aliases": [
+        "Laurus nobilis",
+        "Sweet Bay",
+        "Bay Laurel",
+        "California Bay"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Beans",
+      "type": "vegetable",
+      "aliases": [
+        "Phaseolus vulgaris",
+        "Green Bean",
+        "Runner Bean",
+        "Dwarf Bean",
+        "Climbing Bean",
+        "Scarlet Runner",
+        "Borlotti",
+        "Top Crop"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Beetroot",
+      "type": "vegetable",
+      "aliases": [
+        "Beet",
+        "Beta vulgaris",
+        "Detroit Dark Red",
+        "Bull's Blood",
+        "Golden Beet",
+        "Chioggia"
+      ],
+      "onSite": true,
+      "slug": "beetroot"
+    },
+    {
+      "name": "Bitter Gourd",
+      "type": "vegetable",
+      "aliases": [
+        "Momordica charantia",
+        "Bitter Melon",
+        "Karela",
+        "Balsam Pear"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bitter Melon",
+      "type": "vegetable",
+      "aliases": [
+        "Momordica charantia",
+        "Bitter Gourd",
+        "Karela",
+        "Balsam Pear"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bok Choy",
+      "type": "vegetable",
+      "aliases": [
+        "Pak Choy",
+        "Brassica rapa subsp. chinensis",
+        "Shanghai Bok Choy",
+        "Baby Bok Choy",
+        "Joi Choi",
+        "Shanghai"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Borage",
+      "type": "vegetable",
+      "aliases": [
+        "Borago officinalis",
+        "Starflower",
+        "Bee Bush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bottle Gourd",
+      "type": "vegetable",
+      "aliases": [
+        "Lagenaria siceraria",
+        "Calabash",
+        "Long Melon",
+        "Doodhi",
+        "Lauki"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Bracken Fern",
+      "type": "vegetable",
+      "aliases": [
+        "Pteridium esculentum",
+        "Rarauhe",
+        "Bracken",
+        "Fern Root"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Broccoli",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. italica",
+        "Calabrese",
+        "Green Sprouting",
+        "Purple Sprouting",
+        "Romanesco"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Broccoli Rabe",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa subsp. rapa",
+        "Rapini",
+        "Cima di Rapa",
+        "Broccoletti"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Brussels Sprouts",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. gemmifera",
+        "Long Island",
+        "Jade Cross",
+        "Diablo"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Buckwheat",
+      "type": "vegetable",
+      "aliases": [
+        "Fagopyrum esculentum",
+        "Common Buckwheat",
+        "Kasha"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Butternut Squash",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita moschata",
+        "Butternut Pumpkin",
+        "Waltham Butternut",
+        "Butterbush"
+      ],
+      "onSite": true,
+      "slug": "butternut-squash"
+    },
+    {
+      "name": "Cabbage",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. capitata",
+        "Green Cabbage",
+        "Red Cabbage",
+        "Savoy",
+        "Chinese Cabbage",
+        "Wombok",
+        "Stonehead"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Capsicum",
+      "type": "vegetable",
+      "aliases": [
+        "Bell Pepper",
+        "Sweet Pepper",
+        "Capsicum annuum",
+        "Green Pepper",
+        "Red Pepper",
+        "Yellow Pepper",
+        "California Wonder"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Caraway",
+      "type": "vegetable",
+      "aliases": [
+        "Carum carvi",
+        "Meridian Fennel",
+        "Persian Cumin"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Carrot",
+      "type": "vegetable",
+      "aliases": [
+        "Daucus carota",
+        "Nantes",
+        "Chantenay",
+        "Imperator",
+        "Baby Carrot",
+        "Yates Kinko"
+      ],
+      "onSite": true,
+      "slug": "carrot"
+    },
+    {
+      "name": "Cassava",
+      "type": "vegetable",
+      "aliases": [
+        "Manihot esculenta",
+        "Yuca",
+        "Manioc",
+        "Tapioca"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cauliflower",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. botrytis",
+        "Snowball",
+        "White Rock",
+        "Purple Cape",
+        "Cheddar"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cavolo Nero",
+      "type": "vegetable",
+      "aliases": [],
+      "onSite": true,
+      "slug": "cavolo-nero"
+    },
+    {
+      "name": "Celeriac",
+      "type": "vegetable",
+      "aliases": [
+        "Apium graveolens var. rapaceum",
+        "Celery Root",
+        "Knob Celery",
+        "Turnip-rooted Celery"
+      ],
+      "onSite": true,
+      "slug": "celeriac"
+    },
+    {
+      "name": "Celery",
+      "type": "vegetable",
+      "aliases": [
+        "Apium graveolens",
+        "Green Celery",
+        "Golden Self-Blanching",
+        "Pascal",
+        "Red Celery"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Celery Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Apium graveolens",
+        "Wild Celery Seed",
+        "Smallage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chamomile",
+      "type": "vegetable",
+      "aliases": [
+        "Matricaria chamomilla",
+        "German Chamomile",
+        "Chamaemelum nobile",
+        "Roman Chamomile"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chayote",
+      "type": "vegetable",
+      "aliases": [
+        "Sechium edule",
+        "Mirliton",
+        "Choko",
+        "Vegetable Pear"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chervil",
+      "type": "vegetable",
+      "aliases": [
+        "Anthriscus cerefolium",
+        "French Parsley",
+        "Garden Chervil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chia Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Salvia hispanica",
+        "Mexican Chia",
+        "Golden Chia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chickpea",
+      "type": "vegetable",
+      "aliases": [
+        "Cicer arietinum",
+        "Garbanzo Bean",
+        "Bengal Gram",
+        "Kabuli",
+        "Desi"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chickweed",
+      "type": "vegetable",
+      "aliases": [
+        "Stellaria media",
+        "Common Chickweed",
+        "Starweed",
+        "Winterweed"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chicory",
+      "type": "vegetable",
+      "aliases": [
+        "Cichorium intybus",
+        "Belgian Endive",
+        "Witloof",
+        "Radicchio",
+        "Sugar Loaf"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chilli",
+      "type": "vegetable",
+      "aliases": [
+        "Capsicum frutescens",
+        "Capsicum chinense",
+        "Jalapeño",
+        "Habanero",
+        "Bird's Eye",
+        "Cayenne",
+        "Thai Chilli"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chinese Cabbage",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa subsp. pekinensis",
+        "Napa Cabbage",
+        "Wombok",
+        "Peking Cabbage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Chives",
+      "type": "vegetable",
+      "aliases": [
+        "Allium schoenoprasum",
+        "Common Chives",
+        "Garlic Chives",
+        "Allium tuberosum",
+        "Chinese Chives"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Choko",
+      "type": "vegetable",
+      "aliases": [
+        "Sechium edule",
+        "Chayote",
+        "Mirliton",
+        "Vegetable Pear"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Choy Sum",
+      "type": "vegetable",
+      "aliases": [
+        "Chinese Flowering Cabbage",
+        "Brassica rapa subsp. parachinensis",
+        "Yu Choy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cime Di Rapa",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa subsp. sylvestris",
+        "Turnip Tops",
+        "Friarielli"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cinnamon Basil",
+      "type": "vegetable",
+      "aliases": [
+        "Ocimum basilicum 'Cinnamon'",
+        "Mexican Spice Basil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Claytonia",
+      "type": "vegetable",
+      "aliases": [
+        "Claytonia perfoliata",
+        "Miner's Lettuce",
+        "Winter Purslane",
+        "Indian Lettuce"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Collard Greens",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. viridis",
+        "Collards",
+        "Tree Kale",
+        "Georgia Southern"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Coriander",
+      "type": "vegetable",
+      "aliases": [
+        "Cilantro",
+        "Coriandrum sativum",
+        "Chinese Parsley",
+        "Slow Bolt",
+        "Santo"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Courgette",
+      "type": "vegetable",
+      "aliases": [
+        "Zucchini",
+        "Cucurbita pepo",
+        "Green Zucchini",
+        "Yellow Zucchini",
+        "Black Beauty",
+        "Gold Rush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cowpea",
+      "type": "vegetable",
+      "aliases": [
+        "Vigna unguiculata",
+        "Black-eyed Pea",
+        "Southern Pea",
+        "Crowder Pea"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cuban Oregano",
+      "type": "vegetable",
+      "aliases": [
+        "Plectranthus amboinicus",
+        "Mexican Mint",
+        "Spanish Thyme",
+        "Indian Borage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cucumber",
+      "type": "vegetable",
+      "aliases": [
+        "Cucumis sativus",
+        "Lebanese",
+        "Telegraph",
+        "Marketmore",
+        "Burpless",
+        "Gherkin",
+        "Lebanese Cucumber"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Cumin",
+      "type": "vegetable",
+      "aliases": [
+        "Cuminum cyminum",
+        "Jeera",
+        "Black Cumin",
+        "Bunium persicum"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Curry Leaf",
+      "type": "vegetable",
+      "aliases": [
+        "Murraya koenigii",
+        "Sweet Neem Leaf",
+        "Curry Patta"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Daikon",
+      "type": "vegetable",
+      "aliases": [
+        "Raphanus sativus var. longipinnatus",
+        "White Radish",
+        "Japanese Radish",
+        "Mooli"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Dandelion",
+      "type": "vegetable",
+      "aliases": [
+        "Taraxacum officinale",
+        "Common Dandelion",
+        "Lion's Tooth",
+        "Pissenlit"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Delicata Squash",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita pepo",
+        "Sweet Potato Squash",
+        "Bohemian Squash"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Dill",
+      "type": "vegetable",
+      "aliases": [
+        "Anethum graveolens",
+        "Dill Weed",
+        "Bouquet",
+        "Fernleaf"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Dill Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Anethum graveolens",
+        "Dill Fruit",
+        "Dill Weed Seed"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Dock",
+      "type": "vegetable",
+      "aliases": [
+        "Rumex obtusifolius",
+        "Broad-leaved Dock",
+        "Bitter Dock"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Dried Beans",
+      "type": "vegetable",
+      "aliases": [],
+      "onSite": true,
+      "slug": "dried-beans"
+    },
+    {
+      "name": "Eggplant",
+      "type": "vegetable",
+      "aliases": [
+        "Aubergine",
+        "Solanum melongena",
+        "Black Beauty",
+        "Long Purple",
+        "Italian",
+        "Japanese"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Endive",
+      "type": "vegetable",
+      "aliases": [
+        "Cichorium endivia",
+        "Curly Endive",
+        "Frisée",
+        "Escarole",
+        "Broadleaf Endive"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Fat Hen",
+      "type": "vegetable",
+      "aliases": [
+        "Chenopodium album",
+        "Lamb's Quarters",
+        "White Goosefoot",
+        "Pigweed"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Fava Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Vicia faba",
+        "Broad Bean",
+        "Windsor Bean",
+        "Tick Bean",
+        "Aquadulce"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Fennel",
+      "type": "vegetable",
+      "aliases": [
+        "Florence Fennel",
+        "Foeniculum vulgare",
+        "Finocchio",
+        "Zefa Fino",
+        "Bronze Fennel"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Fennel Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Foeniculum vulgare",
+        "Sweet Fennel Seed",
+        "Florence Fennel Seed"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Fenugreek",
+      "type": "vegetable",
+      "aliases": [
+        "Trigonella foenum-graecum",
+        "Methi",
+        "Greek Hay",
+        "Fenugreek Leaves"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Fingerroot",
+      "type": "vegetable",
+      "aliases": [
+        "Boesenbergia rotunda",
+        "Chinese Ginger",
+        "Temu Kunci"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Flaxseed",
+      "type": "vegetable",
+      "aliases": [
+        "Linum usitatissimum",
+        "Linseed",
+        "Brown Flax",
+        "Golden Flax"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Gai Lan",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. alboglabra",
+        "Chinese Broccoli",
+        "Kai Lan",
+        "Chinese Kale"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Galangal",
+      "type": "vegetable",
+      "aliases": [
+        "Alpinia galanga",
+        "Greater Galangal",
+        "Thai Ginger",
+        "Blue Ginger"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Garden Cress",
+      "type": "vegetable",
+      "aliases": [
+        "Lepidium sativum",
+        "Pepper Cress",
+        "Curly Cress",
+        "Broadleaf Cress"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Garlic",
+      "type": "vegetable",
+      "aliases": [
+        "Allium sativum",
+        "New Zealand White",
+        "Elephant Garlic",
+        "Purple Stripe",
+        "Chet's Italian"
+      ],
+      "onSite": true,
+      "slug": "garlic"
+    },
+    {
+      "name": "Gherkin",
+      "type": "vegetable",
+      "aliases": [
+        "Cucumis sativus",
+        "Cornichon",
+        "West Indian Gherkin",
+        "Cucumis anguria"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ginger",
+      "type": "vegetable",
+      "aliases": [
+        "Zingiber officinale",
+        "Common Ginger",
+        "Turmeric",
+        "Curcuma longa"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Good King Henry",
+      "type": "vegetable",
+      "aliases": [
+        "Chenopodium bonus-henricus",
+        "Lincolnshire Spinach",
+        "Mercury Goosefoot"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hamburg Parsley",
+      "type": "vegetable",
+      "aliases": [
+        "Petroselinum crispum var. tuberosum",
+        "Root Parsley",
+        "Turnip-rooted Parsley"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Harakeke",
+      "type": "vegetable",
+      "aliases": [
+        "Phormium tenax",
+        "New Zealand Flax",
+        "Flax Lily",
+        "Harakeke Flower"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hemp Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Cannabis sativa",
+        "Industrial Hemp",
+        "Hemp Hearts"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Holy Basil",
+      "type": "vegetable",
+      "aliases": [
+        "Ocimum tenuiflorum",
+        "Tulsi",
+        "Krishna Tulsi",
+        "Rama Tulsi"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Honeydew Melon",
+      "type": "vegetable",
+      "aliases": [
+        "Cucumis melo",
+        "Green Flesh",
+        "Orange Flesh",
+        "Honey Pearl"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Horopito",
+      "type": "vegetable",
+      "aliases": [
+        "Pseudowintera colorata",
+        "Pepperwood",
+        "Mountain Pepper",
+        "Red Horopito"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Horseradish",
+      "type": "vegetable",
+      "aliases": [
+        "Armoracia rusticana",
+        "Cochlearia armoracia",
+        "Common Horseradish"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hubbard Squash",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita maxima",
+        "Golden Hubbard",
+        "Blue Hubbard",
+        "Green Hubbard"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Hyacinth Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Lablab purpureus",
+        "Lablab Bean",
+        "Indian Bean",
+        "Bonavist Bean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ice Plant",
+      "type": "vegetable",
+      "aliases": [
+        "Mesembryanthemum crystallinum",
+        "Crystalline Iceplant",
+        "Common Iceplant"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Italian Parsley",
+      "type": "vegetable",
+      "aliases": [
+        "Petroselinum crispum var. neapolitanum",
+        "Flat-leaf Parsley",
+        "Gigante d'Italia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Jerusalem Artichoke",
+      "type": "vegetable",
+      "aliases": [
+        "Sunchoke",
+        "Helianthus tuberosus",
+        "Fuseau",
+        "Red Fuseau"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kaffir Lime Leaf",
+      "type": "vegetable",
+      "aliases": [
+        "Citrus hystrix",
+        "Makrut Lime",
+        "Thai Lime Leaf"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kai Lan",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. alboglabra",
+        "Chinese Broccoli",
+        "Gai Lan"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kale",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. sabellica",
+        "Curly Kale",
+        "Lacinato",
+        "Dinosaur Kale",
+        "Nero di Toscana",
+        "Red Russian"
+      ],
+      "onSite": true,
+      "slug": "kale"
+    },
+    {
+      "name": "Kamo Kamo",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita pepo",
+        "Marrow",
+        "Courgette",
+        "Zucchini",
+        "Green Bush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kamokamo",
+      "type": "vegetable",
+      "aliases": [
+        "Kamo Kamo",
+        "Cucurbita pepo",
+        "Marrow",
+        "Courgette",
+        "Zucchini",
+        "Green Bush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kawakawa",
+      "type": "vegetable",
+      "aliases": [
+        "Piper excelsum",
+        "Macropiper excelsum",
+        "Pepper Tree",
+        "Māori Kava"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kohlrabi",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. gongylodes",
+        "Purple Vienna",
+        "White Vienna",
+        "Gigante"
+      ],
+      "onSite": true,
+      "slug": "kohlrabi"
+    },
+    {
+      "name": "Kohlrabi Leaf",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica oleracea var. gongylodes",
+        "Kohlrabi Greens"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kokihi",
+      "type": "vegetable",
+      "aliases": [
+        "Tetragonia tetragonioides",
+        "New Zealand Spinach",
+        "Warrigal Greens",
+        "Native Spinach",
+        "Spinach",
+        "Spinacia oleracea",
+        "English Spinach",
+        "Perpetual Spinach"
+      ],
+      "onSite": true,
+      "slug": "nz-spinach"
+    },
+    {
+      "name": "Komatsuna",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa var. perviridis",
+        "Japanese Mustard Spinach",
+        "Spinach Mustard"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kumara",
+      "type": "vegetable",
+      "aliases": [
+        "Sweet Potato",
+        "Ipomoea batatas",
+        "Owairaka Red",
+        "Tokomaru",
+        "Red Karamu",
+        "Gold Nugget",
+        "Beauregard"
+      ],
+      "onSite": true,
+      "slug": "kumara"
+    },
+    {
+      "name": "Kānuka",
+      "type": "vegetable",
+      "aliases": [
+        "Kunzea ericoides",
+        "White Tea Tree",
+        "Burnt Tree"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kūmara",
+      "type": "vegetable",
+      "aliases": [
+        "Ipomoea batatas",
+        "Sweet Potato",
+        "Owairaka",
+        "Tokomaru",
+        "Red Karamu"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Kūmara Leaf",
+      "type": "vegetable",
+      "aliases": [
+        "Ipomoea batatas",
+        "Sweet Potato Greens",
+        "Kumara Tops"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Land Cress",
+      "type": "vegetable",
+      "aliases": [
+        "Barbarea verna",
+        "American Cress",
+        "Belle Isle Cress",
+        "Upland Cress"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Leek",
+      "type": "vegetable",
+      "aliases": [
+        "Allium porrum",
+        "Musselburgh",
+        "King Richard",
+        "Blue Solaise",
+        "Giant Winter"
+      ],
+      "onSite": true,
+      "slug": "leek"
+    },
+    {
+      "name": "Lemon Balm",
+      "type": "vegetable",
+      "aliases": [
+        "Melissa officinalis",
+        "Balm",
+        "Sweet Balm"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lemon Basil",
+      "type": "vegetable",
+      "aliases": [
+        "Ocimum × citriodorum",
+        "Thai Lemon Basil",
+        "Lime Basil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lemon Grass",
+      "type": "vegetable",
+      "aliases": [
+        "Cymbopogon citratus",
+        "West Indian Lemon Grass",
+        "Cymbopogon flexuosus",
+        "East Indian Lemon Grass"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lemon Thyme",
+      "type": "vegetable",
+      "aliases": [
+        "Thymus citriodorus",
+        "Citrus Thyme",
+        "Lime Thyme"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lemon Verbena",
+      "type": "vegetable",
+      "aliases": [
+        "Aloysia citrodora",
+        "Lippia citriodora",
+        "Verbena"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lentil",
+      "type": "vegetable",
+      "aliases": [
+        "Lens culinaris",
+        "Red Lentil",
+        "Green Lentil",
+        "Brown Lentil",
+        "Puy Lentil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lettuce",
+      "type": "vegetable",
+      "aliases": [
+        "Lactuca sativa",
+        "Iceberg",
+        "Butterhead",
+        "Cos",
+        "Romain",
+        "Oakleaf",
+        "Mesclun",
+        "Great Lakes"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lettuce - Cos",
+      "type": "vegetable",
+      "aliases": [],
+      "onSite": true,
+      "slug": "lettuce-cos"
+    },
+    {
+      "name": "Lettuce Basil",
+      "type": "vegetable",
+      "aliases": [
+        "Ocimum basilicum 'Lettuce Leaf'",
+        "Large Leaf Basil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lima Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Phaseolus lunatus",
+        "Butter Bean",
+        "Sieva Bean",
+        "Madagascar Bean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Lovage",
+      "type": "vegetable",
+      "aliases": [
+        "Levisticum officinale",
+        "Mountain Celery",
+        "Garden Lovage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Malabar Spinach",
+      "type": "vegetable",
+      "aliases": [
+        "Basella alba",
+        "Ceylon Spinach",
+        "Indian Spinach",
+        "Vine Spinach"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mangelwurzel",
+      "type": "vegetable",
+      "aliases": [
+        "Beta vulgaris subsp. vulgaris",
+        "Mangold",
+        "Fodder Beet",
+        "Field Beet"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Marjoram",
+      "type": "vegetable",
+      "aliases": [
+        "Origanum majorana",
+        "Sweet Marjoram",
+        "Knotted Marjoram"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Melon",
+      "type": "vegetable",
+      "aliases": [
+        "Cucumis melo",
+        "Rockmelon",
+        "Cantaloupe",
+        "Honeydew",
+        "Watermelon",
+        "Citrullus lanatus"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mibuna",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa var. japonica",
+        "Mizuna Mibuna",
+        "Japanese Greens"
+      ],
+      "onSite": true,
+      "slug": "mibuna"
+    },
+    {
+      "name": "Millet",
+      "type": "vegetable",
+      "aliases": [
+        "Panicum miliaceum",
+        "Proso Millet",
+        "Foxtail Millet",
+        "Pearl Millet"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mint",
+      "type": "vegetable",
+      "aliases": [
+        "Mentha spicata",
+        "Spearmint",
+        "Peppermint",
+        "Mentha × piperita",
+        "Apple Mint",
+        "Chocolate Mint"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Minutina",
+      "type": "vegetable",
+      "aliases": [
+        "Plantago coronopus",
+        "Buckhorn Plantain",
+        "Erba Stella",
+        "Herba Stella"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mizuna",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa var. nipposinica",
+        "Japanese Greens",
+        "Mibuna",
+        "Kyoto"
+      ],
+      "onSite": true,
+      "slug": "mizuna"
+    },
+    {
+      "name": "Moth Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Vigna aconitifolia",
+        "Mat Bean",
+        "Turkish Gram"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mung Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Vigna radiata",
+        "Green Gram",
+        "Moong Bean",
+        "Sprouting Bean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mustard Greens",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica juncea",
+        "Brown Mustard",
+        "Leaf Mustard",
+        "Giant Red",
+        "Osaka Purple"
+      ],
+      "onSite": true,
+      "slug": "mustard-greens"
+    },
+    {
+      "name": "Mustard Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica nigra",
+        "Black Mustard",
+        "Sinapis alba",
+        "White Mustard",
+        "Brown Mustard"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Mānuka",
+      "type": "vegetable",
+      "aliases": [
+        "Leptospermum scoparium",
+        "Tea Tree",
+        "New Zealand Tea Tree",
+        "Jelly Bush"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Māori Potato",
+      "type": "vegetable",
+      "aliases": [
+        "Solanum tuberosum",
+        "Taewa",
+        "Urenika",
+        "Karuparera",
+        "Huakaroro"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Nasturtium",
+      "type": "vegetable",
+      "aliases": [
+        "Tropaeolum majus",
+        "Garden Nasturtium",
+        "Indian Cress",
+        "Alaska",
+        "Jewel"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Nettle",
+      "type": "vegetable",
+      "aliases": [
+        "Urtica dioica",
+        "Stinging Nettle",
+        "Common Nettle",
+        "Burn Nettle"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Nigella Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Nigella sativa",
+        "Black Cumin",
+        "Kalonji",
+        "Onion Seed"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Oats",
+      "type": "vegetable",
+      "aliases": [
+        "Avena sativa",
+        "Common Oats",
+        "Naked Oats"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Okra",
+      "type": "vegetable",
+      "aliases": [
+        "Abelmoschus esculentus",
+        "Lady's Finger",
+        "Gumbo",
+        "Bhindi"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Onion",
+      "type": "vegetable",
+      "aliases": [
+        "Allium cepa",
+        "Brown Onion",
+        "Red Onion",
+        "White Onion",
+        "Pukekohe Longkeeper",
+        "California Red"
+      ],
+      "onSite": true,
+      "slug": "onion"
+    },
+    {
+      "name": "Orache",
+      "type": "vegetable",
+      "aliases": [
+        "Atriplex hortensis",
+        "Garden Orache",
+        "Mountain Spinach",
+        "Red Orach"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Oregano",
+      "type": "vegetable",
+      "aliases": [
+        "Origanum vulgare",
+        "Greek Oregano",
+        "Italian Oregano",
+        "Wild Marjoram"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Parsley",
+      "type": "vegetable",
+      "aliases": [
+        "Petroselinum crispum",
+        "Curly Parsley",
+        "Italian Parsley",
+        "Flat-leaf Parsley",
+        "Champion Moss"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Parsnip",
+      "type": "vegetable",
+      "aliases": [
+        "Pastinaca sativa",
+        "Hollow Crown",
+        "Harris Model",
+        "White Gem"
+      ],
+      "onSite": true,
+      "slug": "parsnip"
+    },
+    {
+      "name": "Patty Pan Squash",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita pepo",
+        "Scallop Squash",
+        "White Patty Pan",
+        "Sunburst"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Peas",
+      "type": "vegetable",
+      "aliases": [
+        "Pisum sativum",
+        "Garden Pea",
+        "Snow Pea",
+        "Sugar Snap",
+        "Mangetout",
+        "Greenfeast",
+        "Whero"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Perpetual Spinach",
+      "type": "vegetable",
+      "aliases": [],
+      "onSite": true,
+      "slug": "perpetual-spinach"
+    },
+    {
+      "name": "Pigeon Pea",
+      "type": "vegetable",
+      "aliases": [
+        "Cajanus cajan",
+        "Red Gram",
+        "Toor Dal",
+        "Gungo Pea"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pikopiko",
+      "type": "vegetable",
+      "aliases": [
+        "Asplenium bulbiferum",
+        "Hen and Chicken Fern",
+        "Mountain Fern",
+        "Shining Spleenwort"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Plantain",
+      "type": "vegetable",
+      "aliases": [
+        "Plantago major",
+        "Common Plantain",
+        "Broadleaf Plantain",
+        "White Man's Foot"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Poppy Pod",
+      "type": "vegetable",
+      "aliases": [
+        "Papaver somniferum",
+        "Opium Poppy Pod"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Poppy Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Papaver somniferum",
+        "Opium Poppy",
+        "Blue Poppy",
+        "White Poppy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Potato",
+      "type": "vegetable",
+      "aliases": [
+        "Solanum tuberosum",
+        "Ilam Hardy",
+        "Rua",
+        "Agria",
+        "Nadine",
+        "Desiree",
+        "Red Rascal",
+        "Purple Passion"
+      ],
+      "onSite": true,
+      "slug": "potato"
+    },
+    {
+      "name": "Puha",
+      "type": "vegetable",
+      "aliases": [
+        "Sonchus oleraceus",
+        "Sow Thistle",
+        "Puwha",
+        "Rauriki"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pumpkin",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita maxima",
+        "Cucurbita pepo",
+        "Buttercup",
+        "Crown",
+        "Jarrahdale",
+        "Queensland Blue",
+        "Triamble",
+        "Ironbark",
+        "Crown Pumpkin"
+      ],
+      "onSite": true,
+      "slug": "pumpkin"
+    },
+    {
+      "name": "Pumpkin Leaves",
+      "type": "vegetable",
+      "aliases": [
+        "Squash Leaves",
+        "Cucurbita maxima",
+        "Tendrils"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Pumpkin Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita pepo",
+        "Pepita",
+        "Oilseed Pumpkin",
+        "Styrian"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Purple Basil",
+      "type": "vegetable",
+      "aliases": [
+        "Ocimum basilicum 'Purple Ruffles'",
+        "Dark Opal Basil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Purslane",
+      "type": "vegetable",
+      "aliases": [
+        "Portulaca oleracea",
+        "Common Purslane",
+        "Verdolaga",
+        "Little Hogweed"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Quinoa",
+      "type": "vegetable",
+      "aliases": [
+        "Chenopodium quinoa",
+        "Inca Wheat",
+        "White Quinoa",
+        "Red Quinoa"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Radicchio",
+      "type": "vegetable",
+      "aliases": [
+        "Cichorium intybus",
+        "Italian Chicory",
+        "Red Chicory",
+        "Rossa di Treviso",
+        "Chioggia"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Radish",
+      "type": "vegetable",
+      "aliases": [
+        "Raphanus sativus",
+        "Cherry Belle",
+        "French Breakfast",
+        "Daikon",
+        "White Icicle",
+        "Red Globe"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rhubarb",
+      "type": "vegetable",
+      "aliases": [
+        "Rheum rhabarbarum",
+        "Victoria",
+        "Glaskins Perpetual",
+        "Champagne"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rice Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Vigna umbellata",
+        "Red Rice Bean",
+        "Bamboo Bean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Ridge Gourd",
+      "type": "vegetable",
+      "aliases": [
+        "Luffa acutangula",
+        "Angled Luffa",
+        "Chinese Okra",
+        "Smooth Luffa"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rocket",
+      "type": "vegetable",
+      "aliases": [
+        "Arugula",
+        "Eruca vesicaria",
+        "Wild Rocket",
+        "Diplotaxis tenuifolia",
+        "Salad Rocket"
+      ],
+      "onSite": true,
+      "slug": "rocket"
+    },
+    {
+      "name": "Rockmelon",
+      "type": "vegetable",
+      "aliases": [
+        "Cucumis melo",
+        "Cantaloupe",
+        "Honeydew",
+        "Galia",
+        "Charentais"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rosemary",
+      "type": "vegetable",
+      "aliases": [
+        "Salvia rosmarinus",
+        "Rosmarinus officinalis",
+        "Tuscan Blue",
+        "Prostrate Rosemary"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Rye",
+      "type": "vegetable",
+      "aliases": [
+        "Secale cereale",
+        "Cereal Rye",
+        "Winter Rye"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Saffron",
+      "type": "vegetable",
+      "aliases": [
+        "Crocus sativus",
+        "Saffron Crocus",
+        "Kesar"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sage",
+      "type": "vegetable",
+      "aliases": [
+        "Salvia officinalis",
+        "Common Sage",
+        "Purple Sage",
+        "Golden Sage",
+        "Berggarten"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Salsify",
+      "type": "vegetable",
+      "aliases": [
+        "Tragopogon porrifolius",
+        "Oyster Plant",
+        "Vegetable Oyster",
+        "White Salsify"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Samphire",
+      "type": "vegetable",
+      "aliases": [
+        "Salicornia europaea",
+        "Glasswort",
+        "Sea Asparagus",
+        "Marsh Samphire"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Scorzonera",
+      "type": "vegetable",
+      "aliases": [
+        "Scorzonera hispanica",
+        "Black Salsify",
+        "Spanish Salsify"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sea Beet",
+      "type": "vegetable",
+      "aliases": [
+        "Beta vulgaris subsp. maritima",
+        "Wild Beet",
+        "Sea Spinach"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sesame",
+      "type": "vegetable",
+      "aliases": [
+        "Sesamum indicum",
+        "Benne",
+        "Til",
+        "Gingelly"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sesame Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Sesamum indicum",
+        "Benne",
+        "Til",
+        "Gingelly"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Shallot",
+      "type": "vegetable",
+      "aliases": [
+        "Allium cepa var. aggregatum",
+        "French Shallot",
+        "Golden Shallot",
+        "Eschalot"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Shungiku",
+      "type": "vegetable",
+      "aliases": [
+        "Glebionis coronaria",
+        "Chrysanthemum Greens",
+        "Edible Chrysanthemum",
+        "Garland Daisy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Silverbeet",
+      "type": "vegetable",
+      "aliases": [
+        "Swiss Chard",
+        "Beta vulgaris subsp. cicla",
+        "Rainbow Chard",
+        "Fordhook Giant",
+        "Lucullus",
+        "Perpetual Spinach"
+      ],
+      "onSite": true,
+      "slug": "silverbeet"
+    },
+    {
+      "name": "Smooth Luffa",
+      "type": "vegetable",
+      "aliases": [
+        "Luffa aegyptiaca",
+        "Sponge Gourd",
+        "Egyptian Luffa"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Snake Gourd",
+      "type": "vegetable",
+      "aliases": [
+        "Trichosanthes cucumerina",
+        "Serpent Gourd",
+        "Chichinda"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sorrel",
+      "type": "vegetable",
+      "aliases": [
+        "Rumex acetosa",
+        "Garden Sorrel",
+        "French Sorrel",
+        "Buckler Leaf Sorrel",
+        "Sheep's Sorrel"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Soybean",
+      "type": "vegetable",
+      "aliases": [
+        "Glycine max",
+        "Edamame",
+        "Soya Bean",
+        "Green Soybean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Spaghetti Squash",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita pepo",
+        "Vegetable Spaghetti",
+        "Noodle Squash"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Spring Onion",
+      "type": "vegetable",
+      "aliases": [
+        "Scallion",
+        "Allium fistulosum",
+        "Green Onion",
+        "Shallot",
+        "Bunching Onion",
+        "White Lisbon"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Squash",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita moschata",
+        "Butternut",
+        "Acorn",
+        "Spaghetti",
+        "Hubbard",
+        "Delicata"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Stevia",
+      "type": "vegetable",
+      "aliases": [
+        "Stevia rebaudiana",
+        "Sweet Leaf",
+        "Sugar Leaf"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sunflower",
+      "type": "vegetable",
+      "aliases": [
+        "Helianthus annuus",
+        "Common Sunflower",
+        "Black Oil Sunflower",
+        "Mammoth"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sunflower Seed",
+      "type": "vegetable",
+      "aliases": [
+        "Helianthus annuus",
+        "Black Oil",
+        "Mammoth Grey Stripe",
+        "Russian Mammoth"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Swede",
+      "type": "vegetable",
+      "aliases": [
+        "Rutabaga",
+        "Brassica napus subsp. rapifera",
+        "Purple Top",
+        "Laurentian",
+        "Helenor"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sweet Corn",
+      "type": "vegetable",
+      "aliases": [
+        "Zea mays",
+        "Corn on the Cob",
+        "Golden Bantam",
+        "Honey & Cream",
+        "Peaches and Cream",
+        "Sugar Buns"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sweet Potato Leaf",
+      "type": "vegetable",
+      "aliases": [
+        "Kumara Leaves",
+        "Ipomoea batatas",
+        "Camote Tops"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Sword Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Canavalia gladiata",
+        "Jack Bean",
+        "Wonder Bean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Taewa",
+      "type": "vegetable",
+      "aliases": [
+        "Māori Potato",
+        "Solanum tuberosum",
+        "Purple Potato",
+        "Red Potato"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Taro",
+      "type": "vegetable",
+      "aliases": [
+        "Colocasia esculenta",
+        "Dasheen",
+        "Eddoe",
+        "Kalo",
+        "Pacific Taro"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Taro Leaf",
+      "type": "vegetable",
+      "aliases": [
+        "Colocasia esculenta",
+        "Dasheen Leaf",
+        "Eddoe Leaf"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tarragon",
+      "type": "vegetable",
+      "aliases": [
+        "Artemisia dracunculus",
+        "French Tarragon",
+        "Russian Tarragon"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tatsoi",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa var. rosularis",
+        "Chinese Flat Cabbage",
+        "Rosette Bok Choy"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tepary Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Phaseolus acutifolius",
+        "Pawi",
+        "Texas Bean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Thai Basil",
+      "type": "vegetable",
+      "aliases": [
+        "Ocimum basilicum var. thyrsiflora",
+        "Horapha",
+        "Sweet Thai Basil"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Thyme",
+      "type": "vegetable",
+      "aliases": [
+        "Thymus vulgaris",
+        "Common Thyme",
+        "Lemon Thyme",
+        "Creeping Thyme",
+        "French Thyme"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tomato",
+      "type": "vegetable",
+      "aliases": [
+        "Lycopersicon esculentum",
+        "Solanum lycopersicum",
+        "Moneymaker",
+        "Sweet 100",
+        "Beefsteak",
+        "Roma",
+        "Black Russian",
+        "Grosse Lisse",
+        "Tiny Tim",
+        "Gardener's Delight"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Turmeric",
+      "type": "vegetable",
+      "aliases": [
+        "Curcuma longa",
+        "Curcuma domestica",
+        "Indian Saffron"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Turnip",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa subsp. rapa",
+        "White Globe",
+        "Purple Top",
+        "Golden Ball",
+        "Hakurei"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Tī Kōuka",
+      "type": "vegetable",
+      "aliases": [
+        "Cordyline australis",
+        "Cabbage Tree",
+        "Tī",
+        "Palm Lily"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Urad Dal",
+      "type": "vegetable",
+      "aliases": [
+        "Vigna mungo",
+        "Black Gram",
+        "Mash Bean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Vanilla",
+      "type": "vegetable",
+      "aliases": [
+        "Vanilla planifolia",
+        "Bourbon Vanilla",
+        "Tahitian Vanilla",
+        "Vanilla tahitensis"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Velvet Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Mucuna pruriens",
+        "Cowitch",
+        "Kapikachu"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Wasabi",
+      "type": "vegetable",
+      "aliases": [
+        "Eutrema japonicum",
+        "Japanese Horseradish",
+        "Wasabia japonica"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Water Spinach",
+      "type": "vegetable",
+      "aliases": [
+        "Ipomoea aquatica",
+        "Kangkong",
+        "Morning Glory",
+        "Swamp Cabbage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Watercress",
+      "type": "vegetable",
+      "aliases": [
+        "Nasturtium officinale",
+        "Garden Cress",
+        "True Watercress",
+        "Brooklime"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Watermelon",
+      "type": "vegetable",
+      "aliases": [
+        "Citrullus lanatus",
+        "Sugar Baby",
+        "Crimson Sweet",
+        "Yellow Doll",
+        "Charleston Gray"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Wax Gourd",
+      "type": "vegetable",
+      "aliases": [
+        "Benincasa hispida",
+        "Winter Melon",
+        "Ash Gourd",
+        "White Gourd"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Wheat",
+      "type": "vegetable",
+      "aliases": [
+        "Triticum aestivum",
+        "Bread Wheat",
+        "Spelt",
+        "Triticum spelta"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Winged Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Psophocarpus tetragonolobus",
+        "Goa Bean",
+        "Asparagus Pea",
+        "Four-angled Bean"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Winter Purslane",
+      "type": "vegetable",
+      "aliases": [
+        "Claytonia perfoliata",
+        "Miner's Lettuce",
+        "Spring Beauty"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Wombok",
+      "type": "vegetable",
+      "aliases": [
+        "Brassica rapa subsp. pekinensis",
+        "Napa Cabbage",
+        "Chinese Cabbage",
+        "Peking Cabbage"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Yam",
+      "type": "vegetable",
+      "aliases": [
+        "Dioscorea alata",
+        "Purple Yam",
+        "Ube",
+        "Okinawan Yam"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Yam Bean",
+      "type": "vegetable",
+      "aliases": [
+        "Pachyrhizus erosus",
+        "Jicama",
+        "Mexican Turnip",
+        "Singkamas"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Yellow Squash",
+      "type": "vegetable",
+      "aliases": [
+        "Cucurbita pepo",
+        "Yellow Crookneck",
+        "Yellow Straightneck",
+        "Sunburst"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zucchini",
+      "type": "vegetable",
+      "aliases": [
+        "Courgette",
+        "Cucurbita pepo",
+        "Black Beauty",
+        "Gold Rush",
+        "Costata Romanesco"
+      ],
+      "onSite": false,
+      "slug": null
+    },
+    {
+      "name": "Zucchini Flower",
+      "type": "vegetable",
+      "aliases": [
+        "Courgette Flower",
+        "Squash Blossom",
+        "Cucurbita pepo"
+      ],
+      "onSite": false,
+      "slug": null
+    }
+  ]
+}
