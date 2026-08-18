@@ -51,8 +51,8 @@ export default function RootLayout({
               <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-[var(--text-muted)] dark:text-[var(--text-muted)]">
                 <div className="flex items-center gap-1.5">
                   <span>🌱</span>
-                  <span className="font-semibold text-[var(--forest)]">
-                    auckland<span className="text-[var(--terracotta)]">.</span>garden
+                  <span className="font-semibold text-[var(--forest)] dark:text-[#4CAF50]">
+                    auckland<span className="text-[var(--terracotta-500)] dark:text-[var(--terracotta)]">.</span>garden
                   </span>
                 </div>
                 <p>A seasonal planner for Auckland, New Zealand</p>

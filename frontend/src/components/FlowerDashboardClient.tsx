@@ -56,7 +56,7 @@ export default function FlowerDashboardClient() {
           </button>
           <button
             onClick={() => openAuthModal("signup")}
-            className="px-4 py-2 rounded-[var(--radius-sm)] text-sm font-semibold bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] transition"
+            className="px-4 py-2 rounded-[var(--radius-sm)] text-sm font-semibold bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] dark:bg-[#2D6A4F] dark:hover:bg-[#40916C] transition"
           >
             Get started — free
           </button>

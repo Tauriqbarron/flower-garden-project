@@ -340,7 +340,7 @@ export default function RequestPage() {
             <button
               type="submit"
               disabled={submitting || !q}
-              className="mt-4 flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-sm)] text-sm font-semibold bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] transition disabled:opacity-50"
+              className="mt-4 flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-sm)] text-sm font-semibold bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] dark:bg-[#2D6A4F] dark:hover:bg-[#40916C] transition disabled:opacity-50"
             >
               <Sprout size={16} />
               {submitting

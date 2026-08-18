@@ -195,7 +195,7 @@ export default function AddToCalendarModal({
                     onClick={() => setAction(a)}
                     className={`px-3 py-1.5 rounded-full text-sm capitalize transition ${
                       action === a
-                        ? "bg-[var(--forest)] text-white"
+                        ? "bg-[var(--forest)] text-white dark:bg-[#2D6A4F]"
                         : "bg-gray-100 dark:bg-[var(--border)] hover:bg-[var(--forest-50)]"
                     }`}
                   >
@@ -267,7 +267,7 @@ export default function AddToCalendarModal({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 py-2 px-4 bg-[var(--forest)] text-white rounded-lg hover:opacity-90 disabled:opacity-50 transition font-medium"
+                className="flex-1 py-2 px-4 bg-[var(--forest)] dark:bg-[#2D6A4F] text-white rounded-lg hover:opacity-90 disabled:opacity-50 transition font-medium"
               >
                 {isSubmitting ? "Saving…" : "Save to calendar"}
               </button>
