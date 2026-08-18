@@ -14,6 +14,12 @@ services:
       - RUNTIME_DATA_DIR=/app/data/runtime
       - JWT_SECRET=${JWT_SECRET}
       - PIPELINE_API_KEY=${PIPELINE_API_KEY:-flower-pipeline-key-change-me}
+      # Long-tail plant-suggestion LLM fallback (GET /api/catalog/suggest).
+      # Same env wiring as scripts/pipeline/run.sh so both sides share one key.
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+      - PIPELINE_LLM_API_KEY=${PIPELINE_LLM_API_KEY:-${DEEPSEEK_API_KEY:-}}
+      - PIPELINE_LLM_BASE_URL=${PIPELINE_LLM_BASE_URL:-https://api.deepseek.com}
+      - PIPELINE_LLM_MODEL=${PIPELINE_LLM_MODEL:-deepseek-chat}
     networks:
       - flower-network
     healthcheck:
