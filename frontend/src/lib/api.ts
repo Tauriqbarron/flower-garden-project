@@ -130,6 +130,33 @@ export async function fetchDashboard(region: string = "auckland"): Promise<Dashb
   return res.json();
 }
 
+// ─── Catalog search (request-a-plant suggestions) ───
+
+export interface CatalogHit {
+  name: string;
+  type: "flower" | "vegetable";
+  onSite: boolean;
+  slug: string | null;
+}
+
+export async function fetchCatalogSearch(
+  q: string,
+  type?: "flower" | "vegetable",
+  limit = 8,
+): Promise<CatalogHit[]> {
+  const params = new URLSearchParams({ q, limit: String(limit) });
+  if (type) params.set("type", type);
+  try {
+    const res = await fetch(`${API_BASE}/api/catalog/search?${params}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) return [];
+    return (await res.json()) as CatalogHit[];
+  } catch {
+    return [];
+  }
+}
+
 export async function fetchFlowers(region: string = "auckland"): Promise<Flower[]> {
   const res = await fetch(`${API_BASE}/api/flowers/?region=${region}`, { cache: "no-store" });
   return res.json();

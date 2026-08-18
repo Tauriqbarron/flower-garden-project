@@ -8,19 +8,14 @@ import { useAuth } from "@/lib/auth";
 import {
   createPlantRequest,
   fetchRequests,
-  fetchFlowers,
-  fetchVegetables,
+  fetchCatalogSearch,
   requestLink,
   timeAgo,
   REQUEST_STATUS_META,
+  type CatalogHit,
   type PlantRequest,
 } from "@/lib/api";
-
-interface CatalogEntry {
-  name: string;
-  slug: string;
-  type: "flower" | "vegetable";
-}
+import { hitHref, pickExact } from "@/lib/catalog";
 
 function titleCase(s: string): string {
   return s
@@ -34,7 +29,7 @@ export default function RequestPage() {
   const { token, isLoggedIn, isLoading: authLoading } = useAuth();
   const router = useRouter();
 
-  const [catalog, setCatalog] = useState<CatalogEntry[]>([]);
+  const [hits, setHits] = useState<CatalogHit[]>([]);
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
 
@@ -59,35 +54,31 @@ export default function RequestPage() {
   async function loadAll() {
     if (!token) return;
     setLoading(true);
-    const [flowers, veges, reqs] = await Promise.all([
-      fetchFlowers(),
-      fetchVegetables(),
-      fetchRequests(token),
-    ]);
-    const entries: CatalogEntry[] = [
-      ...flowers.map((f) => ({ name: f.common_name, slug: f.slug, type: "flower" as const })),
-      ...veges.map((v) => ({ name: v.common_name, slug: v.slug, type: "vegetable" as const })),
-    ];
-    setCatalog(entries);
-    setRequests(reqs);
+    setRequests(await fetchRequests(token));
     setLoading(false);
   }
 
-  const q = query.trim().toLowerCase();
-  const matches = useMemo(() => {
-    if (!q) return [];
-    return catalog
-      .filter((c) => c.name.toLowerCase().includes(q) || c.slug.includes(q))
-      .slice(0, 6);
-  }, [catalog, q]);
+  const q = query.trim();
 
-  const exactMatch = useMemo(() => {
-    if (!q) return null;
-    return (
-      catalog.find((c) => c.slug === q.replace(/\s+/g, "-") || c.name.toLowerCase() === q) ||
-      null
-    );
-  }, [catalog, q]);
+  // Debounced remote search against the catalog. Cancels stale results if the
+  // user keeps typing or switches type.
+  useEffect(() => {
+    if (q.length < 2) {
+      setHits([]);
+      return;
+    }
+    let cancelled = false;
+    const id = setTimeout(async () => {
+      const results = await fetchCatalogSearch(q, plantType, 8);
+      if (!cancelled) setHits(results);
+    }, 250);
+    return () => {
+      cancelled = true;
+      clearTimeout(id);
+    };
+  }, [q, plantType]);
+
+  const exactMatch = useMemo(() => pickExact(hits, q), [hits, q]);
 
   const requestName = titleCase(query);
 
@@ -161,23 +152,47 @@ export default function RequestPage() {
         </div>
 
         {/* Suggestions */}
-        {focused && q && matches.length > 0 && (
+        {focused && q.length >= 2 && hits.length > 0 && (
           <div className="absolute z-20 mt-2 w-full bg-white dark:bg-[var(--card)] border border-[var(--border-soft)] dark:border-[var(--border)] rounded-xl shadow-lg overflow-hidden">
-            {matches.map((m) => (
-              <Link
-                key={`${m.type}-${m.slug}`}
-                href={`/${m.type === "flower" ? "flowers" : "vegetables"}/${m.slug}`}
-                className="flex items-center gap-3 px-4 py-3 hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 transition"
-              >
-                <span className="text-lg">{m.type === "flower" ? "🌸" : "🥕"}</span>
-                <span className="text-sm font-medium text-[var(--text)] dark:text-[#E8F0E5]">
-                  {m.name}
-                </span>
-                <span className="ml-auto text-xs text-[var(--text-muted)] dark:text-[#A7C4A0]">
-                  Already in the garden · open →
-                </span>
-              </Link>
-            ))}
+            {hits.map((h, i) => {
+              const href = hitHref(h);
+              const label = h.type === "flower" ? "🌸" : "🥕";
+              const key = `${h.type}-${h.slug ?? h.name}-${i}`;
+              return href ? (
+                <Link
+                  key={key}
+                  href={href}
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 transition"
+                >
+                  <span className="text-lg">{label}</span>
+                  <span className="text-sm font-medium text-[var(--text)] dark:text-[#E8F0E5]">
+                    {h.name}
+                  </span>
+                  <span className="ml-auto text-xs text-[var(--text-muted)] dark:text-[#A7C4A0]">
+                    Already in the garden · open →
+                  </span>
+                </Link>
+              ) : (
+                <button
+                  key={key}
+                  type="button"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => {
+                    setPlantType(h.type);
+                    setQuery(h.name);
+                  }}
+                  className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 transition"
+                >
+                  <span className="text-lg">{label}</span>
+                  <span className="text-sm font-medium text-[var(--text)] dark:text-[#E8F0E5]">
+                    {h.name}
+                  </span>
+                  <span className="ml-auto text-xs text-[var(--text-muted)] dark:text-[#A7C4A0]">
+                    Not here yet · request →
+                  </span>
+                </button>
+              );
+            })}
           </div>
         )}
       </div>
@@ -195,7 +210,7 @@ export default function RequestPage() {
               </p>
             </div>
             <Link
-              href={`/${exactMatch.type === "flower" ? "flowers" : "vegetables"}/${exactMatch.slug}`}
+              href={hitHref(exactMatch)!}
               className="shrink-0 flex items-center gap-1 text-sm font-medium text-[var(--forest)] dark:text-[#4CAF50] hover:underline"
             >
               View it <ArrowRight size={14} />
