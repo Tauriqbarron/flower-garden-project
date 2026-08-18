@@ -25,6 +25,17 @@ import time
 import urllib.parse
 import urllib.request
 
+# Hermes/Portal image-gen helper (H2). Same-directory import; run.sh invokes
+# this file directly so scripts/pipeline is on sys.path[0].
+try:
+    from hermes_image import generate_stage_image  # noqa: E402
+    _HERMES_FALLBACK_AVAILABLE = True
+except ImportError:
+    _HERMES_FALLBACK_AVAILABLE = False
+
+    def generate_stage_image(*_a, **_k):  # type: ignore[no-redef]
+        return False
+
 REPO = os.environ.get("PIPELINE_REPO", "/opt/flower-garden-project")
 API_BASE = os.environ.get("PIPELINE_API_BASE", "http://localhost:8080")
 API_KEY = os.environ.get("PIPELINE_API_KEY", "flower-pipeline-key-change-me")
@@ -372,36 +383,117 @@ def fetch_images(entry, plant_type, staging_dir):
     os.makedirs(staging_dir, exist_ok=True)
     stages = {}
     for stage in STAGES:
-        got = None
-        for q in queries[stage]:
-            try:
-                got = _commons_search(q)
-            except Exception as e:
-                log.warning("commons search '%s' failed: %s", q, e)
-            if got:
-                break
-        if not got:
-            stages[stage] = None
+        # Try Wikimedia first — real photos beat AI where they exist.
+        wikimedia_path = _try_wikimedia_stage(
+            queries[stage], stage, entry, plant_type, staging_dir
+        )
+        if wikimedia_path:
+            stages[stage] = wikimedia_path
             continue
-        _, thumb, orig = got
-        url = thumb or orig
-        ext = os.path.splitext(urllib.parse.urlparse(url).path)[1] or ".jpg"
-        if ext.lower() not in (".jpg", ".jpeg", ".png", ".webp", ".gif"):
-            ext = ".jpg"
-        dest = os.path.join(staging_dir, f"{stage}{ext.lower()}")
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=60) as r, open(dest, "wb") as f:
-                f.write(r.read())
-            stages[stage] = f"/images/{'flowers' if plant_type == 'flower' else 'vegetables'}/{entry['slug']}/{stage}{ext.lower()}"
-            log.info("image %s: %s (%s bytes)", stage, url, os.path.getsize(dest))
-        except Exception as e:
-            log.warning("download %s failed: %s", url, e)
-            stages[stage] = None
+
+        # Wikimedia had nothing usable. Fall back to Hermes/Portal (H2 helper).
+        # Cost cap: this happens at most 3 times per plant (once per stage).
+        hermes_path = _try_hermes_stage(
+            stage, entry, plant_type, staging_dir
+        )
+        stages[stage] = hermes_path  # None if Hermes also failed
 
     if not any(stages.values()):
-        return None, "Could not source any images from Wikimedia Commons"
+        return None, "Could not source any images (Wikimedia + Hermes both failed)"
     return stages, None
+
+
+def _try_wikimedia_stage(queries_for_stage, stage, entry, plant_type, staging_dir):
+    """Attempt Wikimedia Commons for one stage. Returns the site-relative image
+    path on success, None on any failure. Same behaviour as before H3."""
+    got = None
+    for q in queries_for_stage:
+        try:
+            got = _commons_search(q)
+        except Exception as e:
+            log.warning("commons search '%s' failed: %s", q, e)
+        if got:
+            break
+    if not got:
+        return None
+    _, thumb, orig = got
+    url = thumb or orig
+    ext = os.path.splitext(urllib.parse.urlparse(url).path)[1] or ".jpg"
+    if ext.lower() not in (".jpg", ".jpeg", ".png", ".webp", ".gif"):
+        ext = ".jpg"
+    dest = os.path.join(staging_dir, f"{stage}{ext.lower()}")
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=60) as r, open(dest, "wb") as f:
+            f.write(r.read())
+        rel = f"/images/{'flowers' if plant_type == 'flower' else 'vegetables'}/{entry['slug']}/{stage}{ext.lower()}"
+        log.info(
+            "image %s: source=wikimedia path=%s (%s bytes)",
+            stage, rel, os.path.getsize(dest),
+        )
+        return rel
+    except Exception as e:
+        log.warning("download %s failed: %s", url, e)
+        return None
+
+
+# Per-stage descriptions handed to Hermes. The helper wraps every one of
+# these with the mandatory PHOTOREALISM_SPEC so callers cannot accidentally
+# get a stylised render.
+_HERMES_STAGE_DESCRIPTIONS = {
+    "seedling": (
+        "a young {common_name} ({botanical_name}) seedling growing in rich "
+        "dark garden soil, cotyledons and first true leaves visible, single "
+        "plant centred in the frame"
+    ),
+    "young_plant": (
+        "a young {common_name} ({botanical_name}) plant established in a "
+        "home garden bed, several sets of leaves developed but not yet "
+        "flowering or fruiting, single plant"
+    ),
+    "harvest": {
+        "flower": (
+            "a mature {common_name} ({botanical_name}) in full bloom in a "
+            "home garden, flowers open and vibrant, single plant framed for "
+            "cut-flower use"
+        ),
+        "vegetable": (
+            "a mature {common_name} ({botanical_name}) at harvest time in a "
+            "home garden, edible part clearly visible and ready to pick"
+        ),
+    },
+}
+
+
+def _hermes_prompt(stage, entry, plant_type):
+    common = entry.get("common_name", "the plant")
+    botanical = entry.get("botanical_name", "")
+    template = _HERMES_STAGE_DESCRIPTIONS[stage]
+    if isinstance(template, dict):
+        template = template.get(plant_type, template.get("vegetable"))
+    return template.format(common_name=common, botanical_name=botanical)
+
+
+def _try_hermes_stage(stage, entry, plant_type, staging_dir):
+    """Fall back to Hermes/Portal (H2 helper) for one stage. Returns the
+    site-relative image path on success, None on any failure. Never raises."""
+    if not _HERMES_FALLBACK_AVAILABLE:
+        log.warning(
+            "hermes fallback unavailable; skipping %s for %s",
+            stage, entry.get("slug"),
+        )
+        return None
+    dest = os.path.join(staging_dir, f"{stage}.png")
+    prompt = _hermes_prompt(stage, entry, plant_type)
+    ok = generate_stage_image(prompt, dest, timeout_s=90)
+    if not ok:
+        return None
+    rel = f"/images/{'flowers' if plant_type == 'flower' else 'vegetables'}/{entry['slug']}/{stage}.png"
+    log.info(
+        "image %s: source=hermes path=%s (%s bytes)",
+        stage, rel, os.path.getsize(dest),
+    )
+    return rel
 
 
 # ── Ship (repo + git + deploy wait) ──────────────────────────────────────────
