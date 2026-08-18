@@ -157,6 +157,29 @@ export async function fetchCatalogSearch(
   }
 }
 
+/**
+ * LLM-backed suggestions for the long tail. Only call this when
+ * ``fetchCatalogSearch`` returned no useful hits — the backend rate-limits it
+ * by design (empty on failure/timeout, 3-char query floor).
+ */
+export async function fetchCatalogSuggest(
+  q: string,
+  type?: "flower" | "vegetable",
+  limit = 6,
+): Promise<CatalogHit[]> {
+  const params = new URLSearchParams({ q, limit: String(limit) });
+  if (type) params.set("type", type);
+  try {
+    const res = await fetch(`${API_BASE}/api/catalog/suggest?${params}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) return [];
+    return (await res.json()) as CatalogHit[];
+  } catch {
+    return [];
+  }
+}
+
 export async function fetchFlowers(region: string = "auckland"): Promise<Flower[]> {
   const res = await fetch(`${API_BASE}/api/flowers/?region=${region}`, { cache: "no-store" });
   return res.json();
