@@ -85,6 +85,30 @@ def test_ensure_on_site_superset_adds_missing_on_site_plants():
     assert len(plants) == n
 
 
+def test_ensure_on_site_superset_canonicalises_display_name_to_site_common_name():
+    # The catalog returned an on-site plant under one of its aliases as the
+    # primary display name — but the site calls it something different. The
+    # site's naming must win so search results match what users see elsewhere.
+    vegetables = [{"common_name": "New Zealand Spinach", "slug": "nz-spinach", "type": "leafy"}]
+    plants = [
+        {
+            "name": "Kokihi",
+            "type": "vegetable",
+            "aliases": ["Warrigal Greens", "Tetragonia"],
+            "onSite": True,
+            "slug": "nz-spinach",
+        }
+    ]
+    ensure_on_site_superset(plants, [], vegetables)
+    p = plants[0]
+    assert p["name"] == "New Zealand Spinach"
+    assert "Kokihi" in p["aliases"]
+    assert "Warrigal Greens" in p["aliases"]  # original aliases preserved
+    assert p["slug"] == "nz-spinach"
+    # The canonical name must not also appear in its own aliases.
+    assert p["aliases"].count("New Zealand Spinach") == 0
+
+
 def test_collapse_on_site_duplicates_folds_extras_into_aliases():
     plants = [
         {"name": "New Zealand Spinach", "type": "vegetable", "aliases": ["Tetragonia"], "onSite": True, "slug": "nz-spinach"},
