@@ -99,7 +99,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a { color: inherit; text-decoration: none; }
+/* Keep the link reset in @layer base so Tailwind text-* utilities
+   (emitted in @layer utilities) still win on anchors/Links. Without the
+   layer this unlayered rule beat every text-* utility, forcing e.g. the
+   forest-bg "Request a plant" Link to inherit --text (unreadable in light mode). */
+@layer base {
+  a { color: inherit; text-decoration: none; }
+}
 
 /* ─── Component: glass-card ─── */
 .glass-card {
@@ -172,7 +178,9 @@ a { color: inherit; text-decoration: none; }
 
 .dark {
   /* Override primary palette */
-  --forest:    #2E8B57;     /* lighter green for dark bg readability */
+  --forest:    #4CAF50;     /* AA-readable green as TEXT on dark cards (was #2E8B57 ~3.3:1);
+                               button backgrounds use explicit dark greens (#2D6A4F) so they
+                               keep enough contrast against white labels */
   --forest-50: #0f291e;
   --forest-100: #153628;
   --forest-200: #1B4332;
@@ -221,7 +229,7 @@ a { color: inherit; text-decoration: none; }
   --card-alt:  #0a2116;
   --text:      #FFF8F0;               /* cream text */
   --text-muted:#A7C4A0;               /* sage muted */
-  --text-soft: #6b8a65;
+  --text-soft: #93b08b;               /* lightened for AA on dark cards (was #6b8a65 ~4.0:1) */
   --border:    #1B4332;
   --border-soft: #153628;
 
@@ -252,8 +260,8 @@ a { color: inherit; text-decoration: none; }
 .dark .bg-gray-200 { background-color: #153628; }
 .dark .border-gray-100 { border-color: #1B4332; }
 .dark .border-gray-200 { border-color: #1B4332; }
-.dark .text-gray-300 { color: #4a7a5a; }
-.dark .text-gray-400 { color: #6b8a65; }
+.dark .text-gray-300 { color: #7fa276; }
+.dark .text-gray-400 { color: #93b08b; }
 .dark .text-gray-500 { color: #7daa75; }
 .dark .text-gray-600 { color: #A7C4A0; }
 .dark .text-gray-700 { color: #FFF8F0; }

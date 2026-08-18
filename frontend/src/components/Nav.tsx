@@ -62,7 +62,7 @@ export default function Nav() {
             <span className="font-bold text-base tracking-tight text-[var(--forest)] dark:text-[#4CAF50]">
               auckland
             </span>
-            <span className="text-[var(--terracotta)] font-bold text-base">.</span>
+            <span className="text-[var(--terracotta-500)] dark:text-[var(--terracotta)] font-bold text-base">.</span>
             <span className="font-bold text-base tracking-tight text-[var(--forest)] dark:text-[#4CAF50]">
               garden
             </span>
@@ -114,7 +114,7 @@ export default function Nav() {
           ) : (
             <button
               onClick={() => openAuthModal("signin")}
-              className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm font-medium bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] transition"
+              className="px-3 py-1.5 rounded-[var(--radius-sm)] text-sm font-medium bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] dark:bg-[#2D6A4F] dark:hover:bg-[#40916C] transition"
             >
               Sign in
             </button>
@@ -203,7 +203,7 @@ export default function Nav() {
                 <div className="h-px bg-[var(--border-soft)] dark:border-[var(--border)] my-1" />
                 <button
                   onClick={() => openAuthModal("signin")}
-                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-left bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] transition"
+                  className="px-3 py-3 rounded-[var(--radius-sm)] text-base font-medium text-left bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] dark:bg-[#2D6A4F] dark:hover:bg-[#40916C] transition"
                 >
                   Sign in
                 </button>
