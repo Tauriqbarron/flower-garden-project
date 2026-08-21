@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Search, Sprout, ArrowRight } from "lucide-react";
 import { useAuth } from "@/lib/auth";
+import { useAuthModal } from "@/lib/auth-modal";
 import {
   createPlantRequest,
   fetchRequests,
@@ -30,6 +31,7 @@ function titleCase(s: string): string {
 
 export default function RequestPage() {
   const { token, isLoggedIn, isLoading: authLoading } = useAuth();
+  const { openAuthModal } = useAuthModal();
   const router = useRouter();
 
   const [hits, setHits] = useState<SuggestionHit[]>([]);
@@ -40,6 +42,11 @@ export default function RequestPage() {
   const [notes, setNotes] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [sessionExpired, setSessionExpired] = useState(false);
+  // Set synchronously alongside setSessionExpired(true) so the route-guard
+  // effect can see "user is mid-flow, keep them here" even if the auth
+  // clear + re-render arrives before the sessionExpired state update does.
+  const staySignedOutOnPageRef = useRef(false);
   const [justCreated, setJustCreated] = useState<PlantRequest | null>(null);
 
   const [requests, setRequests] = useState<PlantRequest[]>([]);
@@ -48,11 +55,24 @@ export default function RequestPage() {
   useEffect(() => {
     if (authLoading) return;
     if (!isLoggedIn || !token) {
+      // Stay put if the user just tripped a session-expired submit — the
+      // in-page panel prompts a fresh sign-in without losing their draft.
+      // Otherwise (cold-load with no session) send them home to sign in.
+      if (staySignedOutOnPageRef.current) return;
       router.replace("/");
       return;
     }
     loadAll();
   }, [isLoggedIn, token, authLoading]);
+
+  // If the user signs back in via the modal, resume the page state.
+  useEffect(() => {
+    if (isLoggedIn && staySignedOutOnPageRef.current) {
+      staySignedOutOnPageRef.current = false;
+      setSessionExpired(false);
+      if (token) loadAll();
+    }
+  }, [isLoggedIn, token]);
 
   async function loadAll() {
     if (!token) return;
@@ -106,6 +126,7 @@ export default function RequestPage() {
     }
     setSubmitting(true);
     setError(null);
+    setSessionExpired(false);
     setJustCreated(null);
 
     const { request, error: err } = await createPlantRequest(token, {
@@ -114,7 +135,13 @@ export default function RequestPage() {
       notes: notes.trim() || undefined,
     });
 
-    if (err) {
+    if (err === "SESSION_EXPIRED") {
+      // Draft (query/type/notes) is retained in state so the user can
+      // sign in and re-submit without losing what they typed. The ref
+      // is what the route-guard checks before redirecting.
+      staySignedOutOnPageRef.current = true;
+      setSessionExpired(true);
+    } else if (err) {
       setError(err);
     } else if (request) {
       setJustCreated(request);
@@ -195,6 +222,11 @@ export default function RequestPage() {
                   onClick={() => {
                     setPlantType(h.type);
                     setQuery(h.name);
+                    // Close the dropdown so the user's next click can be the
+                    // Request button instead of another suggestion. Without
+                    // this, setQuery re-fires the debounced search and the
+                    // dropdown just re-populates with slightly different hits.
+                    setFocused(false);
                   }}
                   className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-[var(--forest-50)] dark:hover:bg-[#1B4332]/50 transition"
                 >
@@ -277,7 +309,33 @@ export default function RequestPage() {
       )}
 
       {/* Error */}
-      {!exactMatch && error && (
+      {/* Session expired — friendlier than the raw "Invalid or expired token"
+          detail the backend returns. Draft is retained in state so signing in
+          again lets the user submit without retyping. */}
+      {!exactMatch && sessionExpired && (
+        <div className="mt-4 p-4 rounded-xl border border-amber-200 dark:border-[#2e2515] bg-amber-50/60 dark:bg-[#2e2515]/30">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="font-semibold text-[var(--forest)] dark:text-[#4CAF50]">
+                Your sign-in has expired
+              </p>
+              <p className="text-sm text-[var(--text-muted)] dark:text-[#A7C4A0] mt-0.5">
+                Sign in again to send this request — we&apos;ve kept
+                what you typed.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => openAuthModal("signin")}
+              className="shrink-0 px-4 py-2 rounded-[var(--radius-sm)] text-sm font-semibold bg-[var(--forest)] text-white hover:bg-[var(--forest-600)] dark:bg-[#2D6A4F] dark:hover:bg-[#40916C] transition"
+            >
+              Sign in
+            </button>
+          </div>
+        </div>
+      )}
+
+      {!exactMatch && !sessionExpired && error && (
         <div className="mt-4 p-4 rounded-xl border border-red-200 dark:border-red-900/40 bg-red-50/60 dark:bg-red-900/20 text-sm text-red-700 dark:text-red-300">
           {error}
         </div>
