@@ -1,6 +1,20 @@
 import Link from "next/link";
 
+import { dispatchAuthExpired } from "./auth";
+
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:8000";
+
+/**
+ * Any 401 from an authed endpoint means the JWT is invalid or past its
+ * 7-day expiry. Dispatch the auth-expired event so the ``AuthProvider``
+ * clears the local session and the UI stops showing signed-in state.
+ * Returns ``true`` if the caller should treat this as an expired session.
+ */
+function _isSessionExpired(res: Response): boolean {
+  if (res.status !== 401) return false;
+  dispatchAuthExpired();
+  return true;
+}
 
 export interface GrowthStages {
   harvest: string | null;
@@ -572,7 +586,10 @@ export async function fetchNotifications(token: string, limit: number = 100): Pr
     cache: "no-store",
     headers: { Authorization: `Bearer ${token}` },
   });
-  if (!res.ok) return [];
+  if (!res.ok) {
+    _isSessionExpired(res);
+    return [];
+  }
   return res.json();
 }
 
@@ -581,7 +598,10 @@ export async function fetchUnreadCount(token: string): Promise<number> {
     cache: "no-store",
     headers: { Authorization: `Bearer ${token}` },
   });
-  if (!res.ok) return 0;
+  if (!res.ok) {
+    _isSessionExpired(res);
+    return 0;
+  }
   const data = await res.json();
   return data.count ?? 0;
 }
@@ -669,7 +689,10 @@ export async function fetchRequests(token: string): Promise<PlantRequest[]> {
     cache: "no-store",
     headers: { Authorization: `Bearer ${token}` },
   });
-  if (!res.ok) return [];
+  if (!res.ok) {
+    _isSessionExpired(res);
+    return [];
+  }
   return res.json();
 }
 
@@ -686,6 +709,12 @@ export async function createPlantRequest(
     body: JSON.stringify(data),
   });
   if (!res.ok) {
+    // 401 => the session has expired. Surface a stable code so the UI can
+    // show a "Sign in again" affordance instead of the backend's raw
+    // "Invalid or expired token" detail. Also clear the local session.
+    if (_isSessionExpired(res)) {
+      return { request: null, error: "SESSION_EXPIRED" };
+    }
     let error = "Couldn't submit your request. Please try again.";
     try {
       const body = await res.json();
